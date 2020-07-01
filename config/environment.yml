@@ -1,0 +1,13 @@
+cmpdev:
+  host: https://cmp.cmpdev.crowncommercial.gov.uk/facilities-management
+  account_username: otaikutoyin@gmail.com
+  account_password: Test1234!
+preview:
+  host: https://cmp.fm-preview.crowncommercial.gov.uk/facilities-management
+  account_username: bau_fm_test@yopmail.com
+  account_password: Test12345!
+marketplace:
+  host: https://marketplace.preview.crowncommercial.gov.uk/facilities-management
+  account_username: p
+  account_password: Test12345!
+
