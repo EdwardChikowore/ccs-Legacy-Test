@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'capybara', '< 3.18'
+gem 'capybara', "2.18.0"
 gem 'selenium-webdriver'
-gem 'cucumber'
+gem 'cucumber', "3.0.2"
 gem 'rspec'
 gem 'site_prism'
 # gem 'chromedriver-helper'
@@ -19,8 +19,5 @@ gem 'minitest-spec-rails'
 gem 'csv'
 gem 'roo', '~> 2.4'
 gem 'nokogiri'
-gem 'allure-cucumber'
 gem 'cucumber-rails', require: false
 gem 'database_cleaner'
-
-

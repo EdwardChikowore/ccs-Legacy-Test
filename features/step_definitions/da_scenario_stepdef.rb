@@ -168,7 +168,6 @@ Then(/^I select fifteen building "([^"]*)" with address "([^"]*)"$/) do |buildin
 end
 
 Then(/^I select all services$/) do
-  binding.pry
   home.building_service.checkbox.click
 end
 

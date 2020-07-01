@@ -16,7 +16,6 @@ Feature: Facilities Management - DA - Contract - Authorised representative
     And I proceed to the contract details page
     And I am on "Contract details" page
 
-@smoke
   Scenario: Authorised Representative Details Select - Content
     When I click on the third question for "Authorised representative details"
     And I am on "Authorised representative details" page

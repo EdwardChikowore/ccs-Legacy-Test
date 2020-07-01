@@ -11,7 +11,6 @@ require 'csv'
 require 'json'
 require 'roo'
 require 'nokogiri'
-require 'allure-cucumber'
 
 
 require_relative '../../features/support/pages_helper'
