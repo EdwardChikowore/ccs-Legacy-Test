@@ -30,7 +30,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And The second volume for scenario zero "2. Routine cleaning" is 34
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "6240.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 130
+    And The fourth volume for scenario zero b "4. General waste" is 130
     And I click on "Back to detailed search summary"
     When I am on "Detailed search summary" page
     And I click on "Continue"
@@ -56,7 +56,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And The second volume for scenario zero "2. Routine cleaning" is 34
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "6240.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 130
+    And The fourth volume for scenario zero b "4. General waste" is 130
     And I click on "Back to detailed search summary"
     When I am on "Detailed search summary" page
     And I click on "Continue"
@@ -81,7 +81,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And The second volume for scenario zero "2. Routine cleaning" is 34
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "6240.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 130
+    And The fourth volume for scenario zero b "4. General waste" is 130
     And I click on "Back to detailed search summary"
     When I am on "Detailed search summary" page
     And I click on "Continue"
@@ -106,7 +106,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And The second volume for scenario zero "2. Routine cleaning" is 34
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "6240.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 130
+    And The fourth volume for scenario zero b "4. General waste" is 130
     And I click on "Back to detailed search summary"
     When I am on "Detailed search summary" page
     And I click on "Continue"
@@ -134,7 +134,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And The second volume for scenario zero "2. Routine cleaning" is 34
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "6240.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 130
+    And The fourth volume for scenario zero b "4. General waste" is 130
     And I click on "Back to detailed search summary"
     When I am on "Detailed search summary" page
     And I click on "Continue"
@@ -162,7 +162,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And The second volume for scenario zero "2. Routine cleaning" is 34
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "6240.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 130
+    And The fourth volume for scenario zero b "4. General waste" is 130
     And I click on "Back to detailed search summary"
     When I am on "Detailed search summary" page
     And I click on "Continue"
@@ -190,7 +190,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And The second volume for scenario zero "2. Routine cleaning" is 34
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "6240.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 130
+    And The fourth volume for scenario zero b "4. General waste" is 130
     And I click on "Back to detailed search summary"
     When I am on "Detailed search summary" page
     And I click on "Continue"
@@ -217,7 +217,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And The second volume for scenario zero "2. Routine cleaning" is 34
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "6240.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 130
+    And The fourth volume for scenario zero b "4. General waste" is 130
     And I click on "Back to detailed search summary"
     When I am on "Detailed search summary" page
     And I click on "Continue"
@@ -245,7 +245,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And The second volume for scenario zero "2. Routine cleaning" is 3400
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "6240.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 13000
+    And The fourth volume for scenario zero b "4. General waste" is 13000
     And I click on "Back to detailed search summary"
     When I am on "Detailed search summary" page
     And I click on "Continue"
@@ -273,7 +273,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And The second volume for scenario zero "2. Routine cleaning" is 3400
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "6240.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 13000
+    And The fourth volume for scenario zero b "4. General waste" is 13000
     And I click on "Back to detailed search summary"
     When I am on "Detailed search summary" page
     And I click on "Continue"
@@ -301,7 +301,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And The second volume for scenario zero "2. Routine cleaning" is 3400
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "6240.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 13000
+    And The fourth volume for scenario zero b "4. General waste" is 13000
     And I click on "Back to detailed search summary"
     When I am on "Detailed search summary" page
     And I click on "Continue"
@@ -329,7 +329,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And The second volume for scenario zero "2. Routine cleaning" is 3400
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "6240.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 13000
+    And The fourth volume for scenario zero b "4. General waste" is 13000
     And I click on "Back to detailed search summary"
     When I am on "Detailed search summary" page
     And I click on "Continue"
@@ -356,7 +356,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And The second volume for scenario zero "2. Routine cleaning" is 3400
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "6240.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 13000
+    And The fourth volume for scenario zero b "4. General waste" is 13000
     And I click on "Back to detailed search summary"
     When I click on "Outside London building"
     Then I am on "Service requirements" page
@@ -365,7 +365,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And The second volume for scenario zero "2. Routine cleaning" is 3400
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "6240.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 13000
+    And The fourth volume for scenario zero b "4. General waste" is 13000
     And I click on "Back to detailed search summary"
     When I am on "Detailed search summary" page
     And I click on "Continue"
@@ -392,7 +392,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And The second volume for scenario zero "2. Routine cleaning" is 3400
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "6240.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 13000
+    And The fourth volume for scenario zero b "4. General waste" is 13000
     And I click on "Back to detailed search summary"
     When I click on "Outside London building"
     Then I am on "Service requirements" page
@@ -401,7 +401,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And The second volume for scenario zero "2. Routine cleaning" is 3400
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "6240.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 13000
+    And The fourth volume for scenario zero b "4. General waste" is 13000
     And I click on "Back to detailed search summary"
     When I am on "Detailed search summary" page
     And I click on "Continue"
@@ -428,7 +428,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And The second volume for scenario zero "2. Routine cleaning" is 3400
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "6240.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 13000
+    And The fourth volume for scenario zero b "4. General waste" is 13000
     And I click on "Back to detailed search summary"
     When I click on "Outside London building"
     Then I am on "Service requirements" page
@@ -437,7 +437,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And The second volume for scenario zero "2. Routine cleaning" is 3400
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "6240.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 13000
+    And The fourth volume for scenario zero b "4. General waste" is 13000
     And I click on "Back to detailed search summary"
     When I am on "Detailed search summary" page
     And I click on "Continue"
@@ -465,7 +465,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And The second volume for scenario zero "2. Routine cleaning" is 3400
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "6240.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 13000
+    And The fourth volume for scenario zero b "4. General waste" is 13000
     And I click on "Back to detailed search summary"
     When I click on "Outside London building"
     Then I am on "Service requirements" page
@@ -474,7 +474,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And The second volume for scenario zero "2. Routine cleaning" is 3400
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "6240.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 13000
+    And The fourth volume for scenario zero b "4. General waste" is 13000
     And I click on "Back to detailed search summary"
     When I am on "Detailed search summary" page
     And I click on "Continue"

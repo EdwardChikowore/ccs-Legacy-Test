@@ -1,4 +1,4 @@
 default: DRIVER=chrome_headless --format html --out tmp/test_report_two.html --format pretty -r features --tags 'not @wip and not @smoke'
 rerun: --format html --out tmp/test_report_rerun.html --format pretty @reports/rerun
-smoke: SMOKE=true -f pretty -r features/contract -r features/step_definitions -r features/support --tags '@smoke and not @wip'
+smoke: DRIVER=chrome_headless -f pretty -r features/homepage -r features/step_definitions -r features/support --tags '@smoke and not @wip'
 wip: --tags @wip:3 --wip features

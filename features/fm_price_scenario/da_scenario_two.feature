@@ -1,9 +1,9 @@
-Feature: Direct Award scenario One
+Feature: Direct Award scenario Two
 
-  Background: Login page
+  Background:
     Given I am a logged in user
 
-  Scenario Outline: Direct Award Scenario One - TUPE, CAFM, Helpdesk, Management
+  Scenario Outline: Direct Award - No TUPE, CAFM, Helpdesk, Management
     Then I should see the navigation panel has sign out link
     And I click on "Quick search"
     And I am on the "Select the facilities management services that you need" page
@@ -73,15 +73,14 @@ Feature: Direct Award scenario One
     And I click on the "facilities_management_procurement_estimated_cost_known_false" option
     And I click on "Save and continue"
     And I am on "TUPE" page
-    And I click on the "facilities_management_procurement_tupe_true" option
+    And I click on the "facilities_management_procurement_tupe_false" option
     And I click on "Save and continue"
     And I am on "Contract period" page
     And I enter the number of year as "<years>"
     And I enter the day as "<day>"
     And I enter the month as "<month>"
     And I enter the year as "<year>"
-    And I click on the "facilities_management_procurement_mobilisation_period_required_true" option
-    And I enter the mobilisation period for 4 weeks
+    And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_false" option
     And I click on "Save and continue"
     And I am on "Buildings" page
@@ -91,7 +90,7 @@ Feature: Direct Award scenario One
     And I select fourteen building "Westminster Building" with address "10 Downing Street, London, Inner London - West, SW1A 2AA"
     And I click on "Save and continue"
     And I am on the "What facilities management services do you need for each building?" page
-    And I select services for first building "Aberdeen" - DA scenario two
+    And I select services for first building "Aberdeen" - DA scenario three
     And I select services for second building "Belfast Building" - DA scenario two
     And I select services for third building "Birmingham" - DA scenario two
     And I select services for fourth building "Westminster Building" - DA scenario two
@@ -207,19 +206,19 @@ Feature: Direct Award scenario One
     And I click on "Save and return to service requirements"
     And I click on "Back to detailed search summary"
     And I click on "Continue"
-    And I should see the price displayed £234,870.30
+    And I should see the price displayed £213,108.58
     And I click on the Direct award route to market
     And I click on "Continue"
-    And the lowest priced supplier is "Wolf-Wiza" and contract price is £234,870.30
-    And the second subsequent supplier is "Supplier 2" and contract price is £250,298.86
-    And the third subsequent supplier is "Supplier 3" and contract price is £251,029.94
-    And the fourth subsequent supplier is "Supplier 4" and contract price is £260,968.75
-    And the fifth subsequent supplier is "Supplier 5" and contract price is £262,412.28
-    And the sixth subsequent supplier is "Supplier 6" and contract price is £267,133.45
-    And the seventh subsequent supplier is "Supplier 7" and contract price is £278,186.69
-    And the eighth subsequent supplier is "Supplier 8" and contract price is £279,993.33
-    And the ninth subsequent supplier is "Supplier 9" and contract price is £282,709.24
-    And the tenth subsequent supplier is "Supplier 10" and contract price is £296,928.35
+    And the lowest priced supplier is "Wolf-Wiza" and contract price is £213,108.58
+    And the second subsequent supplier is "Supplier 2" and contract price is £236,729.68
+    And the third subsequent supplier is "Supplier 3" and contract price is £238,202.17
+    And the fourth subsequent supplier is "Supplier 4" and contract price is £240,056.14
+    And the fifth subsequent supplier is "Supplier 5" and contract price is £242,148.05
+    And the sixth subsequent supplier is "Supplier 6" and contract price is £246,931.31
+    And the seventh subsequent supplier is "Supplier 7" and contract price is £253,488.65
+    And the eighth subsequent supplier is "Supplier 8" and contract price is £256,356.15
+    And the ninth subsequent supplier is "Supplier 9" and contract price is £267,370.82
+    And the tenth subsequent supplier is "Supplier 10" and contract price is £273,278.77
 
     Examples:
       | years | day | month | year |

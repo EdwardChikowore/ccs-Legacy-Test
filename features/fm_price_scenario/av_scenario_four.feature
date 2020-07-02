@@ -33,10 +33,10 @@ Feature: Assessed value Scenario Four - No Customer Price and at least 1 Service
     And The second volume for scenario zero "2. Routine cleaning" is 28000
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "8736.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 30
-    And The fifth volume for scenario zero "5. Environmental cleaning service" is Standard A
-    And The sixth volume for scenario four "6. Ventilation and air conditioning system maintenance" is "Standard A"
-    And The seventh volume for scenario four "7. Recycled waste" is 30
+    And The fourth volume for scenario zero b "4. General waste" is 30
+    And The fifth volume for scenario zero b "5. Environmental cleaning service" is Standard A
+    And The sixth volume for scenario four b "6. Ventilation and air conditioning system maintenance" is "Standard A"
+    And The seventh volume for scenario four b "7. Recycled waste" is 30
     And I click on "Back to detailed search summary"
     When I am on "Detailed search summary" page
     And I click on "Continue"
@@ -64,10 +64,10 @@ Feature: Assessed value Scenario Four - No Customer Price and at least 1 Service
     And The second volume for scenario zero "2. Routine cleaning" is 26500
     And The second volume for number of building occupants for scenario zero is "Standard A"
     And The third volume for scenario zero "3. Reception service" is "8736.00 Service times"
-    And The fourth volume for scenario zero "4. General waste" is 30
-    And The fifth volume for scenario zero "5. Environmental cleaning service" is Standard A
-    And The sixth volume for scenario four "6. Ventilation and air conditioning system maintenance" is "Standard A"
-    And The seventh volume for scenario four "7. Recycled waste" is 30
+    And The fourth volume for scenario zero b "4. General waste" is 30
+    And The fifth volume for scenario zero b "5. Environmental cleaning service" is Standard A
+    And The sixth volume for scenario four b "6. Ventilation and air conditioning system maintenance" is "Standard A"
+    And The seventh volume for scenario four b "7. Recycled waste" is 30
     And I click on "Back to detailed search summary"
     When I am on "Detailed search summary" page
     And I click on "Continue"

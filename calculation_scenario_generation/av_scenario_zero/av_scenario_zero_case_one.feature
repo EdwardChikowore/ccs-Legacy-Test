@@ -61,7 +61,7 @@ Feature: Assessed value Scenario Zero case one
     And I click on "Save and return to service requirements"
     And I click on "Back to detailed search summary"
     And I click on "Continue"
-    And I should see the price displayed £1,785
+    And I should see the price displayed £1,785,988.67
 
 
     Examples:
