@@ -58,14 +58,29 @@ And(/^The fifth volume for scenario zero "([^"]*)" is (.+)$/) do |service, volum
   expect(service_requirements.volume[9].text).to eq(volume)
 end
 
+And(/^The fifth volume for scenario zero b "([^"]*)" is (.+)$/) do |service, volume|
+  expect(service_requirements.service_table[8].name.text).to eq(service)
+  expect(service_requirements.volume[8].text).to eq(volume)
+end
+
 And(/^The sixth volume for scenario four "([^"]*)" is "([^"]*)"$/) do |service, volume|
   expect(service_requirements.service_table[10].name.text).to eq(service)
   expect(service_requirements.volume[10].text).to eq(volume)
 end
 
+And(/^The sixth volume for scenario four b "([^"]*)" is "([^"]*)"$/) do |service, volume|
+  expect(service_requirements.service_table[9].name.text).to eq(service)
+  expect(service_requirements.volume[9].text).to eq(volume)
+end
+
 And(/^The seventh volume for scenario four "([^"]*)" is (.+)$/) do |service, volume|
   expect(service_requirements.service_table[11].name.text).to eq(service)
   expect(service_requirements.volume[11].text).to eq(volume)
+end
+
+And(/^The seventh volume for scenario four b "([^"]*)" is (.+)$/) do |service, volume|
+  expect(service_requirements.service_table[10].name.text).to eq(service)
+  expect(service_requirements.volume[10].text).to eq(volume)
 end
 
 And(/^The first volume for number of building occupants for scenario four is (.+)$/) do |volume|
