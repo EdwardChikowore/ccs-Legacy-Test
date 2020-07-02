@@ -52,17 +52,17 @@ Feature: Assessed value Scenario zero case six
     And I click on "London building"
     And I am on "Service requirements" page
     And I click on "Answer question"
+    And I am on "Planned maintenance (PPM) services standards" page
+    And I select standard A for first service
+    And I select standard A for second service
+    And I click on "Save and return to service requirements"
+    And I click on "Answer question"
     And I am on "Lifts, hoists & conveyance systems maintenance" page
     And I enter 600 for lift one
     And I enter 600 for lift two
     And I enter 600 for lift three
     And I enter 600 for lift four
     And I enter 600 for lift five
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I am on "Planned maintenance (PPM) services standards" page
-    And I select standard A for first service
-    And I select standard A for second service
     And I click on "Save and return to service requirements"
     And I click on "Answer question"
     And I am on "Service requirement volumes" page
@@ -76,17 +76,17 @@ Feature: Assessed value Scenario zero case six
     And I click on "Outside London building"
     And I am on "Service requirements" page
     And I click on "Answer question"
+    And I am on "Planned maintenance (PPM) services standards" page
+    And I select standard A for first service
+    And I select standard A for second service
+    And I click on "Save and return to service requirements"
+    And I click on "Answer question"
     And I am on "Lifts, hoists & conveyance systems maintenance" page
     And I enter 600 for lift one
     And I enter 600 for lift two
     And I enter 600 for lift three
     And I enter 600 for lift four
     And I enter 600 for lift five
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I am on "Planned maintenance (PPM) services standards" page
-    And I select standard A for first service
-    And I select standard A for second service
     And I click on "Save and return to service requirements"
     And I click on "Answer question"
     And I am on "Service requirement volumes" page

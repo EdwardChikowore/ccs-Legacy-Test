@@ -1,4 +1,4 @@
-Feature: Assessed value Scenario zero case five
+Feature: Assessed value Scenario one building
 
   Background: Login page
     Given I am a logged in user
@@ -16,7 +16,9 @@ Feature: Assessed value Scenario zero case five
     And I click on "Close all"
 
 
-  Scenario Outline: Scenario 5-  CP, CAFM, Helpdesk TUPE (Lot 1A)
+
+
+  Scenario Outline: Scenario 7-  CP, CAFM, Helpdesk TUPE (Lot 1C)
     And I click on "Continue"
     And I click on open all
     And I click on the "Tees Valley and Durham"
@@ -29,7 +31,7 @@ Feature: Assessed value Scenario zero case five
     And I click to answer estimated annual cost question
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option
-    And I enter the cost 500000
+    And I enter the cost 50000000
     And I click on "Save and continue"
     And I am on "TUPE" page
     And I click on the "facilities_management_procurement_tupe_true" option
@@ -50,18 +52,22 @@ Feature: Assessed value Scenario zero case five
     And I click on "London building"
     And I am on "Service requirements" page
     And I click on "Answer question"
-    And I am on "Lifts, hoists & conveyance systems maintenance" page
-    And I enter 300 for first lift
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
     And I am on "Planned maintenance (PPM) services standards" page
     And I select standard A for first service
     And I select standard A for second service
     And I click on "Save and return to service requirements"
     And I click on "Answer question"
+    And I am on "Lifts, hoists & conveyance systems maintenance" page
+    And I enter 600 for lift one
+    And I enter 600 for lift two
+    And I enter 600 for lift three
+    And I enter 600 for lift four
+    And I enter 600 for lift five
+    And I click on "Save and return to service requirements"
+    And I click on "Answer question"
     And I am on "Service requirement volumes" page
-    And I enter 130 for portable appliance testing
-    And I enter 130 for mobile cleaning service two
+    And I enter 1300 for portable appliance testing
+    And I enter 1300 for mobile cleaning service two
     And I click on "Save and return to service requirements"
     And I click on "Answer question"
     And I select standard A for first service
@@ -70,27 +76,31 @@ Feature: Assessed value Scenario zero case five
     And I click on "Outside London building"
     And I am on "Service requirements" page
     And I click on "Answer question"
-    And I am on "Lifts, hoists & conveyance systems maintenance" page
-    And I enter 300 for first lift
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
     And I am on "Planned maintenance (PPM) services standards" page
     And I select standard A for first service
     And I select standard A for second service
     And I click on "Save and return to service requirements"
     And I click on "Answer question"
+    And I am on "Lifts, hoists & conveyance systems maintenance" page
+    And I enter 600 for lift one
+    And I enter 600 for lift two
+    And I enter 600 for lift three
+    And I enter 600 for lift four
+    And I enter 600 for lift five
+    And I click on "Save and return to service requirements"
+    And I click on "Answer question"
     And I am on "Service requirement volumes" page
-    And I enter 130 for portable appliance testing
-    And I enter 130 for mobile cleaning service two
+    And I enter 1300 for portable appliance testing
+    And I enter 1300 for mobile cleaning service two
     And I click on "Save and return to service requirements"
     And I click on "Answer question"
     And I select standard A for first service
     And I click on "Save and return to service requirements"
     And I click on "Back to detailed search summary"
     And I click on "Continue"
-    And I should see the price displayed £5,177,342.84
+    And I should see the price displayed £60,861,180.60
 
 
     Examples:
       | years | day | month | year |
-      |   2   | 12  | 10    | 2020 |
+      |   3   | 12  | 10    | 2020 |

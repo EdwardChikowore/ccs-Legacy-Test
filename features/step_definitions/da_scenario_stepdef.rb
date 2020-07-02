@@ -6,7 +6,7 @@ end
 
 Then(/^I click on close all on regions page$/) do
   value = home.open_all.text
-  home.open_all.click if ( value == 'Open all sections')
+  home.open_all.click if ( value == 'Close all sections')
 end
 
 Then(/^I click on close all on services page$/) do
@@ -436,7 +436,37 @@ Then(/^I select services for tenth building "([^"]*)" - DA scenario one$/) do |b
   home.service_selection.management_billable[1].click
 end
 
+Then(/^I select services for first building "([^"]*)" - DA scenario three$/) do |building_name|
+  #Building_four
+  # click_on building_name
+  # home.service_selection.bms[0].click
+  # home.service_selection.env_cleaning[0].click
+  # home.service_selection.fire_detection_maintenance[0].click
+  # home.service_selection.high_voltage[0].click
+  # home.service_selection.internal_external_building[0].click
+  # home.service_selection.lifts_hoists[0].click
+  # home.service_selection.mech_elec[0].click
+  # home.service_selection.security_access[0].click
+  # home.service_selection.standby_power[0].click
+  # home.service_selection.ventilation[0].click
+  # home.service_selection.cafm[0].click
+  # home.service_selection.helpdesk[0].click
+  # home.service_selection.management_billable[0].click
+  #
 
+  click_on building_name
+  service_requirements.aberdeen_services.select_all.click
+  service_requirements.aberdeen_services.bms.click
+  service_requirements.aberdeen_services.env_cleaning.click
+  service_requirements.aberdeen_services.fire_detection_maintenance.click
+  service_requirements.aberdeen_services.high_voltage.click
+  service_requirements.aberdeen_services.internal_external_building.click
+  service_requirements.aberdeen_services.lifts_hoists.click
+  service_requirements.aberdeen_services.mech_elec.click
+  service_requirements.aberdeen_services.security_access.click
+  service_requirements.aberdeen_services.standby_power.click
+  service_requirements.aberdeen_services.ventilation.click
+end
 
 
 Then(/^I select services for first building "([^"]*)" - DA scenario two$/) do |building_name|
@@ -458,20 +488,20 @@ Then(/^I select services for first building "([^"]*)" - DA scenario two$/) do |b
   #
 
   click_on building_name
-  home.service_selection.bms[3].click
-  home.service_selection.env_cleaning[3].click
-  home.service_selection.fire_detection_maintenance[3].click
-  home.service_selection.high_voltage[3].click
-  home.service_selection.internal_external_building[3].click
-  home.service_selection.lifts_hoists[3].click
-  home.service_selection.mech_elec[3].click
-  home.service_selection.security_access[3].click
-  home.service_selection.standby_power[3].click
-  home.service_selection.ventilation[3].click
-  home.service_selection.cafm[3].click
-  home.service_selection.helpdesk[3].click
-  home.service_selection.management_billable[3].click
-
+  service_requirements.aberdeen_services.select_all.click
+  service_requirements.aberdeen_services.bms.click
+  service_requirements.aberdeen_services.env_cleaning.click
+  service_requirements.aberdeen_services.fire_detection_maintenance.click
+  service_requirements.aberdeen_services.high_voltage.click
+  service_requirements.aberdeen_services.internal_external_building.click
+  service_requirements.aberdeen_services.lifts_hoists.click
+  service_requirements.aberdeen_services.mech_elec.click
+  service_requirements.aberdeen_services.security_access.click
+  service_requirements.aberdeen_services.standby_power.click
+  service_requirements.aberdeen_services.ventilation.click
+  service_requirements.aberdeen_services.cafm.click
+  service_requirements.aberdeen_services.helpdesk.click
+  service_requirements.aberdeen_services.management_billable
 end
 
 
@@ -496,21 +526,22 @@ Then(/^I select services for second building "([^"]*)" - DA scenario two$/) do |
   #
   #
   click_on building_name
-  home.service_selection.asbestos[0].click
-  home.service_selection.compliance_plans[0].click
-  home.service_selection.condition_survey[0].click
-  home.service_selection.electrical_testing[0].click
-  home.service_selection.fire_risk[0].click
-  home.service_selection.portable_appliance[0].click
-  home.service_selection.statutory_inspections[0].click
-  home.service_selection.water_hygiene[0].click
-  home.service_selection.cleaning_external[0].click
-  home.service_selection.cleaning_integral[0].click
-  home.service_selection.deep_periodic_clean[0].click
-  home.service_selection.mobile_cleaning[0].click
-  home.service_selection.pest_control[0].click
-  home.service_selection.external_window_cleaning[0].click
-  home.service_selection.internal_window_cleaning[0].click
+  service_requirements.belfast_building_services.select_all.click
+  service_requirements.belfast_building_services.asbestos.click
+  service_requirements.belfast_building_services.compliance_plans.click
+  service_requirements.belfast_building_services.condition_survey.click
+  service_requirements.belfast_building_services.electrical_testing.click
+  service_requirements.belfast_building_services.fire_risk.click
+  service_requirements.belfast_building_services.portable_appliance.click
+  service_requirements.belfast_building_services.statutory_inspections.click
+  service_requirements.belfast_building_services.water_hygiene.click
+  service_requirements.belfast_building_services.cleaning_external.click
+  service_requirements.belfast_building_services.cleaning_integral.click
+  service_requirements.belfast_building_services.deep_periodic_clean.click
+  service_requirements.belfast_building_services.mobile_cleaning.click
+  service_requirements.belfast_building_services.pest_control.click
+  service_requirements.belfast_building_services.external_window_cleaning.click
+  service_requirements.belfast_building_services.internal_window_cleaning.click
 end
 
 
@@ -534,19 +565,20 @@ Then(/^I select services for third building "([^"]*)" - DA scenario two$/) do |b
   #
   #
   click_on building_name
-  home.service_selection.routine_cleaning[1].click
-  home.service_selection.handyman_services[1].click
-  home.service_selection.move_space_manage[1].click
-  home.service_selection.car_park[1].click
-  home.service_selection.reception_services[1].click
-  home.service_selection.taxi_booking[1].click
-  home.service_selection.voice_announce[1].click
-  home.service_selection.cctv[1].click
-  home.service_selection.control_access[1].click
-  home.service_selection.emergency_response[1].click
-  home.service_selection.managements_visitor[1].click
-  home.service_selection.manned_guarding[1].click
-  home.service_selection.patrols_fixed[1].click
+  service_requirements.birmingham_services.select_all.click
+  service_requirements.birmingham_services.routine_cleaning.click
+  service_requirements.birmingham_services.handyman_services.click
+  service_requirements.birmingham_services.move_space_manage.click
+  service_requirements.birmingham_services.car_park.click
+  service_requirements.birmingham_services.reception_services.click
+  service_requirements.birmingham_services.taxi_booking.click
+  service_requirements.birmingham_services.voice_announce.click
+  service_requirements.birmingham_services.cctv.click
+  service_requirements.birmingham_services.control_access.click
+  service_requirements.birmingham_services.emergency_response.click
+  service_requirements.birmingham_services.managements_visitor.click
+  service_requirements.birmingham_services.manned_guarding.click
+  service_requirements.birmingham_services.patrols_fixed.click
 end
 
 
@@ -563,13 +595,14 @@ Then(/^I select services for fourth building "([^"]*)" - DA scenario two$/) do |
   # home.service_selection.management_billable[1].click
 
   click_on building_name
-  home.service_selection.classified_waste[2].click
-  home.service_selection.feminine_hygiene[2].click
-  home.service_selection.general_waste[2].click
-  home.service_selection.recycled_waste[2].click
-  home.service_selection.cafm[2].click
-  home.service_selection.helpdesk[2].click
-  home.service_selection.management_billable[2].click
+  service_requirements.westminster_building_services.select_all.click
+  service_requirements.westminster_building_services.classified_waste.click
+  service_requirements.westminster_building_services.feminine_hygiene.click
+  service_requirements.westminster_building_services.general_waste.click
+  service_requirements.westminster_building_services.recycled_waste.click
+  service_requirements.westminster_building_services.cafm.click
+  service_requirements.westminster_building_services.helpdesk.click
+  service_requirements.westminster_building_services.management_billable.click
 end
 
 
@@ -655,7 +688,6 @@ And(/^I enter (.+) for lift five$/) do |value|
   home.lift_five.set(value)
 end
 
-
 And(/^I enter (.+) for portable appliance testing$/) do |value|
   home.service_info_volume.portable_appliance.set(value)
 end
@@ -665,39 +697,36 @@ And(/^I enter (.+) for mobile cleaning service two$/) do |value|
 end
 
 And(/^I enter (.+) for portable appliance testing - DA one$/) do |value|
-  home.service_info_volume.portable_appliance_two.set(value)
+  service_requirements.portable_appliance_volume.set(value)
 end
 
 
 And(/^I enter (.+) for cleaning of external areas - DA one$/) do |value|
-  home.service_info_volume.cleaning_external_area.set(value)
+  service_requirements.mobile_cleaning_volume.set(value)
 end
 
 And(/^I enter (.+) for mobile cleaning service - DA one$/) do |value|
-  home.service_info_volume.mobile_cleaning_three.set(value)
+  service_requirements.cleaning_external_area.set(value)
 end
 
 And(/^I enter (.+) for routine cleaning - DA one$/) do |value|
-  home.service_info_volume.routine_cleaning_four.set(value)
+  service_requirements.routine_cleaning_volume.set(value)
 end
-
-
 
 And(/^I enter (.+) for classified waste - DA one$/) do |value|
-  home.service_info_volume.classified_waste.set(value)
+  service_requirements.classified_waste_volume.set(value)
 end
 
-
 And(/^I enter (.+) for feminine hygiene waste - DA one$/) do |value|
-  home.service_info_volume.feminine_hygiene.set(value)
+  service_requirements.feminine_hygiene_volume.set(value)
 end
 
 And(/^I enter (.+) for general waste - DA one$/) do |value|
-  home.service_info_volume.general_waste_four.set(value)
+  service_requirements.general_waste_volume.set(value)
 end
 
 And(/^I enter (.+) for recycled waste - DA one$/) do |value|
-  home.service_info_volume.recycled_waste_two.set(value)
+  service_requirements.recycled_waste_volume.set(value)
 end
 
 Then(/^I select all day service for Monday to Friday$/) do
@@ -755,4 +784,8 @@ end
 
 Then(/^I should see "([^"]*)" as the only available route to market$/) do |market_route|
   expect(home.fc_header.text).to eq(market_route)
+end
+
+And(/^I enter (.+) for number of personnel$/) do |value|
+  service_requirements.number_of_personel.set(value)
 end

@@ -30,8 +30,8 @@ end
 
 
 And(/^I am on "([^"]*)" and "([^"]*)" page$/) do |heading, sub_heading|
-  expect(home.multiple_heading[0].text).to eq(heading)
-  expect(home.multiple_heading[1].text).to eq(sub_heading)
+  expect(home.header_one.text).to end_with(heading)
+  expect(home.header_three.text).to eq(sub_heading)
 end
 
 And(/^I click on the "([^"]*)"$/) do |text|
@@ -41,7 +41,6 @@ end
 And(/^I click on the "([^"]*)" option$/) do |text|
   choose text
 end
-
 
 Then(/^I click to start a new procurement$/) do
   click_on 'Quick search'
@@ -541,7 +540,7 @@ Then(/^I click on save and continue$/) do
 end
 
 Then(/^I am on estimated annual cost page$/) do
-  expect(home.multiple_heading[0].text).to eq("Estimated annual cost")
+  expect(home.header_one.text).to end_with("Estimated annual cost")
 end
 
 Then(/^I select no option for estimated annual cost$/) do
