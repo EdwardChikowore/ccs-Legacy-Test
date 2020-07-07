@@ -18,6 +18,7 @@ class Home < SitePrism::Page
   elements :multiple_heading, 'h1'
   element :ms_c1, 'label', text: 'Mechanical and electrical engineering'
   elements :sign_out_check, 'li > a'
+  element :my_account_title, 'div > span.govuk-caption-l'
 
   section :service_accordion, 'div#procurement-services-accordion' do
     section :section_heading, '[data-sectionname="Maintenance services"]' do

@@ -2,6 +2,11 @@ Given(/^I visit the FM start page$/) do
   home.load
 end
 
+Given(/^I am on your account page$/) do
+  expect(home.my_account_title.text).to eq("Your account")
+end
+
+
 Then("The page should have heading called {string}") do |string|
   page.first("h1.govuk-heading-xl").text.should eq(string)
 end
