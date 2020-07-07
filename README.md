@@ -31,6 +31,11 @@ Command to run all feature test on Chrome-headless
 ```bash
 bundle exec cucumber
 ```
+Command to run all accessibility test on Chrome-headless
+
+```bash
+bundle exec cucumber -p accessibility
+```
 
 Command to run all feature test on Chrome
 
@@ -38,6 +43,11 @@ Command to run all feature test on Chrome
 bundle exec cucumber DRIVER=chrome
 ```
  
+ Command to run all accessibility test on Chrome
+ 
+ ```bash
+ bundle exec cucumber -p accessibility DRIVER=chrome
+ ```
 
 ### Running test on specific environment
 

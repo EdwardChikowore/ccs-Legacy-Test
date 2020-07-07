@@ -14,6 +14,10 @@ Then(/^I click on close all on services page$/) do
   home.open_all.click if ( value == 'Close all sections')
 end
 
+Then(/^I click on close all$/) do
+  value = home.open_all.text
+  home.open_all.click if ( value == 'Close all sections')
+end
 
 Then(/^I click on first region section$/) do
   value = @driver.find_element(home.north_east_section.expanded).text

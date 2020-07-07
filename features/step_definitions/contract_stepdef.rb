@@ -61,6 +61,18 @@ And(/^I click on change address$/) do
   home.change_address.click
 end
 
+And(/^I expand the Invoicing contact details$/) do
+  home.contract_details_value[0].click
+end
+
+And(/^I expand the Authorised representative details$/) do
+  home.contract_details_value[1].click
+end
+
+And(/^I expand the Notices contact details$/) do
+  home.contract_details_value[2].click
+end
+
 And(/^I expand the contact details$/) do
   home.contract_details_value[0].click
 end
@@ -183,6 +195,14 @@ And(/^the following home page content is displayed:$/) do |table|
   table.transpose.raw.flatten.each do |item|
     expect(page).to have_css('#wrapper', text: item)
   end
+end
+
+And(/^I enter duplicate pension name$/) do
+  home.pension_one_name.set('Pension One')
+  home.pension_one_percentage.set(2)
+  click_on "Add another pension fund (98 remaining)"
+  home.pension_input_field[5].set('Pension One')
+  home.pension_input_field[6].set(2)
 end
 
 

@@ -583,10 +583,6 @@ class Home < SitePrism::Page
   element :authorised_contact_details, '[for="facilities_management_procurement_using_buyer_detail_for_authorised_detail_false"]'
   element :notices_contact_details, '[for="facilities_management_procurement_using_buyer_detail_for_notices_detail_false"]'
 
-
-
-
-
   elements :contract_details_value, '[data-module="govuk-details"]'
   element :contract_details_value_one, '[data-module="govuk-details"]'
   elements :review_contract_value, 'summary.govuk-details__summary'
@@ -607,5 +603,12 @@ class Home < SitePrism::Page
 
   element :government_procurement_card, '#facilities_management_procurement_payment_method_card'
 
+  element :pension_one_name, 'input#facilities_management_procurement_procurement_pension_funds_attributes_0_name'
+  element :pension_one_percentage, 'input#facilities_management_procurement_procurement_pension_funds_attributes_0_percentage'
+  element :pension_two_name, 'input#facilities_management_procurement_procurement_pension_funds_attributes_1_name'
+  element :pension_two_percentage, 'input#facilities_management_procurement_procurement_pension_funds_attributes_1_percentage'
+  element :pension_three_name, 'input#facilities_management_procurement_procurement_pension_funds_attributes_2_name'
+  element :pension_three_percentage, 'input#facilities_management_procurement_procurement_pension_funds_attributes_2_percentage'
+  elements :pension_input_field, 'p > input'
 
 end
