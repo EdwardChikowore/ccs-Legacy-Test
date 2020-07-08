@@ -9,7 +9,7 @@ Feature:  Facilities Management - Services - Maintenance - Page Content
 
   Scenario: FM - Services - Maintenance Services - Content
 
-    When I click on "Maintenance services"
+
     Then The following maintenance services are displayed:
       | Mechanical and electrical engineering maintenance   |
       | Ventilation and air conditioning system maintenance |

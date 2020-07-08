@@ -11,7 +11,7 @@ require 'csv'
 require 'json'
 require 'roo'
 require 'nokogiri'
-
+require 'axe/cucumber/step_definitions'
 
 require_relative '../../features/support/pages_helper'
 require_relative '../support/login_helper'
