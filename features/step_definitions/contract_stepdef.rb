@@ -92,21 +92,21 @@ end
 And(/^I expand the Invoicing contact details - review your contract$/) do
   @buyer_details = BUYER_DETAIL['buyer']['name_occupation']
   @contract_details = BUYER_DETAIL['buyer']['contact_details']
-  expect(home.contract_details_value[2].text).to eq(@buyer_details)
+  expect(home.contract_details_value[2].text).to end_with(@buyer_details)
   home.contract_details_value[2].click
-  expect(home.contract_details_value[2].text).to eq(@contract_details)
+  expect(home.contract_details_value[2].text).to end_with(@contract_details)
 end
 
 And(/^I expand the Authorised representative details - review your contract$/) do
-  expect(home.contract_details_value[3].text).to eq(@buyer_details)
+  expect(home.contract_details_value[3].text).to end_with(@buyer_details)
   home.contract_details_value[3].click
-  expect(home.contract_details_value[3].text).to eq(@contract_details)
+  expect(home.contract_details_value[3].text).to end_with(@contract_details)
 end
 
 And(/^I expand the Notices contact details - review your contract$/) do
-  expect(home.contract_details_value[4].text).to eq(@buyer_details)
+  expect(home.contract_details_value[4].text).to end_with(@buyer_details)
   home.contract_details_value[4].click
-  expect(home.contract_details_value[4].text).to eq(@contract_details)
+  expect(home.contract_details_value[4].text).to end_with(@contract_details)
 end
 
 And(/^I should see "([^"]*)" and "([^"]*)" error$/) do |heading, error|

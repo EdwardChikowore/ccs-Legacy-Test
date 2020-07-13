@@ -741,7 +741,6 @@ end
 Then(/^I select not required for Saturday and Sunday$/) do
   home.service_hours.saturday_not_required.click
   home.service_hours.sunday_not_required.click
-  binding.pry
 end
 
 Then(/^I select all day service for Saturday and Sunday$/) do

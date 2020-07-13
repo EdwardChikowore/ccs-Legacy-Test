@@ -44,7 +44,7 @@ Feature: Assessed value Scenario Three - Case Six
     And I click on the "facilities_management_procurement_extensions_required_false" option
     And I click on "Save and continue"
     And I am on "Buildings" page
-    And I select seventh building "London building" with address "Consumers Association Ltd 2 Marylebone Road, London, London, Inner London - West, NW1 4DF"
+    And I select seventh building "London building" with address "2 Marylebone Road, London, Inner London - West, NW1 4DF"
     And I click on "Save and return to detailed search summary"
     And I click on "London building"
     And I am on "Service requirements" page
