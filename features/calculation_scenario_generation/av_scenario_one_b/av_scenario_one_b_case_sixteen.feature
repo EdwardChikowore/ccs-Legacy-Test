@@ -43,7 +43,7 @@ Feature: Assessed value Scenario one B - Case Sixteen
     And I click on the "facilities_management_procurement_extensions_required_false" option
     And I click on "Save and continue"
     And I am on "Buildings" page
-    And I select seventh building "London building" with address "Consumers Association Ltd 2 Marylebone Road, London, London, Inner London - West, NW1 4DF"
+    And I select seventh building "London building" with address "2 Marylebone Road, London, Inner London - West, NW1 4DF"
     And I select twelfth building "Outside London building" with address "10 Kenton Avenue, Manchester, Greater Manchester, M18 7GQ"
     And I click on "Save and return to detailed search summary"
     And I click on "London building"

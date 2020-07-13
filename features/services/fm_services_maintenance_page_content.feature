@@ -8,8 +8,7 @@ Feature:  Facilities Management - Services - Maintenance - Page Content
     And I click on close all on services page
 
   Scenario: FM - Services - Maintenance Services - Content
-
-
+    When I click on "Maintenance services"
     Then The following maintenance services are displayed:
       | Mechanical and electrical engineering maintenance   |
       | Ventilation and air conditioning system maintenance |

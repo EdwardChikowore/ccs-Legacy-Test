@@ -11,18 +11,18 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I click on "Continue"
     And I click on open all
     And I click on select all for North East England
-#    And I click on select all for North West England
-#    And I click on select all for Yorkshire and Humber
-#    And I click on select all for East Midlands
-#    And I click on select all for West Midlands
-#    And I click on select all for East England
-#    And I click on select all for London
-#    And I click on select all for South East England
-#    And I click on select all for South West England
-#    And I click on select all for Wales
-#    And I click on select all for Scotland
-#    And I click on select all for Northern Ireland
-#    And I should see text "73 Regions selected"
+    And I click on select all for North West England
+    And I click on select all for Yorkshire and Humber
+    And I click on select all for East Midlands
+    And I click on select all for West Midlands
+    And I click on select all for East England
+    And I click on select all for London
+    And I click on select all for South East England
+    And I click on select all for South West England
+    And I click on select all for Wales
+    And I click on select all for Scotland
+    And I click on select all for Northern Ireland
+    And I should see text "73 Regions selected"
     And I should see text "2 Regions selected"
     And I click on "Close all"
     And I click on "Continue"
