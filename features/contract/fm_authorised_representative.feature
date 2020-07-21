@@ -53,7 +53,6 @@ Feature: Facilities Management - DA - Contract - Authorised representative
       | Enter a valid postcode, for example SW1A 1AA                                        |
       | Enter a UK telephone number, for example 020 7946 0000                              |
 
-
   Scenario: Contract - Authorise Representative Details Select - Select new authorised representative - Select Address Error message
     When I click on third change link for "Authorised representative details"
     And I am on "Authorised representative details" page
@@ -69,7 +68,6 @@ Feature: Facilities Management - DA - Contract - Authorised representative
     And I click on "Save and return"
     Then I should see the following error messages
       | Select an address from the list or add a missing address |
-
 
   Scenario: Contract - Authorise Representative Details Select - Select new authorised representative - Add Address Error message
     When I click on third change link for "Authorised representative details"
@@ -150,7 +148,6 @@ Feature: Facilities Management - DA - Contract - Authorised representative
     And I expand the contact details
     Then I should see contract details "Auto Test, Test Analyst test@test.com Telephone: 07749228342 Address: 151 Buckingham Palace Road, London SW1W 9SZ" displayed
 
-
   Scenario: - Contract - Authorise Representative Details Select - Select new authorised representative - Add Address manually - Save
     When I click on third change link for "Authorised representative details"
     And I am on "Authorised representative details" page
@@ -174,7 +171,6 @@ Feature: Facilities Management - DA - Contract - Authorised representative
     When I click on "Save and return"
     And I am on "Authorised representative details" page
     Then I should see authorised representative text next to radio button "Auto Test, Test Analyst 112 Strongbow Road, Westminister NW1 4DF Change"
-
 
   Scenario: - Contract - Authorise Representative Details Select - Select new authorised representative - change address - Save
     When I click on third change link for "Authorised representative details"

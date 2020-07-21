@@ -79,23 +79,23 @@ Feature:  FM - Accessibility
 
 
 #  Scenario: FM - Start a new procurement page - Open Services - Maintenance
-    Given I am a logged in user
-    And I click on "Quick search"
-    And I am on the "Select the facilities management services that you need" page
-    When I click on open all
-    And I select all maintenance services
-    And I select all horticultural services
-    And I select all statutory services
-    And I select all catering services
-    And I select all cleaning services
-    And I select all workplace services
-    And I select all reception services
-    And I select all security services
-    And I select all waste services
-    And I select all miscellaneous services
-    And I select all cafm service
-    And I select all helpdesk services
-    Then the page should be accessible
+    # Given I am a logged in user
+    # And I click on "Quick search"
+    # And I am on the "Select the facilities management services that you need" page
+    # When I click on open all
+    # And I select all maintenance services
+    # And I select all horticultural services
+    # And I select all statutory services
+    # And I select all catering services
+    # And I select all cleaning services
+    # And I select all workplace services
+    # And I select all reception services
+    # And I select all security services
+    # And I select all waste services
+    # And I select all miscellaneous services
+    # And I select all cafm service
+    # And I select all helpdesk services
+    # Then the page should be accessible
 
   Scenario: FM - Start a new procurement page - Region 1
     Given I am a logged in user
