@@ -23,7 +23,6 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I click on select all for Scotland
     And I click on select all for Northern Ireland
     And I should see text "73 Regions selected"
-    And I should see text "2 Regions selected"
     And I click on "Close all"
     And I click on "Continue"
     And I am on "Results" page

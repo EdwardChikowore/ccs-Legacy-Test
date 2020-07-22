@@ -72,14 +72,12 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
       | Select an invoicing contact                                                                                 |
       | Enter a new invoicing contact                                                                               |
 
-
   Scenario: Invoicing Contact Details Select - Error message
     When I click on the second question for "Invoicing contact details"
     And I am on "Invoicing contact details" page
     And I should see text next to radio button "Enter a new invoicing contact"
     And I click on "Continue"
     Then I should see "There is a problem" and "Select one option" error
-
 
   Scenario: Contract - Invoicing Contact Details Details Select - Select new invoicing contact
     When I click on the second question for "Invoicing contact details"
@@ -88,7 +86,6 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
     When I click on "Continue"
     And I am on "Contract details" page
     Then I should see the invoicing contract details "Automation Test, Test Analyst" displayed
-
 
   Scenario: Contract - Invoicing contact Details Select - New invoicing contact details - Error messages
     When I click on the second question for "Invoicing contact details"
@@ -118,7 +115,6 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
     And I click on "Save and return"
     Then I should see the following error messages
       | Select an address from the list or add a missing address |
-
 
  Scenario: Contract - Invoicing Contact Details Select - Select new invoicing contact - Add Address Error message
    When I click on the second question for "Invoicing contact details"
@@ -219,8 +215,6 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
     When I click on "Save and return"
     And I am on "Invoicing contact details" page
     Then I should see new invoicing contact details to radio button "Auto Test, Test Analyst 112 Strongbow Road, Westminister NW1 4DF Change"
-
-
 
   Scenario: - Contract - Invoicing Contact Details Select - Select new invoicing contact - change address - Save
     When I click on the second question for "Invoicing contact details"
