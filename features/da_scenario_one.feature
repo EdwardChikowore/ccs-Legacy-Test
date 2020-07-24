@@ -5,7 +5,7 @@ Feature: Direct Award scenario One
 
   Scenario Outline: Direct Award Scenario One - TUPE, CAFM, Helpdesk, Management
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Fire detection and firefighting systems maintenance"
@@ -65,8 +65,8 @@ Feature: Direct Award scenario One
 #    And I should see my selection in the region basket
     And I click on "Continue"
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I am on "Detailed search summary" page
     And I click to answer estimated annual cost question
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
@@ -121,7 +121,6 @@ Feature: Direct Award scenario One
     And I click on "Belfast Building"
     And I click on "Answer question"
     And I enter 9 for portable appliance testing - DA one
-    And I enter 9 for cleaning of external areas - DA one
     And I enter 9 for mobile cleaning service - DA one
     And I click on "Save and return to service requirements"
     And I click on "Answer question"

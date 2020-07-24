@@ -19,7 +19,7 @@ Feature:  FM - Accessibility
   Scenario: FM - Start a new procurement page
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    When I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     Then the page should be accessible
 
@@ -80,7 +80,7 @@ Feature:  FM - Accessibility
 
 #  Scenario: FM - Start a new procurement page - Open Services - Maintenance
     # Given I am a logged in user
-    # And I click on "Quick search"
+    # When I click on "Quick view suppliers"
     # And I am on the "Select the facilities management services that you need" page
     # When I click on open all
     # And I select all maintenance services
@@ -100,7 +100,7 @@ Feature:  FM - Accessibility
   Scenario: FM - Start a new procurement page - Region 1
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
@@ -123,7 +123,7 @@ Feature:  FM - Accessibility
 
   Scenario: FM - Start a new procurement page - Search Result
     Given I am a logged in user
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
@@ -131,12 +131,12 @@ Feature:  FM - Accessibility
     And I click on open all
     And I click on the "Tees Valley and Durham"
     And I click on "Continue"
-    And I am on "Results" page
+    And I am on "Quick view results" page
     Then the page should be accessible
 
   Scenario: FM - Start a new procurement page - Search Result Saved
     Given I am a logged in user
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
@@ -144,15 +144,15 @@ Feature:  FM - Accessibility
     And I click on open all
     And I click on the "Tees Valley and Durham"
     And I click on "Continue"
-    And I am on "Results" page
-    And I am on "Results" page
+    And I am on "Quick view results" page
+    And I am on "Quick view results" page
     And I add contract name
     And I click on "Save and continue"
     Then the page should be accessible
 
   Scenario: FM - Start a new procurement page - Detailed Search Summary
     Given I am a logged in user
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
@@ -160,16 +160,16 @@ Feature:  FM - Accessibility
     And I click on open all
     And I click on the "Tees Valley and Durham"
     And I click on "Continue"
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I am on "Detailed search summary" page
     Then the page should be accessible
 
   Scenario: FM - Start a new procurement page - Contract Name page
     Given I am a logged in user
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
@@ -177,10 +177,10 @@ Feature:  FM - Accessibility
     And I click on open all
     And I click on the "Tees Valley and Durham"
     And I click on "Continue"
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I am on "Detailed search summary" page
     And I click on "Change"
     And I am on "Contract name" page
@@ -188,7 +188,7 @@ Feature:  FM - Accessibility
 
   Scenario: FM - Start a new procurement page - Estimated Annual Cost
     Given I am a logged in user
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
@@ -196,10 +196,10 @@ Feature:  FM - Accessibility
     And I click on open all
     And I click on the "Tees Valley and Durham"
     And I click on "Continue"
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I am on "Detailed search summary" page
     And I click to answer estimated annual cost question
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
@@ -207,7 +207,7 @@ Feature:  FM - Accessibility
 
   Scenario: FM - Start a new procurement page - TUPE
     Given I am a logged in user
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
@@ -215,10 +215,10 @@ Feature:  FM - Accessibility
     And I click on open all
     And I click on the "Tees Valley and Durham"
     And I click on "Continue"
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I am on "Detailed search summary" page
     And I click to answer TUPE question
     And I am on "TUPE" page
@@ -227,7 +227,7 @@ Feature:  FM - Accessibility
 
   Scenario: FM - Start a new procurement page - Contract Period
     Given I am a logged in user
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
@@ -235,10 +235,10 @@ Feature:  FM - Accessibility
     And I click on open all
     And I click on the "Tees Valley and Durham"
     And I click on "Continue"
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I am on "Detailed search summary" page
     And I click to answer contract date question
     And I am on "Contract period" page
@@ -246,7 +246,7 @@ Feature:  FM - Accessibility
 
   Scenario: FM - Buildings page
     Given I am a logged in user
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
@@ -254,10 +254,10 @@ Feature:  FM - Accessibility
     And I click on open all
     And I click on the "Tees Valley and Durham"
     And I click on "Continue"
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I am on "Detailed search summary" page
     And I click to answer building question
     And I am on "Buildings" page
@@ -265,7 +265,7 @@ Feature:  FM - Accessibility
 
   Scenario: FM - Buildings page - More Buildings
     Given I am a logged in user
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
@@ -273,10 +273,10 @@ Feature:  FM - Accessibility
     And I click on open all
     And I click on the "Tees Valley and Durham"
     And I click on "Continue"
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I am on "Detailed search summary" page
     And I click to answer building question
     And I am on "Buildings" page
@@ -285,7 +285,7 @@ Feature:  FM - Accessibility
 
   Scenario: FM - Buildings page - More Buildings - Select Building
     Given I am a logged in user
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
@@ -293,10 +293,10 @@ Feature:  FM - Accessibility
     And I click on open all
     And I click on the "Tees Valley and Durham"
     And I click on "Continue"
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I am on "Detailed search summary" page
     And I click to answer building question
     And I am on "Buildings" page
@@ -306,12 +306,12 @@ Feature:  FM - Accessibility
   Scenario: FM - Detailed Search - Select services
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I am on contract period page
     And I am enter values for initial call-off period
@@ -327,12 +327,12 @@ Feature:  FM - Accessibility
   Scenario: FM - Detailed Search - Select services - Save and Continue
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I am on contract period page
     And I am enter values for initial call-off period
@@ -350,13 +350,13 @@ Feature:  FM - Accessibility
   Scenario: FM - Detailed Search - Service Information
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     When I click change on building name on detailed search summary
@@ -366,33 +366,33 @@ Feature:  FM - Accessibility
   Scenario: FM - Detailed Search - Results page
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question
-    And I am on "Results" page
+    And I am on "Quick view results" page
     Then the page should be accessible
 
   Scenario: FM - Detailed Search - Results 2
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I click on the Direct award route to market
     And I click on "Continue"
     Then the page should be accessible
@@ -400,7 +400,7 @@ Feature:  FM - Accessibility
   Scenario: FM - Contract Value
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
@@ -408,7 +408,7 @@ Feature:  FM - Accessibility
     And I click on the "Management of billable works "
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question

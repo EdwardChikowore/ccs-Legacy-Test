@@ -3,12 +3,12 @@ Feature:Facilities Management - DA - Contract - Review contract
   Background: Login page
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question

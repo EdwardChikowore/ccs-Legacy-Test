@@ -5,7 +5,7 @@ Feature: Direct Award scenario One
 
   Scenario: FM start Page
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Fire detection and firefighting systems maintenance"
@@ -19,7 +19,7 @@ Feature: Direct Award scenario One
     And I click on the "Standby power system maintenance"
     And I click on the "Ventilation and air conditioning system maintenance"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I click change on building name on detailed search summary

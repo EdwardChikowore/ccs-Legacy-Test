@@ -3,7 +3,7 @@ Feature: Assessed value Scenario A - Case Five
   Background: Login page
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
@@ -22,8 +22,8 @@ Feature: Assessed value Scenario A - Case Five
     And I click on "Close all"
     And I click on "Continue"
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I am on "Detailed search summary" page
     And I click to answer estimated annual cost question
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
