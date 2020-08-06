@@ -56,3 +56,11 @@ bundle exec cucumber TEST_ENV=preview
 ```
 
 Config for the different test environments is stored in config/environment.yml
+
+### Branch structure
+These tests are to be used mainly in two environments, CMPDEV and marketplace-preview.
+
+As these can become out of sync, there are two branchs that should be used to run and update the tests.
+
+- `master` should be kept up to date with the code deployed onto CMPDEV
+- `preview-test` should be kept up to date with the code deployed onto marketplace-preview

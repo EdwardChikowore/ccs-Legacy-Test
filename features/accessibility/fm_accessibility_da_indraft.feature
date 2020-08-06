@@ -4,17 +4,17 @@ Feature:  FM - Accessibility DA In Draft
   Scenario: FM - Detailed Search - Direct award pricing
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I click on the Direct award route to market
     And I click on "Continue"
     And I am on "Direct award pricing" page
@@ -23,17 +23,17 @@ Feature:  FM - Accessibility DA In Draft
   Scenario: FM - Detailed Search - What happens next
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I click on the Direct award route to market
     And I click on "Continue"
     And I am on "Direct award pricing" page
@@ -45,17 +45,17 @@ Feature:  FM - Accessibility DA In Draft
   Scenario: FM - Detailed Search - What happens next
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I click on the Direct award route to market
     And I click on "Continue"
     And I am on "Direct award pricing" page
@@ -69,17 +69,17 @@ Feature:  FM - Accessibility DA In Draft
   Scenario: FM - Detailed Search - Contract page
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I click on the Direct award route to market
     And I click on "Continue"
     And I am on "Direct award pricing" page
@@ -93,17 +93,17 @@ Feature:  FM - Accessibility DA In Draft
   Scenario: FM - Detailed Search - Payment method
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I click on the Direct award route to market
     And I click on "Continue"
     And I am on "Direct award pricing" page
@@ -120,17 +120,17 @@ Feature:  FM - Accessibility DA In Draft
   Scenario: FM - Detailed Search - Invoicing contact details
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I click on the Direct award route to market
     And I click on "Continue"
     And I am on "Direct award pricing" page
@@ -147,17 +147,17 @@ Feature:  FM - Accessibility DA In Draft
   Scenario: FM - Detailed Search - Authorised representative details
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I click on the Direct award route to market
     And I click on "Continue"
     And I am on "Direct award pricing" page
@@ -175,17 +175,17 @@ Feature:  FM - Accessibility DA In Draft
   Scenario: FM - Detailed Search - New authorised representative details
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I click on the Direct award route to market
     And I click on "Continue"
     And I am on "Direct award pricing" page
@@ -205,17 +205,17 @@ Feature:  FM - Accessibility DA In Draft
   Scenario: FM - Detailed Search - New authorised representative details - Find address
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I click on the Direct award route to market
     And I click on "Continue"
     And I am on "Direct award pricing" page
@@ -239,17 +239,17 @@ Feature:  FM - Accessibility DA In Draft
   Scenario: FM - Detailed Search - New authorised representative details - Add address
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I click on the Direct award route to market
     And I click on "Continue"
     And I am on "Direct award pricing" page
@@ -273,17 +273,17 @@ Feature:  FM - Accessibility DA In Draft
   Scenario: FM - Detailed Search - Notices contact details
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I click on the Direct award route to market
     And I click on "Continue"
     And I am on "Direct award pricing" page
@@ -301,17 +301,17 @@ Feature:  FM - Accessibility DA In Draft
   Scenario: FM - Detailed Search - Security policy document - Option Yes - Error messages
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I click on the Direct award route to market
     And I click on "Continue"
     And I am on "Direct award pricing" page
@@ -330,17 +330,17 @@ Feature:  FM - Accessibility DA In Draft
   Scenario: FM - Detailed Search - Local Government Pension Scheme
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I click on the Direct award route to market
     And I click on "Continue"
     And I am on "Direct award pricing" page
@@ -357,17 +357,17 @@ Feature:  FM - Accessibility DA In Draft
   Scenario: FM - Detailed Search - Local Government Pension Scheme - Yes
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I click on the Direct award route to market
     And I click on "Continue"
     And I am on "Direct award pricing" page
@@ -386,17 +386,17 @@ Feature:  FM - Accessibility DA In Draft
   Scenario: FM - Detailed Search - Local Government Pension Scheme - Yes - 5 Empty
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I click on the Direct award route to market
     And I click on "Continue"
     And I am on "Direct award pricing" page
@@ -514,17 +514,17 @@ Feature:  FM - Accessibility DA In Draft
   Scenario: FM - Detailed Search - Local Government Pension Scheme - Yes - Duplicates
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I click on the Direct award route to market
     And I click on "Continue"
     And I am on "Direct award pricing" page
@@ -543,17 +543,17 @@ Feature:  FM - Accessibility DA In Draft
   Scenario: FM - Detailed Search - Contract details
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     When I am on detailed search page
-    And I click on "Save and continue"
+    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question
-    And I am on "Results" page
+    And I am on "Quick view results" page
     And I click on the Direct award route to market
     And I click on "Continue"
     And I am on "Direct award pricing" page

@@ -3,7 +3,7 @@ Feature: Facilities Management - Search Results - Search - Create
   Background:
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I select all maintenance services
@@ -26,7 +26,7 @@ Feature: Facilities Management - Search Results - Search - Create
 
   Scenario: FM - Results - General Content
 
-    Then I am on "Results" page
+    Then I am on "Quick view results" page
     And The following is displayed on quick search filter section:
       | Region                  |
       | 73 selected             |
@@ -35,8 +35,8 @@ Feature: Facilities Management - Search Results - Search - Create
 
 
   Scenario: FM - Results - General Content
-    Then I am on "Results" page
-    And The following is displayed on quick search results:
+    Then I am on "Quick view results" page
+    And The following is displayed on Quick view results:
       | Total contract value    |
       | up to                   |
       | £7m                     |
@@ -53,7 +53,7 @@ Feature: Facilities Management - Search Results - Search - Create
 
   Scenario: FM - Results - Regions
 
-    Then I am on "Results" page
+    Then I am on "Quick view results" page
     And The following is displayed on quick search filter section:
       | Tees Valley and Durham                                                                                            |
       | Northumberland and Tyne and Wear                                                                                  |
@@ -133,7 +133,7 @@ Feature: Facilities Management - Search Results - Search - Create
 
   Scenario: FM - Results - Services
 
-    Then I am on "Results" page
+    Then I am on "Quick view results" page
     And The following is displayed on quick search filter section:
       | Airport and aerodrome maintenance services          |
       | Audio visual (AV) equipment maintenance             |

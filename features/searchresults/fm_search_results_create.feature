@@ -3,7 +3,7 @@ Feature: Facilities Management - Search Results - Search - Create
   Background:
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
@@ -27,11 +27,11 @@ Feature: Facilities Management - Search Results - Search - Create
   Scenario: FM - Search Results - Create Search - Save your search
     And I add contract name
     And I click on "Save and continue"
-    And I am on the "Continue to procurement" page
-    And I click on "Save for later"
+    And I am on "Quick view results" page
+    And I click on "Return to procurements dashboard"
     Then I am on the "Procurements dashboard"
 
   Scenario: FM - Search Results - Create Search - Save your search
     And I add contract name
-    And I click on "Save for later"
+    And I click on "Save and return to procurements dashboard"
     Then I am on the "Procurements dashboard"

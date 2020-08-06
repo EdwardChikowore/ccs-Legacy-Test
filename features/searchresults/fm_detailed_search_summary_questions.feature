@@ -3,7 +3,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
   Background:
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
@@ -25,12 +25,12 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I should see text "73 Regions selected"
     And I click on "Close all"
     And I click on "Continue"
-    And I am on "Results" page
+    And I am on "Quick view results" page
 
   Scenario: FM - Detailed Search Summary - Save your Search journey - Question link - Contract Name
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I click on "Change"
     And I am on "Contract name" page
     And I change contract name
@@ -40,8 +40,8 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
 
   Scenario: FM - Detailed Search Summary - Save your Search journey - Question link - Estimated Annual Cost - No selection error
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I click to answer estimated annual cost question
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on "Save and return to detailed search"
@@ -57,8 +57,8 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
 
   Scenario: FM - Detailed Search Summary - Save your Search journey - Question link - Estimated Annual Cost - Yes - No input
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I click to answer estimated annual cost question
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option
@@ -74,8 +74,8 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
 
   Scenario: FM - Detailed Search Summary - Save your Search journey - Question link - Estimated Annual Cost - Yes - exceeds maximum input
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I click to answer estimated annual cost question
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option
@@ -90,8 +90,8 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
 
   Scenario: FM - Detailed Search Summary - Save your Search journey - Question link - Estimated Annual Cost - error message
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I click to answer estimated annual cost question
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option
@@ -102,8 +102,8 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
 
   Scenario: FM - Detailed Search Summary - Save your Search journey - Question link - Estimated Annual Cost
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I click to answer estimated annual cost question
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option
@@ -114,8 +114,8 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
 
   Scenario: FM - Detailed Search Summary - Save your Search journey - Question link - TUPE - Yes
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I click to answer TUPE question
     And I am on "TUPE" page
     And I click on the "facilities_management_procurement_tupe_true" option
@@ -125,8 +125,8 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
 
   Scenario: FM - Detailed Search Summary - Save your Search journey - Question link - TUPE - Error message
     When I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I click to answer TUPE question
     Then I am on "TUPE" page
     When I click on "Save and continue"
@@ -140,8 +140,8 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
 
   Scenario: FM - Detailed Search Summary - Save your Search journey - Question link - TUPE - No
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I click to answer TUPE question
     And I am on "TUPE" page
     And I click on the "facilities_management_procurement_tupe_false" option
@@ -151,8 +151,8 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
 
   Scenario Outline: Scenario: FM - Detailed Search Summary - Save your Search journey - Question link - Contract period
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I am on "Detailed search summary" page
     And I click to answer contract date question
     And I am on "Contract period" page
@@ -173,8 +173,8 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
 
   Scenario: FM - Detailed Search Summary - Save your Search journey - Question link - Select buildings
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I click to answer building question
     And I am on "Buildings" page
     And I select first building
@@ -188,7 +188,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
 
   Scenario: FM - Detailed Search Summary - Save for later journey - Questions
     And I add contract name
-    And I click on "Save and continue"
-    And I click on "Save and continue"
+    And I click on "Save and continue to procurement"
+    And I click on "Continue to procurement"
     And I click on "Return to procurements dashboard"
     And I am on "Procurements dashboard" page

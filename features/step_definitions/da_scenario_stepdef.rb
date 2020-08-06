@@ -706,11 +706,11 @@ end
 
 
 And(/^I enter (.+) for cleaning of external areas - DA one$/) do |value|
-  service_requirements.mobile_cleaning_volume.set(value)
+  service_requirements.cleaning_external_area.set(value)
 end
 
 And(/^I enter (.+) for mobile cleaning service - DA one$/) do |value|
-  service_requirements.cleaning_external_area.set(value)
+  service_requirements.mobile_cleaning_volume.set(value)
 end
 
 And(/^I enter (.+) for routine cleaning - DA one$/) do |value|
