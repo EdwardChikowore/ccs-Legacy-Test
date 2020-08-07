@@ -14,7 +14,7 @@ class Home < SitePrism::Page
   element :header_one, 'h1'
   element :header_three, 'legend'
   elements :header_multiple, 'h2'
-  element :fc_header, 'h5'''
+  element :fc_header, 'h5'
   elements :multiple_heading, 'h1'
   element :ms_c1, 'label', text: 'Mechanical and electrical engineering'
   elements :sign_out_check, 'li > a'

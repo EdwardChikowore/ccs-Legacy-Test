@@ -4,4 +4,6 @@ class DetailedSummary < SitePrism::Page
 
   elements :change_link, 'td > a'
 
+  elements :procurement_name, 'div > span'
+
 end

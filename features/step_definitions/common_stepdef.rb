@@ -2,6 +2,11 @@ Given(/^I visit the FM start page$/) do
   home.load
 end
 
+Given(/^I visit the accessibility page$/) do
+  visit ''
+end
+
+
 Given(/^I am on your account page$/) do
   expect(home.my_account_title.text).to eq("Your account")
 end
@@ -124,7 +129,7 @@ Then(/^I change contract name$/) do
 end
 
 And(/^I contract name should include "([^"]*)"$/) do |value|
-    expect(detailed_summary.value[0].text).to start_with(@name_change)
+    expect(detailed_summary.procurement_name[1].text).to start_with(@name_change)
 end
 
 
@@ -162,7 +167,7 @@ Then(/^I click to answer building question$/) do
 end
 
 Then(/^I click to answer services question$/) do
-  home.answer_question[5].click
+  home.answer_question[1].click
 end
 
 Then(/^I select yes$/) do
@@ -625,6 +630,10 @@ Then(/^I click on save and return to detailed search summary$/) do
   click_on 'Save and return to detailed search summary'
 end
 
+Then(/^I click on estimated annual cost$/) do
+  click_on 'Estimated annual cost'
+end
+
 Then(/^I am on detailed search page$/) do
   step "I click on continue"
   step "I click on open all"
@@ -632,6 +641,8 @@ Then(/^I am on detailed search page$/) do
   step "I click on continue"
   step "I add contract name"
   step "I click on save and continue"
+  step "I click on continue"
+  step "I click on estimated annual cost"
 end
 
 Then(/^I click change on building section$/) do
