@@ -22,14 +22,13 @@ Feature: Facilities Management - Search Results - Search - Create
     And I click on select all for Scotland
     And I click on select all for Northern Ireland
     And I should see text "73 Regions selected"
+    And I click on open all
     And I click on "Continue"
 
   Scenario: FM - Search Results - Create Search - Save your search
     And I add contract name
-    And I click on "Save and continue"
-    And I am on "Quick view results" page
-    And I click on "Return to procurements dashboard"
-    Then I am on the "Procurements dashboard"
+    And I click on "Save and continue to procurement"
+    And I am on "What happens next" page
 
   Scenario: FM - Search Results - Create Search - Save your search
     And I add contract name

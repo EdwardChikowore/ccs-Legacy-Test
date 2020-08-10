@@ -11,14 +11,13 @@ Feature:  Facilities Management - Home Page Content
       | Quick view suppliers                                                                                                |
       | Quickly view suppliers who can provide services to your locations                                                   |
       | Start a procurement                                                                                                 |
-      | Start a new procurement to find a suitable supplier, and progress through to contract award or further competition  |
+      | See shortlisted suppliers, estimated contract costs, and explore direct award or further competition options        |
       | Continue a procurement                                                                                              |
       | Open your procurements dashboard to view and continue existing saved procurements                                   |
       | Manage my buildings                                                                                                 |
-      | Set up and manage your buildings that can be used in procurements                                                   |
+      | Set up and manage your buildings for use in procurements                                                            |
       | Manage my account                                                                                                   |
-      | Set up and manage your buildings that can be used in procurements                                                   |
-      | Set up and manage your buildings that can be used in procurements                                                   |
+      | Update and edit your contact details                                                                                 |
 
 
   Scenario: FM - Procurements - Link - Quick search - Page Content

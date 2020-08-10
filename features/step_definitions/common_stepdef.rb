@@ -2,6 +2,11 @@ Given(/^I visit the FM start page$/) do
   home.load
 end
 
+Given(/^I visit the accessibility page$/) do
+  visit ''
+end
+
+
 Given(/^I am on your account page$/) do
   expect(home.my_account_title.text).to eq("Your account")
 end
@@ -124,7 +129,7 @@ Then(/^I change contract name$/) do
 end
 
 And(/^I contract name should include "([^"]*)"$/) do |value|
-    expect(detailed_summary.value[0].text).to start_with(@name_change)
+    expect(detailed_summary.procurement_name[1].text).to start_with(@name_change)
 end
 
 
@@ -158,11 +163,11 @@ Then(/^I click to answer contract date question$/) do
 end
 
 Then(/^I click to answer building question$/) do
-  home.answer_question[4].click
+  home.answer_question[2].click
 end
 
 Then(/^I click to answer services question$/) do
-  home.answer_question[5].click
+  home.answer_question[1].click
 end
 
 Then(/^I select yes$/) do
@@ -589,7 +594,7 @@ Then(/^I click on save and return to detailed search$/) do
 end
 
 Then(/^I click change on building name on detailed search summary$/) do
-  home.answer_question[6].click
+  home.answer_question[2].click
 end
 
 And(/^I am on service requirements page$/) do
@@ -625,6 +630,10 @@ Then(/^I click on save and return to detailed search summary$/) do
   click_on 'Save and return to detailed search summary'
 end
 
+Then(/^I click on estimated annual cost$/) do
+  click_on 'Estimated annual cost'
+end
+
 Then(/^I am on detailed search page$/) do
   step "I click on continue"
   step "I click on open all"
@@ -632,6 +641,7 @@ Then(/^I am on detailed search page$/) do
   step "I click on continue"
   step "I add contract name"
   step "I click on save and continue"
+  step "I click on continue"
 end
 
 Then(/^I click change on building section$/) do
@@ -640,7 +650,7 @@ end
 
 
 Then(/^I answer about the contract question$/) do
-  step "I click to answer estimated annual cost question"
+  step "I click on estimated annual cost"
   step "I am on estimated annual cost page"
   step "I select no option for estimated annual cost"
   step "I click on save and continue"
@@ -659,10 +669,7 @@ Then(/^I answer contract period question/) do
 end
 
 Then(/^I answer services question/) do
-  # step "I am on building services selection page"
-  # step "I select all services"
-  # step "I click on save and return to detailed search"
-  step "I click change on building name on detailed search summary"
+  step "I click to answer building question"
   step "I am on service requirements page"
   step "I click on answer question"
   step "I am on planned maintenance service page"

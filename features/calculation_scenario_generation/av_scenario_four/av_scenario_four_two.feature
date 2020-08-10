@@ -13,21 +13,9 @@ Feature: Assessed value Scenario Four Case two 2-  No CP,CAFM, Helpdesk TUPE
     And I click on the "General waste"
     And I click on "Close all"
 
-#    And I click on the "CAFM system"
-#    And I click on the "Helpdesk services"
-#    And I click on the "Management of billable works"
-
   Scenario Outline: Scenario 2-  No CP,CAFM, Helpdesk TUPE
-    And I click on "Continue"
-    And I click on open all
-    And I click on the "Tees Valley and Durham"
-    And I click on "Close all"
-    And I click on "Continue"
-    And I add contract name
-    And I click on "Save and continue to procurement"
-    And I click on "Continue to procurement"
-    And I am on "Detailed search summary" page
-    And I click to answer estimated annual cost question
+    When I am on detailed search page
+    And I click on "Estimated annual cost"
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_false" option
     And I click on "Save and continue"
@@ -66,6 +54,7 @@ Feature: Assessed value Scenario Four Case two 2-  No CP,CAFM, Helpdesk TUPE
     And I select not required for Saturday and Sunday
     And I click on "Save and return to service requirements"
     And I click on "Back to detailed search summary"
+    When I am on "Procurement summary" page
     And I click on "Continue"
     And I should see the price displayed £5,021,853.62
 

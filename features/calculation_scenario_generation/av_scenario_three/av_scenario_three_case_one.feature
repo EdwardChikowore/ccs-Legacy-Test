@@ -11,18 +11,9 @@ Feature: Assessed value Scenario Three - Case One
     And I click on the "Management of billable works "
     And I click on "Close all"
 
-
   Scenario Outline: 1-  No CP,CAFM, Helpdesk TUPE - Lot 1A
-    And I click on "Continue"
-    And I click on open all
-    And I click on the "Tees Valley and Durham"
-    And I click on "Close all"
-    And I click on "Continue"
-    And I add contract name
-    And I click on "Save and continue to procurement"
-    And I click on "Continue to procurement"
-    And I am on "Detailed search summary" page
-    And I click to answer estimated annual cost question
+    When I am on detailed search page
+    And I click on "Estimated annual cost"
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_false" option
     And I click on "Save and continue"
@@ -48,6 +39,7 @@ Feature: Assessed value Scenario Three - Case One
     And I select standard A for first service
     And I click on "Save and return to service requirements"
     And I click on "Back to detailed search summary"
+    When I am on "Procurement summary" page
     And I click on "Continue"
     And I should see the "Estimated contract cost" page
     And I should see the partial price value £289,869

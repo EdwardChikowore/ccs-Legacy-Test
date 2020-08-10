@@ -18,11 +18,9 @@ Feature: Assessed value Scenario Four Case five
       |CAFM system                                        |
       |Helpdesk services                                  |
 
-
   Scenario Outline: Scenario 5-  CAFM, TUPE, No CP
     When I am on detailed search page
-    And I click on "Continue to procurement"
-    And I click to answer estimated annual cost question
+    And I click on "Estimated annual cost"
     When I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_false" option
     And I click on "Save and continue"
@@ -91,7 +89,7 @@ Feature: Assessed value Scenario Four Case five
     And I select not required for Tuesday to Sunday
     And I click on "Save and return to service requirements"
     And I click on "Back to detailed search summary"
-    When I am on "Detailed search summary" page
+    When I am on "Procurement summary" page
     And I click on "Continue"
     Then I should see the price displayed £10,261,175.01
     And I should see "Further competition" as the only available route to market

@@ -19,7 +19,6 @@ Feature: Direct Award scenario One
     And I click on the "Standby power system maintenance"
     And I click on the "Ventilation and air conditioning system maintenance"
     When I am on detailed search page
-    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I click change on building name on detailed search summary
