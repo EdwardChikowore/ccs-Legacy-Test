@@ -10,6 +10,5 @@ marketplace:
   host: https://marketplace.preview.crowncommercial.gov.uk/facilities-management
   account_username: oluwatoyin.otaiku@crowncommercial.gov.uk
   account_password: Test12345!
-accessibility:
-  host: https://alphagov.github.io/accessibility-tool-audit/test-cases.html
+
 

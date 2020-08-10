@@ -9,56 +9,7 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
-#    And I click on "Continue"
-#    And I click on open all
-#    And I click on the "Tees Valley and Durham"
-#    And I click on "Close all"
-#    And I click on "Continue"
-#    And I add contract name
-#    And I click on "Save and continue"
-#    And I click on "Save and continue"
-#    And I am on "Detailed search summary" page
-#    And I click to answer estimated annual cost question
-#    And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
-#    And I click on the "facilities_management_procurement_estimated_cost_known_false" option
-#    And I click on "Save and continue"
-#    And I am on "TUPE" page
-#    And I click on the "facilities_management_procurement_tupe_true" option
-#    And I click on "Save and continue"
-#    And I am on "Contract period" page
-#    And I enter the number of year as "2"
-#    And I enter the day as "12"
-#    And I enter the month as "12"
-#    And I enter the year as "2021"
-#    And I click on the "facilities_management_procurement_mobilisation_period_required_true" option
-#    And I enter the mobilisation period for 5 weeks
-#    And I click on the "facilities_management_procurement_extensions_required_false" option
-#    And I click on "Save and continue"
-#    And I am on "Buildings" page
-#    And I select twelfth building "Outside London building" with address "10 Kenton Avenue, Manchester, Greater Manchester, M18 7GQ"
-#    And I click on "Save and continue"
-#    And I am on "Which facilities management services do you need for each building?" page
-#    And I select all services
-#    And I click on "Save and return to detailed search summary"
-#    And I click on "Outside London building"
-#    And I am on "Service requirements" page
-#    And The building gia is 63200
-#    And I click on "Answer question"
-#    And I am on "Planned maintenance (PPM) services standards" page
-#    And I select standard A for "Mechanical and electrical engineering maintenance"
-#    And I click on "Save and return to service requirements"
-#    And I click on "Back to detailed search summary"
-#    And I click on "Continue"
-#    And I click on the Direct award route to market
-#    And I click on "Continue"
-#    And I click on "Continue to direct award"
-#    And I click on "Continue to direct award"
-#    And I click on "Continue"
-#    And I am on "Contract details" page
-
-
     When I am on detailed search page
-    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question

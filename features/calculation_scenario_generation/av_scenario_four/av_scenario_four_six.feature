@@ -21,16 +21,8 @@ Feature: Assessed value Scenario Four Case Six - 6-  CAFM, TUPE, No CP
 
 
   Scenario Outline: Scenario 6-  CAFM, TUPE, No CP
-    And I click on "Continue"
-    And I click on open all
-    And I click on the "Tees Valley and Durham"
-    And I click on "Close all"
-    And I click on "Continue"
-    And I add contract name
-    And I click on "Save and continue to procurement"
-    And I click on "Continue to procurement"
-    And I am on "Detailed search summary" page
-    And I click to answer estimated annual cost question
+    When I am on detailed search page
+    And I click on "Estimated annual cost"
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_false" option
     And I click on "Save and continue"
@@ -96,6 +88,7 @@ Feature: Assessed value Scenario Four Case Six - 6-  CAFM, TUPE, No CP
     And I select all day service for Saturday and Sunday
     And I click on "Save and return to service requirements"
     And I click on "Back to detailed search summary"
+    When I am on "Procurement summary" page
     And I click on "Continue"
     And I should see the price displayed £58,608,378.67
     And I should see "Further competition" as the only available route to market

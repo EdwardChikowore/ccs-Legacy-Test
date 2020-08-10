@@ -8,7 +8,6 @@ Feature:Facilities Management - DA - Contract - Review contract
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     When I am on detailed search page
-    And I click on "Continue to procurement"
     And I answer about the contract question
     And I answer contract period question
     And I answer services question

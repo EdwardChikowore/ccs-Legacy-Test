@@ -163,7 +163,7 @@ Then(/^I click to answer contract date question$/) do
 end
 
 Then(/^I click to answer building question$/) do
-  home.answer_question[4].click
+  home.answer_question[2].click
 end
 
 Then(/^I click to answer services question$/) do
@@ -594,7 +594,7 @@ Then(/^I click on save and return to detailed search$/) do
 end
 
 Then(/^I click change on building name on detailed search summary$/) do
-  home.answer_question[6].click
+  home.answer_question[2].click
 end
 
 And(/^I am on service requirements page$/) do
@@ -642,7 +642,6 @@ Then(/^I am on detailed search page$/) do
   step "I add contract name"
   step "I click on save and continue"
   step "I click on continue"
-  step "I click on estimated annual cost"
 end
 
 Then(/^I click change on building section$/) do
@@ -651,7 +650,7 @@ end
 
 
 Then(/^I answer about the contract question$/) do
-  step "I click to answer estimated annual cost question"
+  step "I click on estimated annual cost"
   step "I am on estimated annual cost page"
   step "I select no option for estimated annual cost"
   step "I click on save and continue"
@@ -670,10 +669,7 @@ Then(/^I answer contract period question/) do
 end
 
 Then(/^I answer services question/) do
-  # step "I am on building services selection page"
-  # step "I select all services"
-  # step "I click on save and return to detailed search"
-  step "I click change on building name on detailed search summary"
+  step "I click to answer building question"
   step "I am on service requirements page"
   step "I click on answer question"
   step "I am on planned maintenance service page"

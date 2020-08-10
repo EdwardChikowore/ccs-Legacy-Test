@@ -4,10 +4,6 @@ Feature: Assessed value Scenario one A - Case Two
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
-
-
-
-  Scenario Outline: Scenario 2 -  CP, No CAFM, Helpdesk TUPE, V is out of 30% (Neg Right boundary)
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
@@ -16,16 +12,10 @@ Feature: Assessed value Scenario one A - Case Two
     And I click on the "Reception service"
     And I click on the "General waste"
     And I click on "Close all"
-    And I click on "Continue"
-    And I click on open all
-    And I click on the "Tees Valley and Durham"
-    And I click on "Close all"
-    And I click on "Continue"
-    And I add contract name
-    And I click on "Save and continue to procurement"
-    And I click on "Continue to procurement"
-    And I am on "Detailed search summary" page
-    And I click to answer estimated annual cost question
+
+  Scenario Outline: Scenario 2 -  CP, No CAFM, Helpdesk TUPE, V is out of 30% (Neg Right boundary)
+    When I am on detailed search page
+    And I click on "Estimated annual cost"
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option
     And I enter the cost 1410200
@@ -65,6 +55,7 @@ Feature: Assessed value Scenario one A - Case Two
     And I select not required for Saturday and Sunday
     And I click on "Save and return to service requirements"
     And I click on "Back to detailed search summary"
+    When I am on "Procurement summary" page
     And I click on "Continue"
     And I should see the price displayed £1,096,792.41
 
