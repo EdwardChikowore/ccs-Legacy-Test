@@ -219,7 +219,8 @@ class ServiceRequirements < SitePrism::Page
   element :feminine_hygiene_volume, '.feminine_hygiene_waste-input'
 
 
-
-
   element :number_of_personel, '#facilities_management_procurement_building_service_service_hours_personnel'
+
+  element :number_of_hours, '#facilities_management_procurement_building_service_service_hours'
+  element :service_hours_requirement, '#facilities_management_procurement_building_service_detail_of_requirement'
 end

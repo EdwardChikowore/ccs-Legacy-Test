@@ -47,10 +47,8 @@ Feature: Assessed value Scenario Four Case four
     And I select standard A for first service
     And I click on "Save and return to service requirements"
     And I click on "Answer question"
-    And I enter 1 for number of personnel
-    And I select all day service for Monday
-    And I select not required for Tuesday to Sunday
-    And I click on "Save and return to service requirements"
+    And I enter 1248 for service hours
+    And I click on "Save and return"
     And I click on "Back to detailed search summary"
     When I am on "Procurement summary" page
     And I click on "Continue"
