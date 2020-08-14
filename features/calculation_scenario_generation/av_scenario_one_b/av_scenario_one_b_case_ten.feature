@@ -53,11 +53,9 @@ Feature: Assessed value Scenario B - Case Ten
     And I select standard A for first service
     And I click on "Save and return to service requirements"
     And I click on "Answer question"
-    And I am on "Reception service" page
-    And I enter 1 for number of personnel
-    And I select all day service for Monday to Friday
-    And I select not required for Saturday and Sunday
-    And I click on "Save and return to service requirements"
+    And I am on the "Reception service" page
+    And I enter 6240 for service hours
+    And I click on "Save and return"
     And I click on "Back to detailed search summary"
     When I am on "Procurement summary" page
     And I click on "Continue"

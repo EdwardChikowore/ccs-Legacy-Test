@@ -762,7 +762,6 @@ Then(/^I select all day service for Monday$/) do
 end
 
 
-
 And(/^I should see the partial price value (.+)$/) do |value|
   expect(home.choose_contract_value[1].text).to start_with(value)
 end
@@ -783,13 +782,14 @@ Then(/^The direct award option should not be displayed$/) do
   expect(home.market_route).to have_no_radio_items[0]
   expect(home.market_route).to have_no_radio_items[1]
   expect(home.market_route).to have_no_radio_items[2]
-
 end
 
 Then(/^I should see "([^"]*)" as the only available route to market$/) do |market_route|
   expect(home.fc_header.text).to eq(market_route)
 end
 
-And(/^I enter (.+) for number of personnel$/) do |value|
-  service_requirements.number_of_personel.set(value)
+And(/^I enter (.+) for service hours$/) do |value|
+  service_requirements.number_of_hours.set(value)
+  service_requirements.service_hours_requirement.set('Test one')
 end
+
