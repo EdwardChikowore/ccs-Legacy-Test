@@ -1,4 +1,4 @@
-class Home < SitePrism::Page
+class Common < SitePrism::Page
   set_url ''
 
   element :body, 'govuk-body'
@@ -452,7 +452,7 @@ class Home < SitePrism::Page
 
 
 
-  sections :service_standard, 'fieldset.govuk-fieldset' do
+  section :service_standard, 'fieldset.govuk-fieldset' do
     element :name, 'legend > span'
     element :name_two, 'legend > span > strong'
     element :value_a, 'input[value="A"]'
@@ -557,12 +557,12 @@ class Home < SitePrism::Page
   element :lowest_supplier_name, 'blockquote > span:nth-child(1)'
   element :lowest_supplier_price, 'blockquote > span:nth-child(2)'
 
-
   sections :subsequent_supplier, 'tbody >tr' do
     elements :details, 'td'
   end
 
-    elements :answer_question, 'td > a'
+    element :service_summary_question, 'td > a', text: 'Answer questions'
+    element :service_question, 'td > a', text: 'Answer question'
 
 
   element :payment_method_bacs, '#facilities_management_procurement_payment_method_bacs'

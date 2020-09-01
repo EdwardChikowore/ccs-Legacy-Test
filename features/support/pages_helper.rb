@@ -1,8 +1,8 @@
 
 module Pages
 
-  def home
-    @home ||= Home.new
+  def common
+    @common ||= Common.new
   end
 
   def detailed_summary

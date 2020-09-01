@@ -9,11 +9,11 @@ And(/^I click on "(.+)"$/) do |text|
 end
 
 And(/^I am on the "(.+)"$/) do |header|
-  expect(home.procure_page.header.text).to eq(header)
+  expect(common.procure_page.header.text).to eq(header)
 end
 
 And(/^I am on the results page$/) do
-  expect(home.results_page.heading[0].text).to end_with('Results')
+  expect(common.results_page.heading[0].text).to end_with('Results')
 end
 
 Then(/^I should see assessed value price for scenario zero$/) do
@@ -35,7 +35,7 @@ Then(/^I should see assessed value price for scenario zero$/) do
   assess_value = assessed_value_with_cost(uom_total_deliverable, buyer_input, benchmark_cost)
 
 
-  result_value = home.results_page.estimated_cost.text.delete(',')
+  result_value = common.results_page.estimated_cost.text.delete(',')
   expect(result_value).to eq("£#{assess_value.round}")
 
 end
@@ -85,7 +85,7 @@ Then(/^I should see assessed value price for scenario one$/) do
 
   assess_value = variance_service_missing(uom_total_deliverable, buyer_input, benchmark_cost)
 
-  result_value = home.results_page.estimated_cost.text.delete(',')
+  result_value = common.results_page.estimated_cost.text.delete(',')
   expect(result_value).to eq("£#{assess_value.round}")
 
 end

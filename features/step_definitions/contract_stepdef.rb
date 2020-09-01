@@ -10,24 +10,24 @@ And(/^I select address "([^"]*)" from the drop down option$/) do |address|
 end
 
 And(/^I should see name and job title "([^"]*)"$/) do |name|
-  expect(home.invoicing_contact_details[1].name_job_details.text).to eq(name)
+  expect(common.invoicing_contact_details[1].name_job_details.text).to eq(name)
 end
 
 And(/^I should see text next to radio button "([^"]*)"$/) do |name|
-  expect(home.invoicing_contact_details.text).to eq(name)
+  expect(common.invoicing_contact_details.text).to eq(name)
 end
 
 And(/^I should see new invoicing contact details to radio button "([^"]*)"$/) do |name|
-  expect(home.invoicing_contact_details.text).to eq(name)
+  expect(common.invoicing_contact_details.text).to eq(name)
 end
 
 And(/^I should see authorised representative text next to radio button "([^"]*)"$/) do |name|
-  expect(home.authorised_contact_details.text).to eq(name)
+  expect(common.authorised_contact_details.text).to eq(name)
 end
 
 
 And(/^I should see notices contact detail text next to radio button "([^"]*)"$/) do |name|
-  expect(home.notices_contact_details.text).to eq(name)
+  expect(common.notices_contact_details.text).to eq(name)
 end
 
 
@@ -36,86 +36,86 @@ And(/^I click on "([^"]*)" option$/) do |option|
 end
 
 And(/^I should see contract details "([^"]*)" displayed$/) do |details|
-  expect(home.contract_details_value[0].text).to eq(details)
+  expect(common.contract_details_value[0].text).to eq(details)
 end
 
 And(/^I should see the invoicing contract details "([^"]*)" displayed$/) do |details|
-  expect(home.contract_details_value[0].text).to eq(details)
+  expect(common.contract_details_value[0].text).to eq(details)
 end
 
 And(/^I should see the authorised representative details "([^"]*)" displayed$/) do |details|
-  expect(home.contract_details_value[2].text).to eq(details)
+  expect(common.contract_details_value[2].text).to eq(details)
 end
 
 
 And(/^I should see new invoicing contract details "([^"]*)" displayed$/) do |details|
-  expect(home.contract_details_value[1].text).to eq(details)
+  expect(common.contract_details_value[1].text).to eq(details)
 end
 
 And(/^The payment method should be "([^"]*)"$/) do |details|
-  expect(home.review_contract_value_two[1].text).to eq(details)
+  expect(common.review_contract_value_two[1].text).to eq(details)
 end
 
 
 And(/^I click on change address$/) do
-  home.change_address.click
+  common.change_address.click
 end
 
 And(/^I expand the Invoicing contact details$/) do
-  home.contract_details_value[0].click
+  common.contract_details_value[0].click
 end
 
 And(/^I expand the Authorised representative details$/) do
-  home.contract_details_value[1].click
+  common.contract_details_value[1].click
 end
 
 And(/^I expand the Notices contact details$/) do
-  home.contract_details_value[2].click
+  common.contract_details_value[2].click
 end
 
 And(/^I expand the contact details$/) do
-  home.contract_details_value[0].click
+  common.contract_details_value[0].click
 end
 
 And(/^I expand the Initial call-off period$/) do
-  home.contract_details_value[0].click
+  common.contract_details_value[0].click
 end
 
 And(/^I expand the Mobilisation period/) do
-  home.contract_details_value[1].click
+  common.contract_details_value[1].click
 end
 
 And(/^I expand the Buildings and services$/) do
-  home.contract_details_value[1].click
+  common.contract_details_value[1].click
 end
 
 And(/^I expand the Invoicing contact details - review your contract$/) do
   @buyer_details = BUYER_DETAIL['buyer']['name_occupation']
   @contract_details = BUYER_DETAIL['buyer']['contact_details']
-  expect(home.contract_details_value[2].text).to end_with(@buyer_details)
-  home.contract_details_value[2].click
-  expect(home.contract_details_value[2].text).to end_with(@contract_details)
+  expect(common.contract_details_value[2].text).to end_with(@buyer_details)
+  common.contract_details_value[2].click
+  expect(common.contract_details_value[2].text).to end_with(@contract_details)
 end
 
 And(/^I expand the Authorised representative details - review your contract$/) do
-  expect(home.contract_details_value[3].text).to end_with(@buyer_details)
-  home.contract_details_value[3].click
-  expect(home.contract_details_value[3].text).to end_with(@contract_details)
+  expect(common.contract_details_value[3].text).to end_with(@buyer_details)
+  common.contract_details_value[3].click
+  expect(common.contract_details_value[3].text).to end_with(@contract_details)
 end
 
 And(/^I expand the Notices contact details - review your contract$/) do
-  expect(home.contract_details_value[4].text).to end_with(@buyer_details)
-  home.contract_details_value[4].click
-  expect(home.contract_details_value[4].text).to end_with(@contract_details)
+  expect(common.contract_details_value[4].text).to end_with(@buyer_details)
+  common.contract_details_value[4].click
+  expect(common.contract_details_value[4].text).to end_with(@contract_details)
 end
 
 And(/^I should see "([^"]*)" and "([^"]*)" error$/) do |heading, error|
-  expect(home.header.text).to eq(heading)
-  expect(home.invoiving_contact_details_error.text).to eq(error)
+  expect(common.header.text).to eq(heading)
+  expect(common.invoiving_contact_details_error.text).to eq(error)
 end
 
 And(/^I should see error message header "([^"]*)"$/) do |heading|
-  expect(home.header.text).to eq(heading)
+  expect(common.header.text).to eq(heading)
 
 end
 
@@ -127,20 +127,20 @@ end
 
 
 And(/^I should see address "([^"]*)" in the address container$/) do |address|
-  expect(home.selected_address_container.text).to eq(address)
+  expect(common.selected_address_container.text).to eq(address)
 
 end
 
 And(/^I click on enter invoicing address manually$/) do
-  home.enter_invoice_manually.click
+  common.enter_invoice_manually.click
 end
 
 And(/^I click on enter authorised representative address manually$/) do
-  home.enter_authorised_manually.click
+  common.enter_authorised_manually.click
 end
 
 And(/^I click on enter notices representative address manually$/) do
-  home.enter_notices_manually.click
+  common.enter_notices_manually.click
 end
 
 And(/^The following is displayed:$/) do |table|
@@ -187,22 +187,22 @@ And(/^The following is displayed on quick search filter section:$/) do |table|
 end
 
 And(/^contract documents page have links$/) do
-  expect(home.contract_document_link.count).to eq(28)
+  expect(common.contract_document_link.count).to eq(28)
 end
 
 
-And(/^the following home page content is displayed:$/) do |table|
+And(/^the following common page content is displayed:$/) do |table|
   table.transpose.raw.flatten.each do |item|
     expect(page).to have_css('#wrapper', text: item)
   end
 end
 
 And(/^I enter duplicate pension name$/) do
-  home.pension_one_name.set('Pension One')
-  home.pension_one_percentage.set(2)
+  common.pension_one_name.set('Pension One')
+  common.pension_one_percentage.set(2)
   click_on "Add another pension fund (98 remaining)"
-  home.pension_input_field[5].set('Pension One')
-  home.pension_input_field[6].set(2)
+  common.pension_input_field[5].set('Pension One')
+  common.pension_input_field[6].set(2)
 end
 
 
