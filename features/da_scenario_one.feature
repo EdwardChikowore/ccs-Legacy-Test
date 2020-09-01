@@ -66,15 +66,18 @@ Feature: Direct Award scenario One
     And I click on "Continue"
     And I add contract name
     And I click on "Save and continue to procurement"
-    And I click on "Continue to procurement"
-    And I am on "Detailed search summary" page
-    And I click to answer estimated annual cost question
+    And I click on "Continue"
+
+    And I am on "Procurement summary" page
+    And I click on "Estimated annual cost"
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_false" option
-    And I click on "Save and continue"
+    And I click on "Save and return"
+    And I click on "TUPE"
     And I am on "TUPE" page
     And I click on the "facilities_management_procurement_tupe_true" option
-    And I click on "Save and continue"
+    And I click on "Save and return"
+    And I click on "Contract period"
     And I am on "Contract period" page
     And I enter the number of year as "<years>"
     And I enter the day as "<day>"
@@ -84,12 +87,42 @@ Feature: Direct Award scenario One
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option
     And I click on "Save and continue"
-    And I am on "Buildings" page
-    And I select first building "Aberdeen" with address "Marischal College, Broad Street, Aberdeen, Aberdeen and Aberdeenshire, AB10 1AL"
-    And I select second building "Belfast Building" with address "8-10, Royal Avenue, Belfast, Belfast, BT1 1DA"
-    And I select third building "Birmingham" with address "259 Yardley Green Road, Bordesley Green, Birmingham, West Midlands, B9 5QA"
-    And I select fourteen building "Westminster Building" with address "10 Downing Street, London, Inner London - West, SW1A 2AA"
+    And I click on "Return to requirements"
+    And I click on "Building"
+    And I select first building
+    And I select second building
+    And I select third building
+    And I select fourth building
+#    And I select first building "Aberdeen" with address "Marischal College, Broad Street, Aberdeen, Aberdeen and Aberdeenshire, AB10 1AL"
+#    And I select second building "Belfast Building" with address "8-10, Royal Avenue, Belfast, Belfast, BT1 1DA"
+#    And I select third building "Birmingham" with address "259 Yardley Green Road, Bordesley Green, Birmingham, West Midlands, B9 5QA"
+#    And I select fourteen building "Westminster Building" with address "10 Downing Street, London, Inner London - West, SW1A 2AA"
+    And I click on "Save and return"
+    And I click on "Assigning services to buildings"
+    And I am on "Buildings and services summary" page
+    And I click on "Change"
+    And I am on the "Which facilities management services do you require within each building?" page
+    And I select services for first building "Aberdeen" - DA scenario two
+    And I select services for second building "Belfast Building" - DA scenario two
+    And I select services for third building "Birmingham" - DA scenario two
+    And I select services for fourth building "Westminster Building" - DA scenario two
     And I click on "Save and continue"
+    And I am on "Buildings and services summary" page
+    And I click on "Return to requirements"
+    And I click on "Service requirements"
+    And I am on "Service requirements summary" page
+    And I click on the service requirements summary question
+
+  #To be completed when FMFR-176 is done
+    And I am on the "Service requirements" page
+    And I click on the service question
+    And I am on the "Lifts, hoists & conveyance systems maintenance" page
+    And I enter 2 for first lift
+    And I click on "Save and return"
+    And I am on the "Portable appliance testing" page
+    And I enter 9 for portable appliance testing
+    And I click on "Save and return"
+
     And I am on the "What facilities management services do you need for each building?" page
     And I select services for first building "Aberdeen" - DA scenario two
     And I select services for second building "Belfast Building" - DA scenario two

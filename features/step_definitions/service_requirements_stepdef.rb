@@ -1,12 +1,12 @@
 
 And(/^I am on "([^"]*)" page - one$/) do |header|
-  result_page= (home.header_one.text).end_with?('Results')
-  contract_value_page= (home.header_one.text).end_with?('Estimated contract cost')
-  detailed_search_page = (home.header_one.text).end_with?(header)
+  result_page= (common.header_one.text).end_with?('Results')
+  contract_value_page= (common.header_one.text).end_with?('Estimated contract cost')
+  detailed_search_page = (common.header_one.text).end_with?(header)
   if result_page
     click_on 'Change requirements'
   elsif detailed_search_page
-    expect(home.header_one.text).to end_with(header)
+    expect(common.header_one.text).to end_with(header)
   elsif contract_value_page
     click_on 'Change requirements'
   end
