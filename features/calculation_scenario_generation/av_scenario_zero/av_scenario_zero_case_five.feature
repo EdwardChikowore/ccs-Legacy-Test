@@ -46,7 +46,7 @@ Feature: Assessed value Scenario zero case five
     And I select standard A for second service
     And I click on "Save and return to service requirements"
     And I click on "Answer question"
-    And I am on "Lifts, hoists & conveyance systems maintenance" page
+    And I am on the "Lifts, hoists & conveyance systems maintenance" page
     And I enter 300 for first lift
     And I click on "Save and return to service requirements"
     And I click on "Answer question"
@@ -66,7 +66,7 @@ Feature: Assessed value Scenario zero case five
     And I select standard A for second service
     And I click on "Save and return to service requirements"
     And I click on "Answer question"
-    And I am on "Lifts, hoists & conveyance systems maintenance" page
+    And I am on the "Lifts, hoists & conveyance systems maintenance" page
     And I enter 300 for first lift
     And I click on "Save and return to service requirements"
     And I click on "Answer question"
