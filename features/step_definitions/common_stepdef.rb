@@ -651,6 +651,7 @@ Then(/^I click on the first question$/) do
 end
 
 Then(/^I click on the service requirements summary question/) do
+  binding.pry
   common.service_summary_question.click
 end
 
