@@ -57,7 +57,7 @@ And(/^The following maintenance services are displayed:$/) do |table|
 end
 
 And(/^I select all miscellaneous services$/) do
-  common.catering.select_all.click
+  common.miscellaneous.select_all.click
 end
 
 And(/^The following miscellaneous services are displayed:$/) do |table|
