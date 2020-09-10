@@ -485,139 +485,69 @@ end
 
 
 Then(/^I select services for first building "([^"]*)" - DA scenario two$/) do |building_name|
-  #Building_four
-  # click_on building_name
-  # common.service_selection.bms[0].click
-  # common.service_selection.env_cleaning[0].click
-  # common.service_selection.fire_detection_maintenance[0].click
-  # common.service_selection.high_voltage[0].click
-  # common.service_selection.internal_external_building[0].click
-  # common.service_selection.lifts_hoists[0].click
-  # common.service_selection.mech_elec[0].click
-  # common.service_selection.security_access[0].click
-  # common.service_selection.standby_power[0].click
-  # common.service_selection.ventilation[0].click
-  # common.service_selection.cafm[0].click
-  # common.service_selection.helpdesk[0].click
-  # common.service_selection.management_billable[0].click
-  #
-
-  click_on building_name
-  service_requirements.aberdeen_services.select_all.click
-  service_requirements.aberdeen_services.bms.click
-  service_requirements.aberdeen_services.env_cleaning.click
-  service_requirements.aberdeen_services.fire_detection_maintenance.click
-  service_requirements.aberdeen_services.high_voltage.click
-  service_requirements.aberdeen_services.internal_external_building.click
-  service_requirements.aberdeen_services.lifts_hoists.click
-  service_requirements.aberdeen_services.mech_elec.click
-  service_requirements.aberdeen_services.security_access.click
-  service_requirements.aberdeen_services.standby_power.click
-  service_requirements.aberdeen_services.ventilation.click
-  service_requirements.aberdeen_services.cafm.click
-  service_requirements.aberdeen_services.helpdesk.click
-  service_requirements.aberdeen_services.management_billable
+  service_requirements.bms.click
+  service_requirements.env_cleaning.click
+  service_requirements.fire_detection_maintenance.click
+  service_requirements.high_voltage.click
+  service_requirements.internal_external_building.click
+  service_requirements.lifts_hoists.click
+  service_requirements.mech_elec.click
+  service_requirements.security_access.click
+  service_requirements.standby_power.click
+  service_requirements.ventilation.click
+  service_requirements.cafm.click
+  service_requirements.helpdesk.click
+  service_requirements.management_billable
 end
 
 
 Then(/^I select services for second building "([^"]*)" - DA scenario two$/) do |building_name|
-  #Building_two
-  # click_on building_name
-  # common.service_selection.asbestos[2].click
-  # common.service_selection.compliance_plans[2].click
-  # common.service_selection.condition_survey[2].click
-  # common.service_selection.electrical_testing[2].click
-  # common.service_selection.fire_risk[2].click
-  # common.service_selection.portable_appliance[2].click
-  # common.service_selection.statutory_inspections[2].click
-  # common.service_selection.water_hygiene[2].click
-  # common.service_selection.cleaning_external[2].click
-  # common.service_selection.cleaning_integral[2].click
-  # common.service_selection.deep_periodic_clean[2].click
-  # common.service_selection.mobile_cleaning[2].click
-  # common.service_selection.pest_control[2].click
-  # common.service_selection.external_window_cleaning[2].click
-  # common.service_selection.internal_window_cleaning[2].click
-  #
-  #
-  click_on building_name
-  service_requirements.belfast_building_services.select_all.click
-  service_requirements.belfast_building_services.asbestos.click
-  service_requirements.belfast_building_services.compliance_plans.click
-  service_requirements.belfast_building_services.condition_survey.click
-  service_requirements.belfast_building_services.electrical_testing.click
-  service_requirements.belfast_building_services.fire_risk.click
-  service_requirements.belfast_building_services.portable_appliance.click
-  service_requirements.belfast_building_services.statutory_inspections.click
-  service_requirements.belfast_building_services.water_hygiene.click
-  service_requirements.belfast_building_services.cleaning_external.click
-  service_requirements.belfast_building_services.cleaning_integral.click
-  service_requirements.belfast_building_services.deep_periodic_clean.click
-  service_requirements.belfast_building_services.mobile_cleaning.click
-  service_requirements.belfast_building_services.pest_control.click
-  service_requirements.belfast_building_services.external_window_cleaning.click
-  service_requirements.belfast_building_services.internal_window_cleaning.click
+  service_requirements.select_all.click
+  service_requirements.asbestos.click
+  service_requirements.compliance_plans.click
+  service_requirements.condition_survey.click
+  service_requirements.electrical_testing.click
+  service_requirements.fire_risk.click
+  service_requirements.portable_appliance.click
+  service_requirements.statutory_inspections.click
+  service_requirements.water_hygiene.click
+  service_requirements.cleaning_external.click
+  service_requirements.cleaning_integral.click
+  service_requirements.deep_periodic_clean.click
+  service_requirements.mobile_cleaning.click
+  service_requirements.pest_control.click
+  service_requirements.external_window_cleaning.click
+  service_requirements.internal_window_cleaning.click
 end
 
 
 
 Then(/^I select services for third building "([^"]*)" - DA scenario two$/) do |building_name|
-  #Building_three
-  # click_on building_name
-  # common.service_selection.routine_cleaning[3].click
-  # common.service_selection.handyman_services[3].click
-  # common.service_selection.move_space_manage[3].click
-  # common.service_selection.car_park[3].click
-  # common.service_selection.reception_services[3].click
-  # common.service_selection.taxi_booking[3].click
-  # common.service_selection.voice_announce[3].click
-  # common.service_selection.cctv[3].click
-  # common.service_selection.control_access[3].click
-  # common.service_selection.emergency_response[3].click
-  # common.service_selection.managements_visitor[3].click
-  # common.service_selection.manned_guarding[3].click
-  # common.service_selection.patrols_fixed[3].click
-  #
-  #
-  click_on building_name
-  service_requirements.birmingham_services.select_all.click
-  service_requirements.birmingham_services.routine_cleaning.click
-  service_requirements.birmingham_services.handyman_services.click
-  service_requirements.birmingham_services.move_space_manage.click
-  service_requirements.birmingham_services.car_park.click
-  service_requirements.birmingham_services.reception_services.click
-  service_requirements.birmingham_services.taxi_booking.click
-  service_requirements.birmingham_services.voice_announce.click
-  service_requirements.birmingham_services.cctv.click
-  service_requirements.birmingham_services.control_access.click
-  service_requirements.birmingham_services.emergency_response.click
-  service_requirements.birmingham_services.managements_visitor.click
-  service_requirements.birmingham_services.manned_guarding.click
-  service_requirements.birmingham_services.patrols_fixed.click
+  service_requirements.routine_cleaning.click
+  service_requirements.handyman_services.click
+  service_requirements.move_space_manage.click
+  service_requirements.car_park.click
+  service_requirements.reception_services.click
+  service_requirements.taxi_booking.click
+  service_requirements.voice_announce.click
+  service_requirements.cctv.click
+  service_requirements.control_access.click
+  service_requirements.emergency_response.click
+  service_requirements.managements_visitor.click
+  service_requirements.manned_guarding.click
+  service_requirements.patrols_fixed.click
 end
 
 
 
 Then(/^I select services for fourth building "([^"]*)" - DA scenario two$/) do |building_name|
-  #building_one
-  # click_on building_name
-  # common.service_selection.classified_waste[1].click
-  # common.service_selection.feminine_hygiene[1].click
-  # common.service_selection.general_waste[1].click
-  # common.service_selection.recycled_waste[1].click
-  # common.service_selection.cafm[1].click
-  # common.service_selection.helpdesk[1].click
-  # common.service_selection.management_billable[1].click
-
-  click_on building_name
-  service_requirements.westminster_building_services.select_all.click
-  service_requirements.westminster_building_services.classified_waste.click
-  service_requirements.westminster_building_services.feminine_hygiene.click
-  service_requirements.westminster_building_services.general_waste.click
-  service_requirements.westminster_building_services.recycled_waste.click
-  service_requirements.westminster_building_services.cafm.click
-  service_requirements.westminster_building_services.helpdesk.click
-  service_requirements.westminster_building_services.management_billable.click
+  service_requirements.classified_waste.click
+  service_requirements.feminine_hygiene.click
+  service_requirements.general_waste.click
+  service_requirements.recycled_waste.click
+  service_requirements.cafm.click
+  service_requirements.helpdesk.click
+  service_requirements.management_billable.click
 end
 
 

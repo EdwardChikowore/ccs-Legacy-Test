@@ -68,7 +68,7 @@ Feature: Direct Award scenario One
     And I click on "Save and continue to procurement"
     And I click on "Continue"
 
-    And I am on "Procurement summary" page
+    And I am on "Requirements" page
     And I click on "Estimated annual cost"
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_false" option
@@ -89,31 +89,33 @@ Feature: Direct Award scenario One
     And I click on "Save and continue"
     And I click on "Return to requirements"
     And I click on "Building"
-    And I select first building
-    And I select second building
-    And I select third building
-    And I select fourth building
-#    And I select first building "Aberdeen" with address "Marischal College, Broad Street, Aberdeen, Aberdeen and Aberdeenshire, AB10 1AL"
-#    And I select second building "Belfast Building" with address "8-10, Royal Avenue, Belfast, Belfast, BT1 1DA"
-#    And I select third building "Birmingham" with address "259 Yardley Green Road, Bordesley Green, Birmingham, West Midlands, B9 5QA"
-#    And I select fourteen building "Westminster Building" with address "10 Downing Street, London, Inner London - West, SW1A 2AA"
-    And I click on "Save and return"
+    And I select first building "Aberdeen" with address "Marischal College, Broad Street, Aberdeen, AB10 1AL"
+    And I select second building "Belfast Building" with address "8-10, Royal Avenue, Belfast, BT1 1DA"
+    And I select third building "Birmingham" with address "259 Yardley Green Road, Bordesley Green, Birmingham, B9 5QA"
+    And I select fourteen building "Westminster Building" with address "10 Downing Street, London, SW1A 2AA"
+    And I click on "Save and continue"
+    And I am on "Buildings summary" page
+    And I click on "Return to requirements"
     And I click on "Assigning services to buildings"
     And I am on "Buildings and services summary" page
-    And I click on "Change"
-    And I am on the "Which facilities management services do you require within each building?" page
+    And I click on "Aberdeen"
     And I select services for first building "Aberdeen" - DA scenario two
+    And I click on "Save and return"
+    And I click on "Belfast Building"
     And I select services for second building "Belfast Building" - DA scenario two
+    And I click on "Save and return"
+    And I click on "Birmingham"
     And I select services for third building "Birmingham" - DA scenario two
+    And I click on "Save and return"
+    And I click on "Westminster Building"
     And I select services for fourth building "Westminster Building" - DA scenario two
-    And I click on "Save and continue"
+    And I click on "Save and return"
     And I am on "Buildings and services summary" page
     And I click on "Return to requirements"
+    And I am on "Requirements" page
     And I click on "Service requirements"
     And I am on "Service requirements summary" page
-    And I click on the service requirements summary question
-
-  #To be completed when FMFR-176 is done
+    And I click on "Aberdeen"
     And I am on the "Service requirements" page
     And I click on the service question
     And I am on the "Lifts, hoists & conveyance systems maintenance" page
@@ -122,136 +124,191 @@ Feature: Direct Award scenario One
     And I am on the "Portable appliance testing" page
     And I enter 9 for portable appliance testing
     And I click on "Save and return"
+    And I am on the "Service requirements" page
+    And I click on the service question
+    And I am on the "Mechanical and electrical engineering maintenance" page
+    And I select standard A
+    And I click on "Save and return"
+    And I am on the "Service requirements" page
+    And I click on the service question
+    And I am on the "Ventilation and air conditioning system maintenance" page
+    And I select standard A
+    And I click on "Save and return"
+    And I am on the "Service requirements" page
+    And I click on the service question
+    And I am on the "Environmental cleaning service" page
+    And I select standard A
+    And I click on "Save and return"
+    And I am on the "Service requirements" page
+    And I click on the service question
+    And I am on the "Fire detection and firefighting systems maintenance" page
+    And I select standard A
+    And I click on "Save and return"
+    And I am on the "Service requirements" page
+    And I click on the service question
+    And I am on the "Security, access and intruder systems maintenance" page
+    And I select standard A
+    And I click on "Save and return"
+    And I am on the "Service requirements" page
+    And I click on the service question
+    And I am on the "Internal & external building fabric maintenance" page
+    And I select standard A
+    And I click on "Save and return"
+    And I am on the "Service requirements" page
+    And I click on the service question
+    And I am on the "Building management system (BMS) maintenance" page
+    And I select standard A
+    And I click on "Save and return"
+    And I am on the "Service requirements" page
+    And I click on the service question
+    And I am on the "Standby power system maintenance" page
+    And I select standard A
+    And I click on "Save and return"
+    And I am on the "Service requirements" page
+    And I click on the service question
+    And I am on the "High voltage (HV) and switchgear maintenance" page
+    And I select standard A
+    And I click on "Save and return"
+    And I am on the "Service requirements" page
+    And I click on the service question
+    And I am on the "Lifts, hoists & conveyance systems maintenance" page
+    And I select standard A
+    And I click on "Save and return"
+    And I am on the "Service requirements" page
+    And I click on "Return to services requirement summary"
+    And I am on "Service requirements summary" page
 
-    And I am on the "What facilities management services do you need for each building?" page
-    And I select services for first building "Aberdeen" - DA scenario two
-    And I select services for second building "Belfast Building" - DA scenario two
-    And I select services for third building "Birmingham" - DA scenario two
-    And I select services for fourth building "Westminster Building" - DA scenario two
-    And I click on "Save and return to detailed search summary"
-    And I click on "Aberdeen"
-    And I am on "Service requirements" page
-    And I click on "Answer question"
-    And I am on "Planned maintenance (PPM) services standards" page
-    And I select standard A for first service
-    And I select standard A for second service
-    And I select standard A for third service
-    And I select standard A for fourth service
-    And I select standard A for fifth service
-    And I select standard A for sixth service
-    And I select standard A for seventh service
-    And I select standard A for eighth service
-    And I select standard A for ninth service
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I am on "Building fabric maintenance services standards" page
-    And I select standard A for first service
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I enter 2 for first lift
-    And I click on "Save and return to service requirements"
-    And I click on "Back to detailed search summary"
-    And I click on "Belfast Building"
-    And I click on "Answer question"
-    And I enter 9 for portable appliance testing - DA one
-    And I enter 9 for mobile cleaning service - DA one
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I select standard A for first service
-    And I select standard A for second service
-    And I select standard A for third service
-    And I click on "Save and return to service requirements"
-    And I click on "Back to detailed search summary"
-    And I click on "Birmingham"
-    And I click on "Answer question"
-    And I enter 4 for routine cleaning - DA one
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I select standard A for first service
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I enter 1 for number of personnel
-    And I select all day service for Monday
-    And I select not required for Tuesday to Sunday
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I enter 1 for number of personnel
-    And I select all day service for Monday
-    And I select not required for Tuesday to Sunday
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I enter 1 for number of personnel
-    And I select all day service for Monday
-    And I select not required for Tuesday to Sunday
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I enter 1 for number of personnel
-    And I select all day service for Monday
-    And I select not required for Tuesday to Sunday
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I enter 1 for number of personnel
-    And I select all day service for Monday
-    And I select not required for Tuesday to Sunday
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I enter 1 for number of personnel
-    And I select all day service for Monday
-    And I select not required for Tuesday to Sunday
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I enter 1 for number of personnel
-    And I select all day service for Monday
-    And I select not required for Tuesday to Sunday
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I enter 1 for number of personnel
-    And I select all day service for Monday
-    And I select not required for Tuesday to Sunday
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I enter 1 for number of personnel
-    And I select all day service for Monday
-    And I select not required for Tuesday to Sunday
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I enter 1 for number of personnel
-    And I select all day service for Monday
-    And I select not required for Tuesday to Sunday
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I enter 1 for number of personnel
-    And I select all day service for Monday
-    And I select not required for Tuesday to Sunday
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I enter 1 for number of personnel
-    And I select all day service for Monday
-    And I select not required for Tuesday to Sunday
-    And I click on "Save and return to service requirements"
-    And I click on "Back to detailed search summary"
-    And I click on "Westminster Building"
-    And I click on "Answer question"
-    And I enter 2 for classified waste - DA one
-    And I enter 2 for feminine hygiene waste - DA one
-    And I enter 2 for general waste - DA one
-    And I enter 2 for recycled waste - DA one
-    And I click on "Save and return to service requirements"
-    And I click on "Back to detailed search summary"
-    And I click on "Continue"
-    And I should see the price displayed £234,870.30
-    And I click on the Direct award route to market
-    And I click on "Continue"
-    And the lowest priced supplier is "Wolf-Wiza" and contract price is £234,870.30
-    And the second subsequent supplier is "Supplier 2" and contract price is £250,298.86
-    And the third subsequent supplier is "Supplier 3" and contract price is £251,029.94
-    And the fourth subsequent supplier is "Supplier 4" and contract price is £260,968.75
-    And the fifth subsequent supplier is "Supplier 5" and contract price is £262,412.28
-    And the sixth subsequent supplier is "Supplier 6" and contract price is £267,133.45
-    And the seventh subsequent supplier is "Supplier 7" and contract price is £278,186.69
-    And the eighth subsequent supplier is "Supplier 8" and contract price is £279,993.33
-    And the ninth subsequent supplier is "Supplier 9" and contract price is £282,709.24
-    And the tenth subsequent supplier is "Supplier 10" and contract price is £296,928.35
+
+#
+#    And I am on the "What facilities management services do you need for each building?" page
+#    And I select services for first building "Aberdeen" - DA scenario two
+#    And I select services for second building "Belfast Building" - DA scenario two
+#    And I select services for third building "Birmingham" - DA scenario two
+#    And I select services for fourth building "Westminster Building" - DA scenario two
+#    And I click on "Save and return to detailed search summary"
+#    And I click on "Aberdeen"
+#    And I am on "Service requirements" page
+#    And I click on "Answer question"
+#    And I am on "Planned maintenance (PPM) services standards" page
+#    And I select standard A for first service
+#    And I select standard A for second service
+#    And I select standard A for third service
+#    And I select standard A for fourth service
+#    And I select standard A for fifth service
+#    And I select standard A for sixth service
+#    And I select standard A for seventh service
+#    And I select standard A for eighth service
+#    And I select standard A for ninth service
+#    And I click on "Save and return to service requirements"
+#    And I click on "Answer question"
+#    And I am on "Building fabric maintenance services standards" page
+#    And I select standard A for first service
+#    And I click on "Save and return to service requirements"
+#    And I click on "Answer question"
+#    And I enter 2 for first lift
+#    And I click on "Save and return to service requirements"
+#    And I click on "Back to detailed search summary"
+#    And I click on "Belfast Building"
+#    And I click on "Answer question"
+#    And I enter 9 for portable appliance testing - DA one
+#    And I enter 9 for mobile cleaning service - DA one
+#    And I click on "Save and return to service requirements"
+#    And I click on "Answer question"
+#    And I select standard A for first service
+#    And I select standard A for second service
+#    And I select standard A for third service
+#    And I click on "Save and return to service requirements"
+#    And I click on "Back to detailed search summary"
+#    And I click on "Birmingham"
+#    And I click on "Answer question"
+#    And I enter 4 for routine cleaning - DA one
+#    And I click on "Save and return to service requirements"
+#    And I click on "Answer question"
+#    And I select standard A for first service
+#    And I click on "Save and return to service requirements"
+#    And I click on "Answer question"
+#    And I enter 1 for number of personnel
+#    And I select all day service for Monday
+#    And I select not required for Tuesday to Sunday
+#    And I click on "Save and return to service requirements"
+#    And I click on "Answer question"
+#    And I enter 1 for number of personnel
+#    And I select all day service for Monday
+#    And I select not required for Tuesday to Sunday
+#    And I click on "Save and return to service requirements"
+#    And I click on "Answer question"
+#    And I enter 1 for number of personnel
+#    And I select all day service for Monday
+#    And I select not required for Tuesday to Sunday
+#    And I click on "Save and return to service requirements"
+#    And I click on "Answer question"
+#    And I enter 1 for number of personnel
+#    And I select all day service for Monday
+#    And I select not required for Tuesday to Sunday
+#    And I click on "Save and return to service requirements"
+#    And I click on "Answer question"
+#    And I enter 1 for number of personnel
+#    And I select all day service for Monday
+#    And I select not required for Tuesday to Sunday
+#    And I click on "Save and return to service requirements"
+#    And I click on "Answer question"
+#    And I enter 1 for number of personnel
+#    And I select all day service for Monday
+#    And I select not required for Tuesday to Sunday
+#    And I click on "Save and return to service requirements"
+#    And I click on "Answer question"
+#    And I enter 1 for number of personnel
+#    And I select all day service for Monday
+#    And I select not required for Tuesday to Sunday
+#    And I click on "Save and return to service requirements"
+#    And I click on "Answer question"
+#    And I enter 1 for number of personnel
+#    And I select all day service for Monday
+#    And I select not required for Tuesday to Sunday
+#    And I click on "Save and return to service requirements"
+#    And I click on "Answer question"
+#    And I enter 1 for number of personnel
+#    And I select all day service for Monday
+#    And I select not required for Tuesday to Sunday
+#    And I click on "Save and return to service requirements"
+#    And I click on "Answer question"
+#    And I enter 1 for number of personnel
+#    And I select all day service for Monday
+#    And I select not required for Tuesday to Sunday
+#    And I click on "Save and return to service requirements"
+#    And I click on "Answer question"
+#    And I enter 1 for number of personnel
+#    And I select all day service for Monday
+#    And I select not required for Tuesday to Sunday
+#    And I click on "Save and return to service requirements"
+#    And I click on "Answer question"
+#    And I enter 1 for number of personnel
+#    And I select all day service for Monday
+#    And I select not required for Tuesday to Sunday
+#    And I click on "Save and return to service requirements"
+#    And I click on "Back to detailed search summary"
+#    And I click on "Westminster Building"
+#    And I click on "Answer question"
+#    And I enter 2 for classified waste - DA one
+#    And I enter 2 for feminine hygiene waste - DA one
+#    And I enter 2 for general waste - DA one
+#    And I enter 2 for recycled waste - DA one
+#    And I click on "Save and return to service requirements"
+#    And I click on "Back to detailed search summary"
+#    And I click on "Continue"
+#    And I should see the price displayed £234,870.30
+#    And I click on the Direct award route to market
+#    And I click on "Continue"
+#    And the lowest priced supplier is "Wolf-Wiza" and contract price is £234,870.30
+#    And the second subsequent supplier is "Supplier 2" and contract price is £250,298.86
+#    And the third subsequent supplier is "Supplier 3" and contract price is £251,029.94
+#    And the fourth subsequent supplier is "Supplier 4" and contract price is £260,968.75
+#    And the fifth subsequent supplier is "Supplier 5" and contract price is £262,412.28
+#    And the sixth subsequent supplier is "Supplier 6" and contract price is £267,133.45
+#    And the seventh subsequent supplier is "Supplier 7" and contract price is £278,186.69
+#    And the eighth subsequent supplier is "Supplier 8" and contract price is £279,993.33
+#    And the ninth subsequent supplier is "Supplier 9" and contract price is £282,709.24
+#    And the tenth subsequent supplier is "Supplier 10" and contract price is £296,928.35
 
     Examples:
       | years | day | month | year |
