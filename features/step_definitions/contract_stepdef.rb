@@ -120,9 +120,8 @@ And(/^I should see error message header "([^"]*)"$/) do |heading|
 end
 
 And(/^I should see the following error messages$/) do |table|
-  table.transpose.raw.flatten.each do |heading|
-    expect(page).to have_css('div.govuk-error-summary', text: heading)
-  end
+  expect(page).to have_css('div.govuk-error-summary')
+  expect(page.find('.govuk-error-summary__list').find_all('a').map(&:text)).to eq table.transpose.raw.flatten
 end
 
 
@@ -153,6 +152,84 @@ end
 And(/^The following detail is displayed:$/) do |table|
   table.transpose.raw.flatten.each do |item|
     expect(page).to have_css('tbody  tr  td', text: item)
+  end
+end
+
+And(/^The following contract period is displayed:$/) do |table|
+  table.transpose.raw.flatten.each do |item|
+    expect(common.contract_period.length.text).to eq(item)
+  end
+end
+
+And(/^The following contract period description is displayed:$/) do |table|
+  table.transpose.raw.flatten.each do |item|
+    expect(common.contract_period.contract_description.text).to eq(item)
+  end
+end
+
+And(/^The following mobilisation length is displayed:$/) do |table|
+  table.transpose.raw.flatten.each do |item|
+    expect(common.contract_period.mobilisation_length.text).to eq(item)
+  end
+end
+
+And(/^The following mobilisation description is displayed:$/) do |table|
+  table.transpose.raw.flatten.each do |item|
+    expect(common.contract_period.mobilisation_description.text).to eq(item)
+  end
+end
+
+And(/^The following call-off extension is displayed:$/) do |table|
+  table.transpose.raw.flatten.each do |item|
+    expect(common.contract_period.call_off_extension.text).to eq(item)
+  end
+end
+
+And(/^The following call-off length 1 is displayed:$/) do |table|
+  table.transpose.raw.flatten.each do |item|
+    expect(common.contract_period.call_off_1_length.text).to eq(item)
+  end
+end
+
+And(/^The following call-off length 1 description is displayed:$/) do |table|
+  table.transpose.raw.flatten.each do |item|
+    expect(common.contract_period.call_off_1_description.text).to eq(item)
+  end
+end
+
+And(/^The following call-off length 2 is displayed:$/) do |table|
+  table.transpose.raw.flatten.each do |item|
+    expect(common.contract_period.call_off_2_length.text).to eq(item)
+  end
+end
+
+And(/^The following call-off length 2 description is displayed:$/) do |table|
+  table.transpose.raw.flatten.each do |item|
+    expect(common.contract_period.call_off_2_description.text).to eq(item)
+  end
+end
+
+And(/^The following call-off length 3 is displayed:$/) do |table|
+  table.transpose.raw.flatten.each do |item|
+    expect(common.contract_period.call_off_3_length.text).to eq(item)
+  end
+end
+
+And(/^The following call-off length 3 description is displayed:$/) do |table|
+  table.transpose.raw.flatten.each do |item|
+    expect(common.contract_period.call_off_3_description.text).to eq(item)
+  end
+end
+
+And(/^The following call-off length 4 is displayed:$/) do |table|
+  table.transpose.raw.flatten.each do |item|
+    expect(common.contract_period.call_off_4_length.text).to eq(item)
+  end
+end
+
+And(/^The following call-off length 4 description is displayed:$/) do |table|
+  table.transpose.raw.flatten.each do |item|
+    expect(common.contract_period.call_off_4_description.text).to eq(item)
   end
 end
 

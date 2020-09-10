@@ -314,7 +314,7 @@ Feature:  FM - Accessibility
     And I click on "Continue to procurement"
     And I answer contract details question
     And I am on contract period page
-    And I am enter values for initial call-off period
+    And I enter values for initial call-off period
     And I select no option for tupe required
     And I select no option for optional call-off extension
     And I click on save and continue
@@ -335,7 +335,7 @@ Feature:  FM - Accessibility
     And I click on "Continue to procurement"
     And I answer contract details question
     And I am on contract period page
-    And I am enter values for initial call-off period
+    And I enter values for initial call-off period
     And I select no option for tupe required
     And I select no option for optional call-off extension
     And I click on save and continue
