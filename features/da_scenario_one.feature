@@ -62,12 +62,10 @@ Feature: Direct Award scenario One
     And I click on "Continue"
     And I click on "North East (England)"
     And I click on the "Tees Valley and Durham"
-#    And I should see my selection in the region basket
     And I click on "Continue"
     And I add contract name
     And I click on "Save and continue to procurement"
     And I click on "Continue"
-
     And I am on "Requirements" page
     And I click on "Estimated annual cost"
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
@@ -119,10 +117,7 @@ Feature: Direct Award scenario One
     And I am on the "Service requirements" page
     And I click on the service question
     And I am on the "Lifts, hoists & conveyance systems maintenance" page
-    And I enter 2 for first lift
-    And I click on "Save and return"
-    And I am on the "Portable appliance testing" page
-    And I enter 9 for portable appliance testing
+    And I enter 2 for number of lift floors
     And I click on "Save and return"
     And I am on the "Service requirements" page
     And I click on the service question
@@ -175,140 +170,126 @@ Feature: Direct Award scenario One
     And I select standard A
     And I click on "Save and return"
     And I am on the "Service requirements" page
-    And I click on "Return to services requirement summary"
+    And I click on "Return to service requirements summary"
     And I am on "Service requirements summary" page
-
-
-#
-#    And I am on the "What facilities management services do you need for each building?" page
-#    And I select services for first building "Aberdeen" - DA scenario two
-#    And I select services for second building "Belfast Building" - DA scenario two
-#    And I select services for third building "Birmingham" - DA scenario two
-#    And I select services for fourth building "Westminster Building" - DA scenario two
-#    And I click on "Save and return to detailed search summary"
-#    And I click on "Aberdeen"
-#    And I am on "Service requirements" page
-#    And I click on "Answer question"
-#    And I am on "Planned maintenance (PPM) services standards" page
-#    And I select standard A for first service
-#    And I select standard A for second service
-#    And I select standard A for third service
-#    And I select standard A for fourth service
-#    And I select standard A for fifth service
-#    And I select standard A for sixth service
-#    And I select standard A for seventh service
-#    And I select standard A for eighth service
-#    And I select standard A for ninth service
-#    And I click on "Save and return to service requirements"
-#    And I click on "Answer question"
-#    And I am on "Building fabric maintenance services standards" page
-#    And I select standard A for first service
-#    And I click on "Save and return to service requirements"
-#    And I click on "Answer question"
-#    And I enter 2 for first lift
-#    And I click on "Save and return to service requirements"
-#    And I click on "Back to detailed search summary"
-#    And I click on "Belfast Building"
-#    And I click on "Answer question"
-#    And I enter 9 for portable appliance testing - DA one
-#    And I enter 9 for mobile cleaning service - DA one
-#    And I click on "Save and return to service requirements"
-#    And I click on "Answer question"
-#    And I select standard A for first service
-#    And I select standard A for second service
-#    And I select standard A for third service
-#    And I click on "Save and return to service requirements"
-#    And I click on "Back to detailed search summary"
-#    And I click on "Birmingham"
-#    And I click on "Answer question"
-#    And I enter 4 for routine cleaning - DA one
-#    And I click on "Save and return to service requirements"
-#    And I click on "Answer question"
-#    And I select standard A for first service
-#    And I click on "Save and return to service requirements"
-#    And I click on "Answer question"
-#    And I enter 1 for number of personnel
-#    And I select all day service for Monday
-#    And I select not required for Tuesday to Sunday
-#    And I click on "Save and return to service requirements"
-#    And I click on "Answer question"
-#    And I enter 1 for number of personnel
-#    And I select all day service for Monday
-#    And I select not required for Tuesday to Sunday
-#    And I click on "Save and return to service requirements"
-#    And I click on "Answer question"
-#    And I enter 1 for number of personnel
-#    And I select all day service for Monday
-#    And I select not required for Tuesday to Sunday
-#    And I click on "Save and return to service requirements"
-#    And I click on "Answer question"
-#    And I enter 1 for number of personnel
-#    And I select all day service for Monday
-#    And I select not required for Tuesday to Sunday
-#    And I click on "Save and return to service requirements"
-#    And I click on "Answer question"
-#    And I enter 1 for number of personnel
-#    And I select all day service for Monday
-#    And I select not required for Tuesday to Sunday
-#    And I click on "Save and return to service requirements"
-#    And I click on "Answer question"
-#    And I enter 1 for number of personnel
-#    And I select all day service for Monday
-#    And I select not required for Tuesday to Sunday
-#    And I click on "Save and return to service requirements"
-#    And I click on "Answer question"
-#    And I enter 1 for number of personnel
-#    And I select all day service for Monday
-#    And I select not required for Tuesday to Sunday
-#    And I click on "Save and return to service requirements"
-#    And I click on "Answer question"
-#    And I enter 1 for number of personnel
-#    And I select all day service for Monday
-#    And I select not required for Tuesday to Sunday
-#    And I click on "Save and return to service requirements"
-#    And I click on "Answer question"
-#    And I enter 1 for number of personnel
-#    And I select all day service for Monday
-#    And I select not required for Tuesday to Sunday
-#    And I click on "Save and return to service requirements"
-#    And I click on "Answer question"
-#    And I enter 1 for number of personnel
-#    And I select all day service for Monday
-#    And I select not required for Tuesday to Sunday
-#    And I click on "Save and return to service requirements"
-#    And I click on "Answer question"
-#    And I enter 1 for number of personnel
-#    And I select all day service for Monday
-#    And I select not required for Tuesday to Sunday
-#    And I click on "Save and return to service requirements"
-#    And I click on "Answer question"
-#    And I enter 1 for number of personnel
-#    And I select all day service for Monday
-#    And I select not required for Tuesday to Sunday
-#    And I click on "Save and return to service requirements"
-#    And I click on "Back to detailed search summary"
-#    And I click on "Westminster Building"
-#    And I click on "Answer question"
-#    And I enter 2 for classified waste - DA one
-#    And I enter 2 for feminine hygiene waste - DA one
-#    And I enter 2 for general waste - DA one
-#    And I enter 2 for recycled waste - DA one
-#    And I click on "Save and return to service requirements"
-#    And I click on "Back to detailed search summary"
-#    And I click on "Continue"
-#    And I should see the price displayed £234,870.30
-#    And I click on the Direct award route to market
-#    And I click on "Continue"
-#    And the lowest priced supplier is "Wolf-Wiza" and contract price is £234,870.30
-#    And the second subsequent supplier is "Supplier 2" and contract price is £250,298.86
-#    And the third subsequent supplier is "Supplier 3" and contract price is £251,029.94
-#    And the fourth subsequent supplier is "Supplier 4" and contract price is £260,968.75
-#    And the fifth subsequent supplier is "Supplier 5" and contract price is £262,412.28
-#    And the sixth subsequent supplier is "Supplier 6" and contract price is £267,133.45
-#    And the seventh subsequent supplier is "Supplier 7" and contract price is £278,186.69
-#    And the eighth subsequent supplier is "Supplier 8" and contract price is £279,993.33
-#    And the ninth subsequent supplier is "Supplier 9" and contract price is £282,709.24
-#    And the tenth subsequent supplier is "Supplier 10" and contract price is £296,928.35
+    And I click on "Belfast Building"
+    And I am on the "Service requirements" page
+    And I click on the service question
+    And I am on the "Portable appliance testing" page
+    And I enter 9 for portable appliance testing
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Mobile cleaning services" page
+    And I enter 9 for mobile cleaning service
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Mobile cleaning services" page
+    And I select standard A
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Deep (periodic) cleaning" page
+    And I select standard A
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Cleaning of external areas" page
+    And I select standard A
+    And I click on "Save and return"
+    And I click on "Return to service requirements summary"
+    And I am on "Service requirements summary" page
+    And I click on "Birmingham"
+    And I click on the service question
+    And I am on the "Routine cleaning" page
+    And I enter 4 for routine cleaning
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Handyman services" page
+    And I enter 1248 for service hours
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Move and space management - internal moves" page
+    And I enter 1248 for service hours
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Reception service" page
+    And I enter 1248 for service hours
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Taxi booking service" page
+    And I enter 1248 for service hours
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Car park management and booking" page
+    And I enter 1248 for service hours
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Voice announcement system operation" page
+    And I enter 1248 for service hours
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Manned guarding service" page
+    And I enter 1248 for service hours
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Cctv / alarm monitoring" page
+    And I enter 1248 for service hours
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Control of access and security passes" page
+    And I enter 1248 for service hours
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Emergency response" page
+    And I enter 1248 for service hours
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Patrols (fixed or static guarding)" page
+    And I enter 1248 for service hours
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Management of visitors and passes" page
+    And I enter 1248 for service hours
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Routine cleaning" page
+    And I select standard A
+    And I click on "Save and return"
+    And I click on "Return to service requirements summary"
+    And I am on "Service requirements summary" page
+    And I click on "Westminster Building"
+    And I am on the "Service requirements" page
+    And I click on the service question
+    And I am on the "General waste" page
+    And I enter 2 for general waste
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Recycled waste" page
+    And I enter 2 for recycled waste
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Classified waste" page
+    And I enter 2 for classified waste
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Feminine hygiene waste" page
+    And I enter 2 for feminine hygiene waste
+    And I click on "Save and return"
+    And I click on "Return to service requirements summary"
+    And I am on "Service requirements summary" page
+    And I click on "Return to requirements"
+    And I click on "Continue to results"
+    And I should see the price displayed £234,870.30
+    And I click on the Direct award route to market
+    And I click on "Continue"
+    And the lowest priced supplier is "Wolf-Wiza" and contract price is £234,870.30
+    And the second subsequent supplier is "Supplier 2" and contract price is £250,298.86
+    And the third subsequent supplier is "Supplier 3" and contract price is £251,029.94
+    And the fourth subsequent supplier is "Supplier 4" and contract price is £260,968.75
+    And the fifth subsequent supplier is "Supplier 5" and contract price is £262,412.28
+    And the sixth subsequent supplier is "Supplier 6" and contract price is £267,133.45
+    And the seventh subsequent supplier is "Supplier 7" and contract price is £278,186.69
+    And the eighth subsequent supplier is "Supplier 8" and contract price is £279,993.33
+    And the ninth subsequent supplier is "Supplier 9" and contract price is £282,709.24
+    And the tenth subsequent supplier is "Supplier 10" and contract price is £296,928.35
 
     Examples:
       | years | day | month | year |
