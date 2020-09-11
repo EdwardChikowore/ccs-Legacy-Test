@@ -502,7 +502,6 @@ end
 
 
 Then(/^I select services for second building "([^"]*)" - DA scenario two$/) do |building_name|
-  service_requirements.select_all.click
   service_requirements.asbestos.click
   service_requirements.compliance_plans.click
   service_requirements.condition_survey.click
@@ -601,38 +600,6 @@ end
 And(/^I enter (.+) for recycled waste - AV scenario four$/) do |value|
   common.service_info_volume.recycled_waste_three.set(value)
 end
-
-
-And(/^I enter (.+) for first lift$/) do |value|
-  common.lift_one.set(value)
-end
-
-
-And(/^I enter (.+) for lift one$/) do |value|
-  common.lift_one.set(value)
-  click_on "Add new lift (98 remaining)"
-end
-
-And(/^I enter (.+) for lift two$/) do |value|
-  common.lift_two.set(value)
-  common.add_lift_button_two.click
-end
-
-
-And(/^I enter (.+) for lift three$/) do |value|
-  common.lift_three.set(value)
-  common.add_lift_button_three.click
-end
-
-And(/^I enter (.+) for lift four$/) do |value|
-  common.lift_four.set(value)
-  common.add_lift_button_four.click
-end
-
-And(/^I enter (.+) for lift five$/) do |value|
-  common.lift_five.set(value)
-end
-
 # And(/^I enter (.+) for portable appliance testing$/) do |value|
 #   common.service_info_volume.portable_appliance.set(value)
 # end
@@ -672,6 +639,18 @@ end
 
 And(/^I enter (.+) for recycled waste$/) do |value|
   service_requirements.recycled_waste_volume.set(value)
+end
+
+And(/^I enter (.+) for hazardous waste$/) do |value|
+  service_requirements.hazardous_waste_volume.set(value)
+end
+
+And(/^I enter (.+) for clinical waste$/) do |value|
+  service_requirements.clinical_waste.set(value)
+end
+
+And(/^I enter (.+) for medical waste$/) do |value|
+  service_requirements.medical_waste.set(value)
 end
 
 Then(/^I select all day service for Monday to Friday$/) do

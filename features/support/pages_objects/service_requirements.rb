@@ -3,8 +3,13 @@ class ServiceRequirements < SitePrism::Page
   sections :service_table, 'tr.govuk-table__row' do
     element :name, 'th'
     elements :volume, 'td:nth-child(3)'
-
   end
+
+    element :answer_question, 'td > a'
+    elements :change_link, 'td > a'
+    element :select_all, '#box-all'
+
+    element :building_standard_text, 'tr:nth-child(1)'
 
     elements :volume, 'tr.govuk-table__row > td:nth-child(3)'
 
@@ -256,18 +261,25 @@ class ServiceRequirements < SitePrism::Page
   # element :mobile_cleaning_volume, '#facilities_management_procurement_building_procurement_building_services_attributes_9_no_of_building_occupants'
   # element :cleaning_external_area, ''
 
-  element :portable_appliance_volume, '.portable_appliance_testing-input'
-  element :mobile_cleaning_volume, '.mobile_cleaning_services-input'
+  element :portable_appliance_volume, '[name="facilities_management_procurement_building_service[no_of_appliances_for_testing]"]'
+  element :mobile_cleaning_volume, '[name="facilities_management_procurement_building_service[no_of_building_occupants]"]'
   element :cleaning_external_area, '.cleaning_of_external_areas-input'
-  element :routine_cleaning_volume, '.routine_cleaning-input'
-  element :general_waste_volume, '.general_waste-input'
-  element :recycled_waste_volume, '.recycled_waste-input'
-  element :classified_waste_volume, '.classified_waste-input'
-  element :feminine_hygiene_volume, '.feminine_hygiene_waste-input'
+  element :routine_cleaning_volume, '[name="facilities_management_procurement_building_service[no_of_building_occupants]"]'
+  element :general_waste_volume, '[name="facilities_management_procurement_building_service[tones_to_be_collected_and_removed]"]'
+  element :recycled_waste_volume, '[name="facilities_management_procurement_building_service[tones_to_be_collected_and_removed]"]'
+  element :classified_waste_volume, '[name="facilities_management_procurement_building_service[no_of_consoles_to_be_serviced]"]'
+  element :feminine_hygiene_volume, '[name="facilities_management_procurement_building_service[no_of_units_to_be_serviced]"]'
+  element :hazardous_waste,'[name="facilities_management_procurement_building_service[tones_to_be_collected_and_removed]"]'
+  element :clinical_waste,'[name="facilities_management_procurement_building_service[tones_to_be_collected_and_removed]"]'
+  element :hazardous_waste,'[name="facilities_management_procurement_building_service[tones_to_be_collected_and_removed]"]'
+  element :medical_waste,'[name="facilities_management_procurement_building_service[tones_to_be_collected_and_removed]"]'
 
 
   element :number_of_personel, '#facilities_management_procurement_building_service_service_hours_personnel'
 
   element :number_of_hours, '#facilities_management_procurement_building_service_service_hours'
   element :service_hours_requirement, '#facilities_management_procurement_building_service_detail_of_requirement'
+  sections :lift_floor, '.lift-row' do
+    element :data, 'input'
+  end
 end

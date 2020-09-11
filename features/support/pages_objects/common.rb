@@ -611,4 +611,7 @@ class Common < SitePrism::Page
   element :pension_three_percentage, 'input#facilities_management_procurement_procurement_pension_funds_attributes_2_percentage'
   elements :pension_input_field, 'p > input'
 
+  element :estimated_cost_option, '[value="1a"]'
+
+  element :procurement_name, '[name="facilities_management_procurement[contract_name]"]'
 end

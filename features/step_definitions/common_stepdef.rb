@@ -72,8 +72,39 @@ Then(/^I should see my selection in the basket$/) do
   expect(common.service_basket.selected_service_msg.text).to eq("Mechanical and electrical engineering maintenance")
 end
 
-Then(/^I click continue/) do
-  click_on 'Continue'
+Then(/^I click continue$/) do
+  click_on 'continue'
+end
+
+Then(/^I select services with no service questions$/) do
+  check 'Voice announcement system maintenance'
+  check 'Airport and aerodrome maintenance services'
+  check 'Specialist maintenance services'
+  check 'Professional snow & ice clearance'
+  check 'Building information modelling and government soft landings'
+  check 'Retail services / convenience store '
+  check 'Deli/coffee bar'
+  check 'Events and functions'
+  check 'Full service restaurant'
+  check 'Hospitality and meetings'
+  check 'Outside catering'
+  check 'Trolley service'
+  check 'Vending services (food & beverage)'
+  check 'Residential catering services'
+  check 'Cleaning of communications and equipment rooms'
+  check 'Specialist cleaning'
+  check 'Cleaning of curtains and window blinds'
+  check 'Cable management'
+  check 'Stores management'
+  check 'Portable washroom solutions'
+  check 'Administrative support services'
+  check 'Additional security services'
+  check 'Patrols (mobile via a specific visiting vehicle)'
+  check 'Journal, magazine and newspaper supply'
+  check 'Footwear cobbling services'
+  check 'Provision of chaplaincy support services'
+  check 'Housing and residential accommodation management'
+  check 'Training establishment management and booking service'
 end
 
 Then(/^I click on a North East England$/) do
@@ -288,7 +319,7 @@ Then(/^I select standard B$/) do
 end
 
 Then(/^I select standard C$/) do
-  common.service_standard.value_C.click
+  common.service_standard.value_c.click
 end
 
 Then(/^I select standard A for first service$/) do
@@ -557,8 +588,8 @@ Then(/^I click on Tees Valley and Durham$/) do
 end
 
 
-Then(/^I click on save and continue$/) do
-  click_on 'Save and continue'
+Then(/^I click on save and return$/) do
+  click_on 'Save and return'
 end
 
 Then(/^I am on estimated annual cost page$/) do
@@ -646,12 +677,19 @@ Then(/^I click on estimated annual cost$/) do
   click_on 'Estimated annual cost'
 end
 
+Then(/^I click on TUPE$/) do
+  click_on 'TUPE'
+end
+
+Then(/^I click on contract period$/) do
+  click_on 'Contract period'
+end
+
 Then(/^I click on the first question$/) do
   common.answer_question[0].click
 end
 
 Then(/^I click on the service requirements summary question/) do
-  binding.pry
   common.service_summary_question.click
 end
 
@@ -659,9 +697,43 @@ Then(/^I click on the service question$/) do
   common.service_question.click
 end
 
+Then(/^I click on save and continue$/) do
+  click_on 'Save and continue'
+end
 
+Then(/^I click on return to requirements$/) do
+  click_on 'Return to requirements'
+end
 
-Then(/^I am on detailed search page$/) do
+Then(/^I click on buildings link$/) do
+  click_on 'Buildings'
+end
+
+Then(/^I click on assigning services to buildings link$/) do
+  click_on 'Assigning services to buildings'
+end
+
+Then(/^I click on the first building on building and services summary page$/) do
+  service_requirements.answer_question.click
+end
+
+Then(/^I click on select all$/) do
+  service_requirements.select_all.click
+end
+
+Then(/^I click on the first building on the service requirements summary page$/) do
+  service_requirements.answer_question.click
+end
+
+Then(/^I click on service standards change link$/) do
+  service_requirements.change_link[1].click
+end
+
+Then(/^I click on lot 1a$/) do
+  common.estimated_cost_option.click
+end
+
+Then(/^I am on requirements page$/) do
   step "I click on continue"
   step "I click on open all"
   step "I click on Tees Valley and Durham"
@@ -675,14 +747,15 @@ Then(/^I click change on building section$/) do
   common.answer_question[4].click
 end
 
-
 Then(/^I answer about the contract question$/) do
   step "I click on estimated annual cost"
   step "I am on estimated annual cost page"
   step "I select no option for estimated annual cost"
-  step "I click on save and continue"
+  step "I click on save and return"
+  step "I click on TUPE"
   step "I select no option for tupe"
-  step "I click on save and continue"
+  step "I click on save and return"
+  step "I click on contract period"
 end
 
 Then(/^I answer contract period question/) do
@@ -691,8 +764,7 @@ Then(/^I answer contract period question/) do
   step "I select no option for tupe required"
   step "I select no option for optional call-off extension"
   step "I click on save and continue"
-  step "I select first building"
-  step "I click on save and return to detailed search summary"
+  step "I click on return to requirements"
 end
 
 Then(/^I answer services question/) do
@@ -706,7 +778,6 @@ Then(/^I answer services question/) do
   step "I click on continue"
 end
 
-
 Then(/^I proceed to the contract details page/) do
   step "I am on results page"
   step "I click on the Direct award route to market"
@@ -716,7 +787,19 @@ Then(/^I proceed to the contract details page/) do
   step "I click on continue"
 end
 
-# Then(/^I select all maintenance services/) do
-#   common.maintenance_select_all.click
-# end
+Then(/^I select building/) do
+  step "I click on buildings link"
+  step "I select first building"
+  step "I click on save and continue"
+  step "I click on return to requirements"
+end
+
+Then(/^I assign services to buildings/) do
+  step "I click on assigning services to buildings link"
+  step "I click on the first building on building and services summary page"
+  step "I click on select all"
+  step "I click on save and return"
+  step "I click on return to requirements"
+end
+
 
