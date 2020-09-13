@@ -187,8 +187,13 @@ Then(/^I select all services$/) do
 end
 
 Then(/^I select all services for first building$/) do
-  common.checkbox_multiple_building[1].click
-  # common.checkbox_multiple_building[0].click
+  common.checkbox_multiple_building.click
+  click_on "Save and return"
+end
+
+Then(/^I select all services for second building$/) do
+  common.checkbox_multiple_building.click
+  click_on "Save and return"
 end
 
 Then(/^I select services for first building "([^"]*)" - DA scenario one$/) do |building_name|
@@ -220,10 +225,6 @@ Then(/^I select services for first building "([^"]*)" - DA scenario one$/) do |b
   common.service_selection.cafm[2].click
   common.service_selection.helpdesk[2].click
   common.service_selection.management_billable[2].click
-
-
-
-
 end
 
 
@@ -549,24 +550,9 @@ Then(/^I select services for fourth building "([^"]*)" - DA scenario two$/) do |
   service_requirements.management_billable.click
 end
 
-
-
-Then(/^I select all services for second building$/) do
-  common.checkbox_multiple_building[0].click
-  # common.checkbox_multiple_building[1].click
-end
-
-# And(/^I enter (.+) for routine cleaning$/) do |value|
-#   common.service_info_volume.routine_cleaning.set(value)
-# end
-
 And(/^I enter (.+) for routine cleaning - scenario four$/) do |value|
   common.service_info_volume.routine_cleaning_three.set(value)
 end
-
-# And(/^I enter (.+) for general waste$/) do |value|
-#   common.service_info_volume.general_waste_two.set(value)
-# end
 
 And(/^I enter (.+) for general waste scenario one b$/) do |value|
   common.service_info_volume.general_waste.set(value)
@@ -584,14 +570,9 @@ And(/^I enter (.+) for mobile cleaning services$/) do |value|
   common.service_info_volume.mobile_cleaning.set(value)
 end
 
-# And(/^I enter (.+) for recycled waste$/) do |value|
-#   common.service_info_volume.recycled_waste.set(value)
-# end
-
 And(/^I enter (.+) for routine cleaning - AV scenario four$/) do |value|
   common.service_info_volume.routine_cleaning_five.set(value)
 end
-
 
 And(/^I enter (.+) for general waste - AV scenario four$/) do |value|
   common.service_info_volume.general_waste_five.set(value)
@@ -600,9 +581,6 @@ end
 And(/^I enter (.+) for recycled waste - AV scenario four$/) do |value|
   common.service_info_volume.recycled_waste_three.set(value)
 end
-# And(/^I enter (.+) for portable appliance testing$/) do |value|
-#   common.service_info_volume.portable_appliance.set(value)
-# end
 
 And(/^I enter (.+) for mobile cleaning service two$/) do |value|
   common.service_info_volume.mobile_cleaning_two.set(value)
@@ -611,7 +589,6 @@ end
 And(/^I enter (.+) for portable appliance testing$/) do |value|
   service_requirements.portable_appliance_volume.set(value)
 end
-
 
 And(/^I enter (.+) for cleaning of external areas$/) do |value|
   service_requirements.cleaning_external_area.set(value)
@@ -623,6 +600,10 @@ end
 
 And(/^I enter (.+) for routine cleaning$/) do |value|
   service_requirements.routine_cleaning_volume.set(value)
+end
+
+And(/^I enter (.+) for mobile cleaning$/) do |value|
+  service_requirements.mobile_cleaning_volume.set(value)
 end
 
 And(/^I enter (.+) for classified waste$/) do |value|
@@ -650,6 +631,10 @@ And(/^I enter (.+) for clinical waste$/) do |value|
 end
 
 And(/^I enter (.+) for medical waste$/) do |value|
+  service_requirements.medical_waste.set(value)
+end
+
+And(/^I enter (.+) for handyman services$/) do |value|
   service_requirements.medical_waste.set(value)
 end
 
@@ -690,8 +675,6 @@ Then(/^unpriced service "([^"]*)" should be displayed$/) do |unpriced_service|
   common.choose_contract.summary_text.click
   expect(common.choose_contract.unpriced_service.text).to eq(unpriced_service)
 end
-
-
 
 Then(/^I click on second building - multiple building$/) do
   expect(common.your_buildings.building_name[1].text).to eq("#{@building_twelve} (0 selected)")

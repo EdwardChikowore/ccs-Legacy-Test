@@ -411,7 +411,7 @@ class Common < SitePrism::Page
 
 
 
-    elements :checkbox_multiple_building, 'input[name="box-all"]'
+    element :checkbox_multiple_building, 'input[name="box-all"]'
 
 
   section :your_buildings, 'div#root' do
