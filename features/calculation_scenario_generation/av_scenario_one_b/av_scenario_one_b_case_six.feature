@@ -1,4 +1,4 @@
-Feature: Assessed value Scenario B - Case Six
+Feature: Assessed Value - Scenario 1b - One service has no benchmark and framework rate
 
   Background: Login page
     Given I am a logged in user
@@ -31,7 +31,6 @@ Feature: Assessed value Scenario B - Case Six
     And I click on the following services:
       |Mechanical and electrical engineering maintenance|
       |Professional snow & ice clearance                  |
-      |Locksmith services                                 |
       |Routine cleaning                                   |
       |Reception service                                  |
       |General waste                                      |

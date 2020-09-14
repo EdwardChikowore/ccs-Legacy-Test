@@ -1,4 +1,4 @@
-Feature: Assessed value Scenario Three - Case Two
+Feature: Assessed value Scenario Three - No Customer Price and at least 1 Service (but not all services) missing FW & BM price
 
   Background: Login page
     Given I am a logged in user
@@ -8,7 +8,7 @@ Feature: Assessed value Scenario Three - Case Two
     And I add contract name
     And I click on "Save and return"
 
-  Scenario Outline: 2-  No CP Lot 1A
+  Scenario Outline: 2- Includes TUPE, CAFM, Helpdesk and London Building - LOT 1A
     And I click on "Estimated annual cost"
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_false" option

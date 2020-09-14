@@ -1,6 +1,6 @@
-Feature: Assessed value Scenario A - Case Eight
+Feature: Assessed Value - Scenario 1a - One service has no framework rate
 
-  Background: Login page
+  Background:
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
     When I click on "Start a procurement"
@@ -8,7 +8,7 @@ Feature: Assessed value Scenario A - Case Eight
     And I add contract name
     And I click on "Save and return"
 
-  Scenario Outline: Scenario 8-  CP, CAFM, Helpdesk TUPE, V is out of 30% (Neg Right boundary)
+  Scenario Outline: 8 - Includes Customer Price, CAFM, Helpdesk, TUPE, London Building, Variance is within of 30% (Positive right boundary)
     And I click on "Estimated annual cost"
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option
@@ -68,4 +68,4 @@ Feature: Assessed value Scenario A - Case Eight
 
     Examples:
       | years | day | month | year |
-      |   1   | 12  | 10    | 2020 |
+      |   1   | 12  | 10    | 2023 |

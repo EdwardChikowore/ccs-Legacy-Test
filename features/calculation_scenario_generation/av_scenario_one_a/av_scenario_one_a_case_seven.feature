@@ -1,4 +1,4 @@
-Feature: Assessed value Scenario A - Case Seven
+Feature: Assessed Value - Scenario 1a - One service has no framework rate
 
   Background: Login page
     Given I am a logged in user
@@ -8,7 +8,7 @@ Feature: Assessed value Scenario A - Case Seven
     And I add contract name
     And I click on "Save and return"
 
-  Scenario Outline: Scenario 7-   CP, CAFM, Helpdesk TUPE, V is within of 30% (Neg Left boundary)
+  Scenario Outline: 7 - Includes Customer Price, CAFM, Helpdesk, TUPE, London Building, Variance is within of 30% (Positive left boundary)
     And I click on "Estimated annual cost"
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option

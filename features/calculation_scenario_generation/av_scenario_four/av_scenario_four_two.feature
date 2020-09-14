@@ -1,4 +1,4 @@
-Feature: Assessed value Scenario Four Case two 2-  No CP,CAFM, Helpdesk TUPE
+Feature: Assessed value Scenario Four - No Customer Price and at least 1 Service missing only FW price.
 
   Background: Login page
     Given I am a logged in user
@@ -8,7 +8,7 @@ Feature: Assessed value Scenario Four Case two 2-  No CP,CAFM, Helpdesk TUPE
     And I add contract name
     And I click on "Save and return"
 
-  Scenario Outline: Scenario 2-  No CP,CAFM, Helpdesk TUPE
+  Scenario Outline: 2- No CP,CAFM, Helpdesk TUPE, Variance out of 30% (Negative boundary)- LOT 1A
     And I click on "Estimated annual cost"
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_false" option

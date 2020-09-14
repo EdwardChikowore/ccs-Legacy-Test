@@ -521,6 +521,11 @@ And(/^I click on the sixth question for "([^"]*)"$/)do |name|
   common.contract_details_change_link[5].click
 end
 
+And(/^I click on the seventh question for "([^"]*)"$/)do |name|
+  expect(common.contract_details_text[6].text).to eq(name)
+  common.contract_details_change_link[6].click
+end
+
 
 And(/^I select invoicing contact$/) do
   common.buyer_invoice_details.click
@@ -768,6 +773,18 @@ end
 
 Then(/^I click on continue to results$/) do
   click_on "Continue to results"
+end
+
+Then(/^I select english law$/) do
+  common.english_law.click
+end
+
+Then(/^I complete service requirements questions$/) do
+  step "I click on service requirements link"
+  step "I am on service requirements summary page"
+  step "I click on the first building on the service requirements summary page"
+  step "I click on Answer question"
+  step "I select standard A"
 end
 
 Then(/^I navigate to results page$/) do

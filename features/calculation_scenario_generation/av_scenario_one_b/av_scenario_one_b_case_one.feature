@@ -1,4 +1,4 @@
-Feature: Assessed value Scenario B - Case One
+Feature: Assessed Value - Scenario 1b - One service has no benchmark and framework rate
 
   Background: Login page
     Given I am a logged in user
@@ -8,7 +8,7 @@ Feature: Assessed value Scenario B - Case One
     And I add contract name
     And I click on "Save and return"
 
-  Scenario Outline: 1- CP, No CAFM, Helpdesk TUPE, V is within of 30% (Neg left boundary)
+  Scenario Outline: 1- Includes Customer price, Variance is within of 30% (Negative left boundary)
     And I click on "Estimated annual cost"
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option
@@ -30,7 +30,6 @@ Feature: Assessed value Scenario B - Case One
     And I click on the following services:
       |Mechanical and electrical engineering maintenance|
       |Professional snow & ice clearance                  |
-      |Locksmith services                                 |
       |Routine cleaning                                   |
       |Reception service                                  |
       |General waste                                      |

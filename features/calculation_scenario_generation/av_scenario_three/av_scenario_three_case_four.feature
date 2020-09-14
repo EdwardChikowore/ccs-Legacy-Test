@@ -1,4 +1,4 @@
-Feature: Assessed value Scenario Three - Case Four
+Feature: Assessed value Scenario Three - No Customer Price and at least 1 Service (but not all services) missing FW & BM price
 
   Background: Login page
     Given I am a logged in user
@@ -9,7 +9,7 @@ Feature: Assessed value Scenario Three - Case Four
     And I click on "Save and return"
 
 
-  Scenario Outline: 4 - No CP - Lot 1B
+  Scenario Outline: 4 - Includes TUPE, CAFM, Helpdesk and London Building - LOT 1B
     And I click on "Estimated annual cost"
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_false" option
@@ -77,7 +77,6 @@ Feature: Assessed value Scenario Three - Case Four
     And I click on "Return to service requirements summary"
     And I click on "Return to requirements"
     And I click on "Continue to results"
-    And I click on "Continue"
     And I should see the "Estimated contract cost" page
     And I should see the partial price value £23,092,200
     And unpriced service "Professional snow & ice clearance" should be displayed

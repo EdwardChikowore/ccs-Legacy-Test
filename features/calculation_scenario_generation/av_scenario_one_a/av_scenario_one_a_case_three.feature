@@ -1,19 +1,14 @@
-Feature: Assessed value Scenario A - Case Three
+Feature: Assessed Value - Scenario 1a - One service has no framework rate
 
-  Background: Login page
+  Background:
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    When I click on "Quick view suppliers"
-    And I am on the "Select the facilities management services that you need" page
-    And I click on open all
-    And I click on the "Mechanical and electrical engineering maintenance"
-    And I click on the "Locksmith services "
-    And I click on the "Routine cleaning"
-    And I click on the "Reception service"
-    And I click on the "General waste"
-    And I click on "Close all"
+    When I click on "Start a procurement"
+    And I click on "Continue"
+    And I add contract name
+    And I click on "Save and return"
 
-  Scenario Outline: Scenario 3 CP, No CAFM, Helpdesk TUPE, V is within of 30% (Positive Left  boundary)
+  Scenario Outline: Scenario 3- Includes Customer Price, No CAFM, Helpdesk, TUPE, Variance is within of 30% (Positive Left boundary)
     And I click on "Estimated annual cost"
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option
@@ -52,7 +47,7 @@ Feature: Assessed value Scenario A - Case Three
     And I click on "Save and return"
     And I click on the service question
     And I am on the "Reception service" page
-    And I enter 8736 for service hours
+    And I enter 6240 for service hours
     And I click on "Save and return"
     And I click on the service question
     And I am on the "General waste" page

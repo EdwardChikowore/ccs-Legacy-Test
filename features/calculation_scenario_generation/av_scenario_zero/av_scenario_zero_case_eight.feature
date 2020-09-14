@@ -1,4 +1,4 @@
-Feature: Assessed value Scenario Zero case one
+Feature: Assessed value Scenario Zero - All services has Benchmark and framework rates
 
   Background: Login page
     Given I am a logged in user
@@ -8,7 +8,7 @@ Feature: Assessed value Scenario Zero case one
     And I add contract name
     And I click on "Save and return"
 
-  Scenario Outline: 1-  CP, No CAFM, Helpdesk TUPE
+  Scenario Outline: Scanario 8 -  Customer Price added; No CAFM, Helpdesk and TUPE - Standard B
     And I click on "Estimated annual cost"
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option

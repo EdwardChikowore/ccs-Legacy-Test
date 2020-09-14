@@ -8,13 +8,15 @@ Feature: Facilities Management - DA - Contract - Review and Generate
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
-    When I am on detailed search page
-    And I answer about the contract question
+    And I am on requirements page
+    Then I answer about the contract question
     And I answer contract period question
-    And I answer services question
+    And I select building
+    And I assign services to buildings
+    And I complete service requirements questions
+    And I navigate to results page
     And I proceed to the contract details page
     And I am on "Contract details" page
-
 
    Scenario: Contract Details - Content
     And I am on "Contract details" page

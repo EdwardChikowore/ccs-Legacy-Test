@@ -1,4 +1,4 @@
-Feature: Assessed value Scenario A - Case Fifteen
+Feature: Assessed Value - Scenario 1a - One service has no framework rate
 
   Background: Login page
     Given I am a logged in user
@@ -8,7 +8,7 @@ Feature: Assessed value Scenario A - Case Fifteen
     And I add contract name
     And I click on "Save and return"
 
-  Scenario Outline: 15-  CP, CAFM, Helpdesk TUPE, V is within of 30% (Neg right  boundary)
+  Scenario Outline: 15 - Includes Customer Price, CAFM, Helpdesk, London Building, Variance is within of 30% (Negative right boundary)
     And I click on "Estimated annual cost"
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option
@@ -37,7 +37,7 @@ Feature: Assessed value Scenario A - Case Fifteen
       |CAFM system                                        |
       |Helpdesk services                                  |
     And I navigate to buildings page
-    And I select seventh building "London building" with address "2 Marylebone Road, London, Inner London - West, NW1 4DF"
+    And I select seventh building "London building" with address "2 Marylebone Road, London, NW1 4DF"
     And I navigate to buildings and services summary page
     And I click on "London building"
     And I select all services for first building
@@ -46,7 +46,7 @@ Feature: Assessed value Scenario A - Case Fifteen
     And I am on the "Service requirements" page
     And I click on the service question
     And I am on the "Routine cleaning" page
-    And I enter 18000 for routine cleaning
+    And I enter 88000 for routine cleaning
     And I click on "Save and return"
     And I click on the service question
     And I am on the "Handyman services" page
@@ -58,7 +58,7 @@ Feature: Assessed value Scenario A - Case Fifteen
     And I click on "Save and return"
     And I click on the service question
     And I am on the "General waste" page
-    And I enter 1300 for general waste
+    And I enter 13000 for general waste
     And I click on "Save and return"
     And I click on the service question
     And I am on the "Mechanical and electrical engineering maintenance" page
