@@ -1,30 +1,24 @@
-Feature: Assessed value Scenario zero case five
+Feature: Assessed value Scenario Zero - All services has Benchmark and framework rates
 
   Background: Login page
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    When I click on "Quick view suppliers"
-    And I am on the "Select the facilities management services that you need" page
-    And I click on open all
-    And I click on the "Ventilation and air conditioning system maintenance "
-    And I click on the "Lifts, hoists & conveyance systems maintenance "
-    And I click on the "Portable appliance testing "
-    And I click on the "Mobile cleaning "
-    And I click on the "CAFM system"
-    And I click on the "Helpdesk services"
-    And I click on the "Management of billable works"
-    And I click on "Close all"
+    When I click on "Start a procurement"
+    And I click on "Continue"
+    And I add contract name
+    And I click on "Save and return"
 
-  Scenario Outline: Scenario 5-  CP, CAFM, Helpdesk TUPE (Lot 1A)
-    When I am on detailed search page
+  Scenario Outline: Scenario 5- Includes Customer Input, CAFM, Helpdesk, TUPE - Two Buildings (Lot 1A)
     And I click on "Estimated annual cost"
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option
     And I enter the cost 500000
-    And I click on "Save and continue"
+    And I click on "Save and return"
+    And I click on "TUPE"
     And I am on "TUPE" page
     And I click on the "facilities_management_procurement_tupe_true" option
-    And I click on "Save and continue"
+    And I click on "Save and return"
+    And I click on "Contract period"
     And I am on "Contract period" page
     And I enter the number of year as "<years>"
     And I enter the day as "<day>"
@@ -33,56 +27,81 @@ Feature: Assessed value Scenario zero case five
     And I click on the "facilities_management_procurement_mobilisation_period_required_true" option
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option
-    And I click on "Save and continue"
-    And I am on "Buildings" page
-    And I select seventh building "London building" with address "2 Marylebone Road, London, Inner London - West, NW1 4DF"
-    And I select twelfth building "Outside London building" with address "10 Kenton Avenue, Manchester, Greater Manchester, M18 7GQ"
-    And I click on "Save and return to detailed search summary"
+    Then I navigate to services page
+    And I click on the following services:
+      |Ventilation and air conditioning system maintenance |
+      |Lifts, hoists & conveyance systems maintenance      |
+      |Portable appliance testing                          |
+      |Mobile cleaning                                     |
+      |CAFM system                                         |
+      |Helpdesk services                                   |
+      |Management of billable works                        |
+    And I navigate to buildings page
+    And I select seventh building "London building" with address "2 Marylebone Road, London, NW1 4DF"
+    And I select twelfth building "Outside London building" with address "10 Kenton Avenue, Manchester, M18 7GQ"
+    And I navigate to buildings and services summary page
     And I click on "London building"
-    And I am on "Service requirements" page
-    And I click on "Answer question"
-    And I am on "Planned maintenance (PPM) services standards" page
-    And I select standard A for first service
-    And I select standard A for second service
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I am on the "Lifts, hoists & conveyance systems maintenance" page
-    And I enter 300 for first lift
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I am on "Service requirement volumes" page
-    And I enter 130 for portable appliance testing
-    And I enter 130 for mobile cleaning service two
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I select standard A for first service
-    And I click on "Save and return to service requirements"
-    And I click on "Back to detailed search summary"
+    And I select all services for first building
     And I click on "Outside London building"
-    And I am on "Service requirements" page
-    And I click on "Answer question"
-    And I am on "Planned maintenance (PPM) services standards" page
-    And I select standard A for first service
-    And I select standard A for second service
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
+    And I select all services for second building
+    And I navigate to Service requirements summary page
+    And I click on "London building"
+    And I am on the "Service requirements" page
+    And I click on the service question
     And I am on the "Lifts, hoists & conveyance systems maintenance" page
-    And I enter 300 for first lift
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I am on "Service requirement volumes" page
+    And I enter 300 for number of lift floors
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Portable appliance testing" page
     And I enter 130 for portable appliance testing
-    And I enter 130 for mobile cleaning service two
-    And I click on "Save and return to service requirements"
-    And I click on "Answer question"
-    And I select standard A for first service
-    And I click on "Save and return to service requirements"
-    And I click on "Back to detailed search summary"
-    When I am on "Procurement summary" page
-    And I click on "Continue"
-    And I should see the price displayed £5,177,342.84
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Mobile cleaning services" page
+    And I enter 130 for mobile cleaning service
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Ventilation and air conditioning system maintenance" page
+    And I select standard A
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Lifts, hoists & conveyance systems maintenance" page
+    And I select standard A
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Mobile cleaning services" page
+    And I select standard A
+    And I click on "Save and return"
+    And I click on "Return to service requirements summary"
+    And I am on "Service requirements summary" page
+    And I click on "Outside London building"
+    And I am on the "Service requirements" page
+    And I click on the service question
+    And I am on the "Lifts, hoists & conveyance systems maintenance" page
+    And I enter 300 for number of lift floors
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Portable appliance testing" page
+    And I enter 130 for portable appliance testing
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Mobile cleaning services" page
+    And I enter 130 for mobile cleaning service
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Ventilation and air conditioning system maintenance" page
+    And I select standard A
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Lifts, hoists & conveyance systems maintenance" page
+    And I select standard A
+    And I click on "Save and return"
+    And I click on the service question
+    And I am on the "Mobile cleaning services" page
+    And I select standard A
+    When I navigate to results page
+    Then I should see the price displayed £5,177,342.84
 
 
     Examples:
       | years | day | month | year |
-      |   2   | 12  | 10    | 2020 |
+      |   2   | 12  | 10    | 2023 |

@@ -209,6 +209,10 @@ Then(/^I enter the cost (\d+)$/) do |cost|
   common.estimated_cost.radio_content.input.set(cost)
 end
 
+# Then(/^I enter the mobilisation period for (\d+) weeks$/) do |weeks|
+#   common.mobilisation_radio.period.set(weeks)
+# end
+
 Then(/^I enter the mobilisation period for (\d+) weeks$/) do |weeks|
   common.mobilisation_radio.period.set(weeks)
 end
@@ -395,6 +399,11 @@ Then(/^I should see the assessed value price$/) do
   expect(common.results_page.heading_two.text).to eq("£#{supplier_order.min}")
 end
 
+# Then(/^I should see the price displayed (.+)$/) do |price|
+#   bindin.pry
+#   expect(common.results_page.estimated_cost[0].text).to eq(price)
+# end
+#
 Then(/^I should see the price displayed (.+)$/) do |price|
   expect(common.results_page.estimated_cost[0].text).to eq(price)
 end
@@ -514,6 +523,11 @@ end
 And(/^I click on the sixth question for "([^"]*)"$/)do |name|
   expect(common.contract_details_text[5].text).to eq(name)
   common.contract_details_change_link[5].click
+end
+
+And(/^I click on the seventh question for "([^"]*)"$/)do |name|
+  expect(common.contract_details_text[6].text).to eq(name)
+  common.contract_details_change_link[6].click
 end
 
 
@@ -735,6 +749,81 @@ end
 
 Then(/^I click on lot 1a$/) do
   common.estimated_cost_option.click
+end
+
+Then(/^I am on buildings and services summary page$/) do
+  expect(common.header_one.text).to end_with("Buildings and services summary")
+end
+
+Then(/^I am on service requirements summary page$/) do
+  expect(common.header_one.text).to end_with("Service requirements summary")
+end
+
+Then(/^I click on service requirements link$/) do
+  click_on "Service requirements"
+end
+
+Then(/^I am on contract period summary page$/) do
+  expect(common.header_one.text).to end_with("Contract period summary")
+end
+
+Then(/^I click on services link$/) do
+  click_on "Services"
+end
+
+Then(/^I click on return to service requirements summary link$/) do
+  click_on "Return to service requirements summary"
+end
+
+Then(/^I click on continue to results$/) do
+  click_on "Continue to results"
+end
+
+Then(/^I select english law$/) do
+  common.english_law.click
+end
+
+Then(/^I complete service requirements questions$/) do
+  step "I click on service requirements link"
+  step "I am on service requirements summary page"
+  step "I click on the first building on the service requirements summary page"
+  step "I click on Answer question"
+  step "I select standard A"
+end
+
+Then(/^I navigate to results page$/) do
+  step "I click on save and return"
+  step "I click on return to service requirements summary link"
+  step "I click on return to requirements"
+  step "I click on continue to results"
+end
+
+Then(/^I navigate to buildings page$/) do
+  step "I click on save and continue"
+  step "I click on return to requirements"
+  step "I click on buildings link"
+  step "I am on buildings page"
+end
+
+Then(/^I navigate to services page$/) do
+  step "I click on save and continue"
+  step "I am on contract period summary page"
+  step "I click on return to requirements"
+  step "I click on services link"
+  step "I click on open all"
+end
+
+Then(/^I navigate to Service requirements summary page$/) do
+  step "I click on return to requirements"
+  step "I click on service requirements link"
+  step "I am on service requirements summary page"
+end
+
+Then(/^I navigate to buildings and services summary page$/) do
+  step "I click on save and continue"
+  step "I click on return to requirements"
+  step "I click on assigning services to buildings link"
+  step "I am on buildings and services summary page"
 end
 
 Then(/^I am on requirements page$/) do

@@ -24,7 +24,6 @@ end
 
 And(/^I enter (.+) for lift five$/) do |value|
   service_requirements.lift_floor[4].data.set(value)
-  click_on "Add another lift (94 remaining)"
 end
 
 And(/^I enter valid data for lift floor$/) do

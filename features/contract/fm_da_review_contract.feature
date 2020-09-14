@@ -8,10 +8,13 @@ Feature:Facilities Management - DA - Contract - Review contract
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
-    When I am on detailed search page
-    And I answer about the contract question
+    And I am on requirements page
+    Then I answer about the contract question
     And I answer contract period question
-    And I answer services question
+    And I select building
+    And I assign services to buildings
+    And I complete service requirements questions
+    And I navigate to results page
     And I proceed to the contract details page
     And I am on "Contract details" page
     And I click on the first question for "Payment method"
@@ -37,6 +40,10 @@ Feature:Facilities Management - DA - Contract - Review contract
     And I click on the sixth question for "Local Government Pension Scheme"
     And I am on "Local Government Pension Scheme" page
     And I select pension option
+    And I click on "Save and continue"
+    And I click on the seventh question for "Governing law"
+    And I am on "Governing law" page
+    And I select english law
     And I click on "Save and continue"
     And I am on "Contract details" page
     And I click on "Continue"

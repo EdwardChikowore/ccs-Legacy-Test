@@ -413,7 +413,7 @@ class Common < SitePrism::Page
 
 
 
-    elements :checkbox_multiple_building, 'input[name="box-all"]'
+    element :checkbox_multiple_building, 'input[name="box-all"]'
 
 
   section :your_buildings, 'div#root' do
@@ -616,4 +616,8 @@ class Common < SitePrism::Page
   element :estimated_cost_option, '[value="1a"]'
 
   element :procurement_name, '[name="facilities_management_procurement[contract_name]"]'
+
+  element :english_law, '#facilities_management_procurement_governing_law_english'
+  element :scottish_law, '#facilities_management_procurement_governing_law_scottish'
+  element :ni_law, '#facilities_management_procurement_governing_law_northern_ireland'
 end
