@@ -32,6 +32,8 @@ class Common < SitePrism::Page
     end
   end
 
+  element :service_summary, 'div#number-of-services'
+
   section :maintenance, '[data-sectionname="Maintenance services"]' do
     element :select_all, '#C_all'
   end

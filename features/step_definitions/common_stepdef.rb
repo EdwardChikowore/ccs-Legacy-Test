@@ -290,7 +290,11 @@ Then(/^I select "([^"]*)" for second building$/) do |service|
   common.choose_service[6].checkbox_items.label.click
 end
 
-
+And(/^The following summary text is displayed:$/) do |table|
+  table.transpose.raw.flatten.each do |item|
+    expect(common.service_summary.text).to eq(item)
+  end
+end
 
 
 
@@ -719,7 +723,7 @@ end
 
 Then(/^I click on select all$/) do
   service_requirements.select_all.click
-end
+end 
 
 Then(/^I click on the first building on the service requirements summary page$/) do
   service_requirements.answer_question.click
