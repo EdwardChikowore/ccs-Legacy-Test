@@ -25,20 +25,18 @@ Feature:Handyman services
       |Enter number of hours per year|
       |Enter the detail of requirement|
     And I enter 0 for service hours
+    When I click on "Save and return"
+    Then I should see the following error messages
       |There is a problem|
       |Number of hours per year must be a whole number between 1 and 999,999,999|
-      |Enter the detail of requirement|
     And I enter 99999999999999909 for service hours
+    When I click on "Save and return"
+    Then I should see the following error messages
       |There is a problem|
       |Number of hours per year must be a whole number between 1 and 999,999,999|
-      |Enter the detail of requirement|
-    When I enter 45 for portable appliance testing
-    And I click on "Save and return"
-    Then I am on the "Service requirements" page
-    And I click on "Change"
-    Then I am on the "Handyman services" page
-    When I click on "Return to service requirements"
-    Then I am on the "Service requirements" page
+    When I enter 45 for service hours
+    When I navigate to results page
+    Then I am on "Results" page
 
 
 

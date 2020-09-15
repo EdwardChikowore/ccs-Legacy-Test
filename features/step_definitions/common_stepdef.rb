@@ -395,11 +395,6 @@ Then(/^I should see the assessed value price$/) do
   expect(common.results_page.heading_two.text).to eq("£#{supplier_order.min}")
 end
 
-# Then(/^I should see the price displayed (.+)$/) do |price|
-#   bindin.pry
-#   expect(common.results_page.estimated_cost[0].text).to eq(price)
-# end
-#
 Then(/^I should see the price displayed (.+)$/) do |price|
   expect(common.results_page.estimated_cost[0].text).to eq(price)
 end
@@ -777,6 +772,10 @@ end
 
 Then(/^I select english law$/) do
   common.english_law.click
+end
+
+Then(/^I should see number of building text "([^"]*)"$/) do |value|
+  expect(common.number_of_buildings.text).to eq(value)
 end
 
 Then(/^I complete service requirements questions$/) do

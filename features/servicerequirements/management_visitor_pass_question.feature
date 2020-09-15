@@ -5,7 +5,7 @@ Feature:Management of visitors and passes
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
-    And I click on the "Voice announcement system operation"
+    And I click on the "Management of visitors and passes"
     And I am on requirements page
     Then I answer about the contract question
     And I answer contract period question
@@ -25,14 +25,16 @@ Feature:Management of visitors and passes
       |Enter number of hours per year|
       |Enter the detail of requirement|
     And I enter 0 for service hours
+    When I click on "Save and return"
+    Then I should see the following error messages
       |There is a problem|
       |Number of hours per year must be a whole number between 1 and 999,999,999|
-      |Enter the detail of requirement|
     And I enter 99999999999999909 for service hours
+    When I click on "Save and return"
+    Then I should see the following error messages
       |There is a problem|
       |Number of hours per year must be a whole number between 1 and 999,999,999|
-      |Enter the detail of requirement|
-    When I enter 45 for portable appliance testing
+    When I enter 45 for service hours
     And I click on "Save and return"
     Then I am on the "Service requirements" page
     And I click on "Change"

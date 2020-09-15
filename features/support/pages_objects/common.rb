@@ -618,4 +618,7 @@ class Common < SitePrism::Page
   element :english_law, '#facilities_management_procurement_governing_law_english'
   element :scottish_law, '#facilities_management_procurement_governing_law_scottish'
   element :ni_law, '#facilities_management_procurement_governing_law_northern_ireland'
+
+  element :number_of_buildings, '#number-of-buildings'
+
 end
