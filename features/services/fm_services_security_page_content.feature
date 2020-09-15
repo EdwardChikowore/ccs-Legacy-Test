@@ -40,6 +40,6 @@ Feature:  Facilities Management - Services - Security - Page Content
       |                                                                                                                                                    |
     Then I should see text "No services selected"
     When I select all security services
-    Then I should see text "12 Services selected"
+    Then I should see text "12 services selected"
     When I select all security services
     Then I should see text "No services selected"

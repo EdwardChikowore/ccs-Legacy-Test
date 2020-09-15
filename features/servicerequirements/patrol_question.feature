@@ -7,7 +7,7 @@ Feature:Patrols (fixed or static guarding)
     And I click on open all
     And I click on the "Patrols (fixed or static guarding)"
     And I am on requirements page
-    Then I answer about the contract question
+    Then I answer contract details question
     And I answer contract period question
     And I select building
     And I assign services to buildings

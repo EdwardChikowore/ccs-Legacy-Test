@@ -21,7 +21,7 @@ Feature: Facilities Management - Search Results - Search - Create
     And I click on select all for Wales
     And I click on select all for Scotland
     And I click on select all for Northern Ireland
-    And I should see text "73 Regions selected"
+    And I should see text "73 regions selected"
     And I click on "Continue"
 
   Scenario: FM - Results - General Content
@@ -36,14 +36,10 @@ Feature: Facilities Management - Search Results - Search - Create
 
   Scenario: FM - Results - General Content
     Then I am on "Quick view results" page
-    And The following is displayed on Quick view results:
-      | Total contract value    |
-      | up to                   |
-      | £7m                     |
-      | between                 |
-      | £7m-50m                 |
-      | over                    |
-      | £50m                    |
+    And The up to 7m is displayed            
+    And The between 7m and 50m is displayed
+    And The over 50m is displayed
+    And The following is displayed:
       | Sub-lot 1a              |
       | Sub-lot 1b              |
       | Sub-lot 1c              |

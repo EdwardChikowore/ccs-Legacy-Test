@@ -37,6 +37,6 @@ Feature:  Facilities Management - Services - Catering - Page Content
       | Catering services for full time residents within a buyers premises, examples include a full board food offering comprising breakfast, luncheon and dinner |
     Then I should see text "No services selected"
     When I select all catering services
-    Then I should see text "10 Services selected"
+    Then I should see text "10 services selected"
     When I select all catering services
     Then I should see text "No services selected"

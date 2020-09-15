@@ -11,7 +11,7 @@ Feature:  FM - Accessibility DA In Draft
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I am on "Quick view results" page
@@ -30,7 +30,7 @@ Feature:  FM - Accessibility DA In Draft
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I am on "Quick view results" page
@@ -52,7 +52,7 @@ Feature:  FM - Accessibility DA In Draft
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I am on "Quick view results" page
@@ -76,7 +76,7 @@ Feature:  FM - Accessibility DA In Draft
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I am on "Quick view results" page
@@ -100,7 +100,7 @@ Feature:  FM - Accessibility DA In Draft
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I am on "Quick view results" page
@@ -127,7 +127,7 @@ Feature:  FM - Accessibility DA In Draft
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I am on "Quick view results" page
@@ -154,7 +154,7 @@ Feature:  FM - Accessibility DA In Draft
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I am on "Quick view results" page
@@ -182,7 +182,7 @@ Feature:  FM - Accessibility DA In Draft
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I am on "Quick view results" page
@@ -212,7 +212,7 @@ Feature:  FM - Accessibility DA In Draft
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I am on "Quick view results" page
@@ -246,7 +246,7 @@ Feature:  FM - Accessibility DA In Draft
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I am on "Quick view results" page
@@ -280,7 +280,7 @@ Feature:  FM - Accessibility DA In Draft
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I am on "Quick view results" page
@@ -308,7 +308,7 @@ Feature:  FM - Accessibility DA In Draft
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I am on "Quick view results" page
@@ -337,7 +337,7 @@ Feature:  FM - Accessibility DA In Draft
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I am on "Quick view results" page
@@ -364,7 +364,7 @@ Feature:  FM - Accessibility DA In Draft
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I am on "Quick view results" page
@@ -393,7 +393,7 @@ Feature:  FM - Accessibility DA In Draft
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I am on "Quick view results" page
@@ -521,7 +521,7 @@ Feature:  FM - Accessibility DA In Draft
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I am on "Quick view results" page
@@ -550,7 +550,7 @@ Feature:  FM - Accessibility DA In Draft
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I am on "Quick view results" page

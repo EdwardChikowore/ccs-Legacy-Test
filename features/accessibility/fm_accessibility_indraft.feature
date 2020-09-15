@@ -10,7 +10,7 @@ Feature:  FM - Accessibility - In Draft
     And I click on the "Mechanical and electrical engineering maintenance"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I proceed to the contract details page
@@ -53,7 +53,7 @@ Feature:  FM - Accessibility - In Draft
     And I click on the "Mechanical and electrical engineering maintenance"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I proceed to the contract details page
@@ -98,7 +98,7 @@ Feature:  FM - Accessibility - In Draft
     And I click on the "Mechanical and electrical engineering maintenance"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I proceed to the contract details page
@@ -146,7 +146,7 @@ Feature:  FM - Accessibility - In Draft
     And I click on the "Mechanical and electrical engineering maintenance"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I proceed to the contract details page

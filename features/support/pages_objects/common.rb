@@ -19,6 +19,7 @@ class Common < SitePrism::Page
   element :ms_c1, 'label', text: 'Mechanical and electrical engineering'
   elements :sign_out_check, 'li > a'
   element :my_account_title, 'div > span.govuk-caption-l'
+  element :tag, 'tr > td > strong.govuk-tag'
 
   section :service_accordion, 'div#procurement-services-accordion' do
     section :section_heading, '[data-sectionname="Maintenance services"]' do
@@ -186,6 +187,22 @@ class Common < SitePrism::Page
 
     end
   end
+
+  section :long_list, '#proc-CCS-fm-suppliers-long-list' do 
+    element :heading, 'span.govuk-heading-l.govuk-!-margin-left-2'
+    section :up_to_7m, '#sub-lot-1a' do 
+      element :sublot_1a, 'table > thead > tr > th.govuk-table__header'
+    end
+
+    section :between_7_and_50, '#sub-lot-1b' do 
+      element :sublot_1b, 'table > thead > tr > th.govuk-table__header'
+    end
+
+    section :over_50, '#sub-lot-1c' do 
+      element :sublot_1c, 'table > thead > tr > th.govuk-table__header'
+    end
+  end
+
 
   sections :summary, 'summary.govuk-details__summary' do
     element :details_open, 'summary[aria-expanded="true"]'
