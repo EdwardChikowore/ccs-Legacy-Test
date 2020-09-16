@@ -55,11 +55,35 @@ Then(/^I select second building$/) do
 end
 
 Then(/^I select third building$/) do
-  common.building_nine.address.click
+  common.building_three.address.click
 end
 
 Then(/^I select fourth building$/) do
-  common.building_fifteen.address.click
+  common.building_four.address.click
+end
+
+Then(/^I select fifth building$/) do
+  common.building_five.address.click
+end
+
+Then(/^I select sixth building$/) do
+  common.building_six.address.click
+end
+
+Then(/^I select seventh building$/) do
+  common.building_seven.address.click
+end
+
+Then(/^I select eighth building$/) do
+  common.building_eight.address.click
+end
+
+Then(/^I select ninth building$/) do
+  common.building_nine.address.click
+end
+
+Then(/^I select tenth building$/) do
+  common.building_ten.address.click
 end
 
 Then(/^I select first building "([^"]*)" with address "([^"]*)"$/) do |building_name, building_address|

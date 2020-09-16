@@ -4,6 +4,12 @@ Given(/^I am a logged in user$/) do
   puts ENV['HOST']
 end
 
+Given(/^I am a logged in user - buildings account$/) do
+  visit '/sign-in'
+  sign_in_building()
+  puts ENV['HOST']
+end
+
 And(/^I click on "(.+)"$/) do |text|
   click_on text
 end

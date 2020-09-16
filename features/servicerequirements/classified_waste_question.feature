@@ -23,7 +23,7 @@ Feature:Classified waste
     Then I should see the following error messages
       |There is a problem|
       |Enter number of consoles|
-    When I enter 0 for hazardous waste
+    When I enter 0 for classified waste
     And I click on "Save and return"
     Then I should see the following error messages
       |There is a problem|
