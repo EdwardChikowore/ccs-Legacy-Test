@@ -10,7 +10,7 @@ Feature:  Facilities Management - Services - Reception - Page Content
   Scenario: FM - Services - Reception Services - Content
 
     When I click on "Reception services"
-    Then The following reception services are  displayed:
+    Then The following reception services are displayed:
       | Reception service                   |
       | Taxi booking service                |
       | Car park management and booking     |

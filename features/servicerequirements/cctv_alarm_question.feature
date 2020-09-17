@@ -18,7 +18,7 @@ Feature:Cctv / alarm monitoring
   Scenario: Selecting building service standards
     When I am on the "Service requirements" page
     And I click on Answer question
-    And I am on the "CCTV / alarm monitoring " page
+    And I am on the "Cctv / alarm monitoring" page
     When I click on "Save and return"
     Then I should see the following error messages
       |There is a problem|
@@ -38,7 +38,7 @@ Feature:Cctv / alarm monitoring
     And I click on "Save and return"
     Then I am on the "Service requirements" page
     And I click on "Change"
-    Then I am on the "CCTV / alarm monitoring " page
+    Then I am on the "Cctv / alarm monitoring" page
     When I click on "Return to service requirements"
     Then I am on the "Service requirements" page
 

@@ -328,7 +328,13 @@ And(/^The following summary text is displayed:$/) do |table|
   end
 end
 
+And(/^The service caption text is displayed$/) do
+  expect(common.quick_service_caption.text).to eq("Choose all facilities management services required within your estate, even if you want services in just one building.")
+end
 
+And(/^The service caption is displayed$/) do
+  expect(common.service_caption.text).to eq("Choose all facilities management services required within your estate, even if you want services in just one building. To see further information about services click on the 'Further details' link under each service. Alternatively, open the service specification document below and go to the relevant section.")
+end
 
 Then(/^I select all services for selected building$/) do
   common.select_all.checkbox.click
@@ -700,6 +706,38 @@ end
 
 Then(/^I click on save and return to service requirements$/) do
   click_on 'Save and return to service requirements'
+end
+
+And(/^The contract name status tag is "([^"]*)"$/)do |text|
+  expect(common.contract_name_status_tag.text).to eq(text)
+end
+
+And(/^The estimated annual cost status tag is "([^"]*)"$/)do |text|
+  expect(common.estimated_status_tag.text).to eq(text)
+end
+
+And(/^The TUPE status tag is "([^"]*)"$/)do |text|
+  expect(common.tupe_status_tag.text).to eq(text)
+end
+
+And(/^The contract period status tag is "([^"]*)"$/)do |text|
+  expect(common.contract_period_status_tag.text).to eq(text)
+end
+
+And(/^The buildings status tag is "([^"]*)"$/)do |text|
+  expect(common.buildings_status_tag.text).to eq(text)
+end
+
+And(/^The services status tag is "([^"]*)"$/)do |text|
+  expect(common.services_status_tag.text).to eq(text)
+end
+
+And(/^The assigning buildings to services status tag is "([^"]*)"$/)do |text|
+  expect(common.assigned_status_tag.text).to eq(text)
+end
+
+And(/^The service requirements status tag is "([^"]*)"$/)do |text|
+  expect(common.requirements_status_tag.text).to eq(text)
 end
 
 Then(/^I click on back to detailed search summary$/) do

@@ -1,7 +1,6 @@
 Feature:  Facilities Management - Services - Catering - Page Content
 
   Background:
-  Background:
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"

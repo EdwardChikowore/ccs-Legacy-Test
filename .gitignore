@@ -1,4 +1,4 @@
 /tmp
 /.idea
 .DS_Store
-/config/environment.yml
+config/environment.yml

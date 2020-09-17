@@ -19,7 +19,6 @@ class Common < SitePrism::Page
   element :ms_c1, 'label', text: 'Mechanical and electrical engineering'
   elements :sign_out_check, 'li > a'
   element :my_account_title, 'div > span.govuk-caption-l'
-  element :tag, 'tr > td > strong.govuk-tag'
 
   section :service_accordion, 'div#procurement-services-accordion' do
     section :section_heading, '[data-sectionname="Maintenance services"]' do
@@ -32,6 +31,18 @@ class Common < SitePrism::Page
       end
     end
   end
+
+  element :quick_service_caption, 'fieldset.govuk-fieldset > div > p.govuk-caption-m'
+  element :service_caption, '#service-caption'
+
+  element :contract_name_status_tag, '#contract_name-tag > .govuk-tag'
+  element :estimated_status_tag, '#estimated_annual_cost-tag > .govuk-tag'
+  element :tupe_status_tag, '#tupe-tag > .govuk-tag'
+  element :contract_period_status_tag, '#contract_period-tag > .govuk-tag'
+  element :buildings_status_tag, '#buildings-tag > .govuk-tag'
+  element :services_status_tag, '#services-tag  > .govuk-tag'
+  element :assigned_status_tag, '#buildings_and_services-tag > .govuk-tag'
+  element :requirements_status_tag, '#service_requirements-tag > .govuk-tag'
 
   element :service_summary, 'div#number-of-services'
 
