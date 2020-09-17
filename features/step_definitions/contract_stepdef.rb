@@ -4,9 +4,24 @@ Given("I enter the following details into the form:") do |table|
   end
 end
 
-
 And(/^I select address "([^"]*)" from the drop down option$/) do |address|
   find("#buyer-details-postcode-lookup-results option[value='#{address}']").select_option
+end
+
+And(/^I select building region "([^"]*)" from the drop down option$/) do |address|
+  find("[data-address_region='#{address}']").select_option
+end
+
+And(/^I select building address "([^"]*)" from the drop down option$/) do |address|
+  find("[data-address_line_1='#{address}']").select_option
+end
+
+And(/^The building region text displayed is "([^"]*)"$/) do |value|
+  expect(common.building_region.text).to eq(value)
+end
+
+And(/^The building address name displayed is "([^"]*)"$/) do |value|
+  expect(common.building_address.text).to eq(value)
 end
 
 And(/^I should see name and job title "([^"]*)"$/) do |name|

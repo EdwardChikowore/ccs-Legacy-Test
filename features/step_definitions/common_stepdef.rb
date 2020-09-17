@@ -154,6 +154,11 @@ Then(/^I add contract name$/) do
   puts @name
 end
 
+Then(/^I add building name$/) do
+  @name = "z_auto" + SecureRandom.uuid
+  common.building_name.set(@name)
+end
+
 Then(/^I change contract name$/) do
   @name_change = "Change_contract_name_DS" + SecureRandom.uuid
   common.contract_name.set(@name_change)
@@ -774,10 +779,6 @@ Then(/^I select english law$/) do
   common.english_law.click
 end
 
-Then(/^I should see number of building text "([^"]*)"$/) do |value|
-  expect(common.number_of_buildings.text).to eq(value)
-end
-
 Then(/^I complete service requirements questions$/) do
   step "I click on service requirements link"
   step "I am on service requirements summary page"
@@ -875,7 +876,7 @@ Then(/^I proceed to the contract details page/) do
   step "I click on continue"
 end
 
-Then(/^I select building/) do
+Then(/^I select building$/) do
   step "I click on buildings link"
   step "I select first building"
   step "I click on save and continue"

@@ -621,4 +621,23 @@ class Common < SitePrism::Page
 
   element :number_of_buildings, '#number-of-buildings'
 
+  element :building_name, '#facilities_management_building_building_name'
+  element :find_address, '[data-module-element="trigger"]'
+  element :find_address_two, '[aria-label="Find address"]'
+  element :address_container, '#results-container'
+  element :building_region, '[data-module-part="region-results"] > p'
+  element :building_address, '[data-module-part="address_text"]'
+
+  element :building_internal_area, '#facilities_management_building_gia'
+  element :building_external_area, '#facilities_management_building_external_area'
+
+  element :view_building_type, '.govuk-details__summary'
+  element :building_type_other, '#facilities_management_building_building_type_other'
+  element :building_type_textbox, '#facilities_management_building_other_building_type'
+  elements :radio_items, '.govuk-radios__item > input'
+
+  element :security_type_other, '#facilities_management_building_security_type_other'
+  element :security_type_textbox, '#facilities_management_building_other_security_type'
+
+  elements :building_change_link, 'td > a'
 end

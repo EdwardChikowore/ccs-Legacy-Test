@@ -720,3 +720,11 @@ And(/^I enter (.+) for service hours$/) do |value|
   service_requirements.service_hours_requirement.set('Test one')
 end
 
+And(/^I enter (.+) for internal area$/) do |value|
+  common.building_internal_area.set(value)
+end
+
+And(/^I enter (.+) for external area$/) do |value|
+  common.building_external_area.set(value)
+end
+
