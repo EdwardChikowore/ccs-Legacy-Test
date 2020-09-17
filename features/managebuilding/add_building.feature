@@ -190,22 +190,26 @@ Feature:Manage Building
     And I select building address "151 Buckingham Palace Road" from the drop down option
     And I click on "Save and return to building details summary"
     Then I am on the "Building details summary" page
+    And The building status tag is "INCOMPLETE"
     When I click on answer question
     Then I am on "Internal and external areas" page
     And I enter 0 for external area
     And I enter 9 for internal area
     And I click on "Save and return to building details summary"
     Then I am on the "Building details summary" page
+    And The building status tag is "INCOMPLETE"
     When I click on answer question
     Then I am on "Building type" page
     And I select the first building type
     And I click on "Save and return to building details summary"
     Then I am on the "Building details summary" page
+    And The building status tag is "INCOMPLETE"
     When I click on answer question
     Then I am on "Security clearance" page
     And I select the first security type
     And I click on "Save and return to building details summary"
     Then I am on the "Building details summary" page
+    And The building status tag is "COMPLETED"
 
   Scenario: Building details Summary - Change link
     And I click on the first building on manage my buildings page

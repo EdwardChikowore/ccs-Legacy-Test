@@ -640,4 +640,5 @@ class Common < SitePrism::Page
   element :security_type_textbox, '#facilities_management_building_other_security_type'
 
   elements :building_change_link, 'td > a'
+  element :building_status_tag, '.govuk-tag:nth-child(2)'
 end

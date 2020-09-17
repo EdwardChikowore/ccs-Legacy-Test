@@ -282,4 +282,7 @@ class ServiceRequirements < SitePrism::Page
   sections :lift_floor, '.lift-row' do
     element :data, 'input'
   end
+
+  element :mech_service_volume, '[id="C.1-gia-volume"]'
+  element :cleaning_external_service_volume, '[id="G.5-external_area-volume"]'
 end

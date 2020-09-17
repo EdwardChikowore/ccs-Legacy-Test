@@ -73,3 +73,7 @@ And(/^The seventh change link should navigate to "([^"]*)" page$/)do |text|
   common.building_change_link[6].click
   expect(common.header_one.text).to end_with(text)
 end
+
+And(/^The building status tag is "([^"]*)"$/)do |text|
+  expect(common.building_status_tag.text).to eq(text)
+end
