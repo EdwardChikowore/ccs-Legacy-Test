@@ -241,6 +241,10 @@ Then(/^I enter the mobilisation period for (\d+) weeks$/) do |weeks|
   common.mobilisation_radio.period.set(weeks)
 end
 
+Then(/^I enter the mobilisation period for "([^"]*)" weeks$/) do |weeks|
+  common.mobilisation_radio.period.set(weeks)
+end
+
 Then(/^I select yes for TUPE$/) do
   common.tupe_yes.set(true)
 end
@@ -273,16 +277,13 @@ Then(/^I select (.+) for optional call off extension$/) do |radio|
   common.procurement_extension_radio.no.set(radio)
 end
 
-Then(/^I enter (.+) year as the first extension period$/) do |year|
-  common.procurement_extension_radio.extension_one.set(year)
-end
 
 Then(/^I click on add another extension period$/) do
   common.procurement_extension_radio.add_extension_period.click
 end
 
-Then(/^I enter (.+) year as the second extension period$/) do |year|
-  common.procurement_extension_radio.extension_two.set(year)
+Then(/^I enter (.+) year for extension period (.+)$/) do |year, extension_period|
+  common.procurement_extension_radio.send("extension_#{extension_period}").set(year)
 end
 
 Then(/^I click on first building link "([^"]*)"$/) do 
@@ -659,11 +660,15 @@ And(/^I am on contract period page$/) do
   expect(common.header_one.text).to end_with("Contract period")
 end
 
-And(/^I am enter values for initial call-off period$/) do
-    common.initial_call_off_period.set(4)
-    common.initial_start_date.day.set(12)
-    common.initial_start_date.month.set(12)
-    common.initial_start_date.year.set(2024)
+And(/^I enter values for initial call-off period/) do
+  common.initial_call_off_period.set(4)
+  step "I enter values for the initial call-off period date"
+end
+
+And(/^I enter values for the initial call-off period date$/) do
+  common.initial_start_date.day.set(12)
+  common.initial_start_date.month.set(12)
+  common.initial_start_date.year.set(2024)
 end
 
 Then(/^I select no option for tupe required$/) do
@@ -922,7 +927,7 @@ end
 
 Then(/^I answer contract period question/) do
   step "I am on contract period page"
-  step "I am enter values for initial call-off period"
+  step "I enter values for initial call-off period"
   step "I select no option for tupe required"
   step "I select no option for optional call-off extension"
   step "I click on save and continue"

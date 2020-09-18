@@ -256,11 +256,27 @@ class Common < SitePrism::Page
     element :no, '#facilities_management_procurement_mobilisation_period_required_false'
   end
 
-
+  section :contract_period, 'table' do 
+    element :length, '#contract-period > td'
+    element :contract_description, '#contract-period-description > td:nth-child(2)'
+    element :mobilisation_length, '#mobilisation-period > td:nth-child(2)'
+    element :mobilisation_description, '#mobilisation-period-description > td:nth-child(2)'
+    element :call_off_extension, '#call-off-extension > td'
+    element :call_off_1_length, '#call-off-extension-1 > td:nth-child(2)'
+    element :call_off_1_description, '#call-off-extension-1-description > td:nth-child(2)'
+    element :call_off_2_length, '#call-off-extension-2 > td:nth-child(2)'
+    element :call_off_2_description, '#call-off-extension-2-description > td:nth-child(2)'
+    element :call_off_3_length, '#call-off-extension-3 > td:nth-child(2)'
+    element :call_off_3_description, '#call-off-extension-3-description > td:nth-child(2)'
+    element :call_off_4_length, '#call-off-extension-4 > td:nth-child(2)'
+    element :call_off_4_description, '#call-off-extension-4-description > td:nth-child(2)'
+  end
 
   section :procurement_extension_radio, 'div[data-propertyname="Extensions choice"]' do
-    element :extension_one, 'input#facilities_management_procurement_optional_call_off_extensions_1'
-    element :extension_two, 'input#facilities_management_procurement_optional_call_off_extensions_2'
+    element :extension_1, 'input#facilities_management_procurement_optional_call_off_extensions_1'
+    element :extension_2, 'input#facilities_management_procurement_optional_call_off_extensions_2'
+    element :extension_3, 'input#facilities_management_procurement_optional_call_off_extensions_3'
+    element :extension_4, 'input#facilities_management_procurement_optional_call_off_extensions_4'
     element :add_extension_period, '#fm-add-contract-ext-btn'
     element :yes, '#facilities_management_procurement_extensions_required_true'
     element :no, '#facilities_management_procurement_extensions_required_false'
