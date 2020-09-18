@@ -7,7 +7,7 @@ Feature:Lifts, Hoists & Conveyance Systems Maintenance
     And I click on open all
     And I click on the "Lifts, hoists & conveyance systems maintenance "
     And I am on requirements page
-    Then I answer about the contract question
+    Then I answer contract details question
     And I answer contract period question
     And I select building
     And I assign services to buildings
@@ -22,7 +22,7 @@ Feature:Lifts, Hoists & Conveyance Systems Maintenance
     When I click on "Save and return"
     Then I should see the following error messages
       |There is a problem|
-      |The number of floors accessed must be a whole number greater than 0|
+      |The number of floors accessed must be a whole number and greater than 0|
     And I enter 0 for number of lift floors
     When I click on "Save and return"
     Then I should see the following error messages

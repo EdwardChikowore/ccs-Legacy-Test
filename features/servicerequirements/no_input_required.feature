@@ -7,7 +7,7 @@ Feature:Services with no service questions
     And I click on open all
     And I select services with no service questions
     And I am on requirements page
-    Then I answer about the contract question
+    Then I answer contract details question
     And I answer contract period question
     And I select building
     And I assign services to buildings

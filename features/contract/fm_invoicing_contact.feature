@@ -10,7 +10,7 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
     And I am on requirements page
-    Then I answer about the contract question
+    Then I answer contract details question
     And I answer contract period question
     And I select building
     And I assign services to buildings

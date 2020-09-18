@@ -29,6 +29,6 @@ Feature:  Facilities Management - Services - Waste - Page Content
       | Disposal of medical and pharmaceutical waste, and provision of suitable receptacles for this type of waste                                  |
     Then I should see text "No services selected"
     When I select all waste services
-    Then I should see text "7 Services selected"
+    Then I should see text "7 services selected"
     When I select all waste services
     Then I should see text "No services selected"

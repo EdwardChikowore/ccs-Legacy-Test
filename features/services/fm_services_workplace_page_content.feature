@@ -49,6 +49,6 @@ Feature:  Facilities Management - Services - Workplace FM - Page Content
       |                                                                                                                             |
     Then I should see text "No services selected"
     When I select all workplace services
-    Then I should see text "16 Services selected"
+    Then I should see text "16 services selected"
     When I select all workplace services
     Then I should see text "No services selected"

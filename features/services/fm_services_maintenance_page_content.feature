@@ -59,6 +59,6 @@ Feature:  Facilities Management - Services - Maintenance - Page Content
       |                                                                                                                                            |
     Then I should see text "No services selected"
     When I select all maintenance services
-    Then I should see text "22 Services selected"
+    Then I should see text "22 services selected"
     When I select all maintenance services
     Then I should see text "No services selected"

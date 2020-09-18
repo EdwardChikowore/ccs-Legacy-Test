@@ -32,6 +32,18 @@ class Common < SitePrism::Page
     end
   end
 
+  element :quick_service_caption, 'fieldset.govuk-fieldset > div > p.govuk-caption-m'
+  element :service_caption, '#service-caption'
+
+  element :contract_name_status_tag, '#contract_name-tag > .govuk-tag'
+  element :estimated_status_tag, '#estimated_annual_cost-tag > .govuk-tag'
+  element :tupe_status_tag, '#tupe-tag > .govuk-tag'
+  element :contract_period_status_tag, '#contract_period-tag > .govuk-tag'
+  element :buildings_status_tag, '#buildings-tag > .govuk-tag'
+  element :services_status_tag, '#services-tag  > .govuk-tag'
+  element :assigned_status_tag, '#buildings_and_services-tag > .govuk-tag'
+  element :requirements_status_tag, '#service_requirements-tag > .govuk-tag'
+
   element :service_summary, 'div#number-of-services'
 
   section :maintenance, '[data-sectionname="Maintenance services"]' do
@@ -186,6 +198,22 @@ class Common < SitePrism::Page
 
     end
   end
+
+  section :long_list, '#proc-CCS-fm-suppliers-long-list' do 
+    element :heading, 'span.govuk-heading-l.govuk-!-margin-left-2'
+    section :up_to_7m, '#sub-lot-1a' do 
+      element :sublot_1a, 'table > thead > tr > th.govuk-table__header'
+    end
+
+    section :between_7_and_50, '#sub-lot-1b' do 
+      element :sublot_1b, 'table > thead > tr > th.govuk-table__header'
+    end
+
+    section :over_50, '#sub-lot-1c' do 
+      element :sublot_1c, 'table > thead > tr > th.govuk-table__header'
+    end
+  end
+
 
   sections :summary, 'summary.govuk-details__summary' do
     element :details_open, 'summary[aria-expanded="true"]'

@@ -1,7 +1,6 @@
 Feature:  Facilities Management - Services - Catering - Page Content
 
   Background:
-  Background:
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
@@ -37,6 +36,6 @@ Feature:  Facilities Management - Services - Catering - Page Content
       | Catering services for full time residents within a buyers premises, examples include a full board food offering comprising breakfast, luncheon and dinner |
     Then I should see text "No services selected"
     When I select all catering services
-    Then I should see text "10 Services selected"
+    Then I should see text "10 services selected"
     When I select all catering services
     Then I should see text "No services selected"

@@ -33,6 +33,6 @@ Feature:  Facilities Management - Services - Statutory Obligations - Page Conten
       | Delivery of strategic priorities related to the wider government policy in line with building information modelling (level 2) and government soft landings |
     Then I should see text "No services selected"
     When I select all statutory services
-    Then I should see text "9 Services selected"
+    Then I should see text "9 services selected"
     When I select all statutory services
     Then I should see text "No services selected"

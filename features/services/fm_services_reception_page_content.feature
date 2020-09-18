@@ -10,7 +10,7 @@ Feature:  Facilities Management - Services - Reception - Page Content
   Scenario: FM - Services - Reception Services - Content
 
     When I click on "Reception services"
-    Then The following reception services are  displayed:
+    Then The following reception services are displayed:
       | Reception service                   |
       | Taxi booking service                |
       | Car park management and booking     |
@@ -23,6 +23,6 @@ Feature:  Facilities Management - Services - Reception - Page Content
       | A service making broadcasts or announcements via the voice announcement system, as requested by the buyer |
     Then I should see text "No services selected"
     When I select all reception services
-    Then I should see text "4 Services selected"
+    Then I should see text "4 services selected"
     When I select all reception services
     Then I should see text "No services selected"

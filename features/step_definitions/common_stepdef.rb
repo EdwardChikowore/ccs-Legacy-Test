@@ -52,6 +52,30 @@ And(/^I click on the "([^"]*)" option$/) do |text|
   choose text
 end
 
+And(/^The up to 7m is displayed$/) do 
+  expect(common.long_list.up_to_7m.text).to eq("up to £7m")
+end
+
+And(/^The sublot 1a is displayed$/) do
+  expect(common.long_list.sublot_1a.text).to eq(text)
+end
+
+And(/^The between 7m and 50m is displayed$/) do 
+  expect(common.long_list.between_7_and_50.text).to eq("between £7m and 50m")
+end
+
+And(/^The sublot 1b is displayed:$/) do |text|
+  expect(common.long_list.sublot_1b.text).to eq(text)
+end
+
+And(/^The over 50m is displayed:$/) do |text|
+  expect(common.long_list.over_50.text).to eq("over £50m")
+end
+
+And(/^The sublot 1c is displayed:$/) do |text|
+  expect(common.long_list.sublot_1c.text).to eq(text)
+end
+
 Then(/^I click to start a new procurement$/) do
   click_on 'Quick search'
 end
@@ -159,7 +183,7 @@ Then(/^I change contract name$/) do
   common.contract_name.set(@name_change)
 end
 
-And(/^I contract name should include "([^"]*)"$/) do |value|
+And(/^The contract name should include "([^"]*)"$/) do |value|
     expect(detailed_summary.procurement_name[1].text).to start_with(@name_change)
 end
 
@@ -261,6 +285,10 @@ Then(/^I enter (.+) year as the second extension period$/) do |year|
   common.procurement_extension_radio.extension_two.set(year)
 end
 
+Then(/^I click on first building link "([^"]*)"$/) do 
+  common.building_summary.first_building.click
+end
+
 Then(/^I select first building with address "([^"]*)"$/) do |building_address|
 
   # @building_one = common.building_one.name.text
@@ -300,7 +328,13 @@ And(/^The following summary text is displayed:$/) do |table|
   end
 end
 
+And(/^The service caption text is displayed$/) do
+  expect(common.quick_service_caption.text).to eq("Choose all facilities management services required within your estate, even if you want services in just one building.")
+end
 
+And(/^The service caption is displayed$/) do
+  expect(common.service_caption.text).to eq("Choose all facilities management services required within your estate, even if you want services in just one building. To see further information about services click on the 'Further details' link under each service. Alternatively, open the service specification document below and go to the relevant section.")
+end
 
 Then(/^I select all services for selected building$/) do
   common.select_all.checkbox.click
@@ -308,6 +342,10 @@ end
 
 Then(/^I click on a saved and return to detailed search$/) do
   click_on 'Save and return to detailed search summary'
+end
+
+Then(/^I click on first building$/) do
+  common.detailed_building_link[0].click
 end
 
 Then(/^I click on building$/) do
@@ -670,6 +708,38 @@ Then(/^I click on save and return to service requirements$/) do
   click_on 'Save and return to service requirements'
 end
 
+And(/^The contract name status tag is "([^"]*)"$/)do |text|
+  expect(common.contract_name_status_tag.text).to eq(text)
+end
+
+And(/^The estimated annual cost status tag is "([^"]*)"$/)do |text|
+  expect(common.estimated_status_tag.text).to eq(text)
+end
+
+And(/^The TUPE status tag is "([^"]*)"$/)do |text|
+  expect(common.tupe_status_tag.text).to eq(text)
+end
+
+And(/^The contract period status tag is "([^"]*)"$/)do |text|
+  expect(common.contract_period_status_tag.text).to eq(text)
+end
+
+And(/^The buildings status tag is "([^"]*)"$/)do |text|
+  expect(common.buildings_status_tag.text).to eq(text)
+end
+
+And(/^The services status tag is "([^"]*)"$/)do |text|
+  expect(common.services_status_tag.text).to eq(text)
+end
+
+And(/^The assigning buildings to services status tag is "([^"]*)"$/)do |text|
+  expect(common.assigned_status_tag.text).to eq(text)
+end
+
+And(/^The service requirements status tag is "([^"]*)"$/)do |text|
+  expect(common.requirements_status_tag.text).to eq(text)
+end
+
 Then(/^I click on back to detailed search summary$/) do
   click_on 'Back to detailed search summary'
 end
@@ -839,7 +909,7 @@ Then(/^I click change on building section$/) do
   common.answer_question[4].click
 end
 
-Then(/^I answer about the contract question$/) do
+Then(/^I answer contract details question$/) do
   step "I click on estimated annual cost"
   step "I am on estimated annual cost page"
   step "I select no option for estimated annual cost"
