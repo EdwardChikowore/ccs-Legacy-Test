@@ -687,4 +687,19 @@ class Common < SitePrism::Page
 
   elements :building_change_link, 'td > a'
   element :building_status_tag, '.govuk-tag:nth-child(2)'
+
+  element :bulk_upload_status, 'div.ccs-font-weight-semi-bold.govuk-body > strong'
+
+  section :contract_details, '#contract-details-summary > table > tbody' do
+    element :payment_method, 'tr:nth-child(2) > td > a'
+    element :invoicing_contact_details, 'tr:nth-child(3) > td > a'
+    element :authorised_representative_details, 'tr:nth-child(4) > td > a'
+    element :notices_contact_details, 'tr:nth-child(5) > td > a'
+    element :security_policy, 'tr:nth-child(6) > td > a'
+    element :local_government_pension_scheme, 'tr:nth-child(7) > td > a'
+    element :governing_law, 'tr:nth-child(8) > td > a'
+  end
+
+  element :missing_regions, 'table > tbody'
+  element :available_route_to_market, 'div.govuk-\!-margin-bottom-3 > h5'
 end
