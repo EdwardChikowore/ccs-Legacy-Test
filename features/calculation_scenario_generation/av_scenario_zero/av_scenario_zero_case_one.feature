@@ -6,7 +6,7 @@ Feature: Assessed value Scenario Zero - All services has Benchmark and framework
     When I click on "Start a procurement"
     And I click on "Continue"
     And I add contract name
-    And I click on "Save and return"
+    And I click on "Save and continue"
 
   Scenario Outline: Scanario 1 -  Customer Price added; No CAFM, Helpdesk and TUPE
     And I click on "Estimated annual cost"

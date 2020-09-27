@@ -35,7 +35,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I am on "Contract name" page
     And I change contract name
     And I click on "Save and return"
-    And I am on "Procurement summary" page
+    And I am on "Requirements" page
     And I contract name should include "Change_contract_name_DS_"
 
   Scenario: FM - Detailed Search Summary - Save your Search journey - Question link - Estimated Annual Cost - No selection error
@@ -69,7 +69,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
       |Estimated annual cost must be a number between 1 and 999,999,999|
     And I enter the cost 5000
     And I click on "Save and return"
-    And I am on "Procurement summary" page
+    And I am on "Requirements" page
 
   Scenario: FM - Detailed Search Summary - Save your Search journey - Question link - Estimated Annual Cost - Yes - exceeds maximum input
     And I add contract name
@@ -84,7 +84,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
       |The estimated annual cost must be an amount of money, such as £12,000 or £1,200|
     And I enter the cost 999999999
     And I click on "Save and return"
-    And I am on "Procurement summary" page
+    And I am on "Requirements" page
 
   Scenario: FM - Detailed Search Summary - Save your Search journey - Question link - Estimated Annual Cost - error message
     And I add contract name
@@ -95,7 +95,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option
     And I enter the cost 500000
     And I click on "Save and return"
-    And I am on "Procurement summary" page
+    And I am on "Requirements" page
 
   Scenario: FM - Detailed Search Summary - Save your Search journey - Question link - Estimated Annual Cost
     And I add contract name
@@ -106,7 +106,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I click on the "facilities_management_procurement_estimated_cost_known_true" option
     And I enter the cost 500000
     And I click on "Save and return"
-    And I am on "Procurement summary" page
+    And I am on "Requirements" page
 
 
   Scenario: FM - Detailed Search Summary - Save your Search journey - Question link - TUPE - Yes
@@ -117,7 +117,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I am on "TUPE" page
     And I click on the "facilities_management_procurement_tupe_true" option
     And I click on "Save and return"
-    And I am on "Procurement summary" page
+    And I am on "Requirements" page
 
   Scenario: FM - Detailed Search Summary - Save your Search journey - Question link - TUPE - Error message
     When I add contract name
@@ -128,10 +128,10 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     When I click on "Save and return"
     Then I should see the following error messages
       |There is a problem|
-      |Select an option|
+      |Select one option|
     And I click on the "facilities_management_procurement_tupe_true" option
     And I click on "Save and return"
-    And I am on "Procurement summary" page
+    And I am on "Requirements" page
 
   Scenario: FM - Detailed Search Summary - Save your Search journey - Question link - TUPE - No
     And I add contract name
@@ -141,7 +141,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I am on "TUPE" page
     And I click on the "facilities_management_procurement_tupe_false" option
     And I click on "Save and return"
-    And I am on "Procurement summary" page
+    And I am on "Requirements" page
 
   Scenario Outline: Scenario: FM - Detailed Search Summary - Save your Search journey - Question link - Contract period
     And I add contract name
@@ -158,7 +158,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I click on the "facilities_management_procurement_extensions_required_false" option
     And I click on "Save and continue"
     And I click on "Return to requirements"
-    And I am on "Procurement summary" page
+    And I am on "Requirements" page
 
     Examples:
       | years | day | month | year |
@@ -192,34 +192,23 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I click on the "facilities_management_procurement_extensions_required_false" option
     And I click on "Save and continue"
     And I click on "Return to requirements"
-    And I am on "Procurement summary" page
+    And I am on "Requirements" page
     Examples:
       | years | day | month | year |
-      |   2   | 12  | 10    | 2020 |
+      |   2   | 12  | 10    | 2021 |
 
   Scenario: FM - Detailed Search Summary - Save your Search journey - Question link - Select buildings
     And I add contract name
     And I click on "Save and continue to procurement"
     And I click on "Continue"
-    And I am on "Procurement summary" page
+    And I am on "Requirements" page
     And I click on "Buildings"
     And I am on "Buildings" page
     And I select first building
-    And I click on "Save and return"
-    And I am on "Procurement summary" page
-    And I click on "Service requirements"
-    And I am on "Service requirements summary" page
-    And I click on "Answer questions"
-    And I am on the "Service requirements" page
-    And I click on "Answer question"
-    And I am on the "Mechanical and electrical engineering maintenance" page
-    And I select standard A
-    And I click on "Save and return"
-    And I am on the "Service requirements" page
+    And I click on "Save and continue"
+    And I am on "Buildings summary" page
     And I click on "Return to requirements"
-    And I am on "Service requirements summary" page
-    And I click on "Return to requirements"
-    And I am on "Procurement summary" page
+    And I am on "Requirements" page
 
   Scenario: FM - Detailed Search Summary - Save for later journey - Questions
     And I add contract name

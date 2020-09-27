@@ -29,6 +29,6 @@ Feature:  Facilities Management - Services - Horticultural - Page Content
       |                                                                                                                                    |
     Then I should see text "No services selected"
     When I select all horticultural services
-    Then I should see text "6 Services selected"
+    Then I should see text "6 services selected"
     When I select all horticultural services
     Then I should see text "No services selected"

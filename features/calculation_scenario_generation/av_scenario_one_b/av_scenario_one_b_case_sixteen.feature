@@ -6,7 +6,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     When I click on "Start a procurement"
     And I click on "Continue"
     And I add contract name
-    And I click on "Save and return"
+    And I click on "Save and continue"
 
   Scenario Outline: 16- Includes CP, CAFM, Helpdesk TUPE, London Building Variance is within 30% (Positive right boundary) - LOT 1C
     And I click on "Estimated annual cost"

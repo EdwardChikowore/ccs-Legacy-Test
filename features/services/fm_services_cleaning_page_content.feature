@@ -45,6 +45,6 @@ Feature:  Facilities Management - Services - Cleaning - Page Content
       | Laundering, organisation and control of linen stocks. Supply of linen                                                 |
     Then I should see text "No services selected"
     When I select all cleaning services
-    Then I should see text "16 Services selected"
+    Then I should see text "16 services selected"
     When I select all cleaning services
     Then I should see text "No services selected"

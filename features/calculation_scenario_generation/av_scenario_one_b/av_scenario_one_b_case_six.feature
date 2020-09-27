@@ -6,7 +6,7 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     When I click on "Start a procurement"
     And I click on "Continue"
     And I add contract name
-    And I click on "Save and return"
+    And I click on "Save and continue"
 
   Scenario Outline: 6-  CP, CAFM, Helpdesk TUPE, V is out of 30% (Neg right boundary)
     And I click on "Estimated annual cost"

@@ -6,7 +6,7 @@ Feature: Assessed value Scenario Zero - All services has Benchmark and framework
     When I click on "Start a procurement"
     And I click on "Continue"
     And I add contract name
-    And I click on "Save and return"
+    And I click on "Save and continue"
 
   Scenario Outline: Scenario 7- Includes Customer Input, CAFM, Helpdesk, TUPE - Two Buildings (Lot 1C)
     And I click on "Estimated annual cost"

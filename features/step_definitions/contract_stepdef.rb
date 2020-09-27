@@ -40,11 +40,9 @@ And(/^I should see authorised representative text next to radio button "([^"]*)"
   expect(common.authorised_contact_details.text).to eq(name)
 end
 
-
 And(/^I should see notices contact detail text next to radio button "([^"]*)"$/) do |name|
   expect(common.notices_contact_details.text).to eq(name)
 end
-
 
 And(/^I click on "([^"]*)" option$/) do |option|
   find("input[value=#{option}]").click
@@ -202,7 +200,7 @@ And(/^The following is displayed on quick search filter section:$/) do |table|
 end
 
 And(/^contract documents page have links$/) do
-  expect(common.contract_document_link.count).to eq(28)
+  expect(common.contract_document_link.count).to eq(30)
 end
 
 

@@ -13,6 +13,6 @@ Feature:  Facilities Management - Services - Management of Billable Works - Page
     When I click on "Management of billable works"
     Then I should see text "No services selected"
     When I select all services listed for Management of billable works
-    Then I should see text "1 Service selected"
+    Then I should see text "1 service selected"
     When I select all services listed for Management of billable works
     Then I should see text "No services selected"

@@ -26,7 +26,6 @@ Feature:Facilities Management - DA - Contract - Review contract
     Then I should see the following error messages
       | Select one payment method |
 
-
   Scenario: Contract Details - Payment method page - BACS payment
     And I am on "Contract details" page
     And I click on the first question for "Payment method"
@@ -37,9 +36,6 @@ Feature:Facilities Management - DA - Contract - Review contract
     Then The payment method should be "BACS payment"
     And I click on change for "Payment method"
     And I am on "Payment method" page
-
-
-
 
   Scenario: Contract Details - Payment method page - Government procurement card
     And I am on "Contract details" page

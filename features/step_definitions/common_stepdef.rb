@@ -623,7 +623,7 @@ And(/^I am on contract period page$/) do
 end
 
 And(/^I am enter values for initial call-off period$/) do
-    common.initial_call_off_period.set(4)
+    common.initial_call_off_period.set(1)
     common.initial_start_date.day.set(12)
     common.initial_start_date.month.set(12)
     common.initial_start_date.year.set(2024)
@@ -748,7 +748,7 @@ Then(/^I click on lot 1a$/) do
 end
 
 Then(/^I am on buildings and services summary page$/) do
-  expect(common.header_one.text).to end_with("Buildings and services summary")
+  expect(common.header_one.text).to end_with("Assigning services to buildings summary")
 end
 
 Then(/^I am on service requirements summary page$/) do

@@ -55,7 +55,7 @@ Feature:Facilities Management - DA - Contract - Review contract
         |2. Contract details|
         |3. Generate your direct award documents|
       And I click on "Change requirements"
-      And I am on "Detailed search summary" page
+      And I am on "Requirements" page
 
   Scenario: Contract Details - Review and Generate - Content - Requirements section
     And The following is displayed:

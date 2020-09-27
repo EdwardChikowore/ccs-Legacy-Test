@@ -13,6 +13,6 @@ Feature:  Facilities Management - Services - Computer-aided FM - Page Content
     When I click on "Computer-aided facilities management (CAFM)"
     Then I should see text "No services selected"
     When I select all cafm service
-    Then I should see text "1 Service selected"
+    Then I should see text "1 service selected"
     When I select all cafm service
     Then I should see text "No services selected"

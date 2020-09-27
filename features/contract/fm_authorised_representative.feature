@@ -1,7 +1,7 @@
 Feature: Facilities Management - DA - Contract - Authorised representative
 
   Background:
-    Given I am a logged in user - buildings account
+    Given I am a logged in user
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page

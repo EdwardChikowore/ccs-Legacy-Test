@@ -21,7 +21,7 @@ Feature: Facilities Management - Search Results - Search - Create
     And I click on select all for Wales
     And I click on select all for Scotland
     And I click on select all for Northern Ireland
-    And I should see text "73 Regions selected"
+    And I should see text "73 regions selected"
     And I click on "Continue"
 
   Scenario: FM - Results - General Content
