@@ -509,7 +509,7 @@ Then(/^I select services for first building "([^"]*)" - DA scenario three$/) do 
 end
 
 
-Then(/^I select services for first building "([^"]*)" - DA scenario two$/) do |building_name|
+Then(/^I select services for first building "([^"]*)" - DA scenario two$/) do |_building_name|
   service_requirements.bms.click
   service_requirements.env_cleaning.click
   service_requirements.fire_detection_maintenance.click
@@ -526,7 +526,7 @@ Then(/^I select services for first building "([^"]*)" - DA scenario two$/) do |b
 end
 
 
-Then(/^I select services for second building "([^"]*)" - DA scenario two$/) do |building_name|
+Then(/^I select services for second building "([^"]*)" - DA scenario two$/) do |_building_name|
   service_requirements.asbestos.click
   service_requirements.compliance_plans.click
   service_requirements.condition_survey.click
@@ -546,7 +546,7 @@ end
 
 
 
-Then(/^I select services for third building "([^"]*)" - DA scenario two$/) do |building_name|
+Then(/^I select services for third building "([^"]*)" - DA scenario two$/) do |_building_name|
   service_requirements.routine_cleaning.click
   service_requirements.handyman_services.click
   service_requirements.move_space_manage.click
@@ -564,7 +564,7 @@ end
 
 
 
-Then(/^I select services for fourth building "([^"]*)" - DA scenario two$/) do |building_name|
+Then(/^I select services for fourth building "([^"]*)" - DA scenario two$/) do |_building_name|
   service_requirements.classified_waste.click
   service_requirements.feminine_hygiene.click
   service_requirements.general_waste.click
