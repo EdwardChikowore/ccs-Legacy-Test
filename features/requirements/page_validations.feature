@@ -14,13 +14,13 @@ Feature: Requirements validations
     And I click on "Continue to results"
     Then I should see the following error messages
     |There is a problem|
-    |‘Estimated annual cost’ task must be ‘COMPLETED’|
-		|‘TUPE’ task must be ‘COMPLETED’|
-		|‘Contract period’ task must be ‘COMPLETED’|
-		|‘Services’ task must be ‘COMPLETED’|
-		|‘Buildings’ task must be ‘COMPLETED’|
-		|‘Assigning services to buildings’ task must be ‘COMPLETED’|
-		|‘Service requirements’ task must be ‘COMPLETED’|
+    |‘Estimated annual cost’ must be ‘COMPLETED’|
+		|‘TUPE’ must be ‘COMPLETED’|
+		|‘Contract period’ must be ‘COMPLETED’|
+		|‘Services’ must be ‘COMPLETED’|
+		|‘Buildings’ must be ‘COMPLETED’|
+		|‘Assigning services to buildings’ must be ‘COMPLETED’|
+		|‘Service requirements’ must be ‘COMPLETED’|
 
   Scenario: Validation errors after estimated annual cost and continuing to results
 		And I click on "Estimated annual cost"
@@ -32,12 +32,12 @@ Feature: Requirements validations
     When I click on "Continue to results"
     Then I should see the following error messages
     |There is a problem|
-		|‘TUPE’ task must be ‘COMPLETED’|
-		|‘Contract period’ task must be ‘COMPLETED’|
-		|‘Services’ task must be ‘COMPLETED’|
-		|‘Buildings’ task must be ‘COMPLETED’|
-		|‘Assigning services to buildings’ task must be ‘COMPLETED’|
-		|‘Service requirements’ task must be ‘COMPLETED’|
+		|‘TUPE’ must be ‘COMPLETED’|
+		|‘Contract period’ must be ‘COMPLETED’|
+		|‘Services’ must be ‘COMPLETED’|
+		|‘Buildings’ must be ‘COMPLETED’|
+		|‘Assigning services to buildings’ must be ‘COMPLETED’|
+		|‘Service requirements’ must be ‘COMPLETED’|
 
   Scenario: Validation errors after TUPE and continuing to results
     And I click on "TUPE"
@@ -48,12 +48,12 @@ Feature: Requirements validations
     When I click on "Continue to results"
     Then I should see the following error messages
     |There is a problem|
-    |‘Estimated annual cost’ task must be ‘COMPLETED’|
-		|‘Contract period’ task must be ‘COMPLETED’|
-		|‘Services’ task must be ‘COMPLETED’|
-		|‘Buildings’ task must be ‘COMPLETED’|
-		|‘Assigning services to buildings’ task must be ‘COMPLETED’|
-		|‘Service requirements’ task must be ‘COMPLETED’|
+    |‘Estimated annual cost’ must be ‘COMPLETED’|
+		|‘Contract period’ must be ‘COMPLETED’|
+		|‘Services’ must be ‘COMPLETED’|
+		|‘Buildings’ must be ‘COMPLETED’|
+		|‘Assigning services to buildings’ must be ‘COMPLETED’|
+		|‘Service requirements’ must be ‘COMPLETED’|
 
   Scenario: Validation errors after Contract period and continuing to results
 		And I click on "Contract period"
@@ -71,12 +71,12 @@ Feature: Requirements validations
     When I click on "Continue to results"
     Then I should see the following error messages
     |There is a problem|
-    |‘Estimated annual cost’ task must be ‘COMPLETED’|
-		|‘TUPE’ task must be ‘COMPLETED’|
-		|‘Services’ task must be ‘COMPLETED’|
-		|‘Buildings’ task must be ‘COMPLETED’|
-		|‘Assigning services to buildings’ task must be ‘COMPLETED’|
-		|‘Service requirements’ task must be ‘COMPLETED’|
+    |‘Estimated annual cost’ must be ‘COMPLETED’|
+		|‘TUPE’ must be ‘COMPLETED’|
+		|‘Services’ must be ‘COMPLETED’|
+		|‘Buildings’ must be ‘COMPLETED’|
+		|‘Assigning services to buildings’ must be ‘COMPLETED’|
+		|‘Service requirements’ must be ‘COMPLETED’|
 	
 	Scenario: Validation errors after Contract period with TUPE and continuing to results
 		And I click on "Contract period"
@@ -101,12 +101,12 @@ Feature: Requirements validations
     When I click on "Continue to results"
     Then I should see the following error messages
     |There is a problem|
-    |‘Estimated annual cost’ task must be ‘COMPLETED’|
+    |‘Estimated annual cost’ must be ‘COMPLETED’|
 		|Mobilisation period length must be a minimum of 4 weeks when TUPE is selected|
-		|‘Services’ task must be ‘COMPLETED’|
-		|‘Buildings’ task must be ‘COMPLETED’|
-		|‘Assigning services to buildings’ task must be ‘COMPLETED’|
-		|‘Service requirements’ task must be ‘COMPLETED’|
+		|‘Services’ must be ‘COMPLETED’|
+		|‘Buildings’ must be ‘COMPLETED’|
+		|‘Assigning services to buildings’ must be ‘COMPLETED’|
+		|‘Service requirements’ must be ‘COMPLETED’|
 	
 	Scenario: Validation errors after Contract period with no TUPE and continuing to results
     And I click on "TUPE"
@@ -131,11 +131,11 @@ Feature: Requirements validations
     When I click on "Continue to results"
     Then I should see the following error messages
     |There is a problem|
-    |‘Estimated annual cost’ task must be ‘COMPLETED’|
-		|‘Services’ task must be ‘COMPLETED’|
-		|‘Buildings’ task must be ‘COMPLETED’|
-		|‘Assigning services to buildings’ task must be ‘COMPLETED’|
-		|‘Service requirements’ task must be ‘COMPLETED’|
+    |‘Estimated annual cost’ must be ‘COMPLETED’|
+		|‘Services’ must be ‘COMPLETED’|
+		|‘Buildings’ must be ‘COMPLETED’|
+		|‘Assigning services to buildings’ must be ‘COMPLETED’|
+		|‘Service requirements’ must be ‘COMPLETED’|
 	
 	Scenario: Validation errors after section 1 complete and continuing to results
 		And I click on "Estimated annual cost"
@@ -164,10 +164,10 @@ Feature: Requirements validations
     When I click on "Continue to results"
     Then I should see the following error messages
     |There is a problem|
-		|‘Services’ task must be ‘COMPLETED’|
-		|‘Buildings’ task must be ‘COMPLETED’|
-		|‘Assigning services to buildings’ task must be ‘COMPLETED’|
-		|‘Service requirements’ task must be ‘COMPLETED’|
+		|‘Services’ must be ‘COMPLETED’|
+		|‘Buildings’ must be ‘COMPLETED’|
+		|‘Assigning services to buildings’ must be ‘COMPLETED’|
+		|‘Service requirements’ must be ‘COMPLETED’|
 
 	Scenario: Validation errors after services and continuing to requirements
 		And I click on "Services"
@@ -192,12 +192,12 @@ Feature: Requirements validations
     When I click on "Continue to results"
     Then I should see the following error messages
     |There is a problem|
-    |‘Estimated annual cost’ task must be ‘COMPLETED’|
-		|‘TUPE’ task must be ‘COMPLETED’|
-		|‘Contract period’ task must be ‘COMPLETED’|
-		|‘Buildings’ task must be ‘COMPLETED’|
-		|‘Assigning services to buildings’ task must be ‘COMPLETED’|
-		|‘Service requirements’ task must be ‘COMPLETED’|
+    |‘Estimated annual cost’ must be ‘COMPLETED’|
+		|‘TUPE’ must be ‘COMPLETED’|
+		|‘Contract period’ must be ‘COMPLETED’|
+		|‘Buildings’ must be ‘COMPLETED’|
+		|‘Assigning services to buildings’ must be ‘COMPLETED’|
+		|‘Service requirements’ must be ‘COMPLETED’|
 	
 	Scenario: Validation errors after services and buildings and then continuing to results
 		And I click on "Services"
@@ -222,11 +222,11 @@ Feature: Requirements validations
     When I click on "Continue to results"
     Then I should see the following error messages
     |There is a problem|
-    |‘Estimated annual cost’ task must be ‘COMPLETED’|
-		|‘TUPE’ task must be ‘COMPLETED’|
-		|‘Contract period’ task must be ‘COMPLETED’|
-		|‘Assigning services to buildings’ task must be ‘COMPLETED’|
-		|‘Service requirements’ task must be ‘COMPLETED’|
+    |‘Estimated annual cost’ must be ‘COMPLETED’|
+		|‘TUPE’ must be ‘COMPLETED’|
+		|‘Contract period’ must be ‘COMPLETED’|
+		|‘Assigning services to buildings’ must be ‘COMPLETED’|
+		|‘Service requirements’ must be ‘COMPLETED’|
 	
 	Scenario: Validation errors after services, buildings and assigning services to buildings then continuing to results
 		And I click on "Services"
@@ -258,10 +258,10 @@ Feature: Requirements validations
     When I click on "Continue to results"
     Then I should see the following error messages
     |There is a problem|
-    |‘Estimated annual cost’ task must be ‘COMPLETED’|
-		|‘TUPE’ task must be ‘COMPLETED’|
-		|‘Contract period’ task must be ‘COMPLETED’|
-		|‘Service requirements’ task must be ‘COMPLETED’|
+    |‘Estimated annual cost’ must be ‘COMPLETED’|
+		|‘TUPE’ must be ‘COMPLETED’|
+		|‘Contract period’ must be ‘COMPLETED’|
+		|‘Service requirements’ must be ‘COMPLETED’|
 	
 	Scenario: Service requirements standards error
 		And I click on "Services"
@@ -343,9 +343,9 @@ Feature: Requirements validations
     When I click on "Continue to results"
     Then I should see the following error messages
     |There is a problem|
-    |‘Estimated annual cost’ task must be ‘COMPLETED’|
-		|‘TUPE’ task must be ‘COMPLETED’|
-		|‘Contract period’ task must be ‘COMPLETED’|
+    |‘Estimated annual cost’ must be ‘COMPLETED’|
+		|‘TUPE’ must be ‘COMPLETED’|
+		|‘Contract period’ must be ‘COMPLETED’|
 
 	Scenario: no errors		
 		And I click on "Estimated annual cost"
