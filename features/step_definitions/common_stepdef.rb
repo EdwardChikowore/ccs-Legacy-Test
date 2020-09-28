@@ -747,7 +747,7 @@ Then(/^I click on lot 1a$/) do
   common.estimated_cost_option.click
 end
 
-Then(/^I am on buildings and services summary page$/) do
+Then(/^I am on Assigning services to buildings summary page$/) do
   expect(common.header_one.text).to end_with("Assigning services to buildings summary")
 end
 
@@ -815,11 +815,11 @@ Then(/^I navigate to Service requirements summary page$/) do
   step "I am on service requirements summary page"
 end
 
-Then(/^I navigate to buildings and services summary page$/) do
+Then(/^I navigate to Assigning services to buildings summary page$/) do
   step "I click on save and continue"
   step "I click on return to requirements"
   step "I click on assigning services to buildings link"
-  step "I am on buildings and services summary page"
+  step "I am on Assigning services to buildings summary page"
 end
 
 Then(/^I am on requirements page$/) do

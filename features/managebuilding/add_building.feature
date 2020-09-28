@@ -65,7 +65,7 @@ Feature:Manage Building
       | Postcode                                    | NW1 4DF              |
     And I click on "Save and continue"
     Then I am on "Add a building" page
-#    Then The building address name displayed is "112 Test street, Zone 7, Westminister NW1 4DF"
+    Then The building address name displayed is "112 Test street, Zone 7, Westminister NW1 4DF"
 
 
   Scenario: Internal and External Area - Error validation
@@ -73,9 +73,9 @@ Feature:Manage Building
     And I am on "Add a building" page
     When I add building name
     And I enter the following details into the form:
-      | Postcode                           | NW14DF |
+      | Postcode                           | SW1W 9SZ |
     And I click on "Find address"
-    And I select building address "2 Marylebone Road" from the drop down option
+    And I select building address "151 Buckingham Palace Road" from the drop down option
     When I click on save and continue
     Then I am on "Internal and external areas" page
     When I click on "Save and continue"
@@ -184,7 +184,7 @@ Feature:Manage Building
     When I add building name
     And I enter the following details into the form:
       |Add a description (optional)        | Nursery  |
-      | Postcode                           | SW1W 9SZ  |
+      | Postcode                           | SW1W9SZ  |
     And I click on find address
     And I select building address "151 Buckingham Palace Road" from the drop down option
     And I click on "Save and return to building details summary"

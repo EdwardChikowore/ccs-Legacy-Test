@@ -14,10 +14,12 @@ end
 
 And(/^I select building address "([^"]*)" from the drop down option$/) do |address|
   find("[data-address_line_1='#{address}']").select_option
+  sleep 1
 end
 
 And(/^The building region text displayed is "([^"]*)"$/) do |value|
   expect(common.building_region.text).to eq(value)
+  sleep 1
 end
 
 And(/^The building address name displayed is "([^"]*)"$/) do |value|

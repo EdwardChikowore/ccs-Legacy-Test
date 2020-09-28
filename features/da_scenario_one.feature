@@ -89,13 +89,13 @@ Feature: Direct Award scenario One
     And I click on "Building"
     And I select first building "Aberdeen" with address "Marischal College, Broad Street, Aberdeen, AB10 1AL"
     And I select second building "Belfast Building" with address "8-10, Royal Avenue, Belfast, BT1 1DA"
-    And I select third building "Birmingham" with address "259 Yardley Green Road, Bordesley Green, Birmingham, B9 5QA"
+    And I select third building "Birmingham" with address "255 Yardley Green Road, Birmingham, B9 5QA"
     And I select fourteen building "Westminster Building" with address "10 Downing Street, London, SW1A 2AA"
     And I click on "Save and continue"
     And I am on "Buildings summary" page
     And I click on "Return to requirements"
     And I click on "Assigning services to buildings"
-    And I am on "Buildings and services summary" page
+    And I am on "Assigning services to buildings summary" page
     And I click on "Aberdeen"
     And I select services for first building "Aberdeen" - DA scenario two
     And I click on "Save and return"
@@ -108,7 +108,7 @@ Feature: Direct Award scenario One
     And I click on "Westminster Building"
     And I select services for fourth building "Westminster Building" - DA scenario two
     And I click on "Save and return"
-    And I am on "Buildings and services summary" page
+    And I am on "Assigning services to buildings summary" page
     And I click on "Return to requirements"
     And I am on "Requirements" page
     And I click on "Service requirements"
