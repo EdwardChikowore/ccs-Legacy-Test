@@ -204,15 +204,30 @@ And(/^The seventh volume for scenario four_b "([^"]*)" is (.+)$/) do |service, v
   expect(service_requirements.volume[10].text).to eq(volume)
 end
 
-
-
 And(/^The following services are listed$/) do |table|
   table.transpose.raw.flatten.each do |services|
     expect(page).to have_css('[data-module="govuk-details"]  div  ul  li', text: services)
   end
+end
+#
+# And(/^The mechanical service internal area volume displayed is  (.+)$/) do |volume|
+#   expect(service_requirements.mech_service_volume.text).to eq(volume)
+# end
+#
+# And(/^The cleaning of external area volume displayed is  (.+)$/) do |volume|
+#   expect(service_requirements.volume[5].text).to eq(volume)
+# end
 
+And(/^The mechanical service volume details displayed are:$/) do |table|
+  table.transpose.raw.flatten.each do |services|
+    expect(page).to have_css('[id="C.1-gia-volume"]', text: services)
+  end
 end
 
-
+And(/^The cleaning of external area volume details displayed are:$/) do |table|
+  table.transpose.raw.flatten.each do |services|
+    expect(page).to have_css('[id="G.5-external_area-volume"]', text: services)
+  end
+end
 
 

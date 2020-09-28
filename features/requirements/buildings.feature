@@ -42,7 +42,7 @@ Feature:Buildings
     And I am on "Buildings summary" page
     Then I should see number of building text "10 buildings"
 
-  Scenario: Navigate to add buildings page
+  Scenario: Navigate to add buildings page - Return to buildings link
     When I click on "Buildings"
     And I am on "Buildings" page
     And I click on "Add a building"
@@ -50,14 +50,51 @@ Feature:Buildings
     When I click on "Return to buildings"
     Then I am on "Buildings" page
 
-  Scenario: Navigate to building details summary page
+  Scenario: Navigate to add buildings page
+    When I click on "Buildings"
+    And I am on "Buildings" page
+    And I click on "Add a building"
+    Then I am on "Add a building" page
+    When I add building name
+    And I enter the following details into the form:
+      | Postcode                           | SW1W9SZ  |
+    And I click on find address
+    And I select building address "151 Buckingham Palace Road" from the drop down option
+    When I click on "Save and continue"
+    Then I am on "Internal and external areas" page
+    And I enter 0 for external area
+    And I enter 9 for internal area
+    When I click on "Save and continue"
+    Then I am on "Building type" page
+    And I select the first building type
+    And I click on "Save and continue"
+    Then I am on "Security clearance" page
+    And I click on "Save and return to building details summary"
+    Then I should see the following error messages
+      |There is a problem                                 |
+      |You must select a security clearance level         |
+    When I click on security type other
+    And I click on "Save and return to building details summary"
+    Then I should see the following error messages
+      |There is a problem                                 |
+      |You must describe the security clearance level     |
+    When I enter "test one" in security type description text box
+    And I click on "Save and return to building details summary"
+    Then I am on the "Building details summary" page
+    When I click on "Return to buildings"
+    Then I am on "Buildings" page
+
+  Scenario: Navigate to building details summary page - Return to buildings link
     When I click on "Buildings"
     And I am on "Buildings" page
     And I click on "Details"
     Then I am on the "Building details summary" page
+    When I click on "Return to buildings"
+    Then I am on "Buildings" page
 
-  Scenario: Navigate to building details summary page
+  Scenario: Return to requirements link
     When I click on "Buildings"
     And I am on "Buildings" page
     And I click on "Return to requirements"
     Then I am on "Requirements" page
+
