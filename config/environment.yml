@@ -4,7 +4,7 @@ local:
   account_password: Test12345!
 cmpdev:
   host: https://cmp.cmpdev.crowncommercial.gov.uk/facilities-management
-  account_username: oluwatoyin.otaiku@crowncommercial.gov.uk
+  account_username: bau_test@yopmail.com
   account_password: Test12345!
 preview:
   host: https://cmp.fm-preview.crowncommercial.gov.uk/facilities-management
@@ -14,8 +14,5 @@ marketplace:
   host: https://marketplace.preview.crowncommercial.gov.uk/facilities-management
   account_username: oluwatoyin.otaiku@crowncommercial.gov.uk
   account_password: Test12345!
-#cmpdev:
-#  host: https://cmp.cmpdev.crowncommercial.gov.uk/facilities-management
-#  account_username: bau_test@yopmail.com
-#  account_password: Test12345!
+
 

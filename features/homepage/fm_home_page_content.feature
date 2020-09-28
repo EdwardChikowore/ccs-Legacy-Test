@@ -31,7 +31,7 @@ Feature:  Facilities Management - Home Page Content
 
   Scenario: FM - Procurements - Link - Manage buildings - Page Content
     When I click on "Manage my buildings"
-    Then I am on "Manage buildings" page
+    Then I am on "Buildings" page
 
 
   Scenario: FM - Procurements - Link - Manage your details - Page content

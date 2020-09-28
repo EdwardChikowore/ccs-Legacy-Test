@@ -580,10 +580,6 @@ class Common < SitePrism::Page
     element :lot_one_c, '#facilities_management_procurement_lot_number_1c'
   end
 
-
-
-
-
   section :results_page, 'main#main-content' do
     elements :heading, 'h1'
     elements :estimated_cost, 'h2 > span'
@@ -668,11 +664,11 @@ class Common < SitePrism::Page
   element :number_of_buildings, '#number-of-buildings'
 
   element :building_name, '#facilities_management_building_building_name'
-  element :find_address, '[data-module-element="trigger"]'
+  element :find_address, '#find-address-button'
   element :find_address_two, '[aria-label="Find address"]'
   element :address_container, '#results-container'
-  element :building_region, '[data-module-part="region-results"] > p'
-  element :building_address, '[data-module-part="address_text"]'
+  element :building_region, '#region-text'
+  element :building_address, '#address-text'
 
   element :building_internal_area, '#facilities_management_building_gia'
   element :building_external_area, '#facilities_management_building_external_area'

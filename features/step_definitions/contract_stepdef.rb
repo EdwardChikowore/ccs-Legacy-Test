@@ -14,10 +14,12 @@ end
 
 And(/^I select building address "([^"]*)" from the drop down option$/) do |address|
   find("[data-address_line_1='#{address}']").select_option
+  sleep 1
 end
 
 And(/^The building region text displayed is "([^"]*)"$/) do |value|
   expect(common.building_region.text).to eq(value)
+  sleep 1
 end
 
 And(/^The building address name displayed is "([^"]*)"$/) do |value|
@@ -40,11 +42,9 @@ And(/^I should see authorised representative text next to radio button "([^"]*)"
   expect(common.authorised_contact_details.text).to eq(name)
 end
 
-
 And(/^I should see notices contact detail text next to radio button "([^"]*)"$/) do |name|
   expect(common.notices_contact_details.text).to eq(name)
 end
-
 
 And(/^I click on "([^"]*)" option$/) do |option|
   find("input[value=#{option}]").click
@@ -279,7 +279,7 @@ And(/^The following is displayed on quick search filter section:$/) do |table|
 end
 
 And(/^contract documents page have links$/) do
-  expect(common.contract_document_link.count).to eq(28)
+  expect(common.contract_document_link.count).to eq(30)
 end
 
 

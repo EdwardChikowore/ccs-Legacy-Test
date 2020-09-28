@@ -38,6 +38,6 @@ Feature:  Facilities Management - Services - Miscellaneous FM - Page Content
       |                                                                                                                                                           |
     Then I should see text "No services selected"
     When I select all miscellaneous services
-    Then I should see text "11 services selected"
+    Then I should see text "10 services selected"
     When I select all miscellaneous services
     Then I should see text "No services selected"
