@@ -73,7 +73,36 @@ And(/^I click on the following services:$/) do |table|
   table.transpose.raw.flatten.each do |item|
     check item
   end
-
 end
 
+And(/^I change region selection$/) do
+  common.quick_view_requirements.region.change.click
+end
 
+And(/^I open the regions selected$/) do
+  common.quick_view_requirements.region.summary.click
+end
+
+And(/^I should see the following regions:$/) do |table|
+  expect(common.quick_view_requirements.region.summary_text.text).to eq table.transpose.raw.flatten.join(' ')
+end
+
+And(/^I change service selection$/) do
+  common.quick_view_requirements.service.change.click
+end
+
+And(/^I open the services selected$/) do
+  common.quick_view_requirements.service.summary.click
+end
+
+And(/^I should see the following services:$/) do |table|
+  expect(common.quick_view_requirements.service.summary_text.text).to eq table.transpose.raw.flatten.join(' ')
+end
+
+Then(/^the requirements should be hidden$/) do
+  expect(common.requirements_list.visible?).to be false
+end
+
+Then(/^the requirements should be shown$/) do
+  expect(common.requirements_list.visible?).to be true
+end

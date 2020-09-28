@@ -704,4 +704,19 @@ class Common < SitePrism::Page
 
   element :next_pagination, 'li.ccs-last > button'
   element :previous_pagination, 'li.ccs-first > button'
+
+  section :quick_view_requirements, '.filter-component-container' do
+    section :service, '.service' do
+      element :change, 'a'
+      element :summary, '.govuk-details__summary'
+      element :summary_text, '.govuk-details__text'
+    end
+    section :region, '.region' do
+      element :change, 'a'
+      element :summary, '.govuk-details__summary'
+      element :summary_text, '.govuk-details__text'
+    end
+  end
+
+  element :requirements_list, '#requirements-list'
 end

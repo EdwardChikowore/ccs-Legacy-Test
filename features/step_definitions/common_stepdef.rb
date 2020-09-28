@@ -184,6 +184,11 @@ Then(/^I add contract name$/) do
   puts @name
 end
 
+Then(/^I add duplicate contract name$/) do
+  common.contract_name.set(@name)
+  puts @name
+end
+
 Then(/^I add building name$/) do
   @name = "z_auto" + SecureRandom.uuid
   common.building_name.set(@name)
