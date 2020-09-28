@@ -32,6 +32,20 @@ class Common < SitePrism::Page
     end
   end
 
+  element :quick_service_caption, 'fieldset.govuk-fieldset > div > p.govuk-caption-m'
+  element :service_caption, '#service-caption'
+
+  element :contract_name_status_tag, '#contract_name-tag > .govuk-tag'
+  element :estimated_status_tag, '#estimated_annual_cost-tag > .govuk-tag'
+  element :tupe_status_tag, '#tupe-tag > .govuk-tag'
+  element :contract_period_status_tag, '#contract_period-tag > .govuk-tag'
+  element :buildings_status_tag, '#buildings-tag > .govuk-tag'
+  element :services_status_tag, '#services-tag  > .govuk-tag'
+  element :assigned_status_tag, '#buildings_and_services-tag > .govuk-tag'
+  element :requirements_status_tag, '#service_requirements-tag > .govuk-tag'
+
+  element :service_summary, 'div#number-of-services'
+
   section :maintenance, '[data-sectionname="Maintenance services"]' do
     element :select_all, '#C_all'
   end
@@ -185,6 +199,22 @@ class Common < SitePrism::Page
     end
   end
 
+  section :long_list, '#proc-CCS-fm-suppliers-long-list' do 
+    element :heading, 'span.govuk-heading-l.govuk-!-margin-left-2'
+    section :up_to_7m, '#sub-lot-1a' do 
+      element :sublot_1a, 'table > thead > tr > th.govuk-table__header'
+    end
+
+    section :between_7_and_50, '#sub-lot-1b' do 
+      element :sublot_1b, 'table > thead > tr > th.govuk-table__header'
+    end
+
+    section :over_50, '#sub-lot-1c' do 
+      element :sublot_1c, 'table > thead > tr > th.govuk-table__header'
+    end
+  end
+
+
   sections :summary, 'summary.govuk-details__summary' do
     element :details_open, 'summary[aria-expanded="true"]'
     element :details_close, '[aria-expanded="false"]'
@@ -226,11 +256,27 @@ class Common < SitePrism::Page
     element :no, '#facilities_management_procurement_mobilisation_period_required_false'
   end
 
-
+  section :contract_period, 'table' do 
+    element :length, '#contract-period > td'
+    element :contract_description, '#contract-period-description > td:nth-child(2)'
+    element :mobilisation_length, '#mobilisation-period > td:nth-child(2)'
+    element :mobilisation_description, '#mobilisation-period-description > td:nth-child(2)'
+    element :call_off_extension, '#call-off-extension > td'
+    element :call_off_1_length, '#call-off-extension-1 > td:nth-child(2)'
+    element :call_off_1_description, '#call-off-extension-1-description > td:nth-child(2)'
+    element :call_off_2_length, '#call-off-extension-2 > td:nth-child(2)'
+    element :call_off_2_description, '#call-off-extension-2-description > td:nth-child(2)'
+    element :call_off_3_length, '#call-off-extension-3 > td:nth-child(2)'
+    element :call_off_3_description, '#call-off-extension-3-description > td:nth-child(2)'
+    element :call_off_4_length, '#call-off-extension-4 > td:nth-child(2)'
+    element :call_off_4_description, '#call-off-extension-4-description > td:nth-child(2)'
+  end
 
   section :procurement_extension_radio, 'div[data-propertyname="Extensions choice"]' do
-    element :extension_one, 'input#facilities_management_procurement_optional_call_off_extensions_1'
-    element :extension_two, 'input#facilities_management_procurement_optional_call_off_extensions_2'
+    element :extension_1, 'input#facilities_management_procurement_optional_call_off_extensions_1'
+    element :extension_2, 'input#facilities_management_procurement_optional_call_off_extensions_2'
+    element :extension_3, 'input#facilities_management_procurement_optional_call_off_extensions_3'
+    element :extension_4, 'input#facilities_management_procurement_optional_call_off_extensions_4'
     element :add_extension_period, '#fm-add-contract-ext-btn'
     element :yes, '#facilities_management_procurement_extensions_required_true'
     element :no, '#facilities_management_procurement_extensions_required_false'
@@ -637,4 +683,19 @@ class Common < SitePrism::Page
 
   elements :building_change_link, 'td > a'
   element :building_status_tag, '.govuk-tag:nth-child(2)'
+
+  element :bulk_upload_status, 'div.ccs-font-weight-semi-bold.govuk-body > strong'
+
+  section :contract_details, '#contract-details-summary > table > tbody' do
+    element :payment_method, 'tr:nth-child(2) > td > a'
+    element :invoicing_contact_details, 'tr:nth-child(3) > td > a'
+    element :authorised_representative_details, 'tr:nth-child(4) > td > a'
+    element :notices_contact_details, 'tr:nth-child(5) > td > a'
+    element :security_policy, 'tr:nth-child(6) > td > a'
+    element :local_government_pension_scheme, 'tr:nth-child(7) > td > a'
+    element :governing_law, 'tr:nth-child(8) > td > a'
+  end
+
+  element :missing_regions, 'table > tbody'
+  element :available_route_to_market, 'div.govuk-\!-margin-bottom-3 > h5'
 end

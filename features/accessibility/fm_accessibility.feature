@@ -13,7 +13,7 @@ Feature:  FM - Accessibility
 
   Scenario: FM - Procurement page
     Given I am a logged in user
-    When I am on your account page
+    When I am on my account page
     Then the page should be accessible
 
   Scenario: FM - Start a new procurement page
@@ -312,9 +312,9 @@ Feature:  FM - Accessibility
     And I click on the "Mechanical and electrical engineering maintenance"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I am on contract period page
-    And I am enter values for initial call-off period
+    And I enter values for initial call-off period
     And I select no option for tupe required
     And I select no option for optional call-off extension
     And I click on save and continue
@@ -333,9 +333,9 @@ Feature:  FM - Accessibility
     And I click on the "Mechanical and electrical engineering maintenance"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I am on contract period page
-    And I am enter values for initial call-off period
+    And I enter values for initial call-off period
     And I select no option for tupe required
     And I select no option for optional call-off extension
     And I click on save and continue
@@ -357,7 +357,7 @@ Feature:  FM - Accessibility
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     When I click change on building name on detailed search summary
     And I am on service requirements page
@@ -373,7 +373,7 @@ Feature:  FM - Accessibility
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I am on "Quick view results" page
@@ -389,7 +389,7 @@ Feature:  FM - Accessibility
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I am on "Quick view results" page
@@ -409,7 +409,7 @@ Feature:  FM - Accessibility
     And I click on "Close all"
     When I am on detailed search page
     And I click on "Continue to procurement"
-    And I answer about the contract question
+    And I answer contract details question
     And I answer contract period question
     And I answer services question
     And I should see the "Estimated contract cost" page
