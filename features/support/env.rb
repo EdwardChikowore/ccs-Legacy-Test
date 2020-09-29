@@ -18,7 +18,6 @@ require_relative '../support/login_helper'
 require_relative '../support/capybara_driver.helper'
 
 World(Pages)
-World(WaitUntil)
 
 configure = YAML.load_file("config/environment.yml")
 ENV['TEST_ENV'] ||= 'cmpdev'

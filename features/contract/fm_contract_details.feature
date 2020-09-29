@@ -27,7 +27,6 @@ Feature: Facilities Management - DA - Contract - Review and Generate
       | Notices contact details                                                          |
       | Security policy                                                                  |
       | Local Government Pension Scheme                                                  |
-      | Governing law                                                                    |
 
     Scenario: Contract Details - Main Links
       And I am on "Contract details" page
@@ -50,10 +49,7 @@ Feature: Facilities Management - DA - Contract - Review and Generate
       And I am on "Local Government Pension Scheme" page
       And I click on "Return to contract details"
       And I am on "Contract details" page
-      And I click on the seventh question for "Governing law"
-      And I am on "Governing law" page
-      And I click on "Return to contract details"
-      And I am on "Contract details" page
+
 
   Scenario: Contract Details - Continue button - Error Message
     And I am on "Contract details" page
@@ -66,7 +62,7 @@ Feature: Facilities Management - DA - Contract - Review and Generate
       | You must answer the question about ‘Notices contact details’           |
       | You must answer the question about ‘Security policy’                   |
       | You must answer the question about ‘Local Government Pension Scheme’   |
-      | You must answer the question about ‘Governing law’                     |
+
 
   Scenario: Contract Details - Return to results button
     And I am on "Contract details" page
