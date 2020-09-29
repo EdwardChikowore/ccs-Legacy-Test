@@ -6,7 +6,7 @@ Feature: Requirements - section 1
     When I click on "Start a procurement"
     And I click on "Continue"
     And I add contract name
-    And I click on "Save and return"
+    And I click on "Save and continue"
     And I am on "Requirements" page
 
   Scenario: Estimated annual cost - saving
@@ -20,8 +20,7 @@ Feature: Requirements - section 1
 		And I click on "Estimated annual cost"
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     When I click on "Save and return"
-    Then I should see the following error messages
-    |There is a problem|
+        Then I should see the following error messages
     |Select one option|
 	
 	Scenario: Adding estimated annual cost - return to requirements
@@ -42,8 +41,7 @@ Feature: Requirements - section 1
 		And I click on "TUPE"
     And I am on "TUPE" page
     When I click on "Save and return"
-    Then I should see the following error messages
-    |There is a problem|
+        Then I should see the following error messages
     |Select one option|
 	
 	Scenario: TUPE - return to requirements

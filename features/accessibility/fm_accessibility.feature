@@ -13,7 +13,7 @@ Feature:  FM - Accessibility
 
   Scenario: FM - Procurement page
     Given I am a logged in user
-    When I am on my account page
+    When I am on your account page
     Then the page should be accessible
 
   Scenario: FM - Start a new procurement page

@@ -5,90 +5,9 @@ Feature:  FM - Contract period
     When I click on "Start a procurement"
     And I click on "Continue"
     And I add contract name
-    And I click on "Save and return"
+    And I click on "Save and continue"
     And I am on "Requirements" page
 		And I click on "Contract period"
-	
-	Scenario: Contract period - validation
-    When I am on "Contract period" page
-		When I click on "Save and continue"
-		Then I should see the following error messages
-		| Enter initial call-off period |
-		| Enter a valid initial call-off start date |
-		| Select one option for mobilisation period |
-		| Select one option for call-off contract extension |
-
-	Scenario: Call off period - validation
-    When I am on "Contract period" page
-    And I enter the number of year as "2"
-    And I enter the day as "2"
-    And I enter the month as "2"
-    And I enter the year as "2021"
-		And I click on "Save and continue"
-		Then I should see the following error messages
-		| Select one option for mobilisation period |
-		| Select one option for call-off contract extension |
-
-	Scenario: Call off period - validation - in the past
-    When I am on "Contract period" page
-    And I enter the number of year as "2"
-    And I enter the day as "2"
-    And I enter the month as "2"
-    And I enter the year as "2020"
-		And I click on "Save and continue"
-		Then I should see the following error messages
-		| Initial call-off period start date must be today or in the future |
-		| Select one option for mobilisation period |
-		| Select one option for call-off contract extension |
-	
-	Scenario: Call off period and Mobilisation period - validation
-    When I am on "Contract period" page
-    And I enter the number of year as "2"
-    And I enter the day as "2"
-    And I enter the month as "2"
-    And I enter the year as "2021"
-    And I click on the "facilities_management_procurement_mobilisation_period_required_true" option
-		When I click on "Save and continue"
-		Then I should see the following error messages
-		| Enter mobilisation period length |
-		| Select one option for call-off contract extension |
-
-	Scenario: Call off period and Mobilisation period - validation
-    When I am on "Contract period" page
-    And I enter the number of year as "2"
-    And I enter the day as "2"
-    And I enter the month as "2"
-    And I enter the year as "2021"
-    And I click on the "facilities_management_procurement_mobilisation_period_required_true" option
-    And I enter the mobilisation period for 4 weeks
-		When I click on "Save and continue"
-		Then I should see the following error messages
-		| Select one option for call-off contract extension |
-	
-	Scenario: Extension period - validation
-    When I am on "Contract period" page
-    And I enter the number of year as "2"
-    And I enter the day as "2"
-    And I enter the month as "2"
-    And I enter the year as "2021"
-    And I click on the "facilities_management_procurement_mobilisation_period_required_true" option
-		When I click on "Save and continue"
-		Then I should see the following error messages
-		| Enter mobilisation period length |
-		| Select one option for call-off contract extension |
-	
-	Scenario: Extension period - validation - missing 
-    When I am on "Contract period" page
-    And I enter the number of year as "2"
-    And I enter the day as "2"
-    And I enter the month as "2"
-    And I enter the year as "2021"
-    And I click on the "facilities_management_procurement_mobilisation_period_required_true" option
-    And I click on the "facilities_management_procurement_extensions_required_true" option
-		When I click on "Save and continue"
-		Then I should see the following error messages
-		| Enter mobilisation period length |
-		| Enter extension period |
 
 	Scenario: no validation errors
     When I am on "Contract period" page
@@ -99,7 +18,7 @@ Feature:  FM - Contract period
     And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_false" option
 		When I click on "Save and continue"
-		Then I am on the "Contract period summary" page
+    Then I am on "Contract period summary" page
 
   Scenario: Contract period - no extra periods
     When I am on "Contract period" page

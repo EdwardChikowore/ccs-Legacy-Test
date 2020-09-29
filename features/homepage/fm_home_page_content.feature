@@ -4,24 +4,22 @@ Feature:  Facilities Management - Home Page Content
     Given I am a logged in user
 
   Scenario: FM - Procurements - Home Page Content
-
-    Then the following home page content is displayed:
-      | Find a facilities management supplier                                                                               |
-      | Your account                                                                                                        |
-      | Quick view suppliers                                                                                                |
-      | Quickly view suppliers who can provide services to your locations                                                   |
-      | Start a procurement                                                                                                 |
-      | See shortlisted suppliers, estimated contract costs, and explore direct award or further competition options        |
-      | Continue a procurement                                                                                              |
-      | Open your procurements dashboard to view and continue existing saved procurements                                   |
-      | Manage my buildings                                                                                                 |
-      | Set up and manage your buildings for use in procurements                                                            |
-      | Manage my account                                                                                                   |
-      | Update and edit your contact details                                                                                 |
+  Given I am on your account page
+  Then the following home page content is displayed:
+    | Your account                                                                                                        |
+    | Quick view suppliers                                                                                                |
+    | Quickly view suppliers who can provide services to your locations                                                   |
+    | Start a procurement                                                                                                 |
+    | See shortlisted suppliers, estimated contract costs, and explore direct award or further competition options        |
+    | Continue a procurement                                                                                              |
+    | Open your procurements dashboard to view and continue existing saved procurements                                   |
+    | Manage my buildings                                                                                                 |
+    | Set up and manage your buildings for use in procurements                                                            |
+    | Manage my account                                                                                                   |
+    | Update and edit your contact details                                                                                 |
 
 
   Scenario: FM - Procurements - Link - Quick search - Page Content
-
     When I click on "Quick view suppliers"
     And I am on "Services" page
 
@@ -31,7 +29,7 @@ Feature:  Facilities Management - Home Page Content
 
   Scenario: FM - Procurements - Link - Manage buildings - Page Content
     When I click on "Manage my buildings"
-    Then I am on "Manage buildings" page
+    Then I am on "Buildings" page
 
 
   Scenario: FM - Procurements - Link - Manage your details - Page content

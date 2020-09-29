@@ -77,3 +77,62 @@ end
 And(/^The building status tag is "([^"]*)"$/)do |text|
   expect(common.building_status_tag.text).to eq(text)
 end
+
+Then(/^I add a new name for the building/) do
+  @building_name = "z_auto" + SecureRandom.uuid
+  common.building_name.set(@building_name)
+end
+
+And(/^I enter "([^"]*)" for the postcode$/)do |text|
+  common.postcode_entry.set(text)
+end
+
+And(/^I find and select my building$/) do
+  step "I find and select \"#{@building_name}\""
+  step "I click on \"Save and continue\""
+end
+
+And(/^I find and select "([^"]*)"$/) do |text|
+  continue = true
+
+  while continue
+    if common.text.include? text
+      find('legend', text: text).click
+      continue = false
+    else
+      if first('.ccs-pagination')
+        common.next_pagination.click
+      else
+        fail("Cannot find Building with name #{text}")
+      end
+    end
+  end
+end
+
+
+And(/^I add a new building/) do
+  step "I click on \"Add a building\""
+  step "I am on \"Add a building\" page"
+  step "I add a new name for the building"
+  step "I find my address"
+  step "I click on \"Save and continue\""
+  step "I am on \"Internal and external areas\" page"
+  step "I enter 100 for external area"
+  step "I enter 9 for internal area"
+  step "I click on \"Save and continue\""
+  step "I am on \"Building type\" page"
+  step "I select the first building type"
+  step "I click on \"Save and continue\""
+  step "I am on \"Security clearance\" page"
+  step "I select the first security type"
+  step "I click on \"Save and return to building details summary\""
+  step "I am on the \"Building details summary\" page"
+  step "I click on \"Return to buildings\""
+  step "I am on \"Buildings\" page"
+end
+
+And(/^I find my address/) do
+  step "I enter \"ST161AA\" for the postcode"
+  step "I click on find address"
+  step "I select the building address \"Stafford Delivery Office\" from the drop down option"
+end

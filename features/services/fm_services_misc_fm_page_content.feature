@@ -20,9 +20,9 @@ Feature:  Facilities Management - Services - Miscellaneous FM - Page Content
       | Hairdressing services                                  |
       | Footwear cobbling services                             |
       | Provision of chaplaincy support services               |
-      | Housing and residential accommodation management      |
-      | Training establishment management and booking service |
-      |                                                               |
+      | Housing and residential accommodation management       |
+      | Training establishment management and booking service  |
+      |                                                        |
     Then The following description is displayed:
       | Childcare nursery service for children aged between three months and an age suitable for first entry to school                                     |
       | Full management of the sports and leisure facilities including the booking of activity rooms, equipment and managing payment systems               |

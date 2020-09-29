@@ -5,7 +5,7 @@ Feature:Services
     When I click on "Start a procurement"
     And I click on "Continue"
     And I add contract name
-    And I click on "Save and return"
+    And I click on "Save and continue"
     And I am on "Requirements" page
 		And I click on "Services"
     And I am on "Services" page
@@ -14,7 +14,6 @@ Feature:Services
   Scenario: Validation error when no service is selected
 		And I click on "Save and continue"
 		Then I should see the following error messages
-		|There is a problem|
 		|Select at least one service you need to include in your procurement|
 
   Scenario: Change service selection

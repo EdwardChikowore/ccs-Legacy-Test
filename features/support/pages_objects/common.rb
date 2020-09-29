@@ -18,7 +18,8 @@ class Common < SitePrism::Page
   elements :multiple_heading, 'h1'
   element :ms_c1, 'label', text: 'Mechanical and electrical engineering'
   elements :sign_out_check, 'li > a'
-  element :my_account_title, 'div > span.govuk-caption-l'
+  element :your_account_title, 'div > span.govuk-caption-l'
+  element :your_account_page, '#main-content > div.govuk-width-container'
 
   section :service_accordion, 'div#procurement-services-accordion' do
     section :section_heading, '[data-sectionname="Maintenance services"]' do
@@ -292,6 +293,7 @@ class Common < SitePrism::Page
     element :name, 'legend'
     element :address, 'span'
   end
+
   section :building_two, 'label[for="facilities_management_procurement_procurement_buildings_attributes_1_active"]' do
     element :name, 'legend'
     element :address, 'span'
@@ -580,10 +582,6 @@ class Common < SitePrism::Page
     element :lot_one_c, '#facilities_management_procurement_lot_number_1c'
   end
 
-
-
-
-
   section :results_page, 'main#main-content' do
     elements :heading, 'h1'
     elements :estimated_cost, 'h2 > span'
@@ -668,11 +666,12 @@ class Common < SitePrism::Page
   element :number_of_buildings, '#number-of-buildings'
 
   element :building_name, '#facilities_management_building_building_name'
-  element :find_address, '[data-module-element="trigger"]'
+  element :find_address, '#find-address-button'
   element :find_address_two, '[aria-label="Find address"]'
   element :address_container, '#results-container'
-  element :building_region, '[data-module-part="region-results"] > p'
-  element :building_address, '[data-module-part="address_text"]'
+  element :building_region, '#region-text'
+  element :building_address, '#address-text'
+  element :postcode_entry, '.postcode-entry'
 
   element :building_internal_area, '#facilities_management_building_gia'
   element :building_external_area, '#facilities_management_building_external_area'
@@ -702,4 +701,7 @@ class Common < SitePrism::Page
 
   element :missing_regions, 'table > tbody'
   element :available_route_to_market, 'div.govuk-\!-margin-bottom-3 > h5'
+
+  element :next_pagination, 'li.ccs-last > button'
+  element :previous_pagination, 'li.ccs-first > button'
 end
