@@ -39,8 +39,8 @@ Feature:Manage Building
     And I am on "Add a building" page
     When I add building name
     And I enter the following details into the form:
-      | Postcode                           | SW1W 9SZ  |
-    And I click on "Find address"
+      | Postcode                           | SW1W9SZ  |
+    And I click on find address
     And I click on "I can’t find my building’s address in the list"
     And I am on "Add building address" page
     And I click on "Save and continue"
@@ -48,13 +48,14 @@ Feature:Manage Building
       |There is a problem                                               |
       |Add a building and street name                                   |
       |Town or city name for this building must be 30 characters or less|
+      |Enter a valid postcode, like AA1 1AA                             |
 
   Scenario: Add Address manually - Save
     And I click on "Add a building"
     And I am on "Add a building" page
     When I add building name
     And I enter the following details into the form:
-      | Postcode                           | LU6 1GQ  |
+      | Postcode                           | SW1W9SZ  |
     And I click on find address
     And I click on "I can’t find my building’s address in the list"
     And I am on "Add building address" page
@@ -73,10 +74,10 @@ Feature:Manage Building
     And I am on "Add a building" page
     When I add building name
     And I enter the following details into the form:
-      | Postcode                           | SW1W 9SZ |
-    And I click on "Find address"
+      | Postcode                           | SW1W9SZ  |
+    And I click on find address
     And I select building address "151 Buckingham Palace Road" from the drop down option
-    When I click on save and continue
+    When I click on "Save and continue"
     Then I am on "Internal and external areas" page
     When I click on "Save and continue"
     Then I should see the following error messages
@@ -105,7 +106,7 @@ Feature:Manage Building
     And I am on "Add a building" page
     When I add building name
     And I enter the following details into the form:
-      | Postcode                           | SW1W 9SZ  |
+      | Postcode                           | SW1W9SZ  |
     And I click on find address
     And I select building address "151 Buckingham Palace Road" from the drop down option
     When I click on "Save and continue"
@@ -124,7 +125,7 @@ Feature:Manage Building
     And I am on "Add a building" page
     When I add building name
     And I enter the following details into the form:
-      | Postcode                           | SW1W 9SZ  |
+      | Postcode                           | SW1W9SZ  |
     And I click on find address
     And I select building address "151 Buckingham Palace Road" from the drop down option
     When I click on "Save and continue"
@@ -153,7 +154,7 @@ Feature:Manage Building
     And I am on "Add a building" page
     When I add building name
     And I enter the following details into the form:
-      | Postcode                           | SW1W 9SZ  |
+      | Postcode                           | SW1W9SZ  |
     And I click on find address
     And I select building address "151 Buckingham Palace Road" from the drop down option
     When I click on "Save and continue"

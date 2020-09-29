@@ -7,7 +7,7 @@ Given(/^I visit the accessibility page$/) do
 end
 
 
-Given(/^I am on your account page$/) do
+Given(/^I am on my account page$/) do
   expect(common.my_account_title.text).to eq("Your account")
 end
 
@@ -50,6 +50,30 @@ end
 
 And(/^I click on the "([^"]*)" option$/) do |text|
   choose text
+end
+
+And(/^The up to 7m is displayed$/) do 
+  expect(common.long_list.up_to_7m.text).to eq("up to £7m")
+end
+
+And(/^The sublot 1a is displayed$/) do
+  expect(common.long_list.sublot_1a.text).to eq(text)
+end
+
+And(/^The between 7m and 50m is displayed$/) do 
+  expect(common.long_list.between_7_and_50.text).to eq("between £7m and 50m")
+end
+
+And(/^The sublot 1b is displayed:$/) do |text|
+  expect(common.long_list.sublot_1b.text).to eq(text)
+end
+
+And(/^The over 50m is displayed:$/) do
+  expect(common.long_list.over_50.text).to eq("over £50m")
+end
+
+And(/^The sublot 1c is displayed:$/) do |text|
+  expect(common.long_list.sublot_1c.text).to eq(text)
 end
 
 Then(/^I click to start a new procurement$/) do
@@ -159,13 +183,17 @@ Then(/^I add building name$/) do
   common.building_name.set(@name)
 end
 
+Then(/^I click on contract name$/) do
+  click_on @name
+end
+
 Then(/^I change contract name$/) do
   @name_change = "Change_contract_name_DS" + SecureRandom.uuid
   common.contract_name.set(@name_change)
 end
 
-And(/^I contract name should include "([^"]*)"$/) do |value|
-    expect(detailed_summary.procurement_name[1].text).to start_with(@name_change)
+And(/^The contract name should include "([^"]*)"$/) do |_value|
+  expect(detailed_summary.procurement_name[1].text).to start_with(@name_change)
 end
 
 
@@ -222,6 +250,10 @@ Then(/^I enter the mobilisation period for (\d+) weeks$/) do |weeks|
   common.mobilisation_radio.period.set(weeks)
 end
 
+Then(/^I enter the mobilisation period for "([^"]*)" weeks$/) do |weeks|
+  common.mobilisation_radio.period.set(weeks)
+end
+
 Then(/^I select yes for TUPE$/) do
   common.tupe_yes.set(true)
 end
@@ -254,16 +286,17 @@ Then(/^I select (.+) for optional call off extension$/) do |radio|
   common.procurement_extension_radio.no.set(radio)
 end
 
-Then(/^I enter (.+) year as the first extension period$/) do |year|
-  common.procurement_extension_radio.extension_one.set(year)
-end
 
 Then(/^I click on add another extension period$/) do
   common.procurement_extension_radio.add_extension_period.click
 end
 
-Then(/^I enter (.+) year as the second extension period$/) do |year|
-  common.procurement_extension_radio.extension_two.set(year)
+Then(/^I enter (.+) year for extension period (.+)$/) do |year, extension_period|
+  common.procurement_extension_radio.send("extension_#{extension_period}").set(year)
+end
+
+Then(/^I click on first building link "([^"]*)"$/) do 
+  common.building_summary.first_building.click
 end
 
 Then(/^I select first building with address "([^"]*)"$/) do |building_address|
@@ -299,9 +332,19 @@ Then(/^I select "([^"]*)" for second building$/) do |service|
   common.choose_service[6].checkbox_items.label.click
 end
 
+And(/^The following summary text is displayed:$/) do |table|
+  table.transpose.raw.flatten.each do |item|
+    expect(common.service_summary.text).to eq(item)
+  end
+end
 
+And(/^The service caption text is displayed$/) do
+  expect(common.quick_service_caption.text).to eq("Choose all facilities management services required within your estate, even if you want services in just one building.")
+end
 
-
+And(/^The service caption is displayed$/) do
+  expect(common.service_caption.text).to eq("Choose all facilities management services required within your estate, even if you want services in just one building. To see further information about services click on the 'Further details' link under each service. Alternatively, open the service specification document below and go to the relevant section.")
+end
 
 Then(/^I select all services for selected building$/) do
   common.select_all.checkbox.click
@@ -309,6 +352,10 @@ end
 
 Then(/^I click on a saved and return to detailed search$/) do
   click_on 'Save and return to detailed search summary'
+end
+
+Then(/^I click on first building$/) do
+  common.detailed_building_link[0].click
 end
 
 Then(/^I click on building$/) do
@@ -465,7 +512,7 @@ end
 
 
 And(/^I click on the question for payment method$/) do
-  common.contract_details.answer_question[0].click
+  common.contract_details.payment_method.click
 end
 
 And(/^I select Bacs payment$/) do
@@ -526,13 +573,16 @@ And(/^I click on the seventh question for "([^"]*)"$/)do |name|
   common.contract_details_change_link[6].click
 end
 
+And(/^I click on the question for invoicing contact details$/) do
+  common.contract_details.invoicing_contact_details.click
+end
 
 And(/^I select invoicing contact$/) do
   common.buyer_invoice_details.click
 end
 
-And (/^I click on the question for Authorised representative details$/) do
-  common.contract_details.answer_question[2].click
+And(/^I click on the question for Authorised representative details$/) do
+  common.contract_details.authorised_representative_details.click
 end
 
 And(/^I select Authorised representative details$/) do
@@ -540,7 +590,7 @@ And(/^I select Authorised representative details$/) do
 end
 
 And(/^I click on the question for Notices contact details$/) do
-  common.contract_details.answer_question[3].click
+  common.contract_details.notices_contact_details.click
 end
 
 And(/^I select Notices contact details$/) do
@@ -548,13 +598,12 @@ And(/^I select Notices contact details$/) do
 end
 
 And(/^I click on the question for Security policy$/) do
-  common.contract_details.answer_question[4].click
+  common.contract_details.security_policy.click
 end
 
 And(/^I select Security policy option$/) do
   common.security_notice_false.click
 end
-
 
 And(/^I enter security name$/) do
   common.security_policy_name.set("CCS doc")
@@ -568,12 +617,16 @@ And(/^I upload a document$/) do
   common.attach_file("facilities_management_procurement[security_policy_document_file]",'features/5Mb.docx' )
 end
 
-And /^I click on the question for Local Government Pension Scheme$/ do
-  common.contract_details.answer_question[5].click
+And(/^I click on the question for Local Government Pension Scheme$/) do
+  common.contract_details.local_government_pension_scheme.click
 end
 
 And(/^I select pension option$/) do
   common.pension_option_false.click
+end
+
+And(/^I click on the question for Governing law$/) do
+  common.contract_details.governing_law.click
 end
 
 Then(/^I should see the uom information$/) do
@@ -622,11 +675,15 @@ And(/^I am on contract period page$/) do
   expect(common.header_one.text).to end_with("Contract period")
 end
 
-And(/^I am enter values for initial call-off period$/) do
-    common.initial_call_off_period.set(1)
-    common.initial_start_date.day.set(12)
-    common.initial_start_date.month.set(12)
-    common.initial_start_date.year.set(2024)
+And(/^I enter values for initial call-off period/) do
+  common.initial_call_off_period.set(4)
+  step "I enter values for the initial call-off period date"
+end
+
+And(/^I enter values for the initial call-off period date$/) do
+  common.initial_start_date.day.set(12)
+  common.initial_start_date.month.set(12)
+  common.initial_start_date.year.set(2024)
 end
 
 Then(/^I select no option for tupe required$/) do
@@ -669,6 +726,38 @@ end
 
 Then(/^I click on save and return to service requirements$/) do
   click_on 'Save and return to service requirements'
+end
+
+And(/^The contract name status tag is "([^"]*)"$/)do |text|
+  expect(common.contract_name_status_tag.text).to eq(text)
+end
+
+And(/^The estimated annual cost status tag is "([^"]*)"$/)do |text|
+  expect(common.estimated_status_tag.text).to eq(text)
+end
+
+And(/^The TUPE status tag is "([^"]*)"$/)do |text|
+  expect(common.tupe_status_tag.text).to eq(text)
+end
+
+And(/^The contract period status tag is "([^"]*)"$/)do |text|
+  expect(common.contract_period_status_tag.text).to eq(text)
+end
+
+And(/^The buildings status tag is "([^"]*)"$/)do |text|
+  expect(common.buildings_status_tag.text).to eq(text)
+end
+
+And(/^The services status tag is "([^"]*)"$/)do |text|
+  expect(common.services_status_tag.text).to eq(text)
+end
+
+And(/^The assigning buildings to services status tag is "([^"]*)"$/)do |text|
+  expect(common.assigned_status_tag.text).to eq(text)
+end
+
+And(/^The service requirements status tag is "([^"]*)"$/)do |text|
+  expect(common.requirements_status_tag.text).to eq(text)
 end
 
 Then(/^I click on back to detailed search summary$/) do
@@ -733,7 +822,7 @@ end
 
 Then(/^I click on select all$/) do
   service_requirements.select_all.click
-end
+end 
 
 Then(/^I click on the first building on the service requirements summary page$/) do
   service_requirements.answer_question.click
@@ -747,8 +836,8 @@ Then(/^I click on lot 1a$/) do
   common.estimated_cost_option.click
 end
 
-Then(/^I am on Assigning services to buildings summary page$/) do
-  expect(common.header_one.text).to end_with("Assigning services to buildings summary")
+Then(/^I am on buildings and services summary page$/) do
+  expect(common.header_one.text).to end_with("Buildings and services summary")
 end
 
 Then(/^I am on service requirements summary page$/) do
@@ -815,11 +904,11 @@ Then(/^I navigate to Service requirements summary page$/) do
   step "I am on service requirements summary page"
 end
 
-Then(/^I navigate to Assigning services to buildings summary page$/) do
+Then(/^I navigate to buildings and services summary page$/) do
   step "I click on save and continue"
   step "I click on return to requirements"
   step "I click on assigning services to buildings link"
-  step "I am on Assigning services to buildings summary page"
+  step "I am on buildings and services summary page"
 end
 
 Then(/^I am on requirements page$/) do
@@ -836,7 +925,7 @@ Then(/^I click change on building section$/) do
   common.answer_question[4].click
 end
 
-Then(/^I answer about the contract question$/) do
+Then(/^I answer contract details question$/) do
   step "I click on estimated annual cost"
   step "I am on estimated annual cost page"
   step "I select no option for estimated annual cost"
@@ -849,7 +938,7 @@ end
 
 Then(/^I answer contract period question/) do
   step "I am on contract period page"
-  step "I am enter values for initial call-off period"
+  step "I enter values for initial call-off period"
   step "I select no option for tupe required"
   step "I select no option for optional call-off extension"
   step "I click on save and continue"
@@ -891,4 +980,45 @@ Then(/^I assign services to buildings/) do
   step "I click on return to requirements"
 end
 
+Then(/^I complete the contract details/) do
+  step "I click on the question for payment method"
+  step "I select Bacs payment"
+  step "I click on \"Save and return\""
+  step "I am on \"Contract details\" page"
+  step "I click on the question for invoicing contact details"
+  step "I select invoicing contact"
+  step "I click on \"Continue\""
+  step "I am on \"Contract details\" page"
+  step "I click on the question for Authorised representative details"
+  step "I select Authorised representative details"
+  step "I click on \"Continue\""
+  step "I am on \"Contract details\" page"
+  step "I click on the question for Notices contact details"
+  step "I select Notices contact details"
+  step "I click on \"Continue\""
+  step "I am on \"Contract details\" page"
+  step "I click on the question for Security policy"
+  step "I select Security policy option"
+  step "I click on \"Save and return\""
+  step "I am on \"Contract details\" page"
+  step "I click on the question for Local Government Pension Scheme"
+  step "I select pension option"
+  step "I click on \"Save and continue\""
+  step "I am on \"Contract details\" page"
+  step "I click on the question for Governing law"
+  step "I select english law"
+  step "I click on \"Save and continue\""
+  step "I am on \"Contract details\" page"
+end
 
+Then(/^I create a new procurement/) do
+  step "I am a logged in user - buildings account"
+  step "I am on my account page"
+  step "I click on \"Start a procurement\""
+  step "I am on \"What happens next\" page"
+  step "I click on \"Continue\""
+  step "I am on \"Contract name\" page"
+  step "I add contract name"
+  step "I click on \"Save and continue\""
+  step "I am on \"Requirements\" page"
+end
