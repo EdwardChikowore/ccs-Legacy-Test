@@ -24,7 +24,6 @@ Feature:  Facilities Management - Contract - Local Government Pension Scheme
   Scenario: Error validation message when no option is selected
     When I click on "Save and continue"
     Then I should see the following error messages
-      |There is a problem|
       |Select one answer |
 
   Scenario: Pension funds validation error message
@@ -40,10 +39,11 @@ Feature:  Facilities Management - Contract - Local Government Pension Scheme
     And I click on "Add another pension fund (97 remaining)"
     When I click on "Save and return"
     Then I should see the following error messages
-      |Enter a pension fund name|
+      |Percentage of pensionable pay must be a number between 0.0001 to 100 inclusive, like 99.9999 or 34|
       |Enter a percentage of pensionable pay|
       |Enter a unique pension fund name, duplication is not allowed|
-      |Percentage of pensionable pay must be a number between 0.0001 to 100 inclusive, like 99.9999 or 34|
+      |Enter a pension fund name|
+      |Enter a percentage of pensionable pay|
 
   Scenario: Pension funds - Valid details entered
     When I click on "true" option

@@ -7,10 +7,9 @@ Given(/^I visit the accessibility page$/) do
 end
 
 
-Given(/^I am on my account page$/) do
-  expect(common.my_account_title.text).to eq("Your account")
+Given(/^I am on your account page$/) do
+  expect(common.your_account_title.text).to eq("Your account")
 end
-
 
 Then("The page should have heading called {string}") do |string|
   page.first("h1.govuk-heading-xl").text.should eq(string)
@@ -38,7 +37,6 @@ And(/^I should see the "([^"]*)" page$/) do |text|
   expect(common.header_one.text).to end_with(text)
 end
 
-
 And(/^I am on "([^"]*)" and "([^"]*)" page$/) do |heading, sub_heading|
   expect(common.header_one.text).to end_with(heading)
   expect(common.header_three.text).to eq(sub_heading)
@@ -52,6 +50,14 @@ And(/^I click on the "([^"]*)" option$/) do |text|
   choose text
 end
 
+Then(/^the following home page content is displayed:$/) do |table|
+  page_text = common.your_account_page.text
+
+  table.transpose.raw.flatten.each do |item|
+    expect(page_text).to include(item)
+  end
+end
+
 And(/^The up to 7m is displayed$/) do 
   expect(common.long_list.up_to_7m.text).to eq("up to £7m")
 end
@@ -61,14 +67,14 @@ And(/^The sublot 1a is displayed$/) do
 end
 
 And(/^The between 7m and 50m is displayed$/) do 
-  expect(common.long_list.between_7_and_50.text).to eq("between £7m and 50m")
+  expect(common.long_list.between_7_and_50.text).to eq("between £7m-50m")
 end
 
 And(/^The sublot 1b is displayed:$/) do |text|
   expect(common.long_list.sublot_1b.text).to eq(text)
 end
 
-And(/^The over 50m is displayed:$/) do
+And(/^The over 50m is displayed$/) do
   expect(common.long_list.over_50.text).to eq("over £50m")
 end
 
@@ -188,12 +194,12 @@ Then(/^I click on contract name$/) do
 end
 
 Then(/^I change contract name$/) do
-  @name_change = "Change_contract_name_DS" + SecureRandom.uuid
+  @name_change = "Change_contract_name_DS_" + SecureRandom.uuid
   common.contract_name.set(@name_change)
 end
 
-And(/^The contract name should include "([^"]*)"$/) do |_value|
-  expect(detailed_summary.procurement_name[1].text).to start_with(@name_change)
+Then(/^The contract name should include "([^"]*)"$/) do |value|
+  expect(detailed_summary.procurement_name[1].text).to start_with(value)
 end
 
 
@@ -339,7 +345,7 @@ And(/^The following summary text is displayed:$/) do |table|
 end
 
 And(/^The service caption text is displayed$/) do
-  expect(common.quick_service_caption.text).to eq("Choose all facilities management services required within your estate, even if you want services in just one building.")
+  expect(common.quick_service_caption.text).to eq("Choose all facilities management services required within your estate, even if you want services in just one building. To see further information about services click on the 'Further details' link under each service. Alternatively, open the service specification document below and go to the relevant section.")
 end
 
 And(/^The service caption is displayed$/) do
@@ -752,7 +758,7 @@ And(/^The services status tag is "([^"]*)"$/)do |text|
   expect(common.services_status_tag.text).to eq(text)
 end
 
-And(/^The assigning buildings to services status tag is "([^"]*)"$/)do |text|
+And(/^The assigning services to buildings status tag is "([^"]*)"$/) do |text|
   expect(common.assigned_status_tag.text).to eq(text)
 end
 
@@ -822,7 +828,7 @@ end
 
 Then(/^I click on select all$/) do
   service_requirements.select_all.click
-end 
+end
 
 Then(/^I click on the first building on the service requirements summary page$/) do
   service_requirements.answer_question.click
@@ -836,8 +842,8 @@ Then(/^I click on lot 1a$/) do
   common.estimated_cost_option.click
 end
 
-Then(/^I am on buildings and services summary page$/) do
-  expect(common.header_one.text).to end_with("Buildings and services summary")
+Then(/^I am on Assigning services to buildings summary page$/) do
+  expect(common.header_one.text).to end_with("Assigning services to buildings summary")
 end
 
 Then(/^I am on service requirements summary page$/) do
@@ -904,11 +910,11 @@ Then(/^I navigate to Service requirements summary page$/) do
   step "I am on service requirements summary page"
 end
 
-Then(/^I navigate to buildings and services summary page$/) do
+Then(/^I navigate to Assigning services to buildings summary page$/) do
   step "I click on save and continue"
   step "I click on return to requirements"
   step "I click on assigning services to buildings link"
-  step "I am on buildings and services summary page"
+  step "I am on Assigning services to buildings summary page"
 end
 
 Then(/^I am on requirements page$/) do
@@ -965,7 +971,7 @@ Then(/^I proceed to the contract details page/) do
   step "I click on continue"
 end
 
-Then(/^I select building$/) do
+Then(/^I select building/) do
   step "I click on buildings link"
   step "I select first building"
   step "I click on save and continue"
@@ -1013,7 +1019,7 @@ end
 
 Then(/^I create a new procurement/) do
   step "I am a logged in user - buildings account"
-  step "I am on my account page"
+  step "I am on your account page"
   step "I click on \"Start a procurement\""
   step "I am on \"What happens next\" page"
   step "I click on \"Continue\""

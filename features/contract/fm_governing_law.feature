@@ -23,7 +23,6 @@ Feature:  Facilities Management - Contract - Governing Law
   Scenario: Error validation message when no option is selected
     When I click on "Save and continue"
     Then I should see the following error messages
-      |There is a problem|
       |Select one option |
     When I select english law
     And I click on "Save and continue"

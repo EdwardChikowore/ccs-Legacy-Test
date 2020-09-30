@@ -3,7 +3,7 @@ Feature: Direct Award scenario Two
   Background: Login page
     Given I am a logged in user
 
-  Scenario Outline: Direct Award Scenario One - TUPE, CAFM, Helpdesk, Management
+  Scenario: Direct Award Scenario One - TUPE, CAFM, Helpdesk, Management
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
@@ -77,10 +77,10 @@ Feature: Direct Award scenario Two
     And I click on "Save and return"
     And I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "<years>"
-    And I enter the day as "<day>"
-    And I enter the month as "<month>"
-    And I enter the year as "<year>"
+    And I enter the number of year as "1"
+    And I enter the day as "12"
+    And I enter the month as "10"
+    And I enter the year as "2020"
     And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_false" option
     And I click on "Save and continue"
@@ -88,13 +88,13 @@ Feature: Direct Award scenario Two
     And I click on "Building"
     And I select first building "Aberdeen" with address "Marischal College, Broad Street, Aberdeen, AB10 1AL"
     And I select second building "Belfast Building" with address "8-10, Royal Avenue, Belfast, BT1 1DA"
-    And I select third building "Birmingham" with address "259 Yardley Green Road, Bordesley Green, Birmingham, B9 5QA"
+    And I select third building "Birmingham" with address "255 Yardley Green Road, Birmingham, B9 5QA"
     And I select fourteen building "Westminster Building" with address "10 Downing Street, London, SW1A 2AA"
     And I click on "Save and continue"
     And I am on "Buildings summary" page
     And I click on "Return to requirements"
     And I click on "Assigning services to buildings"
-    And I am on "Buildings and services summary" page
+    And I am on "Assigning services to buildings summary" page
     And I click on "Aberdeen"
     And I select services for first building "Aberdeen" - DA scenario two
     And I click on "Save and return"
@@ -107,7 +107,7 @@ Feature: Direct Award scenario Two
     And I click on "Westminster Building"
     And I select services for fourth building "Westminster Building" - DA scenario two
     And I click on "Save and return"
-    And I am on "Buildings and services summary" page
+    And I am on "Assigning services to buildings summary" page
     And I click on "Return to requirements"
     And I am on "Requirements" page
     And I click on "Service requirements"
@@ -289,8 +289,3 @@ Feature: Direct Award scenario Two
     And the eighth subsequent supplier is "Supplier 8" and contract price is £256,356.15
     And the ninth subsequent supplier is "Supplier 9" and contract price is £267,370.82
     And the tenth subsequent supplier is "Supplier 10" and contract price is £273,278.77
-
-
-    Examples:
-      | years | day | month | year |
-      |   1   | 12  | 10    | 2020 |

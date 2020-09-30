@@ -70,7 +70,7 @@ And(/^I select all reception services$/) do
   common.reception.select_all.click
 end
 
-And(/^The following reception services are  displayed:$/) do |table|
+And(/^The following reception services are displayed:$/) do |table|
   table.transpose.raw.flatten.each do |item|
     expect(page).to have_css('#procurement-services-accordion-content-7', text: item)
   end

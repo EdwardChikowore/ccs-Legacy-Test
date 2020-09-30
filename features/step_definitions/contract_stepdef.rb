@@ -8,16 +8,18 @@ And(/^I select address "([^"]*)" from the drop down option$/) do |address|
   find("#buyer-details-postcode-lookup-results option[value='#{address}']").select_option
 end
 
-And(/^I select building region "([^"]*)" from the drop down option$/) do |address|
+And(/^I select region "([^"]*)" from the drop down option$/) do |address|
   find("[data-address_region='#{address}']").select_option
 end
 
-And(/^I select building address "([^"]*)" from the drop down option$/) do |address|
+And(/^I select the building address "([^"]*)" from the drop down option$/) do |address|
   find("[data-address_line_1='#{address}']").select_option
+  sleep 1
 end
 
 And(/^The building region text displayed is "([^"]*)"$/) do |value|
   expect(common.building_region.text).to eq(value)
+  sleep 1
 end
 
 And(/^The building address name displayed is "([^"]*)"$/) do |value|
@@ -161,7 +163,12 @@ And(/^The following is displayed:$/) do |table|
   table.transpose.raw.flatten.each do |item|
     expect(page).to have_css('tbody tr th', text: item)
   end
+end
 
+And(/^The following heading text is displayed:$/)do |table|
+  table.transpose.raw.flatten.each do |item|
+    expect(page).to have_css('thead tr th', text: item)
+  end
 end
 
 And(/^The following detail is displayed:$/) do |table|
@@ -279,7 +286,7 @@ And(/^The following is displayed on quick search filter section:$/) do |table|
 end
 
 And(/^contract documents page have links$/) do
-  expect(common.contract_document_link.count).to eq(28)
+  expect(common.contract_document_link.count).to eq(30)
 end
 
 

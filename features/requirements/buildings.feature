@@ -13,7 +13,6 @@ Feature:Buildings
    And I am on "Buildings" page
    And I click on "Save and continue"
     Then I should see the following error messages
-    |There is a problem|
     |Select at least one building|
   When I select first building
   And I click on "Save and continue"
@@ -59,7 +58,7 @@ Feature:Buildings
     And I enter the following details into the form:
       | Postcode                           | SW1W9SZ  |
     And I click on find address
-    And I select building address "151 Buckingham Palace Road" from the drop down option
+    And I select the building address "151 Buckingham Palace Road" from the drop down option
     When I click on "Save and continue"
     Then I am on "Internal and external areas" page
     And I enter 0 for external area
@@ -71,12 +70,10 @@ Feature:Buildings
     Then I am on "Security clearance" page
     And I click on "Save and return to building details summary"
     Then I should see the following error messages
-      |There is a problem                                 |
       |You must select a security clearance level         |
     When I click on security type other
     And I click on "Save and return to building details summary"
     Then I should see the following error messages
-      |There is a problem                                 |
       |You must describe the security clearance level     |
     When I enter "test one" in security type description text box
     And I click on "Save and return to building details summary"

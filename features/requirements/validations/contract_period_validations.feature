@@ -5,7 +5,7 @@ Feature:  FM - Contract period validations
     When I click on "Start a procurement"
     And I click on "Continue"
     And I add contract name
-    And I click on "Save and return"
+    And I click on "Save and continue"
     And I am on "Requirements" page
 
   Scenario: Validation on save and continue - no information
