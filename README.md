@@ -57,6 +57,15 @@ bundle exec cucumber TEST_ENV=preview
 
 Config for the different test environments is stored in config/environment.yml
 
+### Set up for tests
+In order to run some of the tests, you will need certain buildings with various details.
+
+The following command will create the buildings you need in the specified environment (as long as the environment has all the addresses)
+
+ ```bash
+ bundle exec cucumber -p set_up DRIVER=chrome
+ ```
+
 ### Branch structure
 These tests are to be used mainly in two environments, CMPDEV and marketplace-preview.
 

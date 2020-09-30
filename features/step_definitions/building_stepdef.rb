@@ -22,6 +22,10 @@ And(/^I enter "([^"]*)" in building type description text box$/)do |description|
   common.building_type_textbox.set(description)
 end
 
+And(/^I select the building type of "([^"]*)"$/) do |building_type|
+  choose(building_type)
+end
+
 Then(/^I select the first security type$/) do
   common.radio_items[0].click
 end
@@ -32,6 +36,10 @@ end
 
 And(/^I enter "([^"]*)" in security type description text box$/)do |description|
   common.security_type_textbox.set(description)
+end
+
+And(/^I select the security clearance of "([^"]*)"$/) do |security_clearance|
+  choose(security_clearance)
 end
 
 When(/^I click on the first building on manage my buildings page$/) do
@@ -87,6 +95,10 @@ And(/^I enter "([^"]*)" for the postcode$/)do |text|
   common.postcode_entry.set(text)
 end
 
+And(/^I enter the building name "([^"]*)"$/)do |text|
+  common.building_name.set(text)
+end
+
 And(/^I find and select my building$/) do
   step "I find and select \"#{@building_name}\""
   step "I click on \"Save and continue\""
@@ -108,7 +120,6 @@ And(/^I find and select "([^"]*)"$/) do |text|
     end
   end
 end
-
 
 And(/^I add a new building/) do
   step "I click on \"Add a building\""

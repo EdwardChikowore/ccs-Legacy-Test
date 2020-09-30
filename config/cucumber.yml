@@ -1,7 +1,7 @@
-default: DRIVER=chrome_headless --format html --out tmp/<%=Time.now.strftime("%Y%m%d-%H%M%S") %>test-report.html --format pretty -r features --tags 'not @wip and not @smoke and not @accessibility'
+default: DRIVER=chrome_headless --format html --out tmp/<%=Time.now.strftime("%Y%m%d-%H%M%S") %>test-report.html --format pretty -r features --tags 'not @wip and not @smoke and not @accessibility and not @set_up'
 rerun: --format html --out tmp/test_report_rerun.html --format pretty @reports/rerun
 smoke: DRIVER=chrome_headless -f pretty -r features/homepage -r features/step_definitions -r features/support --tags '@smoke and not @wip'
 accessibility: DRIVER=chrome_headless --format html --out tmp/accessibility_test_report.html -f pretty -r features/accessibility -r features/step_definitions -r features/support --tags '@accessibility and not @wip and not @smoke'
 wip: --tags @wip:3 --wip features
 bulk_upload: DRIVER=chrome_headless --format html --out tmp/bulk_upload_test_report.html --format pretty -r features --tags '@bulk_upload'
-
+set_up: DRIVER=chrome_headless --format html --out tmp/set_up_test_report.html --format pretty -r features --tags '@set_up'
