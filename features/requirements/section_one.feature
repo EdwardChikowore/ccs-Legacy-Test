@@ -20,7 +20,7 @@ Feature: Requirements - section 1
 		And I click on "Estimated annual cost"
     And I am on "Estimated annual cost" and "Do you know your current or estimated annual cost?" page
     When I click on "Save and return"
-        Then I should see the following error messages
+    Then I should see the following error messages
     |Select one option|
 	
 	Scenario: Adding estimated annual cost - return to requirements
@@ -41,7 +41,7 @@ Feature: Requirements - section 1
 		And I click on "TUPE"
     And I am on "TUPE" page
     When I click on "Save and return"
-        Then I should see the following error messages
+    Then I should see the following error messages
     |Select one option|
 	
 	Scenario: TUPE - return to requirements

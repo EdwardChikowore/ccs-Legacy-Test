@@ -7,7 +7,7 @@ Feature:Catering equipment maintenance
     And I click on open all
     And I click on the "Catering equipment maintenance"
     And I am on requirements page
-    Then I answer contract details question
+    Then  I answer contract details question
     And I answer contract period question
     And I select building
     And I assign services to buildings

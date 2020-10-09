@@ -7,7 +7,7 @@ Feature:Taxi booking service
     And I click on open all
     And I click on the "Car park management and booking"
     And I am on requirements page
-    Then I answer contract details question
+    Then  I answer contract details question
     And I answer contract period question
     And I select building
     And I assign services to buildings

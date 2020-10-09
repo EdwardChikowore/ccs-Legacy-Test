@@ -141,7 +141,6 @@ And(/^I should see the following error messages$/) do |table|
   expect(page.find('.govuk-error-summary__list').find_all('a').map(&:text)).to eq table.transpose.raw.flatten
 end
 
-
 And(/^I should see address "([^"]*)" in the address container$/) do |address|
   expect(common.selected_address_container.text).to eq(address)
 

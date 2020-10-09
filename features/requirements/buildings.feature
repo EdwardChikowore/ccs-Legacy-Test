@@ -9,14 +9,14 @@ Feature:Buildings
     And I am on requirements page
 
   Scenario: Validation error when no building is selected
-   When I click on "Buildings"
-   And I am on "Buildings" page
-   And I click on "Save and continue"
+    When I click on "Buildings"
+    And I am on "Buildings" page
+    And I click on "Save and continue"
     Then I should see the following error messages
     |Select at least one building|
-  When I select first building
-  And I click on "Save and continue"
-  Then I am on "Buildings summary" page
+    When I select first building
+    And I click on "Save and continue"
+    Then I am on "Buildings summary" page
 
 
   Scenario: Change building selection

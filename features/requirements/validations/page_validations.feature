@@ -177,7 +177,7 @@ Feature: Requirements validations
 		And I click on the "Internal & external building fabric maintenance"
 		When I click on save and continue
 		Then I am on "Services summary" page   
-		And The following summary text is displayed: 
+		And The following summary text is displayed:
 			| 2 services | 
     And I click on "Return to requirements"
 		And The services status tag is "COMPLETED"
@@ -326,7 +326,7 @@ Feature: Requirements validations
 		And The contract name status tag is "COMPLETED"
 		And The buildings status tag is "COMPLETED"
 		And The services status tag is "COMPLETED"
-		And The assigning services to buildings status tag is "COMPLETED"
+		And The assigning buildings to services status tag is "COMPLETED"
 		And The service requirements status tag is "COMPLETED"
     When I click on "Continue to results"
     Then I should see the following error messages
@@ -397,7 +397,7 @@ Feature: Requirements validations
 		And The contract period status tag is "COMPLETED"
 		And The buildings status tag is "COMPLETED"
 		And The services status tag is "COMPLETED"
-		And The assigning services to buildings status tag is "COMPLETED"
+		And The assigning buildings to services status tag is "COMPLETED"
 		And The service requirements status tag is "COMPLETED"
     When I click on "Continue to results"
 		Then I am on "Results" page

@@ -86,9 +86,9 @@ Feature: Facilities Management - DA - Contract - Authorised representative
     And I am on "Add address" page
     And I click on "Continue"
     Then I should see the following error messages
-      | Enter a valid postcode, for example SW1A 1AA       |
       | Enter the building or street name of the address   |
       | Enter the town or city of the address              |
+      | Enter a valid postcode, for example SW1A 1AA       |
 
   Scenario: Contract - Authorise Representative Details Select - Select new authorised representative - Add Address
     When I click on third change link for "Authorised representative details"

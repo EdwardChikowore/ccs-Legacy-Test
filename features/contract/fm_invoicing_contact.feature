@@ -85,9 +85,9 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
     And I am on "Add address" page
     And I click on "Continue"
     Then I should see the following error messages
-      | Enter a valid postcode, for example SW1A 1AA       |
       | Enter the building or street name of the address   |
       | Enter the town or city of the address              |
+      | Enter a valid postcode, for example SW1A 1AA       |
 
   Scenario: Contract - Invoicing Contact Details Select - Select new invoicing contact - Add Address
    When I click on the second question for "Invoicing contact details"
