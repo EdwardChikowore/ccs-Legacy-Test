@@ -82,7 +82,6 @@ Feature: FM - Quick View - Requirements - Services - Service summary
     And I add contract name
     And I click on "Save and continue to procurement"
     And I click on "Continue"
-
     And I am on "Requirements" page
     And I click on "Services"
     And I am on "Services summary" page    

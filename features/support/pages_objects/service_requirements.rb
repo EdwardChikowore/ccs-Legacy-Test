@@ -285,4 +285,6 @@ class ServiceRequirements < SitePrism::Page
 
   element :mech_service_volume, '[id="C.1-gia-volume"]'
   element :cleaning_external_service_volume, '[id="G.5-external_area-volume"]'
+
+  element :number_of_buildings, '#number-of-buildings'
 end

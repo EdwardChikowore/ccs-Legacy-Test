@@ -14,16 +14,16 @@ Feature:Services with no service questions
 
   Scenario: Navigating to results page
     And I click on "Continue to results"
-#    Then I am on "Estimated contract cost" page
-#    And I click on lot 1a
-#    And I click on "Continue"
-#    Then I am on "Results" page
-#    And I click on "Continue"
-#    Then I am on "Further competition" page
-#    And I click on "Save as further competition"
-#    And I am on the "Download your procurement summary" page
-#    And I click on "Make a copy of your requirements"
-#    And I am on "Create a copy" page
-#    When I add contract name
-#    And I click on "Save and continue"
-#    Then I am on "Requirements" page
+    Then I am on "Estimated contract cost" page
+    And I click on lot 1a
+    And I click on "Continue"
+    Then I am on "Results" page
+    And I click on "Continue"
+    Then I am on "Further competition" page
+    And I click on "Save as further competition"
+    And I am on the "Download your procurement summary" page
+    And I click on "Make a copy of your requirements"
+    And I am on "Create a copy" page
+    When I add contract name
+    And I click on "Save and continue"
+    Then I am on "Requirements" page

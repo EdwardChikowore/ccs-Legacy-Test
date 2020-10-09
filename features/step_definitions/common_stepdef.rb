@@ -310,19 +310,6 @@ Then(/^I click on first building link "([^"]*)"$/) do
   common.building_summary.first_building.click
 end
 
-Then(/^I select first building with address "([^"]*)"$/) do |building_address|
-
-  # @building_one = common.building_one.name.text
-  # expect(common.building_one.address.text).to eq(building_address)
-  # common.building_one.address.click
-end
-
-Then(/^I select second building with address "([^"]*)"$/) do |building_address|
-  @building_two = common.building_two.name.text
-  expect(common.building_two.address.text).to eq(building_address)
-  common.building_two.address.click
-end
-
 Then(/^the first building is selected$/) do
   expect(common.your_buildings.building_name[0].text).to eq("#{@building_one} (0 selected)")
   # expect(common.your_buildings).to have_selector :css, 'li.active'

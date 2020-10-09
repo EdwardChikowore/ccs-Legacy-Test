@@ -15,8 +15,8 @@ Feature:  Facilities Management - Home Page Content
     | Open your procurements dashboard to view and continue existing saved procurements                                   |
     | Manage my buildings                                                                                                 |
     | Set up and manage your buildings for use in procurements                                                            |
-    | Manage my account                                                                                                   |
-    | Update and edit your contact details                                                                                 |
+    | Manage my details                                                                                                   |
+    | Update and edit your contact details                                                                                |
 
 
   Scenario: FM - Procurements - Link - Quick search - Page Content
@@ -33,6 +33,6 @@ Feature:  Facilities Management - Home Page Content
 
 
   Scenario: FM - Procurements - Link - Manage your details - Page content
-    When I click on "Manage my account"
+    When I click on "Manage my details"
     Then I am on "Manage your details" page
 

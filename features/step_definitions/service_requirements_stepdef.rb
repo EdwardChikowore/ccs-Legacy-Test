@@ -230,4 +230,6 @@ And(/^The cleaning of external area volume details displayed are:$/) do |table|
   end
 end
 
-
+And(/^The assigning buildings to services status tag is "([^"]*)"$/)do |text|
+  expect(common.assigned_status_tag.text).to eq(text)
+end
