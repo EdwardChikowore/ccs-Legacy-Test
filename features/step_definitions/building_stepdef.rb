@@ -109,7 +109,7 @@ And(/^I find and select "([^"]*)"$/) do |text|
 
   while continue
     if common.text.include? text
-      find('legend', text: text).click
+      find('span', text: text).click
       continue = false
     else
       if first('.ccs-pagination')
