@@ -1,12 +1,12 @@
 
 And(/^I am on "([^"]*)" page - one$/) do |header|
-  result_page= (home.header_one.text).end_with?('Results')
-  contract_value_page= (home.header_one.text).end_with?('Estimated contract cost')
-  detailed_search_page = (home.header_one.text).end_with?(header)
+  result_page= (common.header_one.text).end_with?('Results')
+  contract_value_page= (common.header_one.text).end_with?('Estimated contract cost')
+  detailed_search_page = (common.header_one.text).end_with?(header)
   if result_page
     click_on 'Change requirements'
   elsif detailed_search_page
-    expect(home.header_one.text).to end_with(header)
+    expect(common.header_one.text).to end_with(header)
   elsif contract_value_page
     click_on 'Change requirements'
   end
@@ -204,15 +204,32 @@ And(/^The seventh volume for scenario four_b "([^"]*)" is (.+)$/) do |service, v
   expect(service_requirements.volume[10].text).to eq(volume)
 end
 
-
-
 And(/^The following services are listed$/) do |table|
   table.transpose.raw.flatten.each do |services|
     expect(page).to have_css('[data-module="govuk-details"]  div  ul  li', text: services)
   end
+end
+#
+# And(/^The mechanical service internal area volume displayed is  (.+)$/) do |volume|
+#   expect(service_requirements.mech_service_volume.text).to eq(volume)
+# end
+#
+# And(/^The cleaning of external area volume displayed is  (.+)$/) do |volume|
+#   expect(service_requirements.volume[5].text).to eq(volume)
+# end
 
+And(/^The mechanical service volume details displayed are:$/) do |table|
+  table.transpose.raw.flatten.each do |services|
+    expect(page).to have_css('[id="C.1-gia-volume"]', text: services)
+  end
 end
 
+And(/^The cleaning of external area volume details displayed are:$/) do |table|
+  table.transpose.raw.flatten.each do |services|
+    expect(page).to have_css('[id="G.5-external_area-volume"]', text: services)
+  end
+end
 
-
-
+And(/^The assigning buildings to services status tag is "([^"]*)"$/)do |text|
+  expect(common.assigned_status_tag.text).to eq(text)
+end

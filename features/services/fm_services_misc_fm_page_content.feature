@@ -3,7 +3,7 @@ Feature:  Facilities Management - Services - Miscellaneous FM - Page Content
   Background:
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on close all on services page
 
@@ -20,9 +20,9 @@ Feature:  Facilities Management - Services - Miscellaneous FM - Page Content
       | Hairdressing services                                  |
       | Footwear cobbling services                             |
       | Provision of chaplaincy support services               |
-      | Housing and residential accommodation management      |
-      | Training establishment management and booking service |
-      |                                                               |
+      | Housing and residential accommodation management       |
+      | Training establishment management and booking service  |
+      |                                                        |
     Then The following description is displayed:
       | Childcare nursery service for children aged between three months and an age suitable for first entry to school                                     |
       | Full management of the sports and leisure facilities including the booking of activity rooms, equipment and managing payment systems               |
@@ -38,6 +38,6 @@ Feature:  Facilities Management - Services - Miscellaneous FM - Page Content
       |                                                                                                                                                           |
     Then I should see text "No services selected"
     When I select all miscellaneous services
-    Then I should see text "10 Services selected"
+    Then I should see text "11 services selected"
     When I select all miscellaneous services
     Then I should see text "No services selected"

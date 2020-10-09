@@ -6,8 +6,8 @@ end
 
 
 And(/^I should see text "([^"]*)"$/) do |address|
-  # expect(home.service_basket.service_selected.text).to eq(address)
-  expect(home.region_basket.region_div.none_selected.text).to eq(address)
+  # expect(common.service_basket.service_selected.text).to eq(address)
+  expect(common.region_basket.region_div.none_selected.text).to eq(address)
 end
 
 And(/^The following region is displayed:$/) do |table|
@@ -17,55 +17,55 @@ And(/^The following region is displayed:$/) do |table|
 end
 
 And(/^I click on select all for North East England$/) do
-  home.north_east_select_all.click
+  common.north_east_select_all.click
 end
 
 And(/^I click on select all for North West England$/) do
-  home.north_west_select_all.click
+  common.north_west_select_all.click
 end
 
 And(/^I click on select all for Yorkshire and Humber$/) do
-  home.yorkshire_humber_select_all.click
+  common.yorkshire_humber_select_all.click
 end
 
 And(/^I click on select all for East Midlands$/) do
-  home.east_midlands_select_all.click
+  common.east_midlands_select_all.click
 end
 
 And(/^I click on select all for West Midlands$/) do
-  home.west_midlands_select_all.click
+  common.west_midlands_select_all.click
 end
 
 And(/^I click on select all for East England$/) do
-  home.east_england_select_all.click
+  common.east_england_select_all.click
 end
 
 And(/^I click on select all for London$/) do
-  home.london_select_all.click
+  common.london_select_all.click
 end
 
 And(/^I click on select all for South East England$/) do
-  home.south_east_select_all.click
+  common.south_east_select_all.click
 end
 
 And(/^I click on select all for South West England$/) do
-  home.south_west_select_all.click
+  common.south_west_select_all.click
 end
 
 And(/^I click on select all for Wales$/) do
-  home.wales_select_all.click
+  common.wales_select_all.click
 end
 
 And(/^I click on select all for Scotland$/) do
-  home.scotland_select_all.click
+  common.scotland_select_all.click
 end
 
 And(/^I click on select all for Northern Ireland$/) do
-  home.northern_ireland_select_all.click
+  common.northern_ireland_select_all.click
 end
 
 And(/^I should see text "([^"]*)" regions selected$/) do |address|
-  expect(home.region_basket.region_div.none_selected.text).to eq(address)
+  expect(common.region_basket.region_div.none_selected.text).to eq(address)
 end
 
 
@@ -73,7 +73,36 @@ And(/^I click on the following services:$/) do |table|
   table.transpose.raw.flatten.each do |item|
     check item
   end
-
 end
 
+And(/^I change region selection$/) do
+  common.quick_view_requirements.region.change.click
+end
 
+And(/^I open the regions selected$/) do
+  common.quick_view_requirements.region.summary.click
+end
+
+And(/^I should see the following regions:$/) do |table|
+  expect(common.quick_view_requirements.region.summary_text.text).to eq table.transpose.raw.flatten.join(' ')
+end
+
+And(/^I change service selection$/) do
+  common.quick_view_requirements.service.change.click
+end
+
+And(/^I open the services selected$/) do
+  common.quick_view_requirements.service.summary.click
+end
+
+And(/^I should see the following services:$/) do |table|
+  expect(common.quick_view_requirements.service.summary_text.text).to eq table.transpose.raw.flatten.join(' ')
+end
+
+Then(/^the requirements should be hidden$/) do
+  expect(common.requirements_list.visible?).to be false
+end
+
+Then(/^the requirements should be shown$/) do
+  expect(common.requirements_list.visible?).to be true
+end

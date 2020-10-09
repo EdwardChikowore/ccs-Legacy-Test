@@ -3,7 +3,7 @@ Feature:  Facilities Management - Services - Waste - Page Content
   Background:
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on close all on services page
 
@@ -29,6 +29,6 @@ Feature:  Facilities Management - Services - Waste - Page Content
       | Disposal of medical and pharmaceutical waste, and provision of suitable receptacles for this type of waste                                  |
     Then I should see text "No services selected"
     When I select all waste services
-    Then I should see text "7 Services selected"
+    Then I should see text "7 services selected"
     When I select all waste services
     Then I should see text "No services selected"

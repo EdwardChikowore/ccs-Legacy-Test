@@ -1,13 +1,13 @@
 And(/^I select all services listed for Management of billable works$/) do
-  home.management_billable.select_all.click
+  common.management_billable.select_all.click
 end
 
 And(/^I select all cafm service$/) do
-  home.cafm.select_all.click
+  common.cafm.select_all.click
 end
 
 And(/^I select all catering services$/) do
-  home.catering.select_all.click
+  common.catering.select_all.click
 end
 
 And(/^The following catering services displayed:$/) do |table|
@@ -17,7 +17,7 @@ And(/^The following catering services displayed:$/) do |table|
 end
 
 And(/^I select all cleaning services$/) do
-  home.cleaning.select_all.click
+  common.cleaning.select_all.click
 end
 
 And(/^The following cleaning services are displayed:$/) do |table|
@@ -27,7 +27,7 @@ And(/^The following cleaning services are displayed:$/) do |table|
 end
 
 And(/^I select all helpdesk services$/) do
-  home.helpdesk.select_all.click
+  common.helpdesk.select_all.click
 end
 
 And(/^The following helpdesk service is displayed:$/) do |table|
@@ -37,7 +37,7 @@ And(/^The following helpdesk service is displayed:$/) do |table|
 end
 
 And(/^I select all horticultural services$/) do
-  home.horticultural.select_all.click
+  common.horticultural.select_all.click
 end
 
 And(/^The following horticultural services are displayed:$/) do |table|
@@ -47,7 +47,7 @@ And(/^The following horticultural services are displayed:$/) do |table|
 end
 
 And(/^I select all maintenance services$/) do
-  home.maintenance.select_all.click
+  common.maintenance.select_all.click
 end
 
 And(/^The following maintenance services are displayed:$/) do |table|
@@ -57,7 +57,7 @@ And(/^The following maintenance services are displayed:$/) do |table|
 end
 
 And(/^I select all miscellaneous services$/) do
-  home.catering.select_all.click
+  common.miscellaneous.select_all.click
 end
 
 And(/^The following miscellaneous services are displayed:$/) do |table|
@@ -67,17 +67,17 @@ And(/^The following miscellaneous services are displayed:$/) do |table|
 end
 
 And(/^I select all reception services$/) do
-  home.reception.select_all.click
+  common.reception.select_all.click
 end
 
-And(/^The following reception services are  displayed:$/) do |table|
+And(/^The following reception services are displayed:$/) do |table|
   table.transpose.raw.flatten.each do |item|
     expect(page).to have_css('#procurement-services-accordion-content-7', text: item)
   end
 end
 
 And(/^I select all security services$/) do
-  home.security.select_all.click
+  common.security.select_all.click
 end
 
 And(/^The following security services are displayed:$/) do |table|
@@ -87,7 +87,7 @@ And(/^The following security services are displayed:$/) do |table|
 end
 
 And(/^I select all statutory services$/) do
-  home.statutory.select_all.click
+  common.statutory.select_all.click
 end
 
 And(/^The following statutory services are displayed:$/) do |table|
@@ -97,7 +97,7 @@ And(/^The following statutory services are displayed:$/) do |table|
 end
 
 And(/^I select all waste services$/) do
-  home.waste.select_all.click
+  common.waste.select_all.click
 end
 
 And(/^The following waste services are displayed:$/) do |table|
@@ -107,7 +107,7 @@ And(/^The following waste services are displayed:$/) do |table|
 end
 
 And(/^I select all workplace services$/) do
-  home.workplace.select_all.click
+  common.workplace.select_all.click
 end
 
 And(/^The following workplace services are displayed:$/) do |table|

@@ -3,19 +3,20 @@ Feature: Facilities Management - DA - Contract - Review and Generate
   Background: Login page
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Close all"
-    When I am on detailed search page
-    And I click on "Save and continue"
-    And I answer about the contract question
+    And I am on requirements page
+    Then I answer contract details question
     And I answer contract period question
-    And I answer services question
+    And I select building
+    And I assign services to buildings
+    And I complete service requirements questions
+    And I navigate to results page
     And I proceed to the contract details page
     And I am on "Contract details" page
-
 
    Scenario: Contract Details - Content
     And I am on "Contract details" page
@@ -26,6 +27,7 @@ Feature: Facilities Management - DA - Contract - Review and Generate
       | Notices contact details                                                          |
       | Security policy                                                                  |
       | Local Government Pension Scheme                                                  |
+      | Governing law                                                                    |
 
     Scenario: Contract Details - Main Links
       And I am on "Contract details" page
@@ -48,6 +50,10 @@ Feature: Facilities Management - DA - Contract - Review and Generate
       And I am on "Local Government Pension Scheme" page
       And I click on "Return to contract details"
       And I am on "Contract details" page
+      And I click on the seventh question for "Governing law"
+      And I am on "Governing law" page
+      And I click on "Return to contract details"
+      And I am on "Contract details" page
 
 
   Scenario: Contract Details - Continue button - Error Message
@@ -61,6 +67,7 @@ Feature: Facilities Management - DA - Contract - Review and Generate
       | You must answer the question about ‘Notices contact details’           |
       | You must answer the question about ‘Security policy’                   |
       | You must answer the question about ‘Local Government Pension Scheme’   |
+      | You must answer the question about ‘Governing law’                     |
 
 
   Scenario: Contract Details - Return to results button

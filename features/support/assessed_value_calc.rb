@@ -97,7 +97,7 @@ end
 def assessed_value_with_cost(uom_total, buyer_input, benchmark_costs)
   if buyer_input == 0
     (uom_total + benchmark_costs) / 2
-    else buyer_input > 0
+  elsif buyer_input > 0
     (uom_total + benchmark_costs + buyer_input) / 3
   end
 end

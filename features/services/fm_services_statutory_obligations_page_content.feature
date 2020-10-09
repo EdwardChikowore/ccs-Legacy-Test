@@ -3,7 +3,7 @@ Feature:  Facilities Management - Services - Statutory Obligations - Page Conten
   Background:
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on close all on services page
 
@@ -33,6 +33,6 @@ Feature:  Facilities Management - Services - Statutory Obligations - Page Conten
       | Delivery of strategic priorities related to the wider government policy in line with building information modelling (level 2) and government soft landings |
     Then I should see text "No services selected"
     When I select all statutory services
-    Then I should see text "9 Services selected"
+    Then I should see text "9 services selected"
     When I select all statutory services
     Then I should see text "No services selected"

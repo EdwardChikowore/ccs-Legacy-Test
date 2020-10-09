@@ -3,7 +3,7 @@ Feature:  Facilities Management - Services - Management of Billable Works - Page
   Background:
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    And I click on "Quick search"
+    When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on close all on services page
 
@@ -13,6 +13,6 @@ Feature:  Facilities Management - Services - Management of Billable Works - Page
     When I click on "Management of billable works"
     Then I should see text "No services selected"
     When I select all services listed for Management of billable works
-    Then I should see text "1 Service selected"
+    Then I should see text "1 service selected"
     When I select all services listed for Management of billable works
     Then I should see text "No services selected"
