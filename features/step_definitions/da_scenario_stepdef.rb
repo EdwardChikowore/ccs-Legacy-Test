@@ -1,22 +1,23 @@
+# frozen_string_literal: true
 
 Then(/^I click on open all$/) do
   value = common.open_all.text
-  common.open_all.click if ( value == 'Open all sections')
+  common.open_all.click if value == 'Open all sections'
 end
 
 Then(/^I click on close all on regions page$/) do
   value = common.open_all.text
-  common.open_all.click if ( value == 'Close all sections')
+  common.open_all.click if value == 'Close all sections'
 end
 
 Then(/^I click on close all on services page$/) do
   value = common.open_all.text
-  common.open_all.click if ( value == 'Close all sections')
+  common.open_all.click if value == 'Close all sections'
 end
 
 Then(/^I click on close all$/) do
   value = common.open_all.text
-  common.open_all.click if ( value == 'Close all sections')
+  common.open_all.click if value == 'Close all sections'
 end
 
 Then(/^I click on first region section$/) do
@@ -27,15 +28,13 @@ end
 
 Then(/^I click on second region section$/) do
   value = common.north_west_section.expanded.click.text
-  common.north_west_section.expanded.click if ( value == 'false')
+  common.north_west_section.expanded.click if value == 'false'
 end
 
 Then(/^I click on third region section$/) do
   value = common.yorkshire_humber_section.expanded.click.text
-  common.yorkshire_humber_section.expanded.click if ( value == 'false')
+  common.yorkshire_humber_section.expanded.click if value == 'false'
 end
-
-
 
 Then(/^I click on the following services$/) do |elements|
   check elements
@@ -92,12 +91,12 @@ end
 
 Then(/^I select all services for first building$/) do
   common.checkbox_multiple_building.click
-  click_on "Save and return"
+  click_on 'Save and return'
 end
 
 Then(/^I select all services for second building$/) do
   common.checkbox_multiple_building.click
-  click_on "Save and return"
+  click_on 'Save and return'
 end
 
 Then(/^I select services for first building "([^"]*)" - DA scenario one$/) do |building_name|
@@ -131,7 +130,6 @@ Then(/^I select services for first building "([^"]*)" - DA scenario one$/) do |b
   common.service_selection.management_billable[2].click
 end
 
-
 Then(/^I select services for second building "([^"]*)" - DA scenario one$/) do |building_name|
   click_on building_name
   common.service_selection.bms[4].click
@@ -153,7 +151,6 @@ Then(/^I select services for second building "([^"]*)" - DA scenario one$/) do |
   common.service_selection.handyman_services[4].click
   common.service_selection.cafm[4].click
   common.service_selection.helpdesk[4].click
-
 end
 
 Then(/^I select services for third building "([^"]*)" - DA scenario one$/) do |building_name|
@@ -179,9 +176,7 @@ Then(/^I select services for third building "([^"]*)" - DA scenario one$/) do |b
   common.service_selection.recycled_waste[5].click
   common.service_selection.cafm[5].click
   common.service_selection.helpdesk[5].click
-
 end
-
 
 Then(/^I select services for fourth building "([^"]*)" - DA scenario one$/) do |building_name|
   click_on building_name
@@ -207,9 +202,7 @@ Then(/^I select services for fourth building "([^"]*)" - DA scenario one$/) do |
   common.service_selection.cafm[8].click
   common.service_selection.helpdesk[8].click
   common.service_selection.management_billable[8].click
-
 end
-
 
 Then(/^I select services for fifth building "([^"]*)" - DA scenario one$/) do |building_name|
   click_on building_name
@@ -231,7 +224,6 @@ Then(/^I select services for fifth building "([^"]*)" - DA scenario one$/) do |b
   common.service_selection.recycled_waste[6].click
   common.service_selection.cafm[6].click
   common.service_selection.helpdesk[6].click
-
 end
 
 Then(/^I select services for sixth building "([^"]*)" - DA scenario one$/) do |building_name|
@@ -251,7 +243,6 @@ Then(/^I select services for sixth building "([^"]*)" - DA scenario one$/) do |b
   common.service_selection.cafm[9].click
   common.service_selection.helpdesk[9].click
   common.service_selection.management_billable[9].click
-
 end
 
 Then(/^I select services for seventh building "([^"]*)" - DA scenario one$/) do |building_name|
@@ -297,7 +288,6 @@ Then(/^I select services for eighth building "([^"]*)" - DA scenario one$/) do |
   common.service_selection.routine_cleaning[7].click
   common.service_selection.handyman_services[7].click
   common.service_selection.management_billable[7].click
-
 end
 
 Then(/^I select services for ninth building "([^"]*)" - DA scenario one$/) do |building_name|
@@ -327,7 +317,6 @@ Then(/^I select services for ninth building "([^"]*)" - DA scenario one$/) do |b
   common.service_selection.cafm[3].click
   common.service_selection.helpdesk[3].click
   common.service_selection.management_billable[3].click
-
 end
 
 Then(/^I select services for tenth building "([^"]*)" - DA scenario one$/) do |building_name|
@@ -357,7 +346,7 @@ Then(/^I select services for tenth building "([^"]*)" - DA scenario one$/) do |b
 end
 
 Then(/^I select services for first building "([^"]*)" - DA scenario three$/) do |building_name|
-  #Building_four
+  # Building_four
   # click_on building_name
   # common.service_selection.bms[0].click
   # common.service_selection.env_cleaning[0].click
@@ -388,7 +377,6 @@ Then(/^I select services for first building "([^"]*)" - DA scenario three$/) do 
   service_requirements.aberdeen_services.ventilation.click
 end
 
-
 Then(/^I select services for first building "([^"]*)" - DA scenario two$/) do |_building_name|
   service_requirements.bms.click
   service_requirements.env_cleaning.click
@@ -404,7 +392,6 @@ Then(/^I select services for first building "([^"]*)" - DA scenario two$/) do |_
   service_requirements.helpdesk.click
   service_requirements.management_billable
 end
-
 
 Then(/^I select services for second building "([^"]*)" - DA scenario two$/) do |_building_name|
   service_requirements.asbestos.click
@@ -424,8 +411,6 @@ Then(/^I select services for second building "([^"]*)" - DA scenario two$/) do |
   service_requirements.internal_window_cleaning.click
 end
 
-
-
 Then(/^I select services for third building "([^"]*)" - DA scenario two$/) do |_building_name|
   service_requirements.routine_cleaning.click
   service_requirements.handyman_services.click
@@ -441,8 +426,6 @@ Then(/^I select services for third building "([^"]*)" - DA scenario two$/) do |_
   service_requirements.manned_guarding.click
   service_requirements.patrols_fixed.click
 end
-
-
 
 Then(/^I select services for fourth building "([^"]*)" - DA scenario two$/) do |_building_name|
   service_requirements.classified_waste.click
@@ -570,7 +553,6 @@ Then(/^I select all day service for Monday$/) do
   common.service_hours.all_day[0].click
 end
 
-
 And(/^I should see the partial price value (.+)$/) do |value|
   expect(common.choose_contract_value[1].text).to start_with(value)
 end
@@ -608,3 +590,86 @@ And(/^I enter (.+) for external area$/) do |value|
   common.building_external_area.set(value)
 end
 
+And(/^for scenario 0, lot 1a I add the details for "([^"]*)" building$/) do |building|
+  step 'I navigate to buildings page'
+  step "I find and select \"#{building}\""
+  step 'I navigate to Assigning services to buildings summary page'
+  step "I click on \"#{building}\""
+  step 'I select all services for first building'
+  step 'I navigate to Service requirements summary page'
+  step "I click on \"#{building}\""
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Routine cleaning" page'
+  step 'I enter 34 for routine cleaning'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Reception service" page'
+  step 'I enter 6240 for service hours'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "General waste" page'
+  step 'I enter 130 for general waste'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Mechanical and electrical engineering maintenance" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Routine cleaning" page'
+  step 'I select standard A'
+end
+
+And(/^for scenario 3, lot 1a I add the details for "([^"]*)" building$/) do |building|
+  step 'I navigate to buildings page'
+  step "I find and select \"#{building}\""
+  step 'I navigate to Assigning services to buildings summary page'
+  step "I click on \"#{building}\""
+  step 'I select all services for first building'
+  step 'I navigate to Service requirements summary page'
+  step "I click on \"#{building}\""
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Mechanical and electrical engineering maintenance" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+end
+
+And(/^for scenario 3, I add the details for "([^"]*)" building$/) do |building|
+  step 'I navigate to buildings page'
+  step "I find and select \"#{building}\""
+  step 'I navigate to Assigning services to buildings summary page'
+  step "I click on \"#{building}\""
+  step 'I select all services for first building'
+  step 'I navigate to Service requirements summary page'
+  step "I click on \"#{building}\""
+  step 'I am on the "Service requirements" page'
+  step 'I click on the service question'
+  step 'I am on the "Mobile cleaning services" page'
+  step 'I enter 10000 for mobile cleaning'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "General waste" page'
+  step 'I enter 30000 for general waste'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Recycled waste" page'
+  step 'I enter 30000 for recycled waste'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Mechanical and electrical engineering maintenance" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Ventilation and air conditioning system maintenance" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Environmental cleaning service" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+  step 'I click on the service question'
+  step 'I am on the "Mobile cleaning services" page'
+  step 'I select standard A'
+  step 'I click on "Save and return"'
+end
