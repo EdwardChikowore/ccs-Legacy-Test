@@ -60,7 +60,7 @@ Feature: Direct Award scenario One
     And I click on the "Helpdesk services"
     And I click on the "Management of billable works"
     And I click on "Continue"
-    And I click on "North East (England)"
+    And I click on open all
     And I click on the "Tees Valley and Durham"
     And I click on "Continue"
     And I add contract name

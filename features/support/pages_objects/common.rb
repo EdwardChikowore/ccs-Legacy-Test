@@ -8,7 +8,11 @@ class Common < SitePrism::Page
     element :signout_banner, 'li:nth-child(2)'
   end
   element :sign_out, '[data-method="delete"]'
-  element :start_procurement, 'div.fm-buyer-account-panel' , text: 'Start a new procurement'
+  element :start_procurement, 'div.fm-buyer-account-panel' , text: 'Start a procurement'
+  element :buyer_account_panels, '.fm-buyer-account-panel'
+  elements :account_panels, '.fm-buyer-account-panel > p > a'
+  elements :account_links, '.govuk-grid-row > div > a'
+  element :start_detailed_search, '[name="start_detailed_search"]'
 
   element :header, 'h2'
   element :header_one, 'h1'
