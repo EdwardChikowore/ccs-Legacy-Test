@@ -14,6 +14,7 @@ module Pages
   end
 end
 
+
 module WaitUntil
   def self.wait_until(timeout = 10, message = nil, &block)
     wait = Selenium::WebDriver::Wait.new(timeout: timeout, message: message)
@@ -24,3 +25,26 @@ module WaitUntil
     end
   end
 end
+
+module WaitHelpers
+  def when_visible
+    WaitUntil.wait_until { visible? }
+    self
+  end
+end
+
+module Capybara
+  module Node
+    class Element
+      include WaitHelpers
+    end
+  end
+end
+
+module SitePrism
+  class Section
+    include WaitHelpers
+  end
+end
+
+

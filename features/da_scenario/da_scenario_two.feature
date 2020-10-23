@@ -60,7 +60,7 @@ Feature: Direct Award scenario Two
     And I click on the "Helpdesk services"
     And I click on the "Management of billable works"
     And I click on "Continue"
-    And I click on "North East (England)"
+    And I click on open all
     And I click on the "Tees Valley and Durham"
     And I click on "Continue"
     And I add contract name
@@ -80,7 +80,7 @@ Feature: Direct Award scenario Two
     And I enter the number of year as "1"
     And I enter the day as "12"
     And I enter the month as "10"
-    And I enter the year as "2020"
+    And I enter the year as "2023"
     And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_false" option
     And I click on "Save and continue"
