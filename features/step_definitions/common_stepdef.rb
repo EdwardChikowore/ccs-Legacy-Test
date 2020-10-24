@@ -18,6 +18,11 @@ Given(/^I click on start a procurement$/) do
   click_on "Start a procurement"
 end
 
+Given(/^I click on manage my buildings link$/) do
+  page.execute_script('arguments[0].scrollIntoView(true)', common.account_links[0])
+  click_on "Manage my buildings"
+end
+
 Then(/^I should see the navigation panel has sign out link$/) do
   # page('ul#navigation > li:nth-child(2) > a'')
   expect(common.banner.signout_banner.text).to eq("Sign out")
@@ -1026,7 +1031,7 @@ end
 Then(/^I create a new procurement/) do
   step "I am a logged in user - buildings account"
   step "I am on your account page"
-  step "I click on \"Start a procurement\""
+  step "I click on start a procurement"
   step "I am on \"What happens next\" page"
   step "I click on \"Continue\""
   step "I am on \"Contract name\" page"

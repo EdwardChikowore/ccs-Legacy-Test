@@ -11,6 +11,7 @@ class Common < SitePrism::Page
   element :start_procurement, 'div.fm-buyer-account-panel' , text: 'Start a procurement'
   element :buyer_account_panels, '.fm-buyer-account-panel'
   elements :account_panels, '.fm-buyer-account-panel > p > a'
+  elements :account_links, '.govuk-grid-row > div > a'
   element :start_detailed_search, '[name="start_detailed_search"]'
 
   element :header, 'h2'

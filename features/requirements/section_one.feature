@@ -3,9 +3,11 @@ Feature: Requirements - section 1
 	Background: Login page
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    When I click on "Start a procurement"
-    And I click on "Continue"
-    And I add contract name
+      And I click on start a procurement
+      Then I am on "What happens next" page
+      And I click on "Continue"
+      Then I am on "Contract name" page
+      And I add contract name
     And I click on "Save and continue"
     And I am on "Requirements" page
 
