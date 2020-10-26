@@ -28,7 +28,7 @@ Feature:  Facilities Management - Home Page Content
     Then I am on "Procurements dashboard" page
 
   Scenario: FM - Procurements - Link - Manage buildings - Page Content
-    When I click on "Manage my buildings"
+    When I click on manage my buildings link
     Then I am on "Buildings" page
 
 
