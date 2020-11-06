@@ -1,7 +1,7 @@
 Given(/^I am a logged in user$/) do
   visit '/sign-in'
-  sign_in()
-  puts ENV['HOST']
+  value = common.header_one.text
+  sign_in() if value == 'Sign in to your account'
 end
 
 Given(/^I am a logged in user - buildings account$/) do

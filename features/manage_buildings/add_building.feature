@@ -2,7 +2,7 @@ Feature:Manage Building
   Background:
     Given I am a logged in user - buildings account
     Then I should see the navigation panel has sign out link
-    When I click on "Manage my buildings"
+    When I click on manage my buildings link
     And I am on "Buildings" page
 
   Scenario: Add Building - validation error message - empty fields
