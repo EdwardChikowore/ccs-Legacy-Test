@@ -226,4 +226,3 @@ And(/^I enter valid data for lift floor$/) do
   service_requirements.lift_floor[98].data.set(200)
   click_on "Add another lift (0 remaining)"
 end
-
