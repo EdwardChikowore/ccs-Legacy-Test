@@ -2,7 +2,7 @@ Feature:Manage Building
   Background:
     Given I am a logged in user - buildings account
     Then I should see the navigation panel has sign out link
-    When I click on "Manage my buildings"
+    When I click on manage my buildings link
     And I am on "Buildings" page
 
   Scenario: Add Building - validation error message - empty fields
@@ -43,8 +43,8 @@ Feature:Manage Building
     And I am on "Add building address" page
     And I click on "Save and continue"
     Then I should see the following error messages
-      |Add a building and street name                                   |
-      |Town or city name for this building must be 30 characters or less|
+      |Add a building and street name|
+      |Enter the town or city|
 
   Scenario: Add Address manually - Save
     And I click on "Add a building"
@@ -84,7 +84,6 @@ Feature:Manage Building
     When I click on "Save and continue"
     Then I should see the following error messages
       | External area must be a number between 0 and 999,999,999          |
-      | Internal area must be greater than 0, if the external area is 0.  |
     And I enter 0 for external area
     And I enter 0 for internal area
     When I click on "Save and continue"
@@ -108,8 +107,7 @@ Feature:Manage Building
     And I enter 0 for external area
     When I click on "Save and continue"
     Then I should see the following error messages
-      | Internal area must be a number between 0 and 999,999,999          |
-      | External area must be greater than 0, if the internal area is 0.  |
+      | Internal area must be a number between 0 and 999,999,999  |
     And I enter 9 for internal area
     When I click on "Save and continue"
     Then I am on "Building type" page
@@ -130,7 +128,7 @@ Feature:Manage Building
     Then I am on "Building type" page
     When I click on "Save and continue"
     Then I should see the following error messages
-      |You must select a buiding type or describe your own |
+      |You must select a building type or describe your own |
     When I click on view more building type link
     And I click on building type other
     When I click on "Save and continue"
@@ -139,7 +137,6 @@ Feature:Manage Building
     When I enter "test one" in building type description text box
     And I click on "Save and continue"
     Then I am on "Security clearance" page
-
 
   Scenario: Security type - Validation error
     And I click on "Add a building"

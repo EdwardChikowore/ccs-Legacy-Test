@@ -1,23 +1,23 @@
 And(/^I select all services listed for Management of billable works$/) do
-  common.management_billable.select_all.click
+  quickview.management_billable.select_all.click
 end
 
 And(/^I select all cafm service$/) do
-  common.cafm.select_all.click
+  quickview.cafm.select_all.click
 end
 
 And(/^I select all catering services$/) do
-  common.catering.select_all.click
+  quickview.catering.select_all.click
 end
 
 And(/^The following catering services displayed:$/) do |table|
-    table.transpose.raw.flatten.each do |item|
-      expect(page).to have_css('#procurement-services-accordion-content-4', text: item)
+  table.transpose.raw.flatten.each do |item|
+    expect(page).to have_css('#procurement-services-accordion-content-4', text: item)
   end
 end
 
 And(/^I select all cleaning services$/) do
-  common.cleaning.select_all.click
+  quickview.cleaning.select_all.click
 end
 
 And(/^The following cleaning services are displayed:$/) do |table|
@@ -27,7 +27,7 @@ And(/^The following cleaning services are displayed:$/) do |table|
 end
 
 And(/^I select all helpdesk services$/) do
-  common.helpdesk.select_all.click
+  quickview.helpdesk.select_all.click
 end
 
 And(/^The following helpdesk service is displayed:$/) do |table|
@@ -37,7 +37,7 @@ And(/^The following helpdesk service is displayed:$/) do |table|
 end
 
 And(/^I select all horticultural services$/) do
-  common.horticultural.select_all.click
+  quickview.horticultural.select_all.click
 end
 
 And(/^The following horticultural services are displayed:$/) do |table|
@@ -47,7 +47,7 @@ And(/^The following horticultural services are displayed:$/) do |table|
 end
 
 And(/^I select all maintenance services$/) do
-  common.maintenance.select_all.click
+  quickview.maintenance.select_all.click
 end
 
 And(/^The following maintenance services are displayed:$/) do |table|
@@ -57,7 +57,7 @@ And(/^The following maintenance services are displayed:$/) do |table|
 end
 
 And(/^I select all miscellaneous services$/) do
-  common.miscellaneous.select_all.click
+  quickview.miscellaneous.select_all.click
 end
 
 And(/^The following miscellaneous services are displayed:$/) do |table|
@@ -67,7 +67,7 @@ And(/^The following miscellaneous services are displayed:$/) do |table|
 end
 
 And(/^I select all reception services$/) do
-  common.reception.select_all.click
+  quickview.reception.select_all.click
 end
 
 And(/^The following reception services are displayed:$/) do |table|
@@ -77,7 +77,7 @@ And(/^The following reception services are displayed:$/) do |table|
 end
 
 And(/^I select all security services$/) do
-  common.security.select_all.click
+  quickview.security.select_all.click
 end
 
 And(/^The following security services are displayed:$/) do |table|
@@ -87,7 +87,7 @@ And(/^The following security services are displayed:$/) do |table|
 end
 
 And(/^I select all statutory services$/) do
-  common.statutory.select_all.click
+  quickview.statutory.select_all.click
 end
 
 And(/^The following statutory services are displayed:$/) do |table|
@@ -97,7 +97,7 @@ And(/^The following statutory services are displayed:$/) do |table|
 end
 
 And(/^I select all waste services$/) do
-  common.waste.select_all.click
+  quickview.waste.select_all.click
 end
 
 And(/^The following waste services are displayed:$/) do |table|
@@ -107,7 +107,7 @@ And(/^The following waste services are displayed:$/) do |table|
 end
 
 And(/^I select all workplace services$/) do
-  common.workplace.select_all.click
+  quickview.workplace.select_all.click
 end
 
 And(/^The following workplace services are displayed:$/) do |table|
@@ -116,13 +116,56 @@ And(/^The following workplace services are displayed:$/) do |table|
   end
 end
 
+And(/^I should see text "([^"]*)" in the service selection basket$/) do |address|
+  expect(quickview.service_basket.service_div.none_selected.text).to eq(address)
+end
 
+And(/^I open the services selected$/) do
+  quickview.quick_view_requirements.service.summary.click
+end
 
-
-
-And(/^The following description is displayed:$/) do |table|
+And(/^I should see the following services:$/) do |table|
     table.transpose.raw.flatten.each do |item|
-      expect(page).to have_css('div label span', text: item)
+      expect(page).to have_css('.filter-component-container', text: item)
+    end
+end
+
+And(/^I change service selection$/) do
+  quickview.quick_view_requirements.service.change.click
+end
+
+And(/^The service caption text is displayed$/) do
+  expect(quickview.quick_service_caption.text).to eq("Choose all facilities management services required within your estate, even if you want services in just one building. To see further information about services click on the 'Further details' link under each service. Alternatively, open the service specification document below and go to the relevant section.")
+end
+
+And(/^I click on the following services:$/) do |table|
+  table.transpose.raw.flatten.each do |item|
+    check item
   end
 end
 
+Then(/^I select all services for first building$/) do
+  requirements.checkbox_multiple_building.click
+  click_on 'Save and return'
+end
+
+Then(/^I select all services for second building$/) do
+  requirements.checkbox_multiple_building.click
+  click_on 'Save and return'
+end
+
+And(/^I select all services$/) do
+  step "I select all maintenance services"
+  step "I select all horticultural services"
+  step "I select all statutory services"
+  step "I select all catering services"
+  step "I select all cleaning services"
+  step "I select all workplace services"
+  step "I select all reception services"
+  step "I select all security services"
+  step "I select all waste services"
+  step "I select all miscellaneous services"
+  step "I select all cafm service"
+  step "I select all helpdesk services"
+  step "I select all services listed for Management of billable works"
+end

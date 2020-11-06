@@ -31,8 +31,8 @@ Feature:  Facilities Management - Services - Statutory Obligations - Page Conten
       | Review of fire risk assessment and fire safety plans. Subsequent reviews to ensure compliance                                                              |
       | Portable appliance testing service for buyers equipment                                                                                                    |
       | Delivery of strategic priorities related to the wider government policy in line with building information modelling (level 2) and government soft landings |
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket
     When I select all statutory services
-    Then I should see text "9 services selected"
+    Then I should see text "9 services selected" in the service selection basket
     When I select all statutory services
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket

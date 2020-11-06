@@ -57,8 +57,8 @@ Feature:  Facilities Management - Services - Maintenance - Page Content
       | Maintenance activities and inspections at airports, aerodromes and associated support facilities                                   |
       | Specialist maintenance services, including bulk aircraft fuel supply, offshore hazard markers, coal-fired boilers, sewerage plants |
       |                                                                                                                                            |
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket
     When I select all maintenance services
-    Then I should see text "22 services selected"
+    Then I should see text "22 services selected" in the service selection basket
     When I select all maintenance services
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket

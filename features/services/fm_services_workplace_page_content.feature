@@ -47,8 +47,8 @@ Feature:  Facilities Management - Services - Workplace FM - Page Content
       | Management and cleaning of latrines. Supply of portable facilities on behalf of the buyer as-and-when required      |
       | Provision of administrative support services, for example, clerical support, event management, switchboard services |
       |                                                                                                                             |
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket
     When I select all workplace services
-    Then I should see text "16 services selected"
+    Then I should see text "16 services selected" in the service selection basket
     When I select all workplace services
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket

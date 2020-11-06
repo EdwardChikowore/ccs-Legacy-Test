@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 And(/^I upload the "([^"]*)" file$/) do |file_type|
   next if file_type == 'no file'
 
@@ -25,24 +23,16 @@ And(/^I upload the "([^"]*)" file$/) do |file_type|
 end
 
 And(/^my upload status is "([^"]*)"$/) do |state|
-  expect(common.bulk_upload_status.text).to eq state
+  expect(requirements.bulk_upload_status.text).to eq state
 end
 
 And(/^I wait for the upload to finish$/) do
   30.times do
-    if common.bulk_upload_status.text == 'UPLOAD IN PROGRESS'
+    if requirements.bulk_upload_status.text == 'UPLOAD IN PROGRESS'
       sleep 1
       page.driver.browser.navigate.refresh
     else
       break
     end
   end
-end
-
-And(/^there are buildings with missing regions$/) do
-  expect(common.missing_regions.find_all('tr > td:nth-child(1)').map(&:text)).to eq ['Test Bulk Upload Building 3', 'Test Bulk Upload Building 7']
-end
-
-Then('there should be no options') do
-  expect(common.available_route_to_market.text).to eq 'Further competition'
 end

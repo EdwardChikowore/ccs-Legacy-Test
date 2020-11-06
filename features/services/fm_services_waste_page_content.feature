@@ -27,8 +27,8 @@ Feature:  Facilities Management - Services - Waste - Page Content
       | Disposal of hazardous wastes, and provision of suitable receptacles for this type of waste                                                  |
       | Disposal of clinical waste, may include the provision of sharps bins, sanitary towel disposal service and other specialist receptacles      |
       | Disposal of medical and pharmaceutical waste, and provision of suitable receptacles for this type of waste                                  |
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket
     When I select all waste services
-    Then I should see text "7 services selected"
+    Then I should see text "7 services selected" in the service selection basket
     When I select all waste services
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket

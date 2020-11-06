@@ -18,17 +18,16 @@ Feature:  Facilities Management - Services - Page Content
 			| Select at least one service you need to include in your procurement |
 
 	Scenario: Start a procurement - Services - Content
-		And I click on "Start a procurement"
+		And I click on start a procurement
     And I click on "Continue"
     And I add contract name
     And I click on "Save and continue"
     And I am on "Requirements" page
 		When I click on "Services"
     Then I am on "Services" page
-		Then The service caption is displayed
 
 	Scenario: FM - Services - Error Message
-		And I click on "Start a procurement"
+		And I click on start a procurement
     And I click on "Continue"
     And I add contract name
     And I click on "Save and continue"

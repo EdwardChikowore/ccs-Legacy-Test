@@ -107,7 +107,8 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
       | Town or city         | Westminister         |
       | Postcode             | NW1 4DF              |
     And I click on "Continue"
-    Then I should see address "112 Strongbow Road, Westminister NW1 4DF Change" in the address container
+    Then I should see address:
+      |112 Strongbow Road, Westminister NW1 4DF\nChange|
 
   Scenario: - Contract - Invoicing Contact Details Select - Select new invoicing contact - Add Address - Save
     When I click on the second question for "Invoicing contact details"
@@ -124,12 +125,14 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
     And I select address "151 Buckingham Palace Road, London SW1W 9SZ" from the drop down option
     And I click on "Save and return"
     And I am on "Invoicing contact details" page
-    And I should see new invoicing contact details to radio button "Auto Test, Test Analyst 151 Buckingham Palace Road, London SW1W 9SZ Change"
+    And I should see new invoicing contact details:
+    |Auto Test, Test Analyst\n151 Buckingham Palace Road, London SW1W 9SZ\nChange|
     And I click on "Continue"
     And I am on "Contract details" page
     And I should see contract details "Auto Test, Test Analyst" displayed
     And I expand the contact details
-    Then I should see contract details "Auto Test, Test Analyst test@test.com Address: 151 Buckingham Palace Road, London SW1W 9SZ" displayed
+    Then I should see the contract details:
+      |Auto Test, Test Analyst\ntest@test.com\nAddress: 151 Buckingham Palace Road, London SW1W 9SZ|
 
   Scenario: Contract - Invoicing Contact Details Select - Select new invoicing contact - Add Address - Return without save
     When I click on the second question for "Invoicing contact details"
@@ -165,10 +168,12 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
       | Town or city         | Westminister         |
       | Postcode             | NW1 4DF              |
     And I click on "Continue"
-    Then I should see address "112 Strongbow Road, Westminister NW1 4DF Change" in the address container
+    Then I should see address:
+      |112 Strongbow Road, Westminister NW1 4DF\nChange|
     When I click on "Save and return"
     And I am on "Invoicing contact details" page
-    Then I should see new invoicing contact details to radio button "Auto Test, Test Analyst 112 Strongbow Road, Westminister NW1 4DF Change"
+    Then I should see new invoicing contact details:
+      |Auto Test, Test Analyst\n112 Strongbow Road, Westminister NW1 4DF\nChange|
 
   Scenario: - Contract - Invoicing Contact Details Select - Select new invoicing contact - change address - Save
     When I click on the second question for "Invoicing contact details"
@@ -185,7 +190,8 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
     And I select address "151 Buckingham Palace Road, London SW1W 9SZ" from the drop down option
     And I click on "Save and return"
     And I am on "Invoicing contact details" page
-    And I should see new invoicing contact details to radio button "Auto Test, Test Analyst 151 Buckingham Palace Road, London SW1W 9SZ Change"
+    And I should see new invoicing contact details:
+      |Auto Test, Test Analyst\n151 Buckingham Palace Road, London SW1W 9SZ\nChange|
     And I click on "Change"
     And I enter the following details into the form:
       | Name          | Sam Smith         |
@@ -198,9 +204,12 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
     And I select address "90 Old Hall Street, Liverpool L3 9PP" from the drop down option
     And I click on "Save and return"
     And I am on "Invoicing contact details" page
-    And I should see new invoicing contact details to radio button "Sam Smith, Project Manager 90 Old Hall Street, Liverpool L3 9PP Change"
+    And I should see new invoicing contact details:
+      |Sam Smith, Project Manager\n90 Old Hall Street, Liverpool L3 9PP\nChange|
     And I click on "Continue"
-    And I should see contract details "Sam Smith, Project Manager" displayed
+    And I should see the contract details:
+      |Sam Smith, Project Manager|
     And I expand the contact details
-    Then I should see contract details "Sam Smith, Project Manager test123@test.com Address: 90 Old Hall Street, Liverpool L3 9PP" displayed
+    And I should see the contract details:
+      |Sam Smith, Project Manager\ntest123@test.com\nAddress: 90 Old Hall Street, Liverpool L3 9PP|
 

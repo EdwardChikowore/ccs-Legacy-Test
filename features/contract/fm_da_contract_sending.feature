@@ -43,7 +43,7 @@ Feature: Facilities Management - DA - Contract - Review and Generate
     And I click on the sixth question for "Local Government Pension Scheme"
     And I am on "Local Government Pension Scheme" page
     And I select pension option
-    And I click on "Save and continue"
+    And I click on save and continue button
     And I click on the seventh question for "Governing law"
     And I am on "Governing law" page
     And I select english law

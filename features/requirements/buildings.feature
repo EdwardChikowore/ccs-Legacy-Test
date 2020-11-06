@@ -25,7 +25,8 @@ Feature:Buildings
     When I select first building
     And I click on "Save and continue"
     And I am on "Buildings summary" page
-    Then I should see number of building text "1 building"
+    And The following building summary text is displayed:
+      | 1\nbuilding |
     When I click on "Change"
     And I am on "Buildings" page
     And I select second building
@@ -39,7 +40,8 @@ Feature:Buildings
     And I select tenth building
     And I click on "Save and continue"
     And I am on "Buildings summary" page
-    Then I should see number of building text "10 buildings"
+    And The following building summary text is displayed:
+      | 10\nbuildings |
 
   Scenario: Navigate to add buildings page - Return to buildings link
     When I click on "Buildings"

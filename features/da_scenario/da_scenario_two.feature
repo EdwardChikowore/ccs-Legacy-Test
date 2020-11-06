@@ -1,3 +1,4 @@
+@accessibility
 Feature: Direct Award scenario Two
 
   Background: Login page
@@ -60,7 +61,7 @@ Feature: Direct Award scenario Two
     And I click on the "Helpdesk services"
     And I click on the "Management of billable works"
     And I click on "Continue"
-    And I click on "North East (England)"
+    And I click on open all
     And I click on the "Tees Valley and Durham"
     And I click on "Continue"
     And I add contract name
@@ -80,7 +81,7 @@ Feature: Direct Award scenario Two
     And I enter the number of year as "1"
     And I enter the day as "12"
     And I enter the month as "10"
-    And I enter the year as "2020"
+    And I enter the year as "2023"
     And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_false" option
     And I click on "Save and continue"
@@ -96,16 +97,16 @@ Feature: Direct Award scenario Two
     And I click on "Assigning services to buildings"
     And I am on "Assigning services to buildings summary" page
     And I click on "Aberdeen"
-    And I select services for first building "Aberdeen" - DA scenario two
+    And I select services for first building "Aberdeen"
     And I click on "Save and return"
     And I click on "Belfast Building"
-    And I select services for second building "Belfast Building" - DA scenario two
+    And I select services for second building "Belfast Building"
     And I click on "Save and return"
     And I click on "Birmingham"
-    And I select services for third building "Birmingham" - DA scenario two
+    And I select services for third building "Birmingham"
     And I click on "Save and return"
     And I click on "Westminster Building"
-    And I select services for fourth building "Westminster Building" - DA scenario two
+    And I select services for fourth building "Westminster Building"
     And I click on "Save and return"
     And I am on "Assigning services to buildings summary" page
     And I click on "Return to requirements"

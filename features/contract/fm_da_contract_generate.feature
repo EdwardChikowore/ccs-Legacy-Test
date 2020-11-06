@@ -40,7 +40,7 @@ Feature:Facilities Management - DA - Contract - Review contract
     And I click on the sixth question for "Local Government Pension Scheme"
     And I am on "Local Government Pension Scheme" page
     And I select pension option
-    And I click on "Save and continue"
+    And I click on save and continue button
     And I click on the seventh question for "Governing law"
     And I am on "Governing law" page
     And I select english law
@@ -93,7 +93,6 @@ Feature:Facilities Management - DA - Contract - Review contract
       And I expand the Mobilisation period
       And I expand the Buildings and services
       And I expand the Invoicing contact details - review your contract
-#      And I expand the Authorised representative details - review your contract
       And I expand the Notices contact details - review your contract
       And I click on "Return to procurement dashboard"
       And I am on "Procurements dashboard" page

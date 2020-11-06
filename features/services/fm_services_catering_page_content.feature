@@ -34,8 +34,8 @@ Feature:  Facilities Management - Services - Catering - Page Content
       | Supplier shall provide a trolley service offering a range of snacks and hot/cold beverages which follows a pre-determined route                            |
       | A vending service that will include hot and cold drinks, sweets and snacks, fresh fruit and pre-packed food items                                          |
       | Catering services for full time residents within a buyers premises, examples include a full board food offering comprising breakfast, luncheon and dinner |
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket
     When I select all catering services
-    Then I should see text "10 services selected"
+    Then I should see text "10 services selected" in the service selection basket
     When I select all catering services
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket

@@ -1,5 +1,11 @@
-
 module Pages
+  def account
+    @account ||= Account.new
+  end
+
+  def building
+    @building ||= Building.new
+  end
 
   def common
     @common ||= Common.new
@@ -9,8 +15,25 @@ module Pages
     @detailed_summary ||= DetailedSummary.new
   end
 
+  def dadraft
+    @dadraft ||= Dadraft.new
+  end
+
+
+  def quickview
+    @quickview ||= Quickview.new
+  end
+
+  def requirements
+    @requirements ||= Requirements.new
+  end
+
   def service_requirements
     @service_requirements ||= ServiceRequirements.new
+  end
+
+  def results
+    @results ||= Results.new
   end
 end
 

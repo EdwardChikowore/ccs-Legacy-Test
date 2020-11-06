@@ -3,8 +3,10 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
   Background: Log in and capture contract details
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    When I click on "Start a procurement"
+    And I click on start a procurement
+    Then I am on "What happens next" page
     And I click on "Continue"
+    Then I am on "Contract name" page
     And I add contract name
     And I click on "Save and continue"
     And I click on "Estimated annual cost"
@@ -34,7 +36,7 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on "Return to service requirements summary"
     And I click on "Return to requirements"
     And I click on "Continue to results"
-    And I should see the "Estimated contract cost" page
+    And I am on "Estimated contract cost" page
     And I should see the partial price value £289,869
     And unpriced service "Professional snow & ice clearance" should be displayed
 
@@ -60,7 +62,7 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on "Return to service requirements summary"
     And I click on "Return to requirements"
     And I click on "Continue to results"
-    And I should see the "Estimated contract cost" page
+    And I am on "Estimated contract cost" page
     And I should see the partial price value £394,107
     And unpriced service "Professional snow & ice clearance" should be displayed
 
@@ -88,7 +90,7 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on "Return to service requirements summary"
     And I click on "Return to requirements"
     And I click on "Continue to results"
-    And I should see the "Estimated contract cost" page
+    And I am on "Estimated contract cost" page
     And I should see the partial price value £16,978,383
     And unpriced service "Professional snow & ice clearance" should be displayed
 
@@ -119,7 +121,7 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on "Return to service requirements summary"
     And I click on "Return to requirements"
     And I click on "Continue to results"
-    And I should see the "Estimated contract cost" page
+    And I am on "Estimated contract cost" page
     And I should see the partial price value £23,092,200
     And unpriced service "Professional snow & ice clearance" should be displayed
 
@@ -147,7 +149,7 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on "Return to service requirements summary"
     And I click on "Return to requirements"
     And I click on "Continue to results"
-    And I should see the "Estimated contract cost" page
+    And I am on "Estimated contract cost" page
     And I should see the partial price value £115,692,494
     And unpriced service "Professional snow & ice clearance" should be displayed
 
@@ -178,6 +180,6 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on "Return to service requirements summary"
     And I click on "Return to requirements"
     And I click on "Continue to results"
-    And I should see the "Estimated contract cost" page
+    And I am on "Estimated contract cost" page
     And I should see the partial price value £157,729,040
     And unpriced service "Professional snow & ice clearance" should be displayed

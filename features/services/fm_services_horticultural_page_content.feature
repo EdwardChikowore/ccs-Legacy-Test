@@ -27,8 +27,8 @@ Feature:  Facilities Management - Services - Horticultural - Page Content
       | Provision and maintenance of all indoor planting                                                                            |
       | Cut flowers and christmas tree service                                                                                      |
       |                                                                                                                                    |
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket
     When I select all horticultural services
-    Then I should see text "6 services selected"
+    Then I should see text "6 services selected" in the service selection basket
     When I select all horticultural services
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket

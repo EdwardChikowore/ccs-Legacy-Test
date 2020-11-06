@@ -7,12 +7,12 @@ Feature: Quick view results
     And I am on "Services" page
     And I click on open all
     And I select all maintenance services
-    And I should see text "22 services selected"
+    And I should see text "22 services selected" in the service selection basket
     And I click on "Continue"
     And I am on "Regions" page
     And I click on open all
     And I click on select all for North East England
-    And I should see text "2 regions selected"
+    And I should see text "2 regions selected" in the region selection basket
     Then I click on "Continue"
     And I am on "Quick view results" page
 
@@ -87,19 +87,17 @@ Feature: Quick view results
   Scenario Outline: Contract name - Save - validation duplicate name
     Given I add contract name
     And I click on "Save and return to procurements dashboard"
-    Then I am on the "Procurements dashboard"
+    Then I am on "Procurements dashboard" page
     And I click on "Return to your account"
     Then I am on your account page
     When I click on "Quick view suppliers"
     And I am on "Services" page
-    And I click on open all
     And I select all maintenance services
-    And I should see text "22 services selected"
+    And I should see text "22 services selected" in the service selection basket
     And I click on "Continue"
     And I am on "Regions" page
-    And I click on open all
     And I click on select all for North East England
-    And I should see text "2 regions selected"
+    And I should see text "2 regions selected" in the region selection basket
     Then I click on "Continue"
     And I am on "Quick view results" page
     Then I add duplicate contract name

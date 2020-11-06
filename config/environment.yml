@@ -1,16 +1,13 @@
 local:
   host: http://localhost:3000/facilities-management
-  account_username: bau_test@yopmail.com
-  account_password: Test12345!
+  account_username:
+  account_password:
 cmpdev:
   host: https://cmp.cmpdev.crowncommercial.gov.uk/facilities-management
-  account_username: bau_test@yopmail.com
-  account_password: Test12345!
+  account_username:
+  account_password:
 preview:
   host: https://cmp.fm-preview.crowncommercial.gov.uk/facilities-management
-  account_username: bau_fm_test@yopmail.com
-  account_password: Test12345!
-marketplace:
-  host: https://marketplace.preview.crowncommercial.gov.uk/facilities-management
-  account_username: oluwatoyin.otaiku@crowncommercial.gov.uk
-  account_password: Test12345!
+  account_username:
+  account_password:
+

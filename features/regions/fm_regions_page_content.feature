@@ -6,13 +6,11 @@ Feature: Facilities Management - Location - Page Content
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
     And I click on open all
-#    And I click on open all
     And I click on the "Mechanical and electrical engineering maintenance"
-#    And I click on "Close all"
     And I click on "Continue"
 
   Scenario: FM - Locations - Content
-    And I should see the "Regions" page
+    And I am on "Regions" page
     And The following text is displayed:
       | Where are your buildings located?                                                                          |
       | North East (England)                                                                                       |
@@ -27,8 +25,6 @@ Feature: Facilities Management - Location - Page Content
       | Wales                                                                                                      |
       | Scotland                                                                                                   |
       | Northern Ireland                                                                                           |
-    And I should see text "No regions selected"
-
 
   Scenario: FM - Locations - Areas within Location - North East England - Content
     And I click on "North East (England)"
@@ -37,8 +33,6 @@ Feature: Facilities Management - Location - Page Content
       | Northumberland and Tyne and Wear |
       | Or                               |
       | Select all                       |
-
-
 
   Scenario: FM - Locations - Areas within Location - North West England - Content
     And I click on "North West (England)"
@@ -75,7 +69,6 @@ Feature: Facilities Management - Location - Page Content
       | West Midlands (county)                         |
       | Select all                                     |
 
-
   Scenario: FM - Locations - Areas within Location - East of England - Content
     And I click on "East of England"
     And The following region is displayed:
@@ -83,7 +76,6 @@ Feature: Facilities Management - Location - Page Content
       | Bedfordshire and Hertfordshire |
       | Essex                          |
       | Select all                     |
-
 
   Scenario: FM - Locations - Areas within Location - London - Content
     And I click on "London"
@@ -128,7 +120,6 @@ Feature: Facilities Management - Location - Page Content
       | Flintshire and Wrexham                                        |
       | Powys                                                         |
       | Select all                                                    |
-
 
   Scenario: FM - Locations - Areas within Location - Scotland - Content
     And I click on "Scotland"

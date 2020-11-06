@@ -36,8 +36,8 @@ Feature:  Facilities Management - Services - Miscellaneous FM - Page Content
       | Professionally managed housing and estates management service, for residential occupancy and potential occupancy by buyer staff                   |
       | Managing the delivery, bid and allocation processes associated with all types of specialist training events held at the buyer premises            |
       |                                                                                                                                                           |
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket
     When I select all miscellaneous services
-    Then I should see text "11 services selected"
+    Then I should see text "11 services selected" in the service selection basket
     When I select all miscellaneous services
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket

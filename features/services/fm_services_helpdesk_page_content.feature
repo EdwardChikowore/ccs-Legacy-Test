@@ -16,8 +16,8 @@ Feature:  Facilities Management - Services - Helpdesk - Page Content
       |                          |
     Then The following description is displayed:
       | Fully staffed, supervised helpdesk service for all FM related service requests and fault reporting  |
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket
     When I select all helpdesk services
-    Then I should see text "1 service selected"
+    Then I should see text "1 service selected" in the service selection basket
     When I select all helpdesk services
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket

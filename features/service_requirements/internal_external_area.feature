@@ -1,4 +1,4 @@
-Feature:Mechanical and electrical engineering maintenance
+Feature:Internal and external area
   Background: Login page
     Given I am a logged in user - buildings account
     Then I should see the navigation panel has sign out link
@@ -15,15 +15,14 @@ Feature:Mechanical and electrical engineering maintenance
     And I assign services to buildings
     And I click on "Service requirements"
     And I am on "Service requirements summary" page
-    And I click on the first building on the service requirements summary page
+    And I click on the first building on the page
     When I am on the "Service requirements" page
     And I click on "Change"
     And I am on the "Internal and external areas" page
     And I enter 0 for internal area
     When I click on "Save and return"
     Then I should see the following error messages
-      |Internal area must be greater than 0, if the external area is 0.|
-      |External area must be greater than 0, if the internal area is 0.|
+      |Gross Internal Area (GIA) must be greater than 0|
     And I enter 9999999 for internal area
     When I click on "Save and return"
     Then I am on the "Service requirements" page
@@ -44,7 +43,7 @@ Feature:Mechanical and electrical engineering maintenance
     And I assign services to buildings
     And I click on "Service requirements"
     And I am on "Service requirements summary" page
-    And I click on the first building on the service requirements summary page
+    And I click on the first building on the page
     When I am on the "Service requirements" page
     And I click on "Change"
     And I am on the "Internal and external areas" page

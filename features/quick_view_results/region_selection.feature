@@ -12,19 +12,8 @@ Feature: Quick view results - Region selection
 
   Scenario: View all regions on quick view results
     Given I click on open all
-    And I click on select all for North East England
-    And I click on select all for North West England
-    And I click on select all for Yorkshire and Humber
-    And I click on select all for East Midlands
-    And I click on select all for West Midlands
-    And I click on select all for East England
-    And I click on select all for London
-    And I click on select all for South East England
-    And I click on select all for South West England
-    And I click on select all for Wales
-    And I click on select all for Scotland
-    And I click on select all for Northern Ireland
-    And I should see text "73 regions selected"
+    And I select all regions
+    And I should see text "73 regions selected" in the region selection basket
     Then I click on "Continue"
     And I am on "Quick view results" page
     Given I open the regions selected
@@ -106,15 +95,14 @@ Feature: Quick view results - Region selection
   Scenario: Change region selection
     Given I click on open all
     And I click on select all for North West England
-    And I should see text "5 regions selected"
+    And I should see text "5 regions selected" in the region selection basket
     Then I click on "Continue"
     And I am on "Quick view results" page
     Given I change region selection
     Then I am on "Regions" page
-    And I click on open all
     And I click on select all for North East England
     And I click on select all for North West England
-    And I should see text "2 regions selected"
+    And I should see text "2 regions selected" in the region selection basket
     Then I click on "Continue"
     And I am on "Quick view results" page
     Then I open the regions selected
@@ -124,25 +112,14 @@ Feature: Quick view results - Region selection
 
   Scenario: Change region selection - validation
     Given I click on open all
-    And I click on select all for North East England
-    And I click on select all for North West England
-    And I click on select all for Yorkshire and Humber
-    And I click on select all for East Midlands
-    And I click on select all for West Midlands
-    And I click on select all for East England
-    And I click on select all for London
-    And I click on select all for South East England
-    And I click on select all for South West England
-    And I click on select all for Wales
-    And I click on select all for Scotland
-    And I click on select all for Northern Ireland
-    And I should see text "73 regions selected"
+    And I select all regions
+    And I should see text "73 regions selected" in the region selection basket
     Then I click on "Continue"
     And I am on "Quick view results" page
     Given I change region selection
     Then I am on "Regions" page
     And I click on "Remove all"
-    And I should see text "No regions selected"
+    And I should see text "No regions selected" in the region selection basket
     Then I click on "Continue"
     Then I should see the following error messages
       | Select at least one region you need to include in your procurement  |

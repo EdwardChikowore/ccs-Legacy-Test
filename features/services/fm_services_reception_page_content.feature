@@ -21,8 +21,8 @@ Feature:  Facilities Management - Services - Reception - Page Content
       | Managing and co-ordinating a taxi booking service for the buyer                                           |
       | A car park management and booking service                                                                 |
       | A service making broadcasts or announcements via the voice announcement system, as requested by the buyer |
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket
     When I select all reception services
-    Then I should see text "4 services selected"
+    Then I should see text "4 services selected" in the service selection basket
     When I select all reception services
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket

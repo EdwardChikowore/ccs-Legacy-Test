@@ -30,20 +30,20 @@ Feature:  FM - Accessibility
 
   Scenario: FM - Manage buildings - Buildings page
     Given I am a logged in user
-    When I click on "Manage my buildings"
+    When I click on manage my buildings link
     And I am on "Buildings" page
     Then the page should be accessible
 
   Scenario: FM - Manage buildings - Add Building
     Given I am a logged in user
-    When I click on "Manage my buildings"
+    When I click on manage my buildings link
     When I click on "Add a building"
     And I am on "Add a building" page
     Then the page should be accessible
 
   Scenario: FM - Manage buildings - Add Building - Add address page
     Given I am a logged in user
-    When I click on "Manage my buildings"
+    When I click on manage my buildings link
     When I click on "Add a building"
     And I am on "Add a building" page
     When I add building name
@@ -56,7 +56,7 @@ Feature:  FM - Accessibility
 
   Scenario: FM - Manage buildings - Internal and external areas
     Given I am a logged in user
-    When I click on "Manage my buildings"
+    When I click on manage my buildings link
     When I click on "Add a building"
     And I am on "Add a building" page
     When I add building name
@@ -70,7 +70,7 @@ Feature:  FM - Accessibility
 
   Scenario: FM - Manage buildings - Building type
     Given I am a logged in user
-    When I click on "Manage my buildings"
+    When I click on manage my buildings link
     When I click on "Add a building"
     And I am on "Add a building" page
     When I add building name
@@ -88,7 +88,7 @@ Feature:  FM - Accessibility
 
   Scenario: FM - Manage buildings - Security clearance
     Given I am a logged in user
-    When I click on "Manage my buildings"
+    When I click on manage my buildings link
     When I click on "Add a building"
     And I am on "Add a building" page
     When I add building name
@@ -109,7 +109,7 @@ Feature:  FM - Accessibility
 
   Scenario: FM - Manage buildings - Building summary
     Given I am a logged in user
-    When I click on "Manage my buildings"
+    When I click on manage my buildings link
     When I click on "Add a building"
     And I am on "Add a building" page
     When I add building name
@@ -363,7 +363,7 @@ Feature:  FM - Accessibility
     And I assign services to buildings
     And I click on "Service requirements"
     And I am on "Service requirements summary" page
-    And I click on the first building on the service requirements summary page
+    And I click on the first building on the page
     When I am on the "Service requirements" page
     Then the page should be accessible
 
@@ -382,7 +382,7 @@ Feature:  FM - Accessibility
     And I assign services to buildings
     And I click on "Service requirements"
     And I am on "Service requirements summary" page
-    And I click on the first building on the service requirements summary page
+    And I click on the first building on the page
     When I am on the "Service requirements" page
     And I click on Answer question
     And I am on the "Mechanical and electrical engineering maintenance" page
@@ -402,7 +402,7 @@ Feature:  FM - Accessibility
     And I assign services to buildings
     And I click on "Service requirements"
     And I am on "Service requirements summary" page
-    And I click on the first building on the service requirements summary page
+    And I click on the first building on the page
     When I am on the "Service requirements" page
     And I click on Answer question
     And I am on the "Mobile cleaning services" page
@@ -422,7 +422,7 @@ Feature:  FM - Accessibility
     And I assign services to buildings
     And I click on "Service requirements"
     And I am on "Service requirements summary" page
-    And I click on the first building on the service requirements summary page
+    And I click on the first building on the page
     When I am on the "Service requirements" page
     And I click on Answer question
     And I am on the "Lifts, hoists & conveyance systems maintenance" page
@@ -442,7 +442,7 @@ Feature:  FM - Accessibility
     And I assign services to buildings
     And I click on "Service requirements"
     And I am on "Service requirements summary" page
-    And I click on the first building on the service requirements summary page
+    And I click on the first building on the page
     When I am on the "Service requirements" page
     And I click on Answer question
     And I am on the "Taxi booking service" page

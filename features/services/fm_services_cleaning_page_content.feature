@@ -43,8 +43,8 @@ Feature:  Facilities Management - Services - Cleaning - Page Content
       | Professionally managed curtain and window blinds cleaning service                                                     |
       | Cleaning of all medical, clinical and laboratories                                                                    |
       | Laundering, organisation and control of linen stocks. Supply of linen                                                 |
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket
     When I select all cleaning services
-    Then I should see text "16 services selected"
+    Then I should see text "16 services selected" in the service selection basket
     When I select all cleaning services
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket

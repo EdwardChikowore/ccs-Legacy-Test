@@ -13,7 +13,7 @@ Feature:Mechanical and electrical engineering maintenance
     And I assign services to buildings
     And I click on "Service requirements"
     And I am on "Service requirements summary" page
-    And I click on the first building on the service requirements summary page
+    And I click on the first building on the page
 
   Scenario: No option selected - Validation error
     When I am on the "Service requirements" page

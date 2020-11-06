@@ -22,7 +22,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I click on select all for Wales
     And I click on select all for Scotland
     And I click on select all for Northern Ireland
-    And I should see text "73 regions selected"
+    And I should see text "73 regions selected" in the region selection basket
     And I click on "Close all"
     And I click on "Continue"
     And I am on "Quick view results" page    
@@ -199,7 +199,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I am on "Requirements" page
     And I click on "Assigning services to buildings"
     And I am on "Assigning services to buildings summary" page
-    And I click on first building
+    And I click on the first building
     And I click on the "Mechanical and electrical engineering maintenance"
     And I click on "Save and return"
     And I am on "Assigning services to buildings summary" page
@@ -207,7 +207,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I am on "Requirements" page
     And I click on "Service requirements"
     And I am on "Service requirements summary" page
-    And I click on first building
+    And I click on the first building
     And I click on "Answer question"
     And I am on the "Mechanical and electrical engineering maintenance" page
     And I select standard A
@@ -220,4 +220,4 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
 
   Scenario: FM - Detailed Search Summary - Save for later journey - Questions
     When I click on "Save and return to procurements dashboard"
-    Then I am on the "Procurements dashboard"
+    Then I am on "Procurements dashboard" page

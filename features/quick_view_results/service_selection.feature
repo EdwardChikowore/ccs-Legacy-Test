@@ -8,28 +8,16 @@ Feature: Quick view results - Service selection
 
   Scenario: View all services on results
     Given I click on open all
-    And I select all maintenance services
-    And I select all horticultural services
-    And I select all statutory services
-    And I select all catering services
-    And I select all cleaning services
-    And I select all workplace services
-    And I select all reception services
-    And I select all security services
-    And I select all waste services
-    And I select all miscellaneous services
-    And I select all cafm service
-    And I select all helpdesk services
-    And I select all services listed for Management of billable works
-    And I should see text "116 services selected"
+    And I select all services
+    And I should see text "116 services selected" in the service selection basket
     And I click on "Continue"
     And I am on "Regions" page
     And I click on open all
     And I click on select all for North East England
-    And I should see text "2 regions selected"
+    And I should see text "2 regions selected" in the region selection basket
     Then I click on "Continue"
     And I am on "Quick view results" page
-    Given I open the services selected
+    When I open the services selected
     Then I should see the following services:
       | Mechanical and electrical engineering maintenance             |
       | Ventilation and air conditioning system maintenance           |
@@ -151,20 +139,19 @@ Feature: Quick view results - Service selection
   Scenario: Change service selection
     Given I click on open all
     And I select all horticultural services
-    And I should see text "6 services selected"
+    And I should see text "6 services selected" in the service selection basket
     And I click on "Continue"
     And I am on "Regions" page
     And I click on open all
     And I click on select all for North East England
-    And I should see text "2 regions selected"
+    And I should see text "2 regions selected" in the region selection basket
     Then I click on "Continue"
     And I am on "Quick view results" page
-    Given I change service selection
+    When I change service selection
     Then I am on "Services" page
-    And I click on open all
     And I select all horticultural services
     And I select all maintenance services
-    And I should see text "22 services selected"
+    And I should see text "22 services selected" in the service selection basket
     Then I click on "Continue"
     And I am on "Regions" page
     Then I click on "Continue"
@@ -196,31 +183,19 @@ Feature: Quick view results - Service selection
 
   Scenario: Change service selection - validation
     Given I click on open all
-    And I select all maintenance services
-    And I select all horticultural services
-    And I select all statutory services
-    And I select all catering services
-    And I select all cleaning services
-    And I select all workplace services
-    And I select all reception services
-    And I select all security services
-    And I select all waste services
-    And I select all miscellaneous services
-    And I select all cafm service
-    And I select all helpdesk services
-    And I select all services listed for Management of billable works
-    And I should see text "116 services selected"
+    And I select all services
+    And I should see text "116 services selected" in the service selection basket
     And I click on "Continue"
     And I am on "Regions" page
     And I click on open all
     And I click on select all for North East England
-    And I should see text "2 regions selected"
+    And I should see text "2 regions selected" in the region selection basket
     Then I click on "Continue"
     And I am on "Quick view results" page
     Given I change service selection
     Then I am on "Services" page
     And I click on "Remove all"
-    And I should see text "No services selected"
+    And I should see text "No services selected" in the service selection basket
     Then I click on "Continue"
     Then I should see the following error messages
       | Select at least one service you need to include in your procurement |

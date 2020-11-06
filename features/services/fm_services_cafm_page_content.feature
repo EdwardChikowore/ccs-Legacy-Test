@@ -11,8 +11,8 @@ Feature:  Facilities Management - Services - Computer-aided FM - Page Content
 
   Scenario: FM - Services - Computer-aided FM - Content
     When I click on "Computer-aided facilities management (CAFM)"
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket
     When I select all cafm service
-    Then I should see text "1 service selected"
+    Then I should see text "1 service selected" in the service selection basket
     When I select all cafm service
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket

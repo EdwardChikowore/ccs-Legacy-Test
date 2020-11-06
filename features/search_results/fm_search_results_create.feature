@@ -21,8 +21,7 @@ Feature: Facilities Management - Search Results - Search - Create
     And I click on select all for Wales
     And I click on select all for Scotland
     And I click on select all for Northern Ireland
-    And I should see text "73 regions selected"
-    And I click on open all
+    And I should see text "73 regions selected" in the region selection basket
     And I click on "Continue"
 
   Scenario: FM - Search Results - Create Search - Save your search
@@ -33,4 +32,4 @@ Feature: Facilities Management - Search Results - Search - Create
   Scenario: FM - Search Results - Create Search - Save your search
     And I add contract name
     And I click on "Save and return to procurements dashboard"
-    Then I am on the "Procurements dashboard"
+    Then I am on "Procurements dashboard" page

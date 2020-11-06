@@ -38,8 +38,8 @@ Feature:  Facilities Management - Services - Security - Page Content
       | Key holding, providing assistance to emergency services, and ensuring premises are secure                                                  |
       | Mobile security patrol service for vacant/surplus buyer premises, and on occasion at an occupied buyer premises                            |
       |                                                                                                                                                    |
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket
     When I select all security services
-    Then I should see text "12 services selected"
+    Then I should see text "12 services selected" in the service selection basket
     When I select all security services
-    Then I should see text "No services selected"
+    Then I should see text "No services selected" in the service selection basket

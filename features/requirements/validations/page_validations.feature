@@ -3,17 +3,19 @@ Feature: Requirements validations
   Background: Login page
     Given I am a logged in user
     Then I should see the navigation panel has sign out link
-    When I click on "Start a procurement"
+    And I click on start a procurement
+    Then I am on "What happens next" page
     And I click on "Continue"
+    Then I am on "Contract name" page
     And I add contract name
     And I click on "Save and continue"
     And I am on "Requirements" page
 
   Scenario: Validation errors when continuing to results
-		And The contract name status tag is "COMPLETED"
+    And The contract name status tag is "COMPLETED"
     And I click on "Continue to results"
     Then I should see the following error messages
-    |‘Estimated annual cost’ must be ‘COMPLETED’|
+        |‘Estimated annual cost’ must be ‘COMPLETED’|
 		|‘TUPE’ must be ‘COMPLETED’|
 		|‘Contract period’ must be ‘COMPLETED’|
 		|‘Services’ must be ‘COMPLETED’|
@@ -175,10 +177,10 @@ Feature: Requirements validations
     And I click on open all
 		And I click on the "High voltage (HV) and switchgear maintenance"
 		And I click on the "Internal & external building fabric maintenance"
-		When I click on save and continue
+      When I click on "Save and continue"
 		Then I am on "Services summary" page   
 		And The following summary text is displayed:
-			| 2 services | 
+			| 2\nservices |
     And I click on "Return to requirements"
 		And The services status tag is "COMPLETED"
     When I click on "Continue to results"
@@ -196,10 +198,10 @@ Feature: Requirements validations
     And I click on open all
 		And I click on the "High voltage (HV) and switchgear maintenance"
 		And I click on the "Internal & external building fabric maintenance"
-		When I click on save and continue
+      When I click on "Save and continue"
 		Then I am on "Services summary" page   
 		And The following summary text is displayed: 
-			| 2 services | 
+			| 2\nservices |
     And I click on "Return to requirements"
     When I click on "Buildings"
     And I am on "Buildings" page
@@ -224,23 +226,24 @@ Feature: Requirements validations
     And I click on open all
 		And I click on the "High voltage (HV) and switchgear maintenance"
 		And I click on the "Internal & external building fabric maintenance"
-		When I click on save and continue
+      When I click on "Save and continue"
 		Then I am on "Services summary" page   
 		And The following summary text is displayed: 
-			| 2 services | 
+			| 2\nservices |
     And I click on "Return to requirements"
     When I click on "Buildings"
     Then I am on "Buildings" page
     When I select first building
     And I click on "Save and continue"
     And I am on "Buildings summary" page
-    Then I should see number of building text "1 building"
+      And The following building summary text is displayed:
+        | 1\nbuilding |
     And I click on "Return to requirements"
-		Then I click on assigning services to buildings link
-    And I click on the first building on building and services summary page
+      When I click on "Assigning services to buildings"
+      And I click on the first building
   	And I click on select all
-  	And I click on save and return
-  	And I click on return to requirements
+      And I click on "Save and return"
+      And I click on "Return to requirements"
 		And The contract name status tag is "COMPLETED"
 		And The buildings status tag is "COMPLETED"
 		And The services status tag is "COMPLETED"
@@ -258,27 +261,28 @@ Feature: Requirements validations
     And I click on open all
 		And I click on the "High voltage (HV) and switchgear maintenance"
 		And I click on the "Internal & external building fabric maintenance"
-		When I click on save and continue
+      And I click on "Save and continue"
 		Then I am on "Services summary" page   
 		And The following summary text is displayed: 
-			| 2 services | 
+			| 2\nservices |
     And I click on "Return to requirements"
     When I click on "Buildings"
     Then I am on "Buildings" page
     When I select first building
     And I click on "Save and continue"
     And I am on "Buildings summary" page
-    Then I should see number of building text "1 building"
+      And The following building summary text is displayed:
+        | 1\nbuilding |
     And I click on "Return to requirements"
-		Then I click on assigning services to buildings link
-    And I click on the first building on building and services summary page
+      When I click on "Assigning services to buildings"
+    And I click on the first building
   	And I click on select all
-  	And I click on save and return
-  	And I click on return to requirements
+  	And I click on "Save and return"
+  	And I click on "Return to requirements"
     When I am on the "1. Contract details" page
     And I click on "Service requirements"
     And I am on "Service requirements summary" page
-    And I click on the first building on the service requirements summary page
+    And I click on the first building
     And I click on Answer question
     And I am on the "Internal & external building fabric maintenance" page
     When I click on "Save and return"
@@ -291,27 +295,28 @@ Feature: Requirements validations
     And I click on open all
 		And I click on the "High voltage (HV) and switchgear maintenance"
 		And I click on the "Internal & external building fabric maintenance"
-		When I click on save and continue
+		When I click on "Save and continue"
 		Then I am on "Services summary" page   
 		And The following summary text is displayed: 
-			| 2 services | 
+			| 2\nservices |
     And I click on "Return to requirements"
     When I click on "Buildings"
     Then I am on "Buildings" page
     When I select first building
     And I click on "Save and continue"
     And I am on "Buildings summary" page
-    Then I should see number of building text "1 building"
+      And The following building summary text is displayed:
+        | 1\nbuilding |
     And I click on "Return to requirements"
-		Then I click on assigning services to buildings link
-    And I click on the first building on building and services summary page
+      When I click on "Assigning services to buildings"
+      And I click on the first building
   	And I click on select all
-  	And I click on save and return
-  	And I click on return to requirements
+      And I click on "Save and return"
+      And I click on "Return to requirements"
     When I am on the "1. Contract details" page
     And I click on "Service requirements"
     And I am on "Service requirements summary" page
-    And I click on the first building on the service requirements summary page
+    And I click on the first building
     And I click on Answer question
     And I am on the "Internal & external building fabric maintenance" page
     When I select standard A
@@ -359,27 +364,28 @@ Feature: Requirements validations
     And I click on open all
 		And I click on the "High voltage (HV) and switchgear maintenance"
 		And I click on the "Internal & external building fabric maintenance"
-		When I click on save and continue
+		And I click on "Save and continue"
 		Then I am on "Services summary" page   
 		And The following summary text is displayed: 
-			| 2 services | 
+			| 2\nservices |
     And I click on "Return to requirements"
     When I click on "Buildings"
     Then I am on "Buildings" page
     When I select first building
     And I click on "Save and continue"
     And I am on "Buildings summary" page
-    Then I should see number of building text "1 building"
+      And The following building summary text is displayed:
+        | 1\nbuilding |
     And I click on "Return to requirements"
-		Then I click on assigning services to buildings link
-    And I click on the first building on building and services summary page
+      When I click on "Assigning services to buildings"
+      And I click on the first building
   	And I click on select all
-  	And I click on save and return
-  	And I click on return to requirements
+      And I click on "Save and return"
+      And I click on "Return to requirements"
     When I am on the "1. Contract details" page
     And I click on "Service requirements"
     And I am on "Service requirements summary" page
-    And I click on the first building on the service requirements summary page
+    And I click on the first building
     And I click on Answer question
     And I am on the "Internal & external building fabric maintenance" page
     When I select standard A
@@ -389,7 +395,7 @@ Feature: Requirements validations
     When I select standard A
     And I click on "Save and return"
     Then I am on the "Service requirements" page
-		And I click on "Return to service requirements summary"
+      And I click on "Return to service requirements summary"
 		And I click on "Return to requirements"
 		And The contract name status tag is "COMPLETED"
 		And The estimated annual cost status tag is "COMPLETED"

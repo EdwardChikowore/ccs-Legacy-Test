@@ -22,13 +22,13 @@ Feature:  Facilities Management - Contract - Local Government Pension Scheme
 
 
   Scenario: Error validation message when no option is selected
-    When I click on "Save and continue"
+    When I click on save and continue button
     Then I should see the following error messages
       |Select one answer |
 
   Scenario: Pension funds validation error message
     When I click on "true" option
-    And I click on "Save and continue"
+    And I click on save and continue button
     And I am on "Pension funds" page
     And I enter the following details into the form:
       |Pension fund name 1               | Test 0001   |
@@ -47,7 +47,7 @@ Feature:  Facilities Management - Contract - Local Government Pension Scheme
 
   Scenario: Pension funds - Valid details entered
     When I click on "true" option
-    And I click on "Save and continue"
+    And I click on save and continue button
     And I am on "Pension funds" page
     And I enter the following details into the form:
       |Pension fund name 1               | Test 0001   |
