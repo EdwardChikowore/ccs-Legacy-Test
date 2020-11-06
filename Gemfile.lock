@@ -182,6 +182,9 @@ GEM
     oily_png (1.2.0)
       chunky_png (~> 1.3.1)
     oj (3.10.6)
+    parallel (1.19.2)
+    parallel_tests (3.3.0)
+      parallel
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -285,7 +288,7 @@ PLATFORMS
 
 DEPENDENCIES
   axe-matchers
-  capybara (= 2.18.0)
+  capybara
   capybara-firebug
   capybara-screenshot
   csv
@@ -296,6 +299,7 @@ DEPENDENCIES
   git
   minitest-spec-rails
   nokogiri
+  parallel_tests
   pry
   rails_helper
   require_all

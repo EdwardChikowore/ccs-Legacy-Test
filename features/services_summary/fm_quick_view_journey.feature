@@ -13,7 +13,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
     And I click on the "Internal & external building fabric maintenance"
     And I click on the "Building management system (BMS) maintenance"
     And I click on "Continue"
-    And I click on a North East England
+    And I click on open all
     And I select Tees Valley and Durham
     And I click on "Continue"
     And I add contract name
@@ -38,7 +38,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
     And I click on the "Internal & external building fabric maintenance"
     And I click on the "Building management system (BMS) maintenance"
     And I click on "Continue"
-    And I click on a North East England
+      And I click on open all
     And I select Tees Valley and Durham
     And I click on "Continue"
     And I add contract name
@@ -76,7 +76,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
 		And I click on the "Helpdesk services"
 		And I click on the "Management of billable works"
     And I click on "Continue"
-    And I click on a North East England
+      And I click on open all
     And I select Tees Valley and Durham
     And I click on "Continue"
     And I add contract name
@@ -106,7 +106,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
 		And I click on the "Helpdesk services"
 		And I click on the "Management of billable works"
     And I click on "Continue"
-    And I click on a North East England
+      And I click on open all
     And I select Tees Valley and Durham
     And I click on "Continue"
     And I add contract name
@@ -138,7 +138,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
 		And I click on the "Helpdesk services"
 		And I click on the "Management of billable works"
     And I click on "Continue"
-    And I click on a North East England
+      And I click on open all
     And I select Tees Valley and Durham
     And I click on "Continue"
     And I add contract name
@@ -165,7 +165,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
     And I click on the "Internal & external building fabric maintenance"
     And I click on the "Building management system (BMS) maintenance"
     And I click on "Continue"
-    And I click on a North East England
+      And I click on open all
     And I select Tees Valley and Durham
     And I click on "Continue"
     And I add contract name

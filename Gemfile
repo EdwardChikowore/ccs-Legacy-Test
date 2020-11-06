@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'capybara', "2.18.0"
+gem 'capybara'
 gem 'selenium-webdriver'
 gem 'cucumber', "3.0.2"
 gem 'rspec'
@@ -22,3 +22,4 @@ gem 'nokogiri'
 gem 'cucumber-rails', require: false
 gem 'database_cleaner'
 gem 'axe-matchers'
+gem 'parallel_tests'
