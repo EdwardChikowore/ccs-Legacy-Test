@@ -29,6 +29,7 @@ Feature: Assessed value Scenario Four - No Customer Price and at least 1 Service
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Mechanical and electrical engineering maintenance  |
       |Locksmith services                                 |
@@ -83,6 +84,7 @@ Feature: Assessed value Scenario Four - No Customer Price and at least 1 Service
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Locksmith services|
       |Routine cleaning  |
@@ -135,6 +137,7 @@ Feature: Assessed value Scenario Four - No Customer Price and at least 1 Service
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Mechanical and electrical engineering maintenance|
       |Ventilation and air conditioning system maintenance|

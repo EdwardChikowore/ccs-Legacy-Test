@@ -29,6 +29,7 @@ Feature: Assessed Value - Scenario 1a - One service has no framework rate
     And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Mechanical and electrical engineering maintenance  |
       |Locksmith services                                 |
@@ -89,6 +90,7 @@ Feature: Assessed Value - Scenario 1a - One service has no framework rate
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Mechanical and electrical engineering maintenance  |
       |Locksmith services                                 |
@@ -150,6 +152,7 @@ Feature: Assessed Value - Scenario 1a - One service has no framework rate
     And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Mechanical and electrical engineering maintenance  |
       |Locksmith services                                 |
@@ -213,6 +216,7 @@ Feature: Assessed Value - Scenario 1a - One service has no framework rate
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Mechanical and electrical engineering maintenance  |
       |Locksmith services                                 |

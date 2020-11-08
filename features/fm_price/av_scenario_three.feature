@@ -28,6 +28,7 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Mechanical and electrical engineering maintenance  |
       |Professional snow & ice clearance                  |
@@ -53,6 +54,7 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Mechanical and electrical engineering maintenance  |
       |Professional snow & ice clearance                  |
@@ -78,6 +80,7 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Mechanical and electrical engineering maintenance  |
       |Ventilation and air conditioning system maintenance|
@@ -107,6 +110,7 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Mechanical and electrical engineering maintenance  |
       |Ventilation and air conditioning system maintenance|
@@ -137,6 +141,7 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Mechanical and electrical engineering maintenance  |
       |Ventilation and air conditioning system maintenance|
@@ -166,6 +171,7 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Mechanical and electrical engineering maintenance  |
       |Ventilation and air conditioning system maintenance|

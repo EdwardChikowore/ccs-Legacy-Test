@@ -30,6 +30,7 @@ Feature: Assessed value Scenario Zero - All services has Benchmark and framework
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Mechanical and electrical engineering maintenance  |
       |Routine cleaning                                   |
@@ -55,6 +56,7 @@ Feature: Assessed value Scenario Zero - All services has Benchmark and framework
     And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Mechanical and electrical engineering maintenance  |
       |Routine cleaning                                   |
@@ -82,6 +84,7 @@ Feature: Assessed value Scenario Zero - All services has Benchmark and framework
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Mechanical and electrical engineering maintenance  |
       |Routine cleaning                                   |
@@ -110,6 +113,7 @@ Feature: Assessed value Scenario Zero - All services has Benchmark and framework
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Mechanical and electrical engineering maintenance  |
       |Routine cleaning                                   |
@@ -139,6 +143,7 @@ Feature: Assessed value Scenario Zero - All services has Benchmark and framework
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Ventilation and air conditioning system maintenance |
       |Lifts, hoists & conveyance systems maintenance      |
@@ -230,6 +235,7 @@ Feature: Assessed value Scenario Zero - All services has Benchmark and framework
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Ventilation and air conditioning system maintenance |
       |Lifts, hoists & conveyance systems maintenance      |
@@ -329,6 +335,7 @@ Feature: Assessed value Scenario Zero - All services has Benchmark and framework
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Ventilation and air conditioning system maintenance |
       |Lifts, hoists & conveyance systems maintenance      |
@@ -428,6 +435,7 @@ Feature: Assessed value Scenario Zero - All services has Benchmark and framework
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
+    And I click on open all
     And I click on the following services:
       |Mechanical and electrical engineering maintenance  |
       |Routine cleaning                                   |

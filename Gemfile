@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'capybara'
+gem 'capybara', '< 3.18'
 gem 'selenium-webdriver'
-gem 'cucumber', "3.0.2"
+gem 'cucumber'
 gem 'rspec'
 gem 'site_prism'
 # gem 'chromedriver-helper'
