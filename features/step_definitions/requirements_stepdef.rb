@@ -363,23 +363,6 @@ And(/^I am on buildings page$/) do
   expect(common.header_one.text).to end_with("Buildings")
 end
 
-And(/^I find and select "([^"]*)"$/) do |text|
-  continue = true
-
-  while continue
-    if common.text.include? text
-      find('span', text: text).click
-      continue = false
-    else
-      if first('.ccs-pagination')
-        common.next_pagination.click
-      else
-        fail("Cannot find Building with name #{text}")
-      end
-    end
-  end
-end
-
 Then(/^I am on Assigning services to buildings summary page$/) do
   expect(common.header_one.text).to end_with("Assigning services to buildings summary")
 end

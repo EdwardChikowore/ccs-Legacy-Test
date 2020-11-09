@@ -88,7 +88,7 @@ end
 
 And(/^I find and select my building$/) do
   step "I find and select \"#{@building_name}\""
-  step "I click on \"Save and continue\""
+  step "I click on save and continue button"
 end
 
 And(/^The cleaning of external area volume details displayed are:$/) do |table|
@@ -172,6 +172,27 @@ end
 Then(/^I add a new name for the building/) do
   @building_name = "z_auto" + SecureRandom.uuid
   building.building_name.set(@building_name)
+end
+
+And(/^I enter "([^"]*)" for the postcode$/)do |text|
+  building.postcode_entry.set(text)
+end
+
+And(/^I find and select "([^"]*)"$/) do |text|
+  continue = true
+
+  while continue
+    if common.text.include? text
+      find('label', text: text).click
+      continue = false
+    else
+      if first('.ccs-pagination')
+        building.next_pagination.click
+      else
+        fail("Cannot find Building with name #{text}")
+      end
+    end
+  end
 end
 
 And(/^I add a new building/) do

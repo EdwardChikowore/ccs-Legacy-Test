@@ -25,17 +25,12 @@ end
 
 Then(/^I click on open all$/) do
   value = common.open_all.text
-  common.open_all.click if value == "Open all\nsections"
+  common.open_all.click if value ==  "Open all sections"
 end
 
 Then(/^I click on close all$/) do
   value = common.open_all.text
-  common.open_all.click if value == "Close all\nsections"
-end
-
-Then(/^I click on save and continue button$/) do
-  page.execute_script('arguments[0].scrollIntoView(true)', common.save_and_continue)
-  click_button "Save and continue"
+  common.open_all.click if value == "Close all sections"
 end
 
 And(/^I should see the following error messages$/) do |table|
@@ -93,6 +88,12 @@ Then(/^I click on save and return$/) do
 end
 
 Then(/^I click on save and continue$/) do
+  click_on 'Save and continue'
+end
+
+Then(/^I click on save and continue button$/) do
+
+  page.execute_script('arguments[0].scrollIntoView(true)', common.save_and_continue)
   click_on 'Save and continue'
 end
 

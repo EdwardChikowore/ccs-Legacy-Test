@@ -28,7 +28,7 @@ And(/^The following is displayed on quick search filter section:$/) do |table|
 end
 
 And(/^The up to 7m is displayed$/) do
-  expect(quickview.long_list.up_to_7m.text).to eq("up to\n£7m")
+  expect(quickview.long_list.up_to_7m.text).to eq("up to £7m")
 end
 
 And(/^The sublot 1a is displayed$/) do
@@ -36,7 +36,7 @@ And(/^The sublot 1a is displayed$/) do
 end
 
 And(/^The between 7m and 50m is displayed$/) do
-  expect(quickview.long_list.between_7_and_50.text).to eq("between\n£7m-50m")
+  expect(quickview.long_list.between_7_and_50.text).to eq("between £7m-50m")
 end
 
 And(/^The sublot 1b is displayed:$/) do |text|
@@ -44,7 +44,7 @@ And(/^The sublot 1b is displayed:$/) do |text|
 end
 
 And(/^The over 50m is displayed$/) do
-  expect(quickview.long_list.over_50.text).to eq("over\n£50m")
+  expect(quickview.long_list.over_50.text).to eq("over £50m")
 end
 
 And(/^The following heading text is displayed:$/)do |table|

@@ -231,12 +231,12 @@ Feature: Direct Award scenario One
     And I click on the Direct award route to market
     And I click on "Continue"
     And the lowest priced supplier is "Wolf-Wiza" and contract price is £234,870.30
-    And the second subsequent supplier is "Supplier 2" and contract price is £250,298.86
-    And the third subsequent supplier is "Supplier 3" and contract price is £251,029.94
-    And the fourth subsequent supplier is "Supplier 4" and contract price is £260,968.75
-    And the fifth subsequent supplier is "Supplier 5" and contract price is £262,412.28
-    And the sixth subsequent supplier is "Supplier 6" and contract price is £267,133.45
-    And the seventh subsequent supplier is "Supplier 7" and contract price is £278,186.69
-    And the eighth subsequent supplier is "Supplier 8" and contract price is £279,993.33
-    And the ninth subsequent supplier is "Supplier 9" and contract price is £282,709.24
-    And the tenth subsequent supplier is "Supplier 10" and contract price is £296,928.35
+#    And the second subsequent supplier is "Supplier 2" and contract price is £250,298.86
+#    And the third subsequent supplier is "Supplier 3" and contract price is £251,029.94
+#    And the fourth subsequent supplier is "Supplier 4" and contract price is £260,968.75
+#    And the fifth subsequent supplier is "Supplier 5" and contract price is £262,412.28
+#    And the sixth subsequent supplier is "Supplier 6" and contract price is £267,133.45
+#    And the seventh subsequent supplier is "Supplier 7" and contract price is £278,186.69
+#    And the eighth subsequent supplier is "Supplier 8" and contract price is £279,993.33
+#    And the ninth subsequent supplier is "Supplier 9" and contract price is £282,709.24
+#    And the tenth subsequent supplier is "Supplier 10" and contract price is £296,928.35

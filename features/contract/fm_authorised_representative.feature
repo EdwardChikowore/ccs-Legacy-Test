@@ -110,7 +110,7 @@ Feature: Facilities Management - DA - Contract - Authorised representative
       | Postcode             | NW1 4DF              |
     And I click on "Continue"
     Then I should see address:
-      |112 Strongbow Road, Westminister NW1 4DF\nChange|
+      |112 Strongbow Road, Westminister NW1 4DF Change|
 
   Scenario: Contract - Authorise Representative Details Select - Select new authorised representative - Add Address - Return without save
     When I click on third change link for "Authorised representative details"
@@ -146,13 +146,13 @@ Feature: Facilities Management - DA - Contract - Authorised representative
     And I click on "Save and return"
     Then I am on "Authorised representative details" page
     And I should see authorised representative details:
-      |Auto Test, Test Analyst\n151 Buckingham Palace Road, London SW1W 9SZ\nChange|
+      |Auto Test, Test Analyst 151 Buckingham Palace Road, London SW1W 9SZ Change|
     And I click on "Continue"
     And I am on "Contract details" page
     And I should see contract details "Auto Test, Test Analyst" displayed
     And I expand the contact details
     Then I should see the contract details:
-    |Auto Test, Test Analyst\ntest@test.com\nTelephone: 07749228342\nAddress: 151 Buckingham Palace Road, London SW1W 9SZ|
+    |Auto Test, Test Analyst test@test.com Telephone: 07749228342 Address: 151 Buckingham Palace Road, London SW1W 9SZ|
 
   Scenario: - Contract - Authorise Representative Details Select - Select new authorised representative - Add Address manually - Save
     When I click on third change link for "Authorised representative details"
@@ -174,11 +174,11 @@ Feature: Facilities Management - DA - Contract - Authorised representative
       | Postcode             | NW1 4DF              |
     And I click on "Continue"
     Then I should see address:
-      |112 Strongbow Road, Westminister NW1 4DF\nChange|
+      |112 Strongbow Road, Westminister NW1 4DF Change|
     When I click on "Save and return"
     And I am on "Authorised representative details" page
     Then I should see authorised representative details:
-    |Auto Test, Test Analyst\n112 Strongbow Road, Westminister NW1 4DF\nChange|
+    |Auto Test, Test Analyst 112 Strongbow Road, Westminister NW1 4DF Change|
 
   Scenario: - Contract - Authorise Representative Details Select - Select new authorised representative - change address - Save
     When I click on third change link for "Authorised representative details"
@@ -197,7 +197,7 @@ Feature: Facilities Management - DA - Contract - Authorised representative
     And I click on "Save and return"
     Then I am on "Authorised representative details" page
     And I should see authorised representative details:
-      |Auto Test, Test Analyst\n151 Buckingham Palace Road, London SW1W 9SZ\nChange|
+      |Auto Test, Test Analyst 151 Buckingham Palace Road, London SW1W 9SZ Change|
     And I click on "Change"
     And I enter the following details into the form:
       | Name          | Sam Smith         |
@@ -212,9 +212,9 @@ Feature: Facilities Management - DA - Contract - Authorised representative
     And I click on "Save and return"
     And I am on "Authorised representative details" page
     And I should see authorised representative details:
-      |Sam Smith, Project Manager\n90 Old Hall Street, Liverpool L3 9PP\nChange|
+      |Sam Smith, Project Manager 90 Old Hall Street, Liverpool L3 9PP Change|
     And I click on "Continue"
     And I should see contract details "Sam Smith, Project Manager" displayed
     And I expand the contact details
     Then I should see the contract details:
-      |Sam Smith, Project Manager\ntest123@test.com\nTelephone: 07749228342\nAddress: 90 Old Hall Street, Liverpool L3 9PP|
+      |Sam Smith, Project Manager test123@test.com Telephone: 07749228342 Address: 90 Old Hall Street, Liverpool L3 9PP|

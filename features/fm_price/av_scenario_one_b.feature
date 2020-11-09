@@ -29,7 +29,6 @@ Feature: Assessed Value - Scenario 1b - One service has no benchmark and framewo
     And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_false" option
     Then I navigate to services page
-    And I click on open all
     And I click on the following services:
       | Mechanical and electrical engineering maintenance |
       | Professional snow & ice clearance                 |

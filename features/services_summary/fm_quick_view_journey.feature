@@ -14,7 +14,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
     And I click on the "Building management system (BMS) maintenance"
     And I click on "Continue"
     And I click on open all
-    And I select Tees Valley and Durham
+    And I click on Tees Valley and Durham
     And I click on "Continue"
     And I add contract name
     And I click on "Save and continue to procurement"
@@ -39,7 +39,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
     And I click on the "Building management system (BMS) maintenance"
     And I click on "Continue"
       And I click on open all
-    And I select Tees Valley and Durham
+    And I click on Tees Valley and Durham
     And I click on "Continue"
     And I add contract name
     And I click on "Save and continue to procurement"
@@ -50,7 +50,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
     And I am on "Services summary" page
     When I click on "Change"
     Then I am on the "Select the facilities management services you need" page
-    And I should see text "4 services selected"
+    And I should see text "4 services selected" in the service selection basket
     And I click on save and continue
     Then I am on the "You have selected" page
 		And The following summary text is displayed: 
@@ -77,7 +77,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
 		And I click on the "Management of billable works"
     And I click on "Continue"
       And I click on open all
-    And I select Tees Valley and Durham
+    And I click on Tees Valley and Durham
     And I click on "Continue"
     And I add contract name
     And I click on "Save and continue to procurement"
@@ -107,7 +107,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
 		And I click on the "Management of billable works"
     And I click on "Continue"
       And I click on open all
-    And I select Tees Valley and Durham
+    And I click on Tees Valley and Durham
     And I click on "Continue"
     And I add contract name
     And I click on "Save and continue to procurement"
@@ -139,7 +139,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
 		And I click on the "Management of billable works"
     And I click on "Continue"
       And I click on open all
-    And I select Tees Valley and Durham
+    And I click on Tees Valley and Durham
     And I click on "Continue"
     And I add contract name
     And I click on "Save and continue to procurement"
@@ -166,7 +166,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
     And I click on the "Building management system (BMS) maintenance"
     And I click on "Continue"
       And I click on open all
-    And I select Tees Valley and Durham
+    And I click on Tees Valley and Durham
     And I click on "Continue"
     And I add contract name
     And I click on "Save and continue to procurement"
@@ -183,6 +183,6 @@ Feature: FM - Quick View - Requirements - Services - Service summary
 			| Building management system (BMS) maintenance | 
     When I click on "Change"
     Then I am on the "Select the facilities management services you need" page
-    And I should see text "4 services selected"
+    And I should see text "4 services selected" in the service selection basket
     And I click on return to requirements
     Then I am on the "1. Contract details" page

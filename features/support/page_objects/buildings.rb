@@ -99,6 +99,9 @@ element :security_type_textbox, '#facilities_management_building_other_security_
 elements :building_change_link, 'td > a'
 element :building_status_tag, '.govuk-tag:nth-child(2)'
 
+element :postcode_entry, '.postcode-entry'
 
+element :next_pagination, 'li.ccs-last > button'
+element :previous_pagination, 'li.ccs-first > button'
 
 end

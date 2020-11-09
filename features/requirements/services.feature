@@ -23,7 +23,7 @@ Feature:Services
     And I click on "Save and continue"
     And I am on "Services summary" page
 		And The following summary text is displayed: 
-			|1\nservice|
+			|1 service|
     When I click on "Change"
     And I am on "Services" page
 		And I click on the "High voltage (HV) and switchgear maintenance"
@@ -31,14 +31,14 @@ Feature:Services
 		When I click on save and continue
 		Then I am on "Services summary" page
 		And The following summary text is displayed: 
-			| 3\nservices|
+			| 3 services|
 
   Scenario: Navigate to services summary page
 		And I click on the "Building management system (BMS) maintenance"
 		And I click on "Save and continue"
 		Then I am on "Services summary" page
 		And The following summary text is displayed: 
-			| 1\nservice |
+			| 1 service |
 
   Scenario: Navigate to requirements page
     And I click on "Return to requirements"

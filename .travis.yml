@@ -8,4 +8,4 @@ before_install:
   - curl "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip" -O
   - unzip chromedriver_linux64.zip -d ~/bin
 script:
-  - bundle exec cucumber
+  - bundle exec cucumber ACCOUNT_USERNAME=$ACCOUNT_USERNAME ACCOUNT_PASSWORD=$ACCOUNT_PASSWORD BUYER_USERNAME=$BUYER_USERNAME BUYER_PASSWORD=$BUYER_PASSWORD

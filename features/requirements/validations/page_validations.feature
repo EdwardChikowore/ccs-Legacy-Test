@@ -180,7 +180,7 @@ Feature: Requirements validations
       When I click on "Save and continue"
 		Then I am on "Services summary" page   
 		And The following summary text is displayed:
-			| 2\nservices |
+			| 2 services |
     And I click on "Return to requirements"
 		And The services status tag is "COMPLETED"
     When I click on "Continue to results"
@@ -201,7 +201,7 @@ Feature: Requirements validations
       When I click on "Save and continue"
 		Then I am on "Services summary" page   
 		And The following summary text is displayed: 
-			| 2\nservices |
+			| 2 services |
     And I click on "Return to requirements"
     When I click on "Buildings"
     And I am on "Buildings" page
@@ -229,7 +229,7 @@ Feature: Requirements validations
       When I click on "Save and continue"
 		Then I am on "Services summary" page   
 		And The following summary text is displayed: 
-			| 2\nservices |
+			| 2 services |
     And I click on "Return to requirements"
     When I click on "Buildings"
     Then I am on "Buildings" page
@@ -237,7 +237,7 @@ Feature: Requirements validations
     And I click on "Save and continue"
     And I am on "Buildings summary" page
       And The following building summary text is displayed:
-        | 1\nbuilding |
+        | 1 building |
     And I click on "Return to requirements"
       When I click on "Assigning services to buildings"
       And I click on the first building
@@ -264,7 +264,7 @@ Feature: Requirements validations
       And I click on "Save and continue"
 		Then I am on "Services summary" page   
 		And The following summary text is displayed: 
-			| 2\nservices |
+			| 2 services |
     And I click on "Return to requirements"
     When I click on "Buildings"
     Then I am on "Buildings" page
@@ -272,7 +272,7 @@ Feature: Requirements validations
     And I click on "Save and continue"
     And I am on "Buildings summary" page
       And The following building summary text is displayed:
-        | 1\nbuilding |
+        | 1 building |
     And I click on "Return to requirements"
       When I click on "Assigning services to buildings"
     And I click on the first building
@@ -298,7 +298,7 @@ Feature: Requirements validations
 		When I click on "Save and continue"
 		Then I am on "Services summary" page   
 		And The following summary text is displayed: 
-			| 2\nservices |
+			| 2 services |
     And I click on "Return to requirements"
     When I click on "Buildings"
     Then I am on "Buildings" page
@@ -306,7 +306,7 @@ Feature: Requirements validations
     And I click on "Save and continue"
     And I am on "Buildings summary" page
       And The following building summary text is displayed:
-        | 1\nbuilding |
+        | 1 building |
     And I click on "Return to requirements"
       When I click on "Assigning services to buildings"
       And I click on the first building
@@ -367,7 +367,7 @@ Feature: Requirements validations
 		And I click on "Save and continue"
 		Then I am on "Services summary" page   
 		And The following summary text is displayed: 
-			| 2\nservices |
+			| 2 services |
     And I click on "Return to requirements"
     When I click on "Buildings"
     Then I am on "Buildings" page
@@ -375,7 +375,7 @@ Feature: Requirements validations
     And I click on "Save and continue"
     And I am on "Buildings summary" page
       And The following building summary text is displayed:
-        | 1\nbuilding |
+        | 1 building |
     And I click on "Return to requirements"
       When I click on "Assigning services to buildings"
       And I click on the first building

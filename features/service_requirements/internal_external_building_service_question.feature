@@ -13,7 +13,7 @@ Feature:Internal & external building fabric maintenance
     And I assign services to buildings
     And I click on "Service requirements"
     And I am on "Service requirements summary" page
-    And I click on the first building on the service requirements summary page
+    And I click on the first building
 
   Scenario: Selecting building service standards
     When I am on the "Service requirements" page
