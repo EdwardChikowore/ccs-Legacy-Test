@@ -8,7 +8,7 @@ before_install:
   - curl "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip" -O
   - unzip chromedriver_linux64.zip -d ~/bin
 script:
-  - bundle exec cucumber parallel_cucumber features/ -o "ACCOUNT_USERNAME=$ACCOUNT_USERNAME ACCOUNT_PASSWORD=$ACCOUNT_PASSWORD BUYER_USERNAME=$BUYER_USERNAME BUYER_PASSWORD=$BUYER_PASSWORD"""
+  - bundle exec parallel_cucumber features/ -o "ACCOUNT_USERNAME=$ACCOUNT_USERNAME ACCOUNT_PASSWORD=$ACCOUNT_PASSWORD BUYER_USERNAME=$BUYER_USERNAME BUYER_PASSWORD=$BUYER_PASSWORD"""
 deploy:
   provider: s3
   access_key_id: AKIAIN3M44BAB64RBO5A
