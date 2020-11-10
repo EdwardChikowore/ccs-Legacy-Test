@@ -1,6 +1,6 @@
 language: ruby
 os: linux
-dist: xenial
+dist: trusty
 before_install:
   - gem install bundler
   - CHROME_MAIN_VERSION=`google-chrome-stable --version | sed -E 's/(^Google Chrome |\.[0-9]+ )//g'`
