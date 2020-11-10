@@ -89,7 +89,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
 		| 116 services |
     And I click on "Change"
     When I am on the "Select the facilities management services you need" page
-    Then I should see text "116 services selected"
+    Then I should see text "116 services selected" in the service selection basket
 
 	Scenario: FM - Services - Requirements - Service Summary - Services - Remove all error
     And I select all maintenance services
@@ -117,7 +117,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
     And I am on "Services summary" page
     When I click on "Change"
     And I am on the "Select the facilities management services you need" page
-    And I should see text "116 services selected"
+    And I should see text "116 services selected" in the service selection basket
     And I click on "Remove all"
     Then I click on save and continue
     Then I should see the following error messages
@@ -149,7 +149,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
     And I am on "Services summary" page
     And I click on "Change"
     And I am on the "Select the facilities management services you need" page
-    And I should see text "116 services selected"
+    And I should see text "116 services selected" in the service selection basket
 		And I click on open all
     And I select all catering services
     And I select all cleaning services
