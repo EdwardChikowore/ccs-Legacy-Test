@@ -22,7 +22,7 @@ Feature:Facilities Management - DA - Contract - Review contract
     And I am on "Contract details" page
     And I click on the first question for "Payment method"
     And I am on "Payment method" page
-    And I click on save and continue button
+    And I click on save and return
     Then I should see the following error messages
       | Select one payment method |
 

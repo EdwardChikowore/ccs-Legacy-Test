@@ -35,10 +35,11 @@ class Dadraft < SitePrism::Page
   elements :contract_details_text, 'tr > th'
   element :invoiving_contact_details_error, 'div > ul > li'
   elements :contract_details_change_link, 'td > a'
-  element :selected_address_container, '#selected-address-container'
+  element :selected_address_container, '#full-address'
   element :enter_invoice_manually, '#add_new_invoice_contact_details_address_1'
   element :enter_authorised_manually, '#add_new_authorised_contact_details_address_1'
   element :enter_notices_manually, '#add_new_notices_contact_details_address_1'
+  element :enter_address_manually, '#cant-find-address-link'
 
   elements :contract_details_value, '[data-module="govuk-details"]'
   element :contract_details_value_one, '[data-module="govuk-details"]'
@@ -50,7 +51,7 @@ class Dadraft < SitePrism::Page
 
   elements :review_contract_expand, '[data-module="govuk-details"] > div'
 
-  element :change_address, '#change-selected-address-link'
+  element :change_address, '#change-input-2'
 
   element :government_procurement_card, '#facilities_management_procurement_payment_method_card'
   elements :contract_document_link, 'ul > li > a'
