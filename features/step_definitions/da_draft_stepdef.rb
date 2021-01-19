@@ -308,7 +308,7 @@ Then(/^I complete the contract details/) do
   step "I am on \"Contract details\" page"
   step "I click on the question for Local Government Pension Scheme"
   step "I select pension option"
-  step "I click on \"Save and continue\""
+  step "I click on save and continue button"
   step "I am on \"Contract details\" page"
   step "I click on the question for Governing law"
   step "I select english law"
