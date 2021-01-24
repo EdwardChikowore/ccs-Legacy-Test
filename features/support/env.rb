@@ -19,6 +19,8 @@ require_relative '../support/capybara_driver.helper'
 
 World(Pages)
 
+Webdrivers::Chromedriver.update
+
 configure = YAML.load_file("config/environment.yml")
 ENV['TEST_ENV'] ||= 'cmpdev'
 test_env = ENV['TEST_ENV'].downcase
