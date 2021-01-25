@@ -83,6 +83,7 @@ Feature: Facilities Management - DA - Contract - Authorised representative
       | Job title            | Test Analyst    |
       | Email address        | test@test.com   |
       | Postcode             | SW1W 9SZ        |
+    And I click on "Find address"
     And I click on enter authorised representative address manually
     And I am on "Add address" page
     And I click on "Continue"
@@ -102,6 +103,7 @@ Feature: Facilities Management - DA - Contract - Authorised representative
       | Job title            | Test Analyst    |
       | Email address        | test@test.com   |
       | Postcode             | SW1W 9SZ        |
+    And I click on "Find address"
     And I click on enter authorised representative address manually
     And I am on "Add address" page
     And I enter the following details into the form:
@@ -125,7 +127,7 @@ Feature: Facilities Management - DA - Contract - Authorised representative
       | Postcode             | SW1W 9SZ        |
       | Telephone number     | 07749228342     |
     And I click on "Find address"
-    And I select address "151 Buckingham Palace Road, London SW1W 9SZ" from the drop down option
+    And I select address "151 Buckingham Palace Road, London" from the drop down option
     And I click on "Return to authorised representative details"
     Then I am on "Authorised representative details" page
 
@@ -142,7 +144,7 @@ Feature: Facilities Management - DA - Contract - Authorised representative
       | Postcode             | SW1W 9SZ        |
       | Telephone number     | 07749228342     |
     And I click on "Find address"
-    And I select address "151 Buckingham Palace Road, London SW1W 9SZ" from the drop down option
+    And I select address "151 Buckingham Palace Road, London" from the drop down option
     And I click on "Save and return"
     Then I am on "Authorised representative details" page
     And I should see authorised representative details:
@@ -166,6 +168,7 @@ Feature: Facilities Management - DA - Contract - Authorised representative
       | Email address        | test@test.com   |
       | Postcode             | SW1W 9SZ        |
       | Telephone number     | 07749228342     |
+    And I click on "Find address"
     And I click on enter authorised representative address manually
     And I am on "Add address" page
     And I enter the following details into the form:
@@ -193,7 +196,7 @@ Feature: Facilities Management - DA - Contract - Authorised representative
       | Postcode             | SW1W 9SZ        |
       | Telephone number     | 07749228342     |
     And I click on "Find address"
-    And I select address "151 Buckingham Palace Road, London SW1W 9SZ" from the drop down option
+    And I select address "151 Buckingham Palace Road, London" from the drop down option
     And I click on "Save and return"
     Then I am on "Authorised representative details" page
     And I should see authorised representative details:
@@ -208,7 +211,7 @@ Feature: Facilities Management - DA - Contract - Authorised representative
     And I enter the following details into the form:
       | Postcode      | L3 9PP            |
     And I click on "Find address"
-    And I select address "90 Old Hall Street, Liverpool L3 9PP" from the drop down option
+    And I select address "90 Old Hall Street, Liverpool" from the drop down option
     And I click on "Save and return"
     And I am on "Authorised representative details" page
     And I should see authorised representative details:

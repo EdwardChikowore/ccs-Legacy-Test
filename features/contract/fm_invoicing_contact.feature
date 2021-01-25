@@ -81,6 +81,7 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
       | Job title            | Test Analyst    |
       | Email address        | test@test.com   |
       | Postcode             | SW1W 9SZ        |
+    And  I click on "Find address"
     And I click on enter invoicing address manually
     And I am on "Add address" page
     And I click on "Continue"
@@ -100,6 +101,7 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
      | Job title            | Test Analyst    |
      | Email address        | test@test.com   |
      | Postcode             | SW1W 9SZ        |
+    And  I click on "Find address"
    And I click on enter invoicing address manually
    And I am on "Add address" page
    And I enter the following details into the form:
@@ -122,7 +124,7 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
       | Email address        | test@test.com   |
       | Postcode             | SW1W 9SZ        |
     And I click on "Find address"
-    And I select address "151 Buckingham Palace Road, London SW1W 9SZ" from the drop down option
+    And I select address "151 Buckingham Palace Road, London" from the drop down option
     And I click on "Save and return"
     And I am on "Invoicing contact details" page
     And I should see new invoicing contact details:
@@ -146,7 +148,7 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
       | Email address        | test@test.com   |
       | Postcode             | SW1W 9SZ        |
     And I click on "Find address"
-    And I select address "151 Buckingham Palace Road, London SW1W 9SZ" from the drop down option
+    And I select address "151 Buckingham Palace Road, London" from the drop down option
     And I click on "Return to invoicing contact details"
     Then I am on "Invoicing contact details" page
 
@@ -161,6 +163,7 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
       | Job title            | Test Analyst    |
       | Email address        | test@test.com   |
       | Postcode             | SW1W 9SZ        |
+    And I click on "Find address"
     And I click on enter invoicing address manually
     And I am on "Add address" page
     And I enter the following details into the form:
@@ -187,7 +190,7 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
       | Email address        | test@test.com   |
       | Postcode             | SW1W 9SZ        |
     And I click on "Find address"
-    And I select address "151 Buckingham Palace Road, London SW1W 9SZ" from the drop down option
+    And I select address "151 Buckingham Palace Road, London" from the drop down option
     And I click on "Save and return"
     And I am on "Invoicing contact details" page
     And I should see new invoicing contact details:
@@ -201,7 +204,7 @@ Feature:  Facilities Management - Contract Details - Invoicing Contact
     And I enter the following details into the form:
       | Postcode      | L3 9PP            |
     And I click on "Find address"
-    And I select address "90 Old Hall Street, Liverpool L3 9PP" from the drop down option
+    And I select address "90 Old Hall Street, Liverpool" from the drop down option
     And I click on "Save and return"
     And I am on "Invoicing contact details" page
     And I should see new invoicing contact details:

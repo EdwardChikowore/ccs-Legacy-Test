@@ -128,7 +128,7 @@ Feature:Manage Building
     Then I am on "Building type" page
     When I click on "Save and continue"
     Then I should see the following error messages
-      |You must select a building type or describe your own |
+      |You must select a building type or describe your own|
     When I click on view more building type link
     And I click on building type other
     When I click on "Save and continue"

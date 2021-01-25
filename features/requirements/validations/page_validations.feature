@@ -60,7 +60,7 @@ Feature: Requirements validations
     And I enter the number of year as "2"
     And I enter the day as "2"
     And I enter the month as "2"
-    And I enter the year as "2021"
+    And I enter the year as "2024"
     And I click on the "facilities_management_procurement_mobilisation_period_required_true" option
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option
@@ -82,7 +82,7 @@ Feature: Requirements validations
     And I enter the number of year as "2"
     And I enter the day as "2"
     And I enter the month as "2"
-    And I enter the year as "2021"
+    And I enter the year as "2024"
     And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_false" option
     And I click on "Save and continue"
@@ -115,7 +115,7 @@ Feature: Requirements validations
     And I enter the number of year as "2"
     And I enter the day as "2"
     And I enter the month as "2"
-    And I enter the year as "2021"
+    And I enter the year as "2024"
     And I click on the "facilities_management_procurement_mobilisation_period_required_true" option
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option
@@ -147,7 +147,7 @@ Feature: Requirements validations
     And I enter the number of year as "2"
     And I enter the day as "2"
     And I enter the month as "2"
-    And I enter the year as "2021"
+    And I enter the year as "2024"
     And I click on the "facilities_management_procurement_mobilisation_period_required_true" option
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option
@@ -353,7 +353,7 @@ Feature: Requirements validations
     And I enter the number of year as "2"
     And I enter the day as "2"
     And I enter the month as "2"
-    And I enter the year as "2021"
+    And I enter the year as "2024"
     And I click on the "facilities_management_procurement_mobilisation_period_required_true" option
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_false" option

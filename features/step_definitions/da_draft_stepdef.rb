@@ -155,7 +155,7 @@ And(/^The payment method should be "([^"]*)"$/) do |details|
 end
 
 And(/^I click on enter authorised representative address manually$/) do
-  dadraft.enter_authorised_manually.click
+  dadraft.enter_address_manually.click
 end
 
 And(/^I should see address:$/) do |table|
@@ -165,7 +165,7 @@ And(/^I should see address:$/) do |table|
 end
 
 And(/^I select address "([^"]*)" from the drop down option$/) do |address|
-  find("#buyer-details-postcode-lookup-results option[value='#{address}']").select_option
+  find("#address-results-container option[value='#{address}']").select_option
 end
 
 And(/^I should see authorised representative details:$/) do |table|
@@ -217,7 +217,7 @@ And(/^contract documents page have links$/) do
 end
 
 And(/^I click on enter invoicing address manually$/) do
-  dadraft.enter_invoice_manually.click
+  dadraft.enter_address_manually.click
 end
 
 Then(/^the lowest priced supplier is "([^"]*)" and contract price is (.+)$/) do |supplier, contract_price|
@@ -308,7 +308,7 @@ Then(/^I complete the contract details/) do
   step "I am on \"Contract details\" page"
   step "I click on the question for Local Government Pension Scheme"
   step "I select pension option"
-  step "I click on \"Save and continue\""
+  step "I click on save and continue button"
   step "I am on \"Contract details\" page"
   step "I click on the question for Governing law"
   step "I select english law"
