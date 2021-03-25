@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Pages
   def account
     @account ||= Account.new
@@ -18,7 +20,6 @@ module Pages
   def dadraft
     @dadraft ||= Dadraft.new
   end
-
 
   def quickview
     @quickview ||= Quickview.new
@@ -46,4 +47,4 @@ module WaitUntil
       wait.until(&block)
     end
   end
-  end
+end

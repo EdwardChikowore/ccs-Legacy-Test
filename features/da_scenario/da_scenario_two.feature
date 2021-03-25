@@ -78,7 +78,7 @@ Feature: Direct Award scenario Two
     And I click on "Save and return"
     And I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "1"
+    And I enter '1' years and '0' months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2023"

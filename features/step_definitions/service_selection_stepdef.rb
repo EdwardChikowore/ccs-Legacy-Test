@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 And(/^I select all services listed for Management of billable works$/) do
   quickview.management_billable.select_all.click
 end
@@ -12,7 +14,7 @@ end
 
 And(/^The following catering services displayed:$/) do |table|
   table.transpose.raw.flatten.each do |item|
-    expect(page).to have_css('#procurement-services-accordion-content-4', text: item)
+    expect(page).to have_css('#accordion-with-summary-sections-for-choose-services-content-4', text: item)
   end
 end
 
@@ -22,7 +24,7 @@ end
 
 And(/^The following cleaning services are displayed:$/) do |table|
   table.transpose.raw.flatten.each do |item|
-    expect(page).to have_css('#procurement-services-accordion-content-5', text: item)
+    expect(page).to have_css('#accordion-with-summary-sections-for-choose-services-content-5', text: item)
   end
 end
 
@@ -32,7 +34,7 @@ end
 
 And(/^The following helpdesk service is displayed:$/) do |table|
   table.transpose.raw.flatten.each do |item|
-    expect(page).to have_css('#procurement-services-accordion-content-12', text: item)
+    expect(page).to have_css('#accordion-with-summary-sections-for-choose-services-content-12', text: item)
   end
 end
 
@@ -42,7 +44,7 @@ end
 
 And(/^The following horticultural services are displayed:$/) do |table|
   table.transpose.raw.flatten.each do |item|
-    expect(page).to have_css('#procurement-services-accordion-content-2', text: item)
+    expect(page).to have_css('#accordion-with-summary-sections-for-choose-services-content-2', text: item)
   end
 end
 
@@ -52,7 +54,7 @@ end
 
 And(/^The following maintenance services are displayed:$/) do |table|
   table.transpose.raw.flatten.each do |item|
-    expect(page).to have_css('#procurement-services-accordion-content-1', text: item)
+    expect(page).to have_css('#accordion-with-summary-sections-for-choose-services-content-1', text: item)
   end
 end
 
@@ -62,7 +64,7 @@ end
 
 And(/^The following miscellaneous services are displayed:$/) do |table|
   table.transpose.raw.flatten.each do |item|
-    expect(page).to have_css('#procurement-services-accordion-content-10', text: item)
+    expect(page).to have_css('#accordion-with-summary-sections-for-choose-services-content-10', text: item)
   end
 end
 
@@ -72,7 +74,7 @@ end
 
 And(/^The following reception services are displayed:$/) do |table|
   table.transpose.raw.flatten.each do |item|
-    expect(page).to have_css('#procurement-services-accordion-content-7', text: item)
+    expect(page).to have_css('#accordion-with-summary-sections-for-choose-services-content-7', text: item)
   end
 end
 
@@ -82,7 +84,7 @@ end
 
 And(/^The following security services are displayed:$/) do |table|
   table.transpose.raw.flatten.each do |item|
-    expect(page).to have_css('#procurement-services-accordion-content-8', text: item)
+    expect(page).to have_css('#accordion-with-summary-sections-for-choose-services-content-8', text: item)
   end
 end
 
@@ -92,7 +94,7 @@ end
 
 And(/^The following statutory services are displayed:$/) do |table|
   table.transpose.raw.flatten.each do |item|
-    expect(page).to have_css('#procurement-services-accordion-content-3', text: item)
+    expect(page).to have_css('#accordion-with-summary-sections-for-choose-services-content-3', text: item)
   end
 end
 
@@ -102,7 +104,7 @@ end
 
 And(/^The following waste services are displayed:$/) do |table|
   table.transpose.raw.flatten.each do |item|
-    expect(page).to have_css('#procurement-services-accordion-content-9', text: item)
+    expect(page).to have_css('#accordion-with-summary-sections-for-choose-services-content-9', text: item)
   end
 end
 
@@ -112,7 +114,7 @@ end
 
 And(/^The following workplace services are displayed:$/) do |table|
   table.transpose.raw.flatten.each do |item|
-    expect(page).to have_css('#procurement-services-accordion-content-6', text: item)
+    expect(page).to have_css('#accordion-with-summary-sections-for-choose-services-content-6', text: item)
   end
 end
 
@@ -125,9 +127,9 @@ And(/^I open the services selected$/) do
 end
 
 And(/^I should see the following services:$/) do |table|
-    table.transpose.raw.flatten.each do |item|
-      expect(page).to have_css('.filter-component-container', text: item)
-    end
+  table.transpose.raw.flatten.each do |item|
+    expect(page).to have_css('.filter-component-container', text: item)
+  end
 end
 
 And(/^I change service selection$/) do
@@ -155,17 +157,17 @@ Then(/^I select all services for second building$/) do
 end
 
 And(/^I select all services$/) do
-  step "I select all maintenance services"
-  step "I select all horticultural services"
-  step "I select all statutory services"
-  step "I select all catering services"
-  step "I select all cleaning services"
-  step "I select all workplace services"
-  step "I select all reception services"
-  step "I select all security services"
-  step "I select all waste services"
-  step "I select all miscellaneous services"
-  step "I select all cafm service"
-  step "I select all helpdesk services"
-  step "I select all services listed for Management of billable works"
+  step 'I select all maintenance services'
+  step 'I select all horticultural services'
+  step 'I select all statutory services'
+  step 'I select all catering services'
+  step 'I select all cleaning services'
+  step 'I select all workplace services'
+  step 'I select all reception services'
+  step 'I select all security services'
+  step 'I select all waste services'
+  step 'I select all miscellaneous services'
+  step 'I select all cafm service'
+  step 'I select all helpdesk services'
+  step 'I select all services listed for Management of billable works'
 end

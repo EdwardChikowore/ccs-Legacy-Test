@@ -9,7 +9,6 @@ cmpdev:
   buyer_username:
   buyer_password:
 preview:
-  host: https://cmp.fm-preview.crowncommercial.gov.uk/facilities-management
+  host: https://marketplace.preview.crowncommercial.gov.uk/facilities-management
   account_username:
   account_password:
-

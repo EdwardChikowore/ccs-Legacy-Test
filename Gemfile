@@ -1,25 +1,28 @@
+# frozen_string_literal: true
+
 source 'http://rubygems.org'
 
 gem 'capybara', '< 3.18'
-gem 'selenium-webdriver'
 gem 'cucumber'
 gem 'rspec'
+gem 'selenium-webdriver'
 gem 'site_prism'
 # gem 'chromedriver-helper'
+gem 'capybara-screenshot'
 gem 'git'
 gem 'pry'
 gem 'webdrivers'
-gem 'capybara-screenshot'
 
-gem "capybara-firebug"
-gem "require_all"
-gem "eyes_selenium"
-gem 'rails_helper'
-gem 'minitest-spec-rails'
+gem 'axe-matchers'
+gem 'capybara-firebug'
 gem 'csv'
-gem 'roo', '~> 2.4'
-gem 'nokogiri'
 gem 'cucumber-rails', require: false
 gem 'database_cleaner'
-gem 'axe-matchers'
+gem 'eyes_selenium'
+gem 'minitest-spec-rails'
+gem 'nokogiri'
 gem 'parallel_tests'
+gem 'rails', '~> 6.0.3', '>= 6.0.3.6'
+gem 'rails_helper'
+gem 'require_all'
+gem 'roo', '~> 2.4'

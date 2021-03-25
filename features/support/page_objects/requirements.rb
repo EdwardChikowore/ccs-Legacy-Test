@@ -1,6 +1,8 @@
-class Requirements < SitePrism::Page
+# frozen_string_literal: true
 
-  element :initial_call_off_period, '#facilities_management_procurement_initial_call_off_period'
+class Requirements < SitePrism::Page
+  element :initial_call_off_period_years, '#facilities_management_procurement_initial_call_off_period_years'
+  element :initial_call_off_period_months, '#facilities_management_procurement_initial_call_off_period_months'
 
   section :initial_start_date, 'div.govuk-date-input' do
     element :day, 'input[name="facilities_management_procurement[initial_call_off_start_date_dd]"]'
@@ -8,20 +10,46 @@ class Requirements < SitePrism::Page
     element :year, 'input[name="facilities_management_procurement[initial_call_off_start_date_yyyy]"]'
   end
 
-  section :mobilisation_radio, 'div[data-propertyname="Mobilisation period choice"]' do
+  section :mobilisation_radio, 'div:nth-child(4) > div > fieldset > div > div' do
     element :yes, '#facilities_management_procurement_mobilisation_period_required_true'
     element :period, '#facilities_management_procurement_mobilisation_period'
     element :no, '#facilities_management_procurement_mobilisation_period_required_false'
   end
 
-  section :procurement_extension_radio, 'div[data-propertyname="Extensions choice"]' do
-    element :extension_1, 'input#facilities_management_procurement_optional_call_off_extensions_1'
-    element :extension_2, 'input#facilities_management_procurement_optional_call_off_extensions_2'
-    element :extension_3, 'input#facilities_management_procurement_optional_call_off_extensions_3'
-    element :extension_4, 'input#facilities_management_procurement_optional_call_off_extensions_4'
-    element :add_extension_period, '#fm-add-contract-ext-btn'
-    element :yes, '#facilities_management_procurement_extensions_required_true'
-    element :no, '#facilities_management_procurement_extensions_required_false'
+  element :extension_required_yes, '#facilities_management_procurement_extensions_required_true'
+  element :extension_required_no, '#facilities_management_procurement_extensions_required_false'
+
+  section :optional_call_off_extensions, '#radio-inner-content-for-call-off-extensions' do
+    section :'1', '#extension-0-container' do
+      element :years, '#facilities_management_procurement_optional_call_off_extensions_attributes_0_years'
+      element :months, '#facilities_management_procurement_optional_call_off_extensions_attributes_0_months'
+      element :required,
+              '#facilities_management_procurement_optional_call_off_extensions_attributes_0_extension_required'
+      elements :error_messages, '.govuk-error-message'
+    end
+
+    section :'2', '#extension-1-container' do
+      element :years, '#facilities_management_procurement_optional_call_off_extensions_attributes_1_years'
+      element :months, '#facilities_management_procurement_optional_call_off_extensions_attributes_1_months'
+      element :remove, '#extension-1-remove-button'
+      elements :error_messages, '.govuk-error-message'
+    end
+
+    section :'3', '#extension-2-container' do
+      element :years, '#facilities_management_procurement_optional_call_off_extensions_attributes_2_years'
+      element :months, '#facilities_management_procurement_optional_call_off_extensions_attributes_2_months'
+      element :remove, '#extension-2-remove-button'
+      elements :error_messages, '.govuk-error-message'
+    end
+
+    section :'4', '#extension-3-container' do
+      element :years, '#facilities_management_procurement_optional_call_off_extensions_attributes_3_years'
+      element :months, '#facilities_management_procurement_optional_call_off_extensions_attributes_3_months'
+      element :remove, '#extension-3-remove-button'
+      elements :error_messages, '.govuk-error-message'
+    end
+
+    element :add_extension, '#add-contract-extension-button'
   end
 
   element :contract_name_status_tag, '#contract_name-tag > .govuk-tag'
@@ -45,6 +73,20 @@ class Requirements < SitePrism::Page
 
   element :select_all, '#box-all'
 
+  section :contract_period_summary, '#main-content > table' do
+    element :optional_call_off_extension, '#call-off-extension > td'
+
+    element :extension_1_length, '#call-off-extension-0 > td'
+    element :extension_2_length, '#call-off-extension-1 > td'
+    element :extension_3_length, '#call-off-extension-2 > td'
+    element :extension_4_length, '#call-off-extension-3 > td'
+
+    element :extension_1_period, '#call-off-extension-0-description > td:nth-child(2)'
+    element :extension_2_period, '#call-off-extension-1-description > td:nth-child(2)'
+    element :extension_3_period, '#call-off-extension-2-description > td:nth-child(2)'
+    element :extension_4_period, '#call-off-extension-3-description > td:nth-child(2)'
+  end
+
   section :contract_period, 'table' do
     element :length, '#contract-period > td'
     element :contract_description, '#contract-period-description > td:nth-child(2)'
@@ -66,12 +108,10 @@ class Requirements < SitePrism::Page
 
   section :estimated_cost, 'div.govuk-radios__item' do
     element :radio_yes, '#facilities_management_procurement_estimated_cost_known_true'
-    section :radio_content, 'div#radio-inner-content' do
-      element :label, 'label'
-      element :input, '#facilities_management_procurement_estimated_annual_cost'
-    end
     element :radio_no, '#facilities_management_procurement_estimated_cost_known_false'
   end
+
+  element :estimated_cost_input, '#facilities_management_procurement_estimated_annual_cost'
 
   element :service_summary_question, 'td > a', text: 'Answer questions'
   element :service_question, 'td > a', text: 'Answer question'
@@ -81,7 +121,4 @@ class Requirements < SitePrism::Page
   element :contract_name, 'input[name="facilities_management_procurement[contract_name]"]'
 
   elements :procurement_name, 'div > span'
-
-
 end
-

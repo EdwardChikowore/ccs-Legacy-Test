@@ -145,7 +145,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I am on "Requirements" page
     And I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "2"
+    And I enter "2" years and "0" months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2020"
@@ -162,7 +162,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I am on "Requirements" page
     And I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "2"
+    And I enter "2" years and "0" months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2020"
@@ -175,7 +175,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I am on "Contract period summary" page
     And I click on "Change"
     And I am on "Contract period" page
-    And I enter the number of year as "4"
+    And I enter "4" years and "0" months for the contract period
     And I enter the day as "3"
     And I enter the month as "9"
     And I enter the year as "2021"

@@ -3,3 +3,4 @@
 /bulk_upload_spreadsheets
 .DS_Store
 config/environment.yml
+/docs

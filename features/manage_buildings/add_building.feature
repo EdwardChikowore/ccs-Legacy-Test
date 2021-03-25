@@ -88,8 +88,8 @@ Feature:Manage Building
     And I enter 0 for internal area
     When I click on "Save and continue"
     Then I should see the following error messages
-      | Internal area must be greater than 0, if the external area is 0. |
-      | External area must be greater than 0, if the internal area is 0. |
+      | Internal area must be greater than 0, if the external area is 0 |
+      | External area must be greater than 0, if the internal area is 0 |
     And I enter 99999999 for external area
     When I click on "Save and continue"
     Then I am on "Building type" page

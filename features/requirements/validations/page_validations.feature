@@ -57,7 +57,7 @@ Feature: Requirements validations
   Scenario: Validation errors after Contract period and continuing to results
 		And I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "2"
+    And I enter "2" years and "0" months for the contract period
     And I enter the day as "2"
     And I enter the month as "2"
     And I enter the year as "2024"
@@ -79,7 +79,7 @@ Feature: Requirements validations
 	Scenario: Validation errors after Contract period with TUPE and continuing to results
 		And I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "2"
+    And I enter "2" years and "0" months for the contract period
     And I enter the day as "2"
     And I enter the month as "2"
     And I enter the year as "2024"
@@ -112,7 +112,7 @@ Feature: Requirements validations
     And I click on "Save and return"
 		And I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "2"
+    And I enter "2" years and "0" months for the contract period
     And I enter the day as "2"
     And I enter the month as "2"
     And I enter the year as "2024"
@@ -144,7 +144,7 @@ Feature: Requirements validations
     And I click on "Save and return"
 		And I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "2"
+    And I enter "2" years and "0" months for the contract period
     And I enter the day as "2"
     And I enter the month as "2"
     And I enter the year as "2024"
@@ -350,7 +350,7 @@ Feature: Requirements validations
     And I click on "Save and return"
 		And I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "2"
+    And I enter "2" years and "0" months for the contract period
     And I enter the day as "2"
     And I enter the month as "2"
     And I enter the year as "2024"

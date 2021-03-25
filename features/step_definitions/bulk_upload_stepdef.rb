@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 And(/^I upload the "([^"]*)" file$/) do |file_type|
   next if file_type == 'no file'
 
