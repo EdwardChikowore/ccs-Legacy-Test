@@ -27,7 +27,7 @@ Feature: Direct Award scenario One
     And I click on "Save and return"
     And I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "1"
+    And I enter '1' years and '0' months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2023"
@@ -227,10 +227,10 @@ Feature: Direct Award scenario One
     And I am on "Service requirements summary" page
     And I click on "Return to requirements"
     And I click on "Continue to results"
-    And I should see the price displayed £234,870.30
+    And I should see the price displayed £251,933.78
     And I click on the Direct award route to market
     And I click on "Continue"
-    And the lowest priced supplier is "Wolf-Wiza" and contract price is £234,870.30
+    And the lowest priced supplier is "Bogan-Koch" and contract price is £251,933.78
 #    And the second subsequent supplier is "Supplier 2" and contract price is £250,298.86
 #    And the third subsequent supplier is "Supplier 3" and contract price is £251,029.94
 #    And the fourth subsequent supplier is "Supplier 4" and contract price is £260,968.75

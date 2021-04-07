@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 And(/^I click on select all for North East England$/) do
   quickview.north_east_select_all.click
 end
@@ -75,16 +77,16 @@ And(/^I should see number of region selected text "([^"]*)"$/) do |address|
 end
 
 And(/^I select all regions$/) do
-  step "I click on select all for North East England"
-  step "I click on select all for North West England"
-  step "I click on select all for Yorkshire and Humber"
-  step "I click on select all for East Midlands"
-  step "I click on select all for West Midlands"
-  step "I click on select all for East England"
-  step "I click on select all for London"
-  step "I click on select all for South East England"
-  step "I click on select all for South West England"
-  step "I click on select all for Wales"
-  step "I click on select all for Scotland"
-  step "I click on select all for Northern Ireland"
+  step 'I click on select all for North East England'
+  step 'I click on select all for North West England'
+  step 'I click on select all for Yorkshire and Humber'
+  step 'I click on select all for East Midlands'
+  step 'I click on select all for West Midlands'
+  step 'I click on select all for East England'
+  step 'I click on select all for London'
+  step 'I click on select all for South East England'
+  step 'I click on select all for South West England'
+  step 'I click on select all for Wales'
+  step 'I click on select all for Scotland'
+  step 'I click on select all for Northern Ireland'
 end

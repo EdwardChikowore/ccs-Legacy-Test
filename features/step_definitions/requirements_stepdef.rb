@@ -1,5 +1,8 @@
-Then(/^I enter the number of year as "([^"]*)"$/) do |years|
-  requirements.initial_call_off_period.set(years)
+# frozen_string_literal: true
+
+Then('I enter {string} years and {string} months for the contract period') do |years, months|
+  requirements.initial_call_off_period_years.set(years)
+  requirements.initial_call_off_period_months.set(months)
 end
 
 And(/^I enter values for the initial call-off period date$/) do
@@ -21,8 +24,8 @@ Then(/^I enter the year as "([^"]*)"$/) do |year|
 end
 
 And(/^I enter values for initial call-off period/) do
-  requirements.initial_call_off_period.set(4)
-  step "I enter values for the initial call-off period date"
+  step 'I enter "4" years and "0" months for the contract period'
+  step 'I enter values for the initial call-off period date'
 end
 
 Then(/^I enter the mobilisation period for "([^"]*)" weeks$/) do |weeks|
@@ -30,38 +33,39 @@ Then(/^I enter the mobilisation period for "([^"]*)" weeks$/) do |weeks|
 end
 
 Then(/^I click on add another extension period$/) do
-  requirements.procurement_extension_radio.add_extension_period.click
+  requirements.optional_call_off_extensions.add_extension.click
 end
 
-Then(/^I enter (.+) year for extension period (.+)$/) do |year, extension_period|
-  requirements.procurement_extension_radio.send("extension_#{extension_period}").set(year)
+Then('I enter {string} years and {string} months for optional extension {int}') do |years, months, extension|
+  requirements.optional_call_off_extensions.send(:"#{extension}").years.set(years)
+  requirements.optional_call_off_extensions.send(:"#{extension}").months.set(months)
 end
 
 Then(/^I enter the mobilisation period for (\d+) weeks$/) do |weeks|
   requirements.mobilisation_radio.period.set(weeks)
 end
 
-And(/^The contract name status tag is "([^"]*)"$/)do |text|
+And(/^The contract name status tag is "([^"]*)"$/) do |text|
   expect(requirements.contract_name_status_tag.text).to eq(text)
 end
 
-And(/^The estimated annual cost status tag is "([^"]*)"$/)do |text|
+And(/^The estimated annual cost status tag is "([^"]*)"$/) do |text|
   expect(requirements.estimated_status_tag.text).to eq(text)
 end
 
-And(/^The TUPE status tag is "([^"]*)"$/)do |text|
+And(/^The TUPE status tag is "([^"]*)"$/) do |text|
   expect(requirements.tupe_status_tag.text).to eq(text)
 end
 
-And(/^The contract period status tag is "([^"]*)"$/)do |text|
+And(/^The contract period status tag is "([^"]*)"$/) do |text|
   expect(requirements.contract_period_status_tag.text).to eq(text)
 end
 
-And(/^The buildings status tag is "([^"]*)"$/)do |text|
+And(/^The buildings status tag is "([^"]*)"$/) do |text|
   expect(requirements.buildings_status_tag.text).to eq(text)
 end
 
-And(/^The services status tag is "([^"]*)"$/)do |text|
+And(/^The services status tag is "([^"]*)"$/) do |text|
   expect(requirements.services_status_tag.text).to eq(text)
 end
 
@@ -69,7 +73,7 @@ And(/^The assigning services to buildings status tag is "([^"]*)"$/) do |text|
   expect(requirements.assigned_status_tag.text).to eq(text)
 end
 
-And(/^The service requirements status tag is "([^"]*)"$/)do |text|
+And(/^The service requirements status tag is "([^"]*)"$/) do |text|
   expect(requirements.requirements_status_tag.text).to eq(text)
 end
 
@@ -91,7 +95,7 @@ Then(/^I select standard C$/) do
   requirements.service_standard.value_c.click
 end
 
-And(/^The assigning buildings to services status tag is "([^"]*)"$/)do |text|
+And(/^The assigning buildings to services status tag is "([^"]*)"$/) do |text|
   expect(requirements.assigned_status_tag.text).to eq(text)
 end
 
@@ -129,56 +133,20 @@ And(/^The following call-off extension is displayed:$/) do |table|
   end
 end
 
-And(/^The following call-off length 1 is displayed:$/) do |table|
-  table.transpose.raw.flatten.each do |item|
-    expect(requirements.contract_period.call_off_1_length.text).to eq(item)
-  end
+And('The following call-off length {int} is displayed:') do |extension, table|
+  extension_length = table.transpose.raw.flatten.first
+
+  expect(requirements.contract_period_summary.send(:"extension_#{extension}_length")).to have_content(extension_length)
 end
 
-And(/^The following call-off length 1 description is displayed:$/) do |table|
-  table.transpose.raw.flatten.each do |item|
-    expect(requirements.contract_period.call_off_1_description.text).to eq(item)
-  end
-end
+And('The following call-off length {int} description is displayed:') do |extension, table|
+  extension_period = table.transpose.raw.flatten.first
 
-And(/^The following call-off length 2 is displayed:$/) do |table|
-  table.transpose.raw.flatten.each do |item|
-    expect(requirements.contract_period.call_off_2_length.text).to eq(item)
-  end
-end
-
-And(/^The following call-off length 2 description is displayed:$/) do |table|
-  table.transpose.raw.flatten.each do |item|
-    expect(requirements.contract_period.call_off_2_description.text).to eq(item)
-  end
-end
-
-And(/^The following call-off length 3 is displayed:$/) do |table|
-  table.transpose.raw.flatten.each do |item|
-    expect(requirements.contract_period.call_off_3_length.text).to eq(item)
-  end
-end
-
-And(/^The following call-off length 3 description is displayed:$/) do |table|
-  table.transpose.raw.flatten.each do |item|
-    expect(requirements.contract_period.call_off_3_description.text).to eq(item)
-  end
-end
-
-And(/^The following call-off length 4 is displayed:$/) do |table|
-  table.transpose.raw.flatten.each do |item|
-    expect(requirements.contract_period.call_off_4_length.text).to eq(item)
-  end
-end
-
-And(/^The following call-off length 4 description is displayed:$/) do |table|
-  table.transpose.raw.flatten.each do |item|
-    expect(requirements.contract_period.call_off_4_description.text).to eq(item)
-  end
+  expect(requirements.contract_period_summary.send(:"extension_#{extension}_period")).to have_content(extension_period)
 end
 
 Then(/^I am on estimated annual cost page$/) do
-  expect(common.header_one.text).to end_with("Estimated annual cost")
+  expect(common.header_one.text).to end_with('Estimated annual cost')
 end
 
 Then(/^I select no option for estimated annual cost$/) do
@@ -190,16 +158,15 @@ Then(/^I select no option for tupe$/) do
 end
 
 And(/^I am on contract period page$/) do
-  expect(common.header_one.text).to end_with("Contract period")
+  expect(common.header_one.text).to end_with('Contract period')
 end
 
-
 Then(/^I select no option for tupe required$/) do
-  choose "facilities_management_procurement_mobilisation_period_required_false"
+  choose 'facilities_management_procurement_mobilisation_period_required_false'
 end
 
 And(/^I select no option for optional call-off extension$/) do
-  choose "facilities_management_procurement_extensions_required_false"
+  choose 'facilities_management_procurement_extensions_required_false'
 end
 
 Then(/^I click on return to requirements$/) do
@@ -322,16 +289,16 @@ And(/^The mechanical service volume details displayed are:$/) do |table|
 end
 
 Then(/^I click on return to service requirements summary link$/) do
-  click_on "Return to service requirements summary"
+  click_on 'Return to service requirements summary'
 end
 
 Then(/^I click on continue to results$/) do
   sleep 2
-  click_on "Continue to results"
+  click_on 'Continue to results'
 end
 
 Then(/^I change contract name$/) do
-  @name_change = "Change_contract_name_DS_" + SecureRandom.uuid
+  @name_change = "Change_contract_name_DS_#{SecureRandom.uuid}"
   requirements.contract_name.set(@name_change)
 end
 
@@ -340,31 +307,31 @@ Then(/^The contract name should include "([^"]*)"$/) do |value|
 end
 
 Then(/^I enter the cost (\d+)$/) do |cost|
-  requirements.estimated_cost.radio_content.input.set(cost)
+  requirements.estimated_cost_input.set(cost)
 end
 
 Then(/^I click on service requirements link$/) do
-  click_on "Service requirements"
+  click_on 'Service requirements'
 end
 
 Then(/^I am on service requirements summary page$/) do
-  expect(common.header_one.text).to end_with("Service requirements summary")
+  expect(common.header_one.text).to end_with('Service requirements summary')
 end
 
 Then(/^I am on contract period summary page$/) do
-  expect(common.header_one.text).to end_with("Contract period summary")
+  expect(common.header_one.text).to end_with('Contract period summary')
 end
 
 Then(/^I click on services link$/) do
-  click_on "Services"
+  click_on 'Services'
 end
 
 And(/^I am on buildings page$/) do
-  expect(common.header_one.text).to end_with("Buildings")
+  expect(common.header_one.text).to end_with('Buildings')
 end
 
 Then(/^I am on Assigning services to buildings summary page$/) do
-  expect(common.header_one.text).to end_with("Assigning services to buildings summary")
+  expect(common.header_one.text).to end_with('Assigning services to buildings summary')
 end
 
 Then(/^I click on the service question$/) do
@@ -431,7 +398,6 @@ Then(/^I select services for fourth building "([^"]*)"$/) do |_building_name|
   service_requirements.management_billable.click
 end
 
-
 When(/^I select services with no service questions$/) do
   check 'Voice announcement system maintenance'
   check 'Airport and aerodrome maintenance services'
@@ -464,91 +430,91 @@ When(/^I select services with no service questions$/) do
 end
 
 Then(/^I am on requirements page$/) do
-  step "I click on continue"
-  step "I click on open all"
-  step "I click on Tees Valley and Durham"
-  step "I click on continue"
-  step "I add contract name"
-  step "I click on save and continue"
-  step "I click on continue"
+  step 'I click on continue'
+  step 'I click on open all'
+  step 'I click on Tees Valley and Durham'
+  step 'I click on continue'
+  step 'I add contract name'
+  step 'I click on save and continue'
+  step 'I click on continue'
 end
 
 Then(/^I answer contract details question$/) do
-  step "I click on estimated annual cost"
-  step "I am on estimated annual cost page"
-  step "I select no option for estimated annual cost"
-  step "I click on save and return"
-  step "I click on TUPE"
-  step "I select no option for tupe"
-  step "I click on save and return"
-  step "I click on contract period"
+  step 'I click on estimated annual cost'
+  step 'I am on estimated annual cost page'
+  step 'I select no option for estimated annual cost'
+  step 'I click on save and return'
+  step 'I click on TUPE'
+  step 'I select no option for tupe'
+  step 'I click on save and return'
+  step 'I click on contract period'
 end
 
 Then(/^I answer contract period question/) do
-  step "I am on contract period page"
-  step "I enter values for initial call-off period"
-  step "I select no option for tupe required"
-  step "I select no option for optional call-off extension"
-  step "I click on save and continue"
-  step "I click on return to requirements"
+  step 'I am on contract period page'
+  step 'I enter values for initial call-off period'
+  step 'I select no option for tupe required'
+  step 'I select no option for optional call-off extension'
+  step 'I click on save and continue'
+  step 'I click on return to requirements'
 end
 
 Then(/^I select building/) do
-  step "I click on buildings link"
-  step "I select first building"
-  step "I click on save and continue"
-  step "I click on return to requirements"
+  step 'I click on buildings link'
+  step 'I select first building'
+  step 'I click on save and continue'
+  step 'I click on return to requirements'
 end
 
 Then(/^I assign services to buildings/) do
-  step "I click on assigning services to buildings link"
-  step "I click on the first building on the page"
-  step "I click on select all"
-  step "I click on save and return"
-  step "I click on return to requirements"
+  step 'I click on assigning services to buildings link'
+  step 'I click on the first building on the page'
+  step 'I click on select all'
+  step 'I click on save and return'
+  step 'I click on return to requirements'
 end
 
 Then(/^I navigate to results page$/) do
-  step "I click on save and return"
-  step "I click on return to service requirements summary link"
-  step "I click on return to requirements"
-  step "I click on continue to results"
+  step 'I click on save and return'
+  step 'I click on return to service requirements summary link'
+  step 'I click on return to requirements'
+  step 'I click on continue to results'
 end
 
 Then(/^I complete service requirements questions$/) do
-  step "I click on service requirements link"
-  step "I am on service requirements summary page"
-  step "I click on the first building on the page"
-  step "I click on Answer question"
-  step "I select standard A"
+  step 'I click on service requirements link'
+  step 'I am on service requirements summary page'
+  step 'I click on the first building on the page'
+  step 'I click on Answer question'
+  step 'I select standard A'
 end
 
 Then(/^I navigate to services page$/) do
-  step "I click on save and continue"
-  step "I am on contract period summary page"
-  step "I click on return to requirements"
-  step "I click on services link"
-  step "I click on open all"
+  step 'I click on save and continue'
+  step 'I am on contract period summary page'
+  step 'I click on return to requirements'
+  step 'I click on services link'
+  step 'I click on open all'
 end
 
 Then(/^I navigate to buildings page$/) do
-  step "I click on save and continue"
-  step "I click on return to requirements"
-  step "I click on buildings link"
-  step "I am on buildings page"
+  step 'I click on save and continue'
+  step 'I click on return to requirements'
+  step 'I click on buildings link'
+  step 'I am on buildings page'
 end
 
 Then(/^I navigate to Assigning services to buildings summary page$/) do
-  step "I click on save and continue"
-  step "I click on return to requirements"
-  step "I click on assigning services to buildings link"
-  step "I am on Assigning services to buildings summary page"
+  step 'I click on save and continue'
+  step 'I click on return to requirements'
+  step 'I click on assigning services to buildings link'
+  step 'I am on Assigning services to buildings summary page'
 end
 
 Then(/^I navigate to Service requirements summary page$/) do
-  step "I click on return to requirements"
-  step "I click on service requirements link"
-  step "I am on service requirements summary page"
+  step 'I click on return to requirements'
+  step 'I click on service requirements link'
+  step 'I am on service requirements summary page'
 end
 
 And(/^for scenario 3, lot 1a I add the details for "([^"]*)" building$/) do |building|
@@ -603,34 +569,4 @@ And(/^for scenario 3, I add the details for "([^"]*)" building$/) do |building|
   step 'I am on the "Mobile cleaning services" page'
   step 'I select standard A'
   step 'I click on "Save and return"'
-end
-
-And(/^for scenario 0, lot 1a I add the details for "([^"]*)" building$/) do |building|
-  step 'I navigate to buildings page'
-  step "I find and select \"#{building}\""
-  step 'I navigate to Assigning services to buildings summary page'
-  step "I click on \"#{building}\""
-  step 'I select all services for first building'
-  step 'I navigate to Service requirements summary page'
-  step "I click on \"#{building}\""
-  step 'I am on the "Service requirements" page'
-  step 'I click on the service question'
-  step 'I am on the "Routine cleaning" page'
-  step 'I enter 34 for routine cleaning'
-  step 'I click on "Save and return"'
-  step 'I click on the service question'
-  step 'I am on the "Reception service" page'
-  step 'I enter 6240 for service hours'
-  step 'I click on "Save and return"'
-  step 'I click on the service question'
-  step 'I am on the "General waste" page'
-  step 'I enter 130 for general waste'
-  step 'I click on "Save and return"'
-  step 'I click on the service question'
-  step 'I am on the "Mechanical and electrical engineering maintenance" page'
-  step 'I select standard A'
-  step 'I click on "Save and return"'
-  step 'I click on the service question'
-  step 'I am on the "Routine cleaning" page'
-  step 'I select standard A'
 end

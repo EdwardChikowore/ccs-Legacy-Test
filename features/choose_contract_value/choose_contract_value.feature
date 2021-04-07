@@ -21,7 +21,7 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on "Save and return"
     And I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "1"
+    And I enter '1' years and '0' months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2023"
@@ -37,15 +37,19 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on "Return to requirements"
     And I click on "Continue to results"
     And I am on "Estimated contract cost" page
-    And I should see the partial price value £289,869
+    And I should see the partial price value £290,266
     And unpriced service "Professional snow & ice clearance" should be displayed
+    And I can select the following lots:
+      | 1a  |
+      | 1b  |
+      | 1c  |
 
   Scenario: Includes TUPE, CAFM, Helpdesk and London Building - LOT 1A
     And I click on the "facilities_management_procurement_tupe_true" option
     And I click on "Save and return"
     And I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "1"
+    And I enter '1' years and '0' months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2023"
@@ -63,15 +67,19 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on "Return to requirements"
     And I click on "Continue to results"
     And I am on "Estimated contract cost" page
-    And I should see the partial price value £394,107
+    And I should see the partial price value £393,521
     And unpriced service "Professional snow & ice clearance" should be displayed
+    And I can select the following lots:
+      | 1a  |
+      | 1b  |
+      | 1c  |
 
   Scenario: No CP,CAFM, Helpdesk TUPE - LOT 1B
     And I click on the "facilities_management_procurement_tupe_false" option
     And I click on "Save and return"
     And I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "1"
+    And I enter '1' years and '0' months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2023"
@@ -91,15 +99,18 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on "Return to requirements"
     And I click on "Continue to results"
     And I am on "Estimated contract cost" page
-    And I should see the partial price value £16,978,383
+    And I should see the partial price value £17,010,785
     And unpriced service "Professional snow & ice clearance" should be displayed
+    And I can select the following lots:
+      | 1b  |
+      | 1c  |
 
   Scenario: Includes TUPE, CAFM, Helpdesk and London Building - LOT 1B
     And I click on the "facilities_management_procurement_tupe_true" option
     And I click on "Save and return"
     And I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "1"
+    And I enter '1' years and '0' months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2023"
@@ -122,15 +133,18 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on "Return to requirements"
     And I click on "Continue to results"
     And I am on "Estimated contract cost" page
-    And I should see the partial price value £23,092,200
+    And I should see the partial price value £23,044,302
     And unpriced service "Professional snow & ice clearance" should be displayed
+    And I can select the following lots:
+      | 1b  |
+      | 1c  |
 
   Scenario: No CP,CAFM, Helpdesk TUPE - LOT 1C
     And I click on the "facilities_management_procurement_tupe_false" option
     And I click on "Save and return"
     And I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "7"
+    And I enter '7' years and '0' months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2023"
@@ -150,15 +164,16 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on "Return to requirements"
     And I click on "Continue to results"
     And I am on "Estimated contract cost" page
-    And I should see the partial price value £115,692,494
+    And I should see the partial price value £115,919,309
     And unpriced service "Professional snow & ice clearance" should be displayed
+    And I cannot select the lot
 
   Scenario: Includes TUPE, CAFM, Helpdesk and London Building - LOT 1C
     And I click on the "facilities_management_procurement_tupe_true" option
     And I click on "Save and return"
     And I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "7"
+    And I enter '7' years and '0' months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2023"
@@ -181,5 +196,6 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on "Return to requirements"
     And I click on "Continue to results"
     And I am on "Estimated contract cost" page
-    And I should see the partial price value £157,729,040
+    And I should see the partial price value £157,393,752
     And unpriced service "Professional snow & ice clearance" should be displayed
+    And I cannot select the lot

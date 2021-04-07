@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 And(/^I click on the question for payment method$/) do
   dadraft.contract_details.payment_method.click
 end
@@ -35,11 +37,11 @@ And(/^I select Security policy option$/) do
 end
 
 And(/^I enter security name$/) do
-  dadraft.security_policy_name.set("CCS doc")
+  dadraft.security_policy_name.set('CCS doc')
 end
 
 And(/^I enter policy number$/) do
-  dadraft.security_policy_number.set(12334)
+  dadraft.security_policy_number.set(12_334)
 end
 
 And(/^I click on the question for Local Government Pension Scheme$/) do
@@ -59,7 +61,8 @@ Then(/^I select english law$/) do
 end
 
 And(/^there are buildings with missing regions$/) do
-  expect(dadraft.missing_regions.find_all('tr > td:nth-child(1)').map(&:text)).to eq ['Test Bulk Upload Building 3', 'Test Bulk Upload Building 7']
+  expect(dadraft.missing_regions.find_all('tr > td:nth-child(1)').map(&:text)).to eq ['Test Bulk Upload Building 3',
+                                                                                      'Test Bulk Upload Building 7']
 end
 
 And(/^I click on change link for "([^"]*)"$/) do |name|
@@ -67,47 +70,47 @@ And(/^I click on change link for "([^"]*)"$/) do |name|
   dadraft.contract_details_change_link[1].click
 end
 
-And(/^I click on the first question for "([^"]*)"$/)do |name|
+And(/^I click on the first question for "([^"]*)"$/) do |name|
   expect(dadraft.contract_details_text[0].text).to eq(name)
   dadraft.contract_details_change_link[0].click
 end
 
-And(/^I click on change for "([^"]*)"$/)do |name|
+And(/^I click on change for "([^"]*)"$/) do |name|
   expect(dadraft.contract_details_text[0].text).to eq(name)
   dadraft.contract_details_change_link[0].click
 end
 
-And(/^I click on third change link for "([^"]*)"$/)do |name|
+And(/^I click on third change link for "([^"]*)"$/) do |name|
   expect(dadraft.contract_details_text[2].text).to eq(name)
   dadraft.contract_details_change_link[2].click
 end
 
-And(/^I click on the second question for "([^"]*)"$/)do |name|
+And(/^I click on the second question for "([^"]*)"$/) do |name|
   expect(dadraft.contract_details_text[1].text).to eq(name)
   dadraft.contract_details_change_link[1].click
 end
 
-And(/^I click on the third question for "([^"]*)"$/)do |name|
+And(/^I click on the third question for "([^"]*)"$/) do |name|
   expect(dadraft.contract_details_text[2].text).to eq(name)
   dadraft.contract_details_change_link[2].click
 end
 
-And(/^I click on the fourth question for "([^"]*)"$/)do |name|
+And(/^I click on the fourth question for "([^"]*)"$/) do |name|
   expect(dadraft.contract_details_text[3].text).to eq(name)
   dadraft.contract_details_change_link[3].click
 end
 
-And(/^I click on the fifth question for "([^"]*)"$/)do |name|
+And(/^I click on the fifth question for "([^"]*)"$/) do |name|
   expect(dadraft.contract_details_text[4].text).to eq(name)
   dadraft.contract_details_change_link[4].click
 end
 
-And(/^I click on the sixth question for "([^"]*)"$/)do |name|
+And(/^I click on the sixth question for "([^"]*)"$/) do |name|
   expect(dadraft.contract_details_text[5].text).to eq(name)
   dadraft.contract_details_change_link[5].click
 end
 
-And(/^I click on the seventh question for "([^"]*)"$/)do |name|
+And(/^I click on the seventh question for "([^"]*)"$/) do |name|
   expect(dadraft.contract_details_text[6].text).to eq(name)
   dadraft.contract_details_change_link[6].click
 end
@@ -123,7 +126,7 @@ And(/^The following is displayed for contact details:$/) do |table|
 end
 
 And(/^I should see contract details "([^"]*)" displayed$/) do |details|
-    expect(dadraft.contract_details_value[0].text).to eq(details)
+  expect(dadraft.contract_details_value[0].text).to eq(details)
 end
 
 And(/^I should see the contract details:$/) do |table|
@@ -161,7 +164,7 @@ end
 And(/^I should see address:$/) do |table|
   table.transpose.raw.flatten.each do |item|
     expect(dadraft.selected_address_container.text).to eq(item)
-    end
+  end
 end
 
 And(/^I select address "([^"]*)" from the drop down option$/) do |address|
@@ -213,7 +216,7 @@ And(/^I expand the Notices contact details - review your contract$/) do
 end
 
 And(/^contract documents page have links$/) do
-  expect(dadraft.contract_document_link.count).to eq(30)
+  expect(dadraft.contract_document_link.count).to eq(28)
 end
 
 And(/^I click on enter invoicing address manually$/) do
@@ -286,32 +289,32 @@ And(/^I should see text next to radio button "([^"]*)"$/) do |name|
 end
 
 Then(/^I complete the contract details/) do
-  step "I click on the question for payment method"
-  step "I select Bacs payment"
-  step "I click on \"Save and return\""
-  step "I am on \"Contract details\" page"
-  step "I click on the question for invoicing contact details"
-  step "I select invoicing contact"
-  step "I click on \"Continue\""
-  step "I am on \"Contract details\" page"
-  step "I click on the question for Authorised representative details"
-  step "I select Authorised representative details"
-  step "I click on \"Continue\""
-  step "I am on \"Contract details\" page"
-  step "I click on the question for Notices contact details"
-  step "I select Notices contact details"
-  step "I click on \"Continue\""
-  step "I am on \"Contract details\" page"
-  step "I click on the question for Security policy"
-  step "I select Security policy option"
-  step "I click on \"Save and return\""
-  step "I am on \"Contract details\" page"
-  step "I click on the question for Local Government Pension Scheme"
-  step "I select pension option"
-  step "I click on save and continue button"
-  step "I am on \"Contract details\" page"
-  step "I click on the question for Governing law"
-  step "I select english law"
-  step "I click on \"Save and continue\""
-  step "I am on \"Contract details\" page"
+  step 'I click on the question for payment method'
+  step 'I select Bacs payment'
+  step 'I click on "Save and return"'
+  step 'I am on "Contract details" page'
+  step 'I click on the question for invoicing contact details'
+  step 'I select invoicing contact'
+  step 'I click on "Continue"'
+  step 'I am on "Contract details" page'
+  step 'I click on the question for Authorised representative details'
+  step 'I select Authorised representative details'
+  step 'I click on "Continue"'
+  step 'I am on "Contract details" page'
+  step 'I click on the question for Notices contact details'
+  step 'I select Notices contact details'
+  step 'I click on "Continue"'
+  step 'I am on "Contract details" page'
+  step 'I click on the question for Security policy'
+  step 'I select Security policy option'
+  step 'I click on "Save and return"'
+  step 'I am on "Contract details" page'
+  step 'I click on the question for Local Government Pension Scheme'
+  step 'I select pension option'
+  step 'I click on save and continue button'
+  step 'I am on "Contract details" page'
+  step 'I click on the question for Governing law'
+  step 'I select english law'
+  step 'I click on "Save and continue"'
+  step 'I am on "Contract details" page'
 end

@@ -1,5 +1,6 @@
-class Quickview < SitePrism::Page
+# frozen_string_literal: true
 
+class Quickview < SitePrism::Page
   section :maintenance, '[data-sectionname="Maintenance services"]' do
     element :select_all, '#C_all'
   end
@@ -133,5 +134,4 @@ class Quickview < SitePrism::Page
       element :sublot_1c, 'table > thead > tr > th.govuk-table__header'
     end
   end
-
 end

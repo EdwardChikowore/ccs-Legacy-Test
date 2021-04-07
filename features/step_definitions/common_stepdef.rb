@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 Given(/^I am a logged in user$/) do
   visit '/sign-in'
   value = common.header_one.text
-  sign_in() if value == 'Sign in to your account'
+  sign_in if value == 'Sign in to your account'
 end
 
 Given(/^I am a logged in user - buildings account$/) do
   visit '/sign-in'
-  sign_in_building()
+  sign_in_building
   puts ENV['HOST']
 end
 
@@ -20,17 +22,17 @@ end
 
 Given(/^I click on manage my buildings link$/) do
   page.execute_script('arguments[0].scrollIntoView(true)', account.account_links[0])
-  click_link "Manage my buildings"
+  click_link 'Manage my buildings'
 end
 
 Then(/^I click on open all$/) do
   value = common.open_all.text
-  common.open_all.click if value ==  "Open all sections"
+  common.open_all.click if value == 'Open all sections'
 end
 
 Then(/^I click on close all$/) do
   value = common.open_all.text
-  common.open_all.click if value == "Close all sections"
+  common.open_all.click if value == 'Close all sections'
 end
 
 And(/^I should see the following error messages$/) do |table|
@@ -47,7 +49,7 @@ And(/^I am on the "(.+)" page$/) do |header|
 end
 
 Then(/^I should see the navigation panel has sign out link$/) do
-  expect(common.banner.signout_banner.text).to eq("Sign out")
+  expect(common.banner.signout_banner.text).to eq('Sign out')
 end
 
 And(/^The following text is displayed:$/) do |table|
@@ -69,7 +71,7 @@ Then(/^I click on Answer question$/) do
   click_link 'Answer question'
 end
 
-Given("I enter the following details into the form:") do |table|
+Given('I enter the following details into the form:') do |table|
   table.raw.to_h.each do |field, value|
     fill_in field, with: value
   end
@@ -80,7 +82,7 @@ Then(/^I click on continue$/) do
 end
 
 Then(/^I click on Tees Valley and Durham$/) do
-  check "Tees Valley and Durham"
+  check 'Tees Valley and Durham'
 end
 
 Then(/^I click on save and return$/) do
@@ -92,7 +94,6 @@ Then(/^I click on save and continue$/) do
 end
 
 Then(/^I click on save and continue button$/) do
-
   page.execute_script('arguments[0].scrollIntoView(true)', common.save_and_continue)
   click_on 'Save and continue'
 end
@@ -156,13 +157,13 @@ And(/^The following detail is displayed:$/) do |table|
 end
 
 Then(/^I create a new procurement/) do
-  step "I am a logged in user - buildings account"
-  step "I am on your account page"
-  step "I click on start a procurement"
-  step "I am on \"What happens next\" page"
-  step "I click on \"Continue\""
-  step "I am on \"Contract name\" page"
-  step "I add contract name"
-  step "I click on \"Save and continue\""
-  step "I am on \"Requirements\" page"
+  step 'I am a logged in user - buildings account'
+  step 'I am on your account page'
+  step 'I click on start a procurement'
+  step 'I am on "What happens next" page'
+  step 'I click on "Continue"'
+  step 'I am on "Contract name" page'
+  step 'I add contract name'
+  step 'I click on "Save and continue"'
+  step 'I am on "Requirements" page'
 end

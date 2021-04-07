@@ -1,5 +1,6 @@
-class Dadraft < SitePrism::Page
+# frozen_string_literal: true
 
+class Dadraft < SitePrism::Page
   section :contract_details, '#contract-details-summary > table > tbody' do
     element :payment_method, 'tr:nth-child(2) > td > a'
     element :invoicing_contact_details, 'tr:nth-child(3) > td > a'
@@ -45,16 +46,19 @@ class Dadraft < SitePrism::Page
   element :contract_details_value_one, '[data-module="govuk-details"]'
   elements :review_contract_value, 'summary.govuk-details__summary'
   elements :review_contract_value_two, 'tbody > tr > td:nth-child(2)'
-  element :invoicing_contact_details, '[for="facilities_management_procurement_using_buyer_detail_for_invoice_details_false"]'
-  element :authorised_contact_details, '[for="facilities_management_procurement_using_buyer_detail_for_authorised_detail_false"]'
-  element :notices_contact_details, '[for="facilities_management_procurement_using_buyer_detail_for_notices_detail_false"]'
+  element :invoicing_contact_details,
+          '[for="facilities_management_procurement_using_buyer_detail_for_invoice_details_false"]'
+  element :authorised_contact_details,
+          '[for="facilities_management_procurement_using_buyer_detail_for_authorised_detail_false"]'
+  element :notices_contact_details,
+          '[for="facilities_management_procurement_using_buyer_detail_for_notices_detail_false"]'
 
   elements :review_contract_expand, '[data-module="govuk-details"] > div'
 
   element :change_address, '#change-input-2'
 
   element :government_procurement_card, '#facilities_management_procurement_payment_method_card'
-  elements :contract_document_link, 'ul > li > a'
+  elements :contract_document_link, 'main ul > li > a'
 
   element :lowest_supplier_name, 'blockquote > span:nth-child(1)'
   element :lowest_supplier_price, 'blockquote > span:nth-child(2)'
@@ -64,5 +68,4 @@ class Dadraft < SitePrism::Page
   end
 
   element :fc_header, 'h5'
-
 end

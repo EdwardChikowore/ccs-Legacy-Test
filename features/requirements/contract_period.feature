@@ -13,10 +13,10 @@ Feature:  FM - Contract period
 
 	Scenario: no validation errors
     When I am on "Contract period" page
-    And I enter the number of year as "2"
+    And I enter '2' years and '2' months for the contract period
     And I enter the day as "2"
     And I enter the month as "2"
-    And I enter the year as "2021"
+    And I enter the year as "2022"
     And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_false" option
 		When I click on "Save and continue"
@@ -24,7 +24,7 @@ Feature:  FM - Contract period
 
   Scenario: Contract period - no extra periods
     When I am on "Contract period" page
-    And I enter the number of year as "1"
+    And I enter '1' years and '0' months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2021"
@@ -35,7 +35,7 @@ Feature:  FM - Contract period
   
   Scenario: Contract period - with mobilisation period
     When I am on "Contract period" page
-    And I enter the number of year as "1"
+    And I enter '1' years and '0' months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2021"
@@ -58,14 +58,14 @@ Feature:  FM - Contract period
 
   Scenario: Contract period - with 1 extension period
     When I am on "Contract period" page
-    And I enter the number of year as "1"
+    And I enter '1' years and '0' months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2021"
     And I click on the "facilities_management_procurement_mobilisation_period_required_true" option
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_true" option
-    And I enter 1 year for extension period 1
+    And I enter "1" years and "0" months for optional extension 1
     When I click on "Save and continue"
     Then I am on "Contract period summary" page
     And The following contract period is displayed: 
@@ -83,16 +83,16 @@ Feature:  FM - Contract period
 
   Scenario: Contract period - with 2 extension periods
     When I am on "Contract period" page
-    And I enter the number of year as "1"
+    And I enter '1' years and '0' months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2021"
     And I click on the "facilities_management_procurement_mobilisation_period_required_true" option
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_true" option
-    And I enter 1 year for extension period 1
+    And I enter "1" years and "0" months for optional extension 1
     And I click on add another extension period
-    And I enter 2 year for extension period 2
+    And I enter "2" years and "0" months for optional extension 2
     When I click on "Save and continue"
     Then I am on "Contract period summary" page
     And The following contract period is displayed: 
@@ -114,18 +114,18 @@ Feature:  FM - Contract period
 
   Scenario: Contract period - with 3 extension periods
     When I am on "Contract period" page
-    And I enter the number of year as "1"
+    And I enter '1' years and '0' months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2021"
     And I click on the "facilities_management_procurement_mobilisation_period_required_true" option
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_true" option
-    And I enter 1 year for extension period 1
+    And I enter "1" years and "0" months for optional extension 1
     And I click on add another extension period
-    And I enter 1 year for extension period 2
+    And I enter "1" years and "0" months for optional extension 2
     And I click on add another extension period
-    And I enter 1 year for extension period 3
+    And I enter "1" years and "0" months for optional extension 3
     When I click on "Save and continue"
     Then I am on "Contract period summary" page
     And The following contract period is displayed: 
@@ -151,20 +151,20 @@ Feature:  FM - Contract period
   
   Scenario: Contract period - with 4 extension periods
     When I am on "Contract period" page
-    And I enter the number of year as "1"
+    And I enter '1' years and '0' months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2021"
     And I click on the "facilities_management_procurement_mobilisation_period_required_true" option
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_true" option
-    And I enter 1 year for extension period 1
+    And I enter "1" years and "0" months for optional extension 1
     And I click on add another extension period
-    And I enter 1 year for extension period 2
+    And I enter "1" years and "0" months for optional extension 2
     And I click on add another extension period
-    And I enter 1 year for extension period 3
+    And I enter "1" years and "0" months for optional extension 3
     And I click on add another extension period
-    And I enter 5 year for extension period 4
+    And I enter "5" years and "0" months for optional extension 4
     When I click on "Save and continue"
     Then I am on "Contract period summary" page
     And The following contract period is displayed: 
@@ -194,14 +194,14 @@ Feature:  FM - Contract period
 
   Scenario: Contract period - use change link
     When I am on "Contract period" page
-    And I enter the number of year as "1"
+    And I enter '1' years and '0' months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2021"
     And I click on the "facilities_management_procurement_mobilisation_period_required_true" option
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_true" option
-    And I enter 1 year for extension period 1
+    And I enter "1" years and "0" months for optional extension 1
     And I click on "Save and continue"
     And I am on "Contract period summary" page
     When I click on "Change"
@@ -209,20 +209,20 @@ Feature:  FM - Contract period
 
   Scenario: Contract period - use change link - save new details
     When I am on "Contract period" page
-    And I enter the number of year as "1"
+    And I enter '1' years and '0' months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2021"
     And I click on the "facilities_management_procurement_mobilisation_period_required_true" option
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_true" option
-    And I enter 1 year for extension period 1
+    And I enter "1" years and "0" months for optional extension 1
     And I click on "Save and continue"
     And I am on "Contract period summary" page
     And I click on "Change"
     And I am on "Contract period" page
     And I click on add another extension period
-    And I enter 1 year for extension period 2
+    And I enter "1" years and "0" months for optional extension 2
     When I click on "Save and continue"
     Then I am on "Contract period summary" page
     And The following contract period is displayed: 
@@ -244,27 +244,27 @@ Feature:  FM - Contract period
 
   Scenario: Contract period - return to requirements
     When I am on "Contract period" page
-    And I enter the number of year as "1"
+    And I enter '1' years and '0' months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2021"
     And I click on the "facilities_management_procurement_mobilisation_period_required_true" option
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_true" option
-    And I enter 1 year for extension period 1
+    And I enter "1" years and "0" months for optional extension 1
     When I click on "Return to requirements"
     Then I am on "Requirements" page
 
   Scenario: Contract period summary - return to requirements
     When I am on "Contract period" page
-    And I enter the number of year as "1"
+    And I enter '1' years and '0' months for the contract period
     And I enter the day as "12"
     And I enter the month as "10"
     And I enter the year as "2021"
     And I click on the "facilities_management_procurement_mobilisation_period_required_true" option
     And I enter the mobilisation period for 4 weeks
     And I click on the "facilities_management_procurement_extensions_required_true" option
-    And I enter 1 year for extension period 1
+    And I enter "1" years and "0" months for optional extension 1
     And I click on "Save and continue"
     And I am on "Contract period summary" page
     When I click on "Return to requirements"

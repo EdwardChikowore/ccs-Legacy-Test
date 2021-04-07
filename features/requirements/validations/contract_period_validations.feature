@@ -15,15 +15,16 @@ Feature:  FM - Contract period validations
     And I am on "Contract period" page
     And I click on "Save and continue"
     Then I should see the following error messages
-      | Enter initial call-off period                       |
-      | Enter a valid initial call-off start date           |
-      | Select one option for mobilisation period           |
-      | Select one option for call-off contract extension   |
+      | Enter the years for the initial call-off period   |
+      | Enter the months for the initial call-off period  |
+      | Enter a valid initial call-off start date         |
+      | Select one option for mobilisation period         |
+      | Select one option for call-off contract extension |
 
   Scenario Outline: Validation on save and continue - initial call off period
     When I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "<years>"
+    And I enter "<years>" years and "0" months for the contract period
     And I enter values for the initial call-off period date
     And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_false" option
@@ -32,16 +33,16 @@ Feature:  FM - Contract period validations
       | <error>  |
 
     Examples:
-      | years | error                                                 |
-      |       | Enter initial call-off period                         |
-      | 0     | Initial call-off period must be between 1 and 7 years |
-      | 8     | Initial call-off period must be between 1 and 7 years |
-      | 5.7   | Initial call-off period must be a whole number        |
+      | years | error                                                                 |
+      |       | Enter the years for the initial call-off period                       |
+      | 0     | The total initial call-off period must be between 1 month and 7 years |
+      | 8     | The years for the initial call-off period must be between 0 and 7     |
+      | 5.7   | The years for the initial call-off period must be a whole number      |
 
   Scenario Outline: Validation on save and continue - initial call off start date
     When I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "7"
+    And I enter "7" years and "0" months for the contract period
     And I enter the day as "<day>"
     And I enter the month as "<month>"
     And I enter the year as "<year>"
@@ -70,11 +71,11 @@ Feature:  FM - Contract period validations
       | <error>  |
     
     Examples:
-      | mobilisation_period | error                                              |
-      |                    | Enter mobilisation period length                   |
-      | 0                  | Mobilisation length must be between 1 and 52 weeks |
-      | 53                 | Mobilisation length cannot be more than 52 weeks   |
-      | 5.7                | Enter mobilisation length as a whole number        |
+      | mobilisation_period | error                                               |
+      |                     | Enter mobilisation period length                    |
+      | 0                   | Mobilisation length must be between 1 and 52 weeks  |
+      | 53                  | Mobilisation length must be between 1 and 52 weeks  |
+      | 5.7                 | Enter mobilisation length as a whole number         |
 
   Scenario: Validation on save and continue - mobilisation period required false - with TUPE
     When I click on "TUPE"
@@ -103,7 +104,7 @@ Feature:  FM - Contract period validations
     And I click on the "facilities_management_procurement_extensions_required_false" option
     And I click on "Save and continue"
     Then I should see the following error messages
-      | Mobilisation period must be a minimum of 4 weeks when TUPE is selected |
+      | Mobilisation length must be a minimum of 4 weeks when TUPE is selected |
 
   Scenario: Validation on save and continue - call-off extensions - no option selected
     When I click on "Contract period"
@@ -120,16 +121,16 @@ Feature:  FM - Contract period validations
     And I enter values for initial call-off period
     And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_true" option
-    And I enter "<years>" year for extension period 1
+    And I enter "<years>" years and "0" months for optional extension 1
     And I click on "Save and continue"
     Then I should see the following error messages
       | <error> |
 
     Examples:
-      | years | error |
-      |       | Enter extension period |
-      | 0     | Extension period must be a whole number and greater than 0 |
-      | 1.5   | Extension period must be a whole number and greater than 0 |
+      | years | error                                                         |
+      |       | Enter the years for the extension period                      |
+      | 0     | The total for extension period 1 must be greater than 1 month |
+      | 1.5   | The years for the extension period must be a whole number     |
   
   Scenario Outline: Validation on save and continue - call-off extension 2
     When I click on "Contract period"
@@ -137,18 +138,18 @@ Feature:  FM - Contract period validations
     And I enter values for initial call-off period
     And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_true" option
-    And I enter 1 year for extension period 1
+    And I enter "1" years and "0" months for optional extension 1
     And I click on add another extension period
-    And I enter "<years>" year for extension period 2
+    And I enter "<years>" years and "0" months for optional extension 2
     And I click on "Save and continue"
     Then I should see the following error messages
       | <error> |
 
     Examples:
-      | years | error |
-      |       | Enter extension period |
-      | 0     | Extension period must be a whole number and greater than 0 |
-      | 1.5   | Extension period must be a whole number and greater than 0 |
+      | years | error                                                         |
+      |       | Enter the years for the extension period                      |
+      | 0     | The total for extension period 2 must be greater than 1 month |
+      | 1.5   | The years for the extension period must be a whole number     |
 
   Scenario Outline: Validation on save and continue - call-off extension 3
     When I click on "Contract period"
@@ -156,20 +157,20 @@ Feature:  FM - Contract period validations
     And I enter values for initial call-off period
     And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_true" option
-    And I enter 1 year for extension period 1
+    And I enter "1" years and "0" months for optional extension 1
     And I click on add another extension period
-    And I enter 1 year for extension period 2
+    And I enter "1" years and "0" months for optional extension 2
     And I click on add another extension period
-    And I enter "<years>" year for extension period 3
+    And I enter "<years>" years and "0" months for optional extension 3
     And I click on "Save and continue"
     Then I should see the following error messages
       | <error> |
 
     Examples:
-      | years | error |
-      |       | Enter extension period |
-      | 0     | Extension period must be a whole number and greater than 0 |
-      | 1.5   | Extension period must be a whole number and greater than 0 |
+      | years | error                                                         |
+      |       | Enter the years for the extension period                      |
+      | 0     | The total for extension period 3 must be greater than 1 month |
+      | 1.5   | The years for the extension period must be a whole number     |
 
   Scenario Outline: Validation on save and continue - call-off extension 4
     When I click on "Contract period"
@@ -177,22 +178,22 @@ Feature:  FM - Contract period validations
     And I enter values for initial call-off period
     And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_true" option
-    And I enter 1 year for extension period 1
+    And I enter "1" years and "0" months for optional extension 1
     And I click on add another extension period
-    And I enter 1 year for extension period 2
+    And I enter "1" years and "0" months for optional extension 2
     And I click on add another extension period
-    And I enter 1 year for extension period 3
+    And I enter "1" years and "0" months for optional extension 3
     And I click on add another extension period
-    And I enter "<years>" year for extension period 4
+    And I enter "<years>" years and "0" months for optional extension 4
     And I click on "Save and continue"
     Then I should see the following error messages
       | <error> |
 
     Examples:
-      | years | error |
-      |       | Enter extension period |
-      | 0     | Extension period must be a whole number and greater than 0 |
-      | 1.5   | Extension period must be a whole number and greater than 0 |
+      | years | error                                                         |
+      |       | Enter the years for the extension period                      |
+      | 0     | The total for extension period 4 must be greater than 1 month |
+      | 1.5   | The years for the extension period must be a whole number     |
 
   Scenario: Validation on save and continue - call-off extensions - too long
     When I click on "Contract period"
@@ -200,13 +201,13 @@ Feature:  FM - Contract period validations
     And I enter values for initial call-off period
     And I click on the "facilities_management_procurement_mobilisation_period_required_false" option
     And I click on the "facilities_management_procurement_extensions_required_true" option
-    And I enter 1 year for extension period 1
+    And I enter "1" years and "0" months for optional extension 1
     And I click on add another extension period
-    And I enter 1 year for extension period 2
+    And I enter "1" years and "0" months for optional extension 2
     And I click on add another extension period
-    And I enter 1 year for extension period 3
+    And I enter "1" years and "0" months for optional extension 3
     And I click on add another extension period
-    And I enter 5 year for extension period 4
+    And I enter "5" years and "0" months for optional extension 4
     And I click on "Save and continue"
     Then I should see the following error messages
-      | Call-off contract period, including extensions, must not be more than 10 years in total |
+      | Call-off contract period, including extensions and mobilisation period, must not be more than 10 years in total |

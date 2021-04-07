@@ -203,10 +203,10 @@ Feature: Facilities Management - DA - Contract - Authorised representative
       |Auto Test, Test Analyst 151 Buckingham Palace Road, London SW1W 9SZ Change|
     And I click on "Change"
     And I enter the following details into the form:
-      | Name          | Sam Smith         |
-      | Job title     | Project Manager   |
-      | Email address | test123@test.com  |
-      | Telephone number     | 07749228342          |
+      | Name              | Sam Smith         |
+      | Job title         | Project Manager   |
+      | Email address     | test123@test.com  |
+      | Telephone number  | 07749228342       |
     And I click on change address
     And I enter the following details into the form:
       | Postcode      | L3 9PP            |

@@ -268,7 +268,7 @@ Feature:  FM - Accessibility
     And I am on "Requirements" page
     And I click on "Contract period"
     And I am on "Contract period" page
-    And I enter the number of year as "2"
+    And I enter "2" years and "0" months for the contract period
     And I enter the day as "3"
     And I enter the month as "12"
     And I enter the year as "2023"

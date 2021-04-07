@@ -1,10 +1,11 @@
-class Results < SitePrism::Page
+# frozen_string_literal: true
 
+class Results < SitePrism::Page
   element :estimated_cost_option, '[value="1a"]'
 
-  section :results_page, 'main#main-content' do
+  section :results_page, '#main-content' do
     elements :heading, 'h1'
-    elements :estimated_cost, 'h2 > span'
+    elements :estimated_cost, 'h3:nth-child(6) > span'
   end
 
   section :market_route, 'div.govuk-radios' do
@@ -22,4 +23,5 @@ class Results < SitePrism::Page
     element :unpriced_service, 'div >ul>li'
   end
 
+  elements :choose_contract_value_options, 'input[type="radio"]'
 end
