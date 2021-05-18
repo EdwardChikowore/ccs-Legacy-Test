@@ -2,12 +2,14 @@
 
 Given(/^I am a logged in user$/) do
   visit '/sign-in'
+  page.driver.browser.manage.add_cookie(name: 'crown_marketplace_cookie_settings_viewed', value: 'true')
   value = common.header_one.text
   sign_in if value == 'Sign in to your account'
 end
 
 Given(/^I am a logged in user - buildings account$/) do
   visit '/sign-in'
+  page.driver.browser.manage.add_cookie(name: 'crown_marketplace_cookie_settings_viewed', value: 'true')
   sign_in_building
   puts ENV['HOST']
 end
