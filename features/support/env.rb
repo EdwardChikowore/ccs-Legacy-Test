@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'capybara/cucumber'
 require 'selenium-webdriver'
 require 'webdrivers'
@@ -8,11 +6,9 @@ require 'site_prism'
 require 'capybara'
 require 'capybara-screenshot/cucumber'
 require 'securerandom'
-require 'csv'
 require 'json'
-require 'roo'
-require 'nokogiri'
-require 'axe/cucumber/step_definitions'
+require 'axe-capybara'
+require 'axe-cucumber-steps'
 
 require_relative '../../features/support/pages_helper'
 require_relative '../support/login_helper'
@@ -22,7 +18,12 @@ World(Pages)
 
 Webdrivers::Chromedriver.update
 
-configure = YAML.load_file('config/environment.yml')
+configure = if ENV['CUCUMBER_ENV'] == 'test'
+              YAML.load_file('config/environment.test.yml')
+            else
+              YAML.load_file('config/environment.local.yml')
+            end
+
 ENV['TEST_ENV'] ||= 'cmpdev'
 test_env = ENV['TEST_ENV'].downcase
 ENV['DRIVER'] ||= :selenium_chrome

@@ -2,6 +2,9 @@ language: ruby
 cache: bundler
 os: linux
 dist: xenial
+env:
+  global:
+    - CUCUMBER_ENV=test
 before_install:
   - gem install bundler
   - CHROME_MAIN_VERSION=`google-chrome-stable --version | sed -E 's/(^Google Chrome |\.[0-9]+ )//g'`
@@ -9,4 +12,4 @@ before_install:
   - curl "https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip" -O
   - unzip chromedriver_linux64.zip -d ~/bin
 script:
-  - bundle exec parallel_cucumber features/ -o "ACCOUNT_USERNAME=$ACCOUNT_USERNAME ACCOUNT_PASSWORD=$ACCOUNT_PASSWORD BUYER_USERNAME=$BUYER_USERNAME BUYER_PASSWORD=$BUYER_PASSWORD"""
+  - bundle exec parallel_cucumber features/ -o "-p travis ACCOUNT_USERNAME=$ACCOUNT_USERNAME ACCOUNT_PASSWORD=$ACCOUNT_PASSWORD BUYER_USERNAME=$BUYER_USERNAME BUYER_PASSWORD=$BUYER_PASSWORD"

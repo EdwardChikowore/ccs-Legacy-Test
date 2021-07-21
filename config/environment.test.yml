@@ -1,0 +1,4 @@
+cmpdev:
+  host: https://cmp.cmpdev.crowncommercial.gov.uk
+preview:
+  host: https://marketplace.preview.crowncommercial.gov.uk
