@@ -10,14 +10,6 @@ require 'json'
 require 'axe-capybara'
 require 'axe-cucumber-steps'
 
-require_relative '../../features/support/pages_helper'
-require_relative '../support/login_helper'
-require_relative '../support/capybara_driver.helper'
-
-World(Pages)
-
-Webdrivers::Chromedriver.update
-
 configure = if ENV['CUCUMBER_ENV'] == 'test'
               YAML.load_file('config/environment.test.yml')
             else
@@ -34,6 +26,10 @@ ENV['BUYER_USERNAME'] ||= configure[test_env]['buyer_username']
 ENV['BUYER_PASSWORD'] ||= configure[test_env]['buyer_password']
 ENV['HOST'] ||= configure[test_env]['host']
 
-MAX_OPACITY_WAIT_TIME ||= 120
-require "#{File.dirname(__FILE__)}/../../features/support/capybara_driver.helper"
-require "#{File.dirname(__FILE__)}/../../features/support/login_helper"
+require "#{File.dirname(__FILE__)}/pages_helper"
+require "#{File.dirname(__FILE__)}/login_helper"
+require "#{File.dirname(__FILE__)}/capybara_driver.helper"
+
+World(Pages)
+
+Webdrivers::Chromedriver.update

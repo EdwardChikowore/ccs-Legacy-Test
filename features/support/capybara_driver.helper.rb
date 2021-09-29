@@ -1,6 +1,6 @@
 Capybara.configure do |config|
   config.default_driver = (ENV['DRIVER'].to_sym if ENV['DRIVER']) || :chrome_headless
-  config.default_max_wait_time = 30
+  config.default_max_wait_time = ENV['MAX_WAIT_TIME']
   config.match = :prefer_exact
   config.ignore_hidden_elements = false
   config.visible_text_only = true
@@ -8,7 +8,7 @@ end
 
 Capybara.register_driver :chrome do |app|
   client = Selenium::WebDriver::Remote::Http::Default.new
-  client.timeout = 120
+  client.read_timeout = 120
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
     chromeOptions: { w3c: false }
   )
@@ -36,13 +36,7 @@ Capybara::Screenshot.register_driver(:chrome_headless) do |driver, path|
 end
 
 Capybara::Screenshot.register_filename_prefix_formatter(:cucumber) do |scenario|
-  case scenario
-  when Cucumber::RunningTestCase::Scenario
-    @scenario_name = scenario.name
-  when Cucumber::RunningTestCase::ScenarioOutlineExample
-    @scenario_name = scenario.scenario_outline.name
-  end
-  "screenshot_cucumber_#{@scenario_name.tr(' ', '-').gsub(%r{/^.*/cucumber//}, '')}"
+  "screenshot_cucumber_#{scenario.name.tr(' ', '-').gsub(%r{/^.*/cucumber//}, '')}"
 end
 
 def screenshot_path
@@ -53,6 +47,6 @@ Capybara.save_path = screenshot_path
 Capybara.javascript_driver = Capybara.default_driver
 Capybara.current_driver = Capybara.default_driver
 Capybara.app_host = ENV['HOST'] if ENV['HOST']
-Capybara.default_max_wait_time = 30
+Capybara.default_max_wait_time = ENV['MAX_WAIT_TIME']
 
 Webdrivers::Chromedriver.update
