@@ -2,5 +2,9 @@
 /.idea
 /bulk_upload_spreadsheets
 .DS_Store
-config/environment.yml
-/docs
+config/environment.local.yml
+/docs/*
+!/docs/reports
+/docs/reports/*
+!/docs/reports/.gitkeep
+.bundle/

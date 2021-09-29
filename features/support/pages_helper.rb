@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Pages
   def account
     @account ||= Account.new
@@ -13,28 +11,24 @@ module Pages
     @common ||= Common.new
   end
 
-  def detailed_summary
-    @detailed_summary ||= DetailedSummary.new
-  end
-
   def dadraft
-    @dadraft ||= Dadraft.new
+    @dadraft ||= RM3830::Dadraft.new
   end
 
   def quickview
-    @quickview ||= Quickview.new
+    @quickview ||= RM3830::Quickview.new
   end
 
   def requirements
-    @requirements ||= Requirements.new
+    @requirements ||= RM3830::Requirements.new
   end
 
   def service_requirements
-    @service_requirements ||= ServiceRequirements.new
+    @service_requirements ||= RM3830::ServiceRequirements.new
   end
 
   def results
-    @results ||= Results.new
+    @results ||= RM3830::Results.new
   end
 end
 

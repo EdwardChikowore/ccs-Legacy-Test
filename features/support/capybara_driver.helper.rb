@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 Capybara.configure do |config|
   config.default_driver = (ENV['DRIVER'].to_sym if ENV['DRIVER']) || :chrome_headless
   config.default_max_wait_time = 30
