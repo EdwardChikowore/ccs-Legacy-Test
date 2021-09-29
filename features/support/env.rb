@@ -27,7 +27,7 @@ configure = if ENV['CUCUMBER_ENV'] == 'test'
 ENV['TEST_ENV'] ||= 'cmpdev'
 test_env = ENV['TEST_ENV'].downcase
 ENV['DRIVER'] ||= :selenium_chrome
-ENV['MAX_WAIT_TIME'] ||= '5'
+ENV['MAX_WAIT_TIME'] ||= '10'
 ENV['ACCOUNT_USERNAME'] ||= configure[test_env]['account_username']
 ENV['ACCOUNT_PASSWORD'] ||= configure[test_env]['account_password']
 ENV['BUYER_USERNAME'] ||= configure[test_env]['buyer_username']

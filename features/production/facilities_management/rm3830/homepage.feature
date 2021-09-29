@@ -2,7 +2,7 @@
 Feature:  Facilities Management - Home Page Content
 
   Background:
-    Given I am a logged in user for "RM3830"
+    Given I am a logged in user - buildings account - for "RM3830"
 
   Scenario: FM - Procurements - Home Page Content
     Given I am on your account page
