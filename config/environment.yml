@@ -5,8 +5,8 @@ local:
 cmpdev:
   host:
     legal_services: https://cmp.cmpdev.crowncommercial.gov.uk/legal-services
-    management_consultancy: https://cmp.cmpdev.crowncommercial.gov.uk/management-consultancy
-    supply_teachers: https://cmp.cmpdev.crowncommercial.gov.uk/supply-teachers
+#    management_consultancy: https://cmp.cmpdev.crowncommercial.gov.uk/management-consultancy
+#    supply_teachers: https://cmp.cmpdev.crowncommercial.gov.uk/supply-teachers
   account_username: edward.chikowore@crowncommercial.gov.uk
   account_password: Test12345!
 preview:
