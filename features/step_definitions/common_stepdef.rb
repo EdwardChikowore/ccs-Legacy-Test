@@ -120,11 +120,6 @@ And(/^I should see "([^"]*)" and "([^"]*)" error$/) do |heading, error|
   expect(dadraft.invoiving_contact_details_error.text).to eq(error)
 end
 
-=begin
-And(/^I click on "([^"]*)" option$/) do |option|
-  find("input[value=#{option}]").click
-=end
-
 And(/^The following is displayed:$/) do |table|
   table.transpose.raw.flatten.each do |item|
     expect(page).to have_css('tbody tr th', text: item)
@@ -151,29 +146,9 @@ And(/^I should see error message header "([^"]*)"$/) do |heading|
   expect(common.header_two.text).to eq(heading)
 end
 
-# And(/^The following text is displayed:$/) do |table|
-#   table.transpose.raw.flatten.each do |item|
-#     expect(page).to have_css('div h2', text: item)
-#   end
-# end
+
 Then("I should see the following selected services heading") do |table|
-  expect(page).('#css-list-basket > div > h2 > span:nth-child(2)').to eq(table)} 
+  table.transpose.raw.flatten.each do |item|
+    expect(page).to have_css('div  h2', text: item)
 end
-
-
-=begin
-Given("I click on {string} checkbox") do |string|
-  check ('child law')
 end
-=end
-=begin
-And(/^I am on "([^"]*)" page$/) do |header|
-  expect(common.main_page_header).to eq(header)
-end
-
-
-Given(/^I click on manage my buildings link$/) do
-  page.execute_script('arguments[0].scrollIntoView(true)', account.account_links[0])
-  click_link 'Manage my buildings'
-end
-=end
