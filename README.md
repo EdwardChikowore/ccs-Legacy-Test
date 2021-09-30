@@ -1,4 +1,4 @@
-# ccs-FM-Test
+# ccs-Legacy-Test
 
 ### Running Automation tests
 

@@ -3,12 +3,16 @@ local:
   account_username:
   account_password:
 cmpdev:
-  host: https://cmp.cmpdev.crowncommercial.gov.uk/facilities-management
-  account_username:
-  account_password:
-  buyer_username:
-  buyer_password:
+  host:
+    legal_services: https://cmp.cmpdev.crowncommercial.gov.uk/legal-services
+    management_consultancy: https://cmp.cmpdev.crowncommercial.gov.uk/management-consultancy
+    supply_teachers: https://cmp.cmpdev.crowncommercial.gov.uk/supply-teachers
+  account_username: edward.chikowore@crowncommercial.gov.uk
+  account_password: Test12345!
 preview:
-  host: https://marketplace.preview.crowncommercial.gov.uk/facilities-management
-  account_username:
-  account_password:
+  host:
+    legal_services: https://marketplace.preview.crowncommercial.gov.uk/legal-services
+    management_consultancy: https://marketplace.preview.crowncommercial.gov.uk/management-consultancy
+    supply_teachers: https://marketplace.preview.crowncommercial.gov.uk/supply-teachers
+  account_username: edward.chikowore@crowncommercial.gov.uk
+  account_password: Test12345!

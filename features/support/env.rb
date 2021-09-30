@@ -29,8 +29,6 @@ ENV['DRIVER'] ||= :selenium_chrome
 ENV['MAX_WAIT_TIME'] ||= '5'
 ENV['ACCOUNT_USERNAME'] ||= configure[test_env]['account_username']
 ENV['ACCOUNT_PASSWORD'] ||= configure[test_env]['account_password']
-ENV['BUYER_USERNAME'] ||= configure[test_env]['buyer_username']
-ENV['BUYER_PASSWORD'] ||= configure[test_env]['buyer_password']
 ENV['HOST'] ||= configure[test_env]['host']
 
 MAX_OPACITY_WAIT_TIME ||= 120
