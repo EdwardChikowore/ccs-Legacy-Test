@@ -5,7 +5,7 @@ ruby '2.7.4'
 # Main gems for the test suite
 gem 'capybara', '~> 3.35'
 gem 'capybara-screenshot'
-gem 'cucumber'
+gem 'cucumber', '>= 4.0.0'
 gem 'rspec'
 
 # Webdriver related gems
