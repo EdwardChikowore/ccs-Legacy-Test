@@ -1,14 +1,9 @@
 Feature: Do you work for Central Government Yes Options
 
     Background: login ls
+        Given I am logged in to legal services
 
-        Given I am on the legal services start page
-        And I click on "Start now"
-        And I am on "Sign in to your legal services buyer account" page
-        Then I sign in to the buyer account
-        Then I am logged in successfully
-
-    Scenario: Buyer selects Yes for Central gvt and yes fees over £20,000       
+    Scenario: Buyer selects Yes for Central gvt and yes fees under £20,000       
         Given I am on "Do you work for central government?" page
         And I click on "Yes" option
         And I click on "Continue"
@@ -16,21 +11,16 @@ Feature: Do you work for Central Government Yes Options
         And I click on "Yes" option
         And I click on "Continue"        
         Then I am on "Select the legal services you need" page
-              
-        When I click on Litigation / dispute resolution 
-        And I click on Property and construction
+        And I check "Litigation / dispute resolution"
+        And I check "Property and construction"
         And I click on "Continue"
         Then I am on "Select the regions where you need legal services" page
-
-    # Scenario check region selection
-        When I click on North East region
-        And I click on North West region
-        And I click on Yorkshire and The Humber region
-        And I click on East Midlands region
-        And I click on West Midlands region
-        And I click on East of England region
-        #Then I should see text "6 regions selected" in the region selection basket
-
+        When I check "North East"
+        And I check "North West"
+        And I check "Yorkshire and The Humber"
+        And I check "East Midlands"
+         And I check "West Midlands" 
+        And I check "East of England" 
         And I click on "Continue"
         And I am on "Supplier results" page
         And I click on "Download the supplier list"
@@ -45,8 +35,7 @@ Feature: Do you work for Central Government Yes Options
         Given I am on "Do you work for central government?" page
         And I click on "Yes" option
         And I click on "Continue"
-        And I am on "Will the fees be under £20,000 per matter?" page
-        
+        And I am on "Will the fees be under £20,000 per matter?" page        
         When I click on "No" option
         And I click on "Continue"
         And I am on "Sorry, this panel isn't suitable for you" page
@@ -62,21 +51,16 @@ Feature: Do you work for Central Government Yes Options
         And I am on "Will the fees be under £20,000 per matter?" page
         And I click on "Continue"
         Then I should see the following error messages
-    #    | There is a problem |  
-         | Select yes if the fees will be under £20,000  |
-
+            | Select yes if the fees will be under £20,000  |
         When I click on "Yes" option
         And I click on "Continue"        
         And I am on "Select the legal services you need" page
         And I click on "Continue"
         Then I should see the following error messages
-    #    | There is a problem |  
-         | Select at least one legal service |
-
-        When I click on Litigation / dispute resolution 
+            | Select at least one legal service |
+        When I check "Litigation / dispute resolution" 
         And I click on "Continue"
         And I am on "Select the regions where you need legal services" page
         And I click on "Continue"
         Then I should see the following error messages
-    #    | There is a problem |  
-         | Select the region or regions you require the services in |
+            | Select the region or regions you require the services in |

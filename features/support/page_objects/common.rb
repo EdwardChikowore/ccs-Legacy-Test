@@ -11,6 +11,13 @@ class Common < SitePrism::Page
   element :header, 'h1'
   #choose_organistion_type > div > fieldset > legend > h1 
 
+  element :header_two, 'h2'
+  element :header_three, 'h3'
+
+  element :rates_table, 'tr>th'
+
+  elements :results_list, 'ul.ccs-results-list>li>h2>a'
+
   #element :radio_button_yes, 'central_government_yes'
   #element :radio_button_no,  '[value="no"]'
 
@@ -23,5 +30,7 @@ class Common < SitePrism::Page
   element :error_message, 'govuk-list govuk-error-summary__list'
 
   element :services_selected, 'govuk-heading-m'
+
+  element :supplier_details_page_title, 'div>span.govuk-caption-xl'
 
 end

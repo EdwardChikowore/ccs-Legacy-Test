@@ -27,3 +27,19 @@ Feature: Login to legal services
         #And the dropdown list of servies for the lot is displayed
         #And I click on the summary text "Lot 2 Legal Services"
         #And the dropdown list is retracted
+
+               # And I click on a supplier name
+       # And I should see supplier details header "Lot 1 - Regional service provision"
+        #Then I am on "Lot 1 - Regional service provision" page
+        # And The following text is displayed:
+        #     | Rates |
+        # And I should see header three "Contact details"
+        # And I should see the rates table
+        # | Position              | 
+        # | Hourly                | 
+        # | Daily     | 
+        # | Monthly   | 
+        # | Managing Practitioner  | 
+        # | Senior Practitioner  | 
+        # | Solicitor/Associate  | 
+        # | Legal Support Practitioner/Executive | 

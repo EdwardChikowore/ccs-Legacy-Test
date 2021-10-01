@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-Given(/^I am a logged in user$/) do
-  visit '/sign-in'
+Given("I sign in to the buyer account") do
   page.driver.browser.manage.add_cookie(name: 'crown_marketplace_cookie_settings_viewed', value: 'true')
-  value = common.header_one.text
-  sign_in if value == 'Sign in to your legal services buyer account'
+  sign_in
+  page.execute_script('arguments[0].scrollIntoView(true)', common.sign_in_button)
+  click_on 'Sign in'
 end
 
 Given(/^I am a logged in user - buildings account$/) do
@@ -12,6 +12,11 @@ Given(/^I am a logged in user - buildings account$/) do
   page.driver.browser.manage.add_cookie(name: 'crown_marketplace_cookie_settings_viewed', value: 'true')
   sign_in_building
   puts ENV['HOST']
+end
+
+
+Then("I am logged in successfully") do
+  expect(common.nav_menu.sign_out_text.text).to eq('Sign out')
 end
 
 And(/^I click on "(.+)"$/) do |text|
@@ -82,9 +87,6 @@ Then(/^I click on continue$/) do
   click_on 'Continue'
 end
 
-Then(/^I click on Tees Valley and Durham$/) do
-  check 'Tees Valley and Durham'
-end
 
 Then(/^I click on save and return$/) do
   click_on 'Save and return'
@@ -146,9 +148,32 @@ And(/^I should see error message header "([^"]*)"$/) do |heading|
   expect(common.header_two.text).to eq(heading)
 end
 
-
 Then("I should see the following selected services heading") do |table|
   table.transpose.raw.flatten.each do |item|
     expect(page).to have_css('div  h2', text: item)
+  end
 end
+
+And("I check {string}") do |text|
+  check text 
+end
+
+And(/^I should see header three "([^"]*)"$/) do |heading|
+  expect(common.header_three.text).to eq(heading)
+end
+
+# Then(/^I should see the rates table$/) do |table|
+#   binding.pry
+#   page_text = common.rates_table.text
+# table.transpose.raw.flatten.each do |item|
+#     expect(page_text).to include(item)
+#   end
+# end
+
+When("I click on a supplier name") do
+  common.results_list[0].click
+end
+
+And(/^I should see supplier details header "([^"]*)"$/) do |heading|
+  expect(common.supplier_details_page_title.text).to eq(heading)
 end
