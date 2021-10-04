@@ -32,11 +32,11 @@ Feature:Buildings
       | building  |
     When I click on "Change"
     And I am on "Buildings" page
-    And I select buildings 2 to 10
+    And I select buildings 2 to 6
     And I click on "Save and continue"
     And I am on "Buildings summary" page
     And the following building summary text is displayed:
-      | 10        |
+      | 6         |
       | buildings |
 
 

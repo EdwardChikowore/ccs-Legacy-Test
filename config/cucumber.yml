@@ -1,7 +1,8 @@
-default: DRIVER=chrome_headless --format html --out docs/reports/<%=Time.now.strftime("%Y%m%d-%H%M%S") %>test-report.html --format pretty -r features --tags 'not @wip and not @accessibility and not @prod_test and not @set_up' --publish-quiet
+default: DRIVER=chrome_headless --format html --out docs/reports/<%=Time.now.strftime("%Y%m%d-%H%M%S") %>test-report.html --format pretty -r features --tags 'not @wip and not @accessibility and not @prod_test and not @environment_prep' --publish-quiet
 rerun: --format html --out tmp/test_report_rerun.html --format pretty @reports/rerun --publish-quiet
 wip: --tags @wip:3 --wip features --publish-quiet
 accessibility: DRIVER=chrome_headless --format html --out tmp/accessibility_test_report.html -f pretty -r features/accessibility -r features/step_definitions -r features/support --tags '@accessibility and not @wip' --publish-quiet
-set_up: TEST_ENV=local DRIVER=chrome_headless -f progress -r features --tags '@set_up' --publish-quiet
-travis: DRIVER=chrome_headless -f pretty -r features --tags 'not @wip and not @accessibility and not @prod_test and not @bulk_upload and not @set_up' --publish-quiet
+set_up: DRIVER=chrome_headless -f progress -r features --tags '@environment_prep and @set_up' --publish-quiet
+clean_up: DRIVER=chrome_headless -f progress -r features --tags '@environment_prep and @clean_up' --publish-quiet
+travis: DRIVER=chrome_headless -f pretty -r features --tags 'not @wip and not @accessibility and not @prod_test and not @bulk_upload and not @environment_prep' --publish-quiet
 prod_test: DRIVER=chrome_headless TEST_ENV=prod --format html --out docs/reports/<%=Time.now.strftime("%Y%m%d-%H%M%S") %>test-report.html --format pretty -r features --tags '@prod_test' --publish-quiet
