@@ -14,7 +14,7 @@ class Common < SitePrism::Page
   element :header_two, 'h2'
   element :header_three, 'h3'
 
-  element :rates_table, 'tr>th'
+  element :rates_table, 'tr.govuk-table__row'
 
   elements :results_list, 'ul.ccs-results-list>li>h2>a'
 

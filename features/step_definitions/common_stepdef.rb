@@ -162,13 +162,13 @@ And(/^I should see header three "([^"]*)"$/) do |heading|
   expect(common.header_three.text).to eq(heading)
 end
 
-# Then(/^I should see the rates table$/) do |table|
-#   binding.pry
-#   page_text = common.rates_table.text
-# table.transpose.raw.flatten.each do |item|
-#     expect(page_text).to include(item)
-#   end
-# end
+Then(/^I should see the rates table$/) do |table|
+  binding.pry
+  page_text = common.rates_table.text
+table.transpose.raw.flatten.each do |item|
+    expect(page_text).to include(item)
+  end
+end
 
 When("I click on a supplier name") do
   common.results_list[0].click
@@ -176,4 +176,12 @@ end
 
 And(/^I should see supplier details header "([^"]*)"$/) do |heading|
   expect(common.supplier_details_page_title.text).to eq(heading)
+end
+
+And(/^The excel file "(.+)" should download successfully$/) do |filename|
+  sleep 1
+  name = getDownLoadedFileName
+  expect(name).to start_with(filename)
+  expect(name).to end_with('.xlsx')
+  closeBrowserTab
 end

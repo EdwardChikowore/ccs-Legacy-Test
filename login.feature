@@ -43,3 +43,19 @@ Feature: Login to legal services
         # | Senior Practitioner  | 
         # | Solicitor/Associate  | 
         # | Legal Support Practitioner/Executive | 
+
+                # And I should see the rates table
+        # | Position              | 
+        # | Hourly                | 
+        # | Daily     | 
+        # | Monthly   | 
+        # | Managing Practitioner  | 
+        # | Senior Practitioner  | 
+        # | Solicitor/Associate  | 
+        # | Legal Support Practitioner/Executive | 
+
+
+
+        # And I click on "Download the supplier list"
+        # And I am on "Download the supplier shortlist" page
+        # And I click on "Download supplier shortlist"

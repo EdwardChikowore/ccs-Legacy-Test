@@ -17,8 +17,10 @@ require 'axe/cucumber/step_definitions'
 require_relative '../../features/support/pages_helper'
 require_relative '../support/login_helper'
 require_relative '../support/capybara_driver.helper'
+require_relative '../support/download_helpers'
 
 World(Pages)
+World(DownloadHelpers)
 
 Webdrivers::Chromedriver.update
 
@@ -35,3 +37,4 @@ ENV['HOST'] ||= configure[test_env]['host'][ENV['SERVICE']]
 MAX_OPACITY_WAIT_TIME ||= 120
 require "#{File.dirname(__FILE__)}/../../features/support/capybara_driver.helper"
 require "#{File.dirname(__FILE__)}/../../features/support/login_helper"
+require "#{File.dirname(__FILE__)}/../../features/support/download_helpers"

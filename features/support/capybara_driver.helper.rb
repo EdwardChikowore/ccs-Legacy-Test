@@ -9,32 +9,51 @@ Capybara.configure do |config|
 end
 
 Capybara.register_driver :chrome do |app|
-  client = Selenium::WebDriver::Remote::Http::Default.new
-  client.timeout = 120
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-    chromeOptions: { w3c: false }
+      chromeOptions: { args: %w[disable-gpu] }
   )
 
   Capybara::Selenium::Driver.new(
-    app,
-    browser: :chrome,
-    desired_capabilities: capabilities,
-    http_client: client
+      app,
+      browser: :chrome,
+      desired_capabilities: capabilities
   )
 end
 
 Capybara.register_driver :chrome_headless do |app|
-  options = Selenium::WebDriver::Chrome::Options.new(args: %w[no-sandbox headless disable-gpu])
+  options = Selenium::WebDriver::Chrome::Options.new
+  options.headless!
 
-  Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+  Capybara::Selenium::Driver.new(
+      app,
+      browser: :chrome,
+      options: options
+  )
 end
 
-Capybara::Screenshot.register_driver(:chrome) do |driver, path|
-  driver.browser.save_screenshot(path)
+Capybara.register_driver :firefox do |app|
+  Capybara::Selenium::Driver.new(app, browser: :firefox)
 end
 
-Capybara::Screenshot.register_driver(:chrome_headless) do |driver, path|
-  driver.browser.save_screenshot(path)
+Capybara.register_driver :firefox_headless do |app|
+  options = Selenium::WebDriver::Firefox::Options.new(args: %w[--headless])
+
+  Capybara::Selenium::Driver.new(
+      app,
+      browser: :firefox,
+      options: options
+  )
+end
+
+Capybara.register_driver :ie do |app|
+  options = Selenium::WebDriver::IE::Options.new
+  options.require_window_focus = true
+  options.ignore_protected_mode_settings = true
+  Capybara::Selenium::Driver.new(app, browser: :internet_explorer, options: options)
+end
+
+Capybara.register_driver :safari do |app|
+  Capybara::Selenium::Driver.new(app, browser: :safari)
 end
 
 Capybara::Screenshot.register_filename_prefix_formatter(:cucumber) do |scenario|
