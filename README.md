@@ -67,6 +67,7 @@ The following table lists the different profiles available to use:
 | default       | Will run all the features, except tests for accessibility, setup and production, in a headless browser and will generate a report that can be found timestamped in `docs/reports` |
 | accessibility | Will run the accessibility tests in the `features/accessibility` folder. We use the `axe` gem to analyse our pages and report any issues |
 | set_up        | Will create all the buildings needed to run the tests on your local machine (see [Set up for tests](#set-up-for-tests)) |
+| clean_up      | Will delete all the procurements created during the tests (see [Clean up after tests](#clean-up-after-tests)) |
 | travis        | Used for running the test on travis, runs the same feature tests as the default profile excluding the bulk upload tests |
 | prod_test     | Used for running a small subset of tests on the production environment after a release |
 
@@ -83,4 +84,13 @@ The following command will create the buildings you need in the specified enviro
 
  ```bash
  bundle exec cucumber -p set_up
+ ```
+
+ ## Clean up after tests
+After running all the tests there can be a lot of data left over that is not required.
+This feature was created to remove as much of this data as possible from the environment where it is run.
+
+The following command will delete the procurements (that can be deleted) for both accounts used in the testing
+ ```bash
+ bundle exec cucumber -p clean_up
  ```

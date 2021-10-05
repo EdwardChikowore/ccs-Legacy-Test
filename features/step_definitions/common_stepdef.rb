@@ -106,3 +106,19 @@ Then('I create a new procurement') do
   step 'I click on "Save and continue"'
   step 'I am on "Requirements" page'
 end
+
+Then('I delete all my procurements') do
+  number_of_procurements = page.all('a', text: 'Delete').size
+
+  puts "\n-----------------------------------------"
+
+  number_of_procurements.times do |n|
+    print "There are #{number_of_procurements} procurements to delete: #{n + 1}/#{number_of_procurements}\r"
+
+    page.first('tbody > tr:nth-child(1) a', text: 'Delete').click
+    click_on 'Confirm delete'
+    step 'I am on "Procurements dashboard" page'
+  end
+
+  puts "\n-----------------------------------------"
+end

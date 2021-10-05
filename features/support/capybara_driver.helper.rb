@@ -1,6 +1,6 @@
 Capybara.configure do |config|
   config.default_driver = (ENV['DRIVER'].to_sym if ENV['DRIVER']) || :chrome_headless
-  config.default_max_wait_time = ENV['MAX_WAIT_TIME']
+  config.default_max_wait_time = ENV['MAX_WAIT_TIME'].to_i
   config.match = :prefer_exact
   config.ignore_hidden_elements = false
   config.visible_text_only = true
@@ -47,6 +47,6 @@ Capybara.save_path = screenshot_path
 Capybara.javascript_driver = Capybara.default_driver
 Capybara.current_driver = Capybara.default_driver
 Capybara.app_host = ENV['HOST'] if ENV['HOST']
-Capybara.default_max_wait_time = ENV['MAX_WAIT_TIME']
+Capybara.default_max_wait_time = ENV['MAX_WAIT_TIME'].to_i
 
 Webdrivers::Chromedriver.update

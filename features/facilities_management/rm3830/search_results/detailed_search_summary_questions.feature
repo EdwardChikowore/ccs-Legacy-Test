@@ -146,9 +146,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I click on "Contract period"
     And I am on "Contract period" page
     And I enter "2" years and "0" months for the contract period
-    And I enter the day as "12"
-    And I enter the month as "10"
-    And I enter the year as "2020"
+    And I enter an inital call-off period start date 1 years and 0 months into the future
     And I select "Yes" for mobilisation period required
     And I enter "4" weeks for the mobilisation period
     And I select "No" for optional extension required
@@ -163,9 +161,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I click on "Contract period"
     And I am on "Contract period" page
     And I enter "2" years and "0" months for the contract period
-    And I enter the day as "12"
-    And I enter the month as "10"
-    And I enter the year as "2020"
+    And I enter an inital call-off period start date 1 years and 0 months into the future
     And I select "Yes" for mobilisation period required
     And I enter "4" weeks for the mobilisation period
     And I select "No" for optional extension required
@@ -176,9 +172,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I click on "Change"
     And I am on "Contract period" page
     And I enter "4" years and "0" months for the contract period
-    And I enter the day as "3"
-    And I enter the month as "9"
-    And I enter the year as "2021"
+    And I enter an inital call-off period start date 2 years and 0 months into the future
     And I select "Yes" for mobilisation period required
     And I enter "4" weeks for the mobilisation period
     And I select "No" for optional extension required
