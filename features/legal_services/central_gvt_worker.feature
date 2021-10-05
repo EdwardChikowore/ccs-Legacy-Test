@@ -108,8 +108,6 @@ Feature: Do you work for Central Government Yes Options
         And I click on "Sign out"
         Then I am on the legal services start page
 
-
-
     Scenario: Buyer selects Yes for Central gvt No for fees over £20,000
         Given I am on "Do you work for central government?" page
         And I click on "Yes" option
@@ -142,4 +140,4 @@ Feature: Do you work for Central Government Yes Options
         And I am on "Select the regions where you need legal services" page
         And I click on "Continue"
         Then I should see the following error messages
-            | Select the region or regions you require the services in |
+            | Select the region or regions you require the services in  |

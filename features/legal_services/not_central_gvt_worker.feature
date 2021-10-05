@@ -1,7 +1,7 @@
 Feature: Do you work for Central Government Lots1-4
 
     Background: login ls
-    Given I am logged in to legal services
+        Given I am logged in to legal services
 
     Scenario: Lot1 Regional service provision
         Given I am on "Do you work for central government?" page
@@ -49,7 +49,7 @@ Feature: Do you work for Central Government Lots1-4
         Then I am on "Lot 2 - Full-service firms" page
         When I click on "Continue"
         Then I should see the following error messages
-         | Select the jurisdiction you need |
+            | Select the jurisdiction you need  |
         And I click on "England and Wales" option
         And I click on "Continue"
         And I am on "Select the legal services you need" page
@@ -65,13 +65,13 @@ Feature: Do you work for Central Government Lots1-4
         And I check "Education law"
         And I check "Employment"
         Then I should see the following selected services heading
-        | 11 services selected |
+            | 11 services selected  |
         When I click on "Remove"
         Then I should see the following selected services heading
-        | 10 services selected |
+            | 10 services selected  |
         When I click on "Remove all"
         Then I should see the following selected services heading
-        | No services selected |
+            | No services selected  |
         And I check "Public procurement"
         And I check "Property, real estate & construction"
         And I check "Public international law"   
@@ -100,7 +100,7 @@ Feature: Do you work for Central Government Lots1-4
         Then I am on "Lot 2 - Full-service firms" page
         When I click on "Continue"
         Then I should see the following error messages
-         | Select the jurisdiction you need |
+            | Select the jurisdiction you need  |
         And I click on "Scotland" option
         And I click on "Continue"
         And I am on "Select the legal services you need" page
@@ -137,7 +137,7 @@ Feature: Do you work for Central Government Lots1-4
         Then I am on "Lot 2 - Full-service firms" page
         When I click on "Continue"
         Then I should see the following error messages
-         | Select the jurisdiction you need |
+            | Select the jurisdiction you need  |
         And I click on "Northern Ireland" option
         And I click on "Continue"
         And I am on "Select the legal services you need" page
@@ -168,13 +168,13 @@ Feature: Do you work for Central Government Lots1-4
         Given I am on "Do you work for central government?" page
         When I click on "Continue"
         Then I should see the following error messages
-        | Select yes if you work for central government |
+            | Select yes if you work for central government |
         When I click on "No" option
         And I click on "Continue"
         Then I am on "Select the lot you need" page 
         When I click on "Continue"
         Then I should see the following error messages
-        | Select the lot you need |
+            | Select the lot you need   |
         When I click on "Lot 3 - Property and construction" option
         And I click on "Continue"
         And I am on "Supplier results" page
