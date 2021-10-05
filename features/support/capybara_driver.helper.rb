@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 Capybara.configure do |config|
   config.default_driver = (ENV['DRIVER'].to_sym if ENV['DRIVER']) || :chrome_headless
   config.default_max_wait_time = 30
@@ -10,13 +8,13 @@ end
 
 Capybara.register_driver :chrome do |app|
   capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
-      chromeOptions: { args: %w[disable-gpu] }
+    chromeOptions: { args: %w[disable-gpu] }
   )
 
   Capybara::Selenium::Driver.new(
-      app,
-      browser: :chrome,
-      desired_capabilities: capabilities
+    app,
+    browser: :chrome,
+    desired_capabilities: capabilities
   )
 end
 
@@ -25,9 +23,9 @@ Capybara.register_driver :chrome_headless do |app|
   options.headless!
 
   Capybara::Selenium::Driver.new(
-      app,
-      browser: :chrome,
-      options: options
+    app,
+    browser: :chrome,
+    options: options
   )
 end
 
@@ -39,9 +37,9 @@ Capybara.register_driver :firefox_headless do |app|
   options = Selenium::WebDriver::Firefox::Options.new(args: %w[--headless])
 
   Capybara::Selenium::Driver.new(
-      app,
-      browser: :firefox,
-      options: options
+    app,
+    browser: :firefox,
+    options: options
   )
 end
 

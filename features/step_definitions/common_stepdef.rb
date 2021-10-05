@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-Given("I sign in to the buyer account") do
+Given('I sign in to the buyer account') do
   page.driver.browser.manage.add_cookie(name: 'crown_marketplace_cookie_settings_viewed', value: 'true')
   sign_in
   page.execute_script('arguments[0].scrollIntoView(true)', common.sign_in_button)
@@ -14,8 +12,7 @@ Given(/^I am a logged in user - buildings account$/) do
   puts ENV['HOST']
 end
 
-
-Then("I am logged in successfully") do
+Then('I am logged in successfully') do
   expect(common.nav_menu.sign_out_text.text).to eq('Sign out')
 end
 
@@ -87,7 +84,6 @@ Then(/^I click on continue$/) do
   click_on 'Continue'
 end
 
-
 Then(/^I click on save and return$/) do
   click_on 'Save and return'
 end
@@ -100,7 +96,6 @@ Then(/^I click on save and continue button$/) do
   page.execute_script('arguments[0].scrollIntoView(true)', common.save_and_continue)
   click_on 'Save and continue'
 end
-
 
 Then(/^I click on close all on services page$/) do
   value = common.open_all.text
@@ -148,14 +143,14 @@ And(/^I should see error message header "([^"]*)"$/) do |heading|
   expect(common.header_two.text).to eq(heading)
 end
 
-Then("I should see the following selected services heading") do |table|
+Then('I should see the following selected services heading') do |table|
   table.transpose.raw.flatten.each do |item|
     expect(page).to have_css('div  h2', text: item)
   end
 end
 
-And("I check {string}") do |text|
-  check text 
+And('I check {string}') do |text|
+  check text
 end
 
 And(/^I should see header three "([^"]*)"$/) do |heading|
@@ -163,14 +158,13 @@ And(/^I should see header three "([^"]*)"$/) do |heading|
 end
 
 Then(/^I should see the rates table$/) do |table|
-  binding.pry
   page_text = common.rates_table.text
-table.transpose.raw.flatten.each do |item|
+  table.transpose.raw.flatten.each do |item|
     expect(page_text).to include(item)
   end
 end
 
-When("I click on a supplier name") do
+When('I click on a supplier name') do
   common.results_list[0].click
 end
 
@@ -180,8 +174,8 @@ end
 
 And(/^The excel file "(.+)" should download successfully$/) do |filename|
   sleep 1
-  name = getDownLoadedFileName
+  name = downloaded_file_name
   expect(name).to start_with(filename)
   expect(name).to end_with('.xlsx')
-  closeBrowserTab
+  close_browser_tab
 end

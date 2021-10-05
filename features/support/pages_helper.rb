@@ -1,18 +1,16 @@
-# frozen_string_literal: true
-
 module Pages
   def common
     @common ||= Common.new
   end
 
   def home_page
-    @home_page ||= Home_page.new
-    end
+    @home_page ||= HomePage.new
   end
+end
 
-  def services
-    @services ||= Services.new
-  end
+def services
+  @services ||= Services.new
+end
 
 module WaitUntil
   def self.wait_until(timeout = 10, message = nil, &block)
