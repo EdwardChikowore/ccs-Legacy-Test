@@ -7,14 +7,6 @@ Given("I sign in to the buyer account") do
   click_on 'Sign in'
 end
 
-Given(/^I am a logged in user - buildings account$/) do
-  visit '/sign-in'
-  page.driver.browser.manage.add_cookie(name: 'crown_marketplace_cookie_settings_viewed', value: 'true')
-  sign_in_building
-  puts ENV['HOST']
-end
-
-
 Then("I am logged in successfully") do
   expect(common.nav_menu.sign_out_text.text).to eq('Sign out')
 end
@@ -22,6 +14,12 @@ end
 And(/^I click on "(.+)"$/) do |text|
   click_on text
 end
+
+
+And(/^I click on "([^"]*)" option$/) do |option|
+  choose option
+end
+
 
 Then(/^I click on open all$/) do
   value = common.open_all.text
@@ -42,6 +40,10 @@ And(/^I click on the "([^"]*)"$/) do |text|
   check text
 end
 
+Given("I am on {string} page") do |header_text|
+  expect(common.header.text).to eq(header_text)
+end
+
 And(/^I am on the "(.+)" page$/) do |header|
   expect(common.header.text).to eq(header)
 end
@@ -54,10 +56,6 @@ And(/^The following text is displayed:$/) do |table|
   table.transpose.raw.flatten.each do |item|
     expect(page).to have_css('div h2', text: item)
   end
-end
-
-And(/^I click on the "([^"]*)" option$/) do |text|
-  choose text
 end
 
 And(/^I am on "([^"]*)" and "([^"]*)" page$/) do |heading, sub_heading|
@@ -87,7 +85,6 @@ Then(/^I click on continue$/) do
   click_on 'Continue'
 end
 
-
 Then(/^I click on save and return$/) do
   click_on 'Save and return'
 end
@@ -100,7 +97,6 @@ Then(/^I click on save and continue button$/) do
   page.execute_script('arguments[0].scrollIntoView(true)', common.save_and_continue)
   click_on 'Save and continue'
 end
-
 
 Then(/^I click on close all on services page$/) do
   value = common.open_all.text
@@ -144,9 +140,9 @@ And(/^I should see error message header "([^"]*)"$/) do |heading|
   expect(common.header_two.text).to eq(heading)
 end
 
-And(/^I should see error message header "([^"]*)"$/) do |heading|
-  expect(common.header_two.text).to eq(heading)
-end
+# And(/^I should see error message header "([^"]*)"$/) do |heading|
+#   expect(common.header_two.text).to eq(heading)
+# end
 
 Then("I should see the following selected services heading") do |table|
   table.transpose.raw.flatten.each do |item|
@@ -156,6 +152,14 @@ end
 
 And("I check {string}") do |text|
   check text 
+end
+
+When("I check <region>") do |table|
+  check text 
+end
+
+When("I check {string}:") do |string, table|
+check table
 end
 
 And(/^I should see header three "([^"]*)"$/) do |heading|
@@ -172,6 +176,7 @@ end
 
 When("I click on a supplier name") do
   common.results_list[0].click
+  #common.results_list_mc
 end
 
 And(/^I should see supplier details header "([^"]*)"$/) do |heading|
@@ -184,4 +189,9 @@ And(/^The excel file "(.+)" should download successfully$/) do |filename|
   expect(name).to start_with(filename)
   expect(name).to end_with('.xlsx')
   closeBrowserTab
+end
+
+
+Then(/^I click Back$/) do
+  click_link 'Back'
 end

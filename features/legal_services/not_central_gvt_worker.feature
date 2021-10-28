@@ -27,7 +27,7 @@ Feature: Do you work for Central Government Lots1-4
         And I check "Social housing"
         And I click on "Continue"
         Then I am on "Select the regions where you need legal services" page
-        When I click on North East region
+        When I click on "North East" region
         And I click on "Continue"
         And I am on "Supplier results" page
         And I click on "Download the supplier list"
@@ -140,19 +140,7 @@ Feature: Do you work for Central Government Lots1-4
          | Select the jurisdiction you need |
         And I click on "Northern Ireland" option
         And I click on "Continue"
-        And I am on "Select the legal services you need" page
-        And I check "Partnerships"
-        And I check "Pensions"
-        And I check "Planning"
-        And I check "Projects"
-        And I check "Property, real estate & construction"
-        And I check "Public international law" 
-        And I check "Public procurement"
-        And I check "Restructuring and insolvency"
-        And I check "Tax"
-        And I check "Telecommunications"
-        And I check "The law of international trade, investment and regulation"
-        And I check "Transport law (excluding rail)"
+        When I select the required legal services
         And I click on "Continue"
         And I am on "Supplier results" page
         And I click on "Download the supplier list"

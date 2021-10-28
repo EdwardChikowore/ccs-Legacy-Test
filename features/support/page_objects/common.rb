@@ -17,6 +17,7 @@ class Common < SitePrism::Page
   element :rates_table, 'tr.govuk-table__row'
 
   elements :results_list, 'ul.ccs-results-list>li>h2>a'
+  elements :results_list_mc, 'ul.ccs-results-list>li>div>div>h2>a'
 
   #element :radio_button_yes, 'central_government_yes'
   #element :radio_button_no,  '[value="no"]'
