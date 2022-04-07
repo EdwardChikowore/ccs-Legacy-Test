@@ -5,7 +5,7 @@ Feature: Waste services volume questions
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     And I select "<service>" and navigate to the service requirements page
     When I am on the "Service requirements" page
     And I click on "Answer question"

@@ -5,7 +5,7 @@ Feature: Direct Award scenario Two
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     And I check "Fire detection and firefighting systems maintenance"
     And I check "High voltage (HV) and switchgear maintenance"
     And I check "Internal & external building fabric maintenance"
@@ -58,7 +58,7 @@ Feature: Direct Award scenario Two
     And I check "Helpdesk services"
     And I check "Management of billable works"
     And I click on "Continue"
-    And I click on open all
+    And I click on show all sections
     And I check "Tees Valley and Durham"
     And I click on "Continue"
     And I add contract name
@@ -269,12 +269,12 @@ Feature: Direct Award scenario Two
     And I click on the "Direct award" route to market
     And I click on "Continue"
     And the lowest priced supplier is "Shields, Ratke and Parisian" and contract price is "£238,274.89"
-    And supplier number 2 contract price is "£239,619.36"
-    And supplier number 3 contract price is "£243,723.86"
+    And supplier number 2 contract price is "£239,632.30"
+    And supplier number 3 contract price is "£243,724.79"
     And supplier number 4 contract price is "£281,644.29"
-    And supplier number 5 contract price is "£295,460.95"
+    And supplier number 5 contract price is "£295,459.61"
     And supplier number 6 contract price is "£300,539.80"
     And supplier number 7 contract price is "£315,235.08"
-    And supplier number 8 contract price is "£323,269.59"
-    And supplier number 9 contract price is "£372,022.46"
-    And supplier number 10 contract price is "£404,737.94"
+    And supplier number 8 contract price is "£323,269.65"
+    And supplier number 9 contract price is "£372,035.12"
+    And supplier number 10 contract price is "£404,739.54"

@@ -5,13 +5,13 @@ Feature: Quick view results - Region selection
     Then I am on your account page
     When I click on "Quick view suppliers"
     And I am on "Services" page
-    And I click on open all
+    And I click on show all sections
     And I check "Mechanical and electrical engineering maintenance"
     And I click on "Continue"
     And I am on "Regions" page
 
   Scenario: View all regions on quick view results
-    Given I click on open all
+    Given I click on show all sections
     And I select all regions
     And I should see text "73 regions selected" in the selection basket
     Then I click on "Continue"
@@ -93,7 +93,7 @@ Feature: Quick view results - Region selection
       | West and South of Northern Ireland (Armagh, Cookstown, Dungannon, Fermanagh, Magherafelt, Newry and Mourne, Omagh)  |
 
   Scenario: Change region selection
-    Given I click on open all
+    Given I click on show all sections
     And I click on select all for "North West England"
     And I should see text "5 regions selected" in the selection basket
     Then I click on "Continue"
@@ -111,7 +111,7 @@ Feature: Quick view results - Region selection
       | Northumberland and Tyne and Wear  |
 
   Scenario: Change region selection - validation
-    Given I click on open all
+    Given I click on show all sections
     And I select all regions
     And I should see text "73 regions selected" in the selection basket
     Then I click on "Continue"

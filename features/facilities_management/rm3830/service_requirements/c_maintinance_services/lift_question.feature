@@ -5,7 +5,7 @@ Feature:Lifts, Hoists & Conveyance Systems Maintenance
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     And I select "Lifts, hoists & conveyance systems maintenance" and navigate to the service requirements page
     And I click on "Answer question"
     And I am on the "Lifts, hoists & conveyance systems maintenance" page

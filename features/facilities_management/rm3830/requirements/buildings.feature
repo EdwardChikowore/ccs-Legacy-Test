@@ -5,7 +5,7 @@ Feature:Buildings
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     And I check "Building management system (BMS) maintenance"
     And I am on requirements page
 

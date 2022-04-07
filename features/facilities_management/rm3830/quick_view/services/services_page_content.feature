@@ -7,7 +7,7 @@ Feature:  Facilities Management - Services - Page Content
 	Scenario: FM - Services - Page Header - Content
 		When I click on "Quick view suppliers"
 		And I am on the "Select the facilities management services that you need" page
-		And I click on close all
+		And I click on hide all sections
 		Then the service caption text is displayed
 
 	Scenario: FM - Services - Error Message

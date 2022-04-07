@@ -112,7 +112,7 @@ module Pages::RM3830
 
     element :quick_service_caption, 'fieldset.govuk-fieldset > div > p.govuk-caption-m'
 
-    section :long_list, '#proc-CCS-fm-suppliers-long-list' do
+    section :long_list, '#supplier-lot-list__container' do
       section :lot_1a, '#sub-lot-1a' do
         element :sublot_1a, 'table > thead > tr > th.govuk-table__header'
       end

@@ -5,7 +5,7 @@ Feature:  Facilities Management - Services - Maintenance - Page Content
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on close all
+    And I click on hide all sections
     When I click on "Maintenance services"
     Then the following "Maintenance services" are displayed:
       | Mechanical and electrical engineering maintenance   |

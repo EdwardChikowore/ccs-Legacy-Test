@@ -5,11 +5,11 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     And I check "Mechanical and electrical engineering maintenance"
-    And I click on "Close all"
+    And I click on hide all sections
     And I click on "Continue"
-    And I click on open all
+    And I click on show all sections
     And I click on select all for "North East England"
     And I click on select all for "North West England"
     And I click on select all for "Yorkshire and Humber"
@@ -23,7 +23,7 @@ Feature:  Facilities Management - Detailed Search Summary - Question Links - Con
     And I click on select all for "Scotland"
     And I click on select all for "Northern Ireland"
     And I should see text "73 regions selected" in the selection basket
-    And I click on "Close all"
+    And I click on hide all sections
     And I click on "Continue"
     And I am on "Quick view results" page    
     And I add contract name

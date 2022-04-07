@@ -5,7 +5,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
 
   Scenario: FM - Services - Requirements - Service Summary - Content - Services match quick view
     And I check "Fire detection and firefighting systems maintenance"
@@ -13,7 +13,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
     And I check "Internal & external building fabric maintenance"
     And I check "Building management system (BMS) maintenance"
     And I click on "Continue"
-    And I click on open all
+    And I click on show all sections
     And I check "Tees Valley and Durham"
     And I click on "Continue"
     And I add contract name
@@ -37,7 +37,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
     And I check "Internal & external building fabric maintenance"
     And I check "Building management system (BMS) maintenance"
     And I click on "Continue"
-    And I click on open all
+    And I click on show all sections
     And I check "Tees Valley and Durham"
     And I click on "Continue"
     And I add contract name
@@ -75,7 +75,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
 		And I check "Helpdesk services"
 		And I check "Management of billable works"
     And I click on "Continue"
-    And I click on open all
+    And I click on show all sections
     And I check "Tees Valley and Durham"
     And I click on "Continue"
     And I add contract name
@@ -106,7 +106,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
 		And I check "Helpdesk services"
 		And I check "Management of billable works"
     And I click on "Continue"
-    And I click on open all
+    And I click on show all sections
     And I check "Tees Valley and Durham"
     And I click on "Continue"
     And I add contract name
@@ -138,7 +138,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
 		And I check "Helpdesk services"
 		And I check "Management of billable works"
     And I click on "Continue"
-    And I click on open all
+    And I click on show all sections
     And I check "Tees Valley and Durham"
     And I click on "Continue"
     And I add contract name
@@ -150,7 +150,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
     And I click on "Change"
     And I am on the "Select the facilities management services you need" page
     And I should see text "116 services selected" in the selection basket
-		And I click on open all
+		And I click on show all sections
     And I select all "Catering services"
     And I select all "Cleaning services"
     And I select all "Workplace FM services"
@@ -166,7 +166,7 @@ Feature: FM - Quick View - Requirements - Services - Service summary
     And I check "Internal & external building fabric maintenance"
     And I check "Building management system (BMS) maintenance"
     And I click on "Continue"
-    And I click on open all
+    And I click on show all sections
     And I check "Tees Valley and Durham"
     And I click on "Continue"
     And I add contract name

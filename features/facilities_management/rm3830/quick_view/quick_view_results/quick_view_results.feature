@@ -5,12 +5,12 @@ Feature: Quick view results
     Then I am on your account page
     When I click on "Quick view suppliers"
     And I am on "Services" page
-    And I click on open all
+    And I click on show all sections
     And I select all "Maintenance services"
     And I should see text "22 services selected" in the selection basket
     And I click on "Continue"
     And I am on "Regions" page
-    And I click on open all
+    And I click on show all sections
     And I click on select all for "North East England"
     And I should see text "2 regions selected" in the selection basket
     Then I click on "Continue"

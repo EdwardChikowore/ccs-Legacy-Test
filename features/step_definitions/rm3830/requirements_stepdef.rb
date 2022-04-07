@@ -289,7 +289,7 @@ end
 
 When('I am on requirements page') do
   step 'I click on "Continue"'
-  step 'I click on open all'
+  step 'I click on show all sections'
   step 'I check "Tees Valley and Durham"'
   step 'I click on "Continue"'
   step 'I add contract name'
@@ -352,7 +352,7 @@ Then('I navigate to services page') do
   step 'I am on "Contract period summary" page'
   step 'I click on "Return to requirements"'
   step 'I click on "Services"'
-  step 'I click on open all'
+  step 'I click on show all sections'
 end
 
 And('I select the {string} and services for scenario 3, lot 1a') do |building|

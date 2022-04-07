@@ -11,7 +11,7 @@ Feature:Services
     And I am on "Requirements" page
 		And I click on "Services"
     And I am on "Services" page
-    And I click on open all
+    And I click on show all sections
 
   Scenario: Validation error when no service is selected
 		And I click on "Save and continue"

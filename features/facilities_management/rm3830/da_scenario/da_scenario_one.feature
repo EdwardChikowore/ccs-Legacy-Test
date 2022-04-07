@@ -5,10 +5,10 @@ Feature: Direct Award scenario One
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     When I select all da services
     And I click on "Continue"
-    And I click on open all
+    And I click on show all sections
     And I check "Tees Valley and Durham"
     And I click on "Continue"
     And I add contract name
@@ -216,7 +216,7 @@ Feature: Direct Award scenario One
     And I am on "Service requirements summary" page
     And I click on "Return to requirements"
     And I click on "Continue to results"
-    And I should see the price displayed "£252,500.49"
+    And I should see the price displayed "£252,514.12"
     And I click on the "Direct award" route to market
     And I click on "Continue"
-    And the lowest priced supplier is "Dickinson-Abbott" and contract price is "£252,500.49"
+    And the lowest priced supplier is "Dickinson-Abbott" and contract price is "£252,514.12"

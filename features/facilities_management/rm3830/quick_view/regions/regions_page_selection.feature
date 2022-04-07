@@ -5,10 +5,10 @@ Feature: Facilities Management - Regions - Area - Selection
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     And I check "Mechanical and electrical engineering maintenance"
     And I click on "Continue"
-    And I click on close all
+    And I click on hide all sections
 
   Scenario: FM - Locations - Areas within Location - North East England - Content
     And I click on "North East (England)"

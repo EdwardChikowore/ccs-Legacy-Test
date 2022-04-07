@@ -15,7 +15,7 @@ Feature:  FM - Quick View - Accessibility
   Scenario: FM - Start a new procurement page - Open Services - Maintenance
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    When I click on open all
+    When I click on show all sections
     And I select all "Maintenance services"
     And I select all "Horticultural services"
     And I select all "Statutory obligations"
@@ -34,10 +34,10 @@ Feature:  FM - Quick View - Accessibility
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     And I check "Mechanical and electrical engineering maintenance"
     And I click on "Continue"
-    And I click on open all
+    And I click on show all sections
     And I click on select all for "North East England"
     And I click on select all for "North West England"
     And I click on select all for "Yorkshire and Humber"
@@ -55,10 +55,10 @@ Feature:  FM - Quick View - Accessibility
   Scenario: FM - Start a new procurement page - Search Result
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     And I check "Mechanical and electrical engineering maintenance"
     And I click on "Continue"
-    And I click on open all
+    And I click on show all sections
     And I check "Tees Valley and Durham"
     And I click on "Continue"
     And I am on "Quick view results" page
@@ -67,10 +67,10 @@ Feature:  FM - Quick View - Accessibility
   Scenario: FM - Start a new procurement page - What next page
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     And I check "Mechanical and electrical engineering maintenance"
     And I click on "Continue"
-    And I click on open all
+    And I click on show all sections
     And I check "Tees Valley and Durham"
     And I click on "Continue"
     And I am on "Quick view results" page

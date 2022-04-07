@@ -4,7 +4,7 @@ module Pages
     element :header_two, 'h2'
     element :header_three, 'legend'
 
-    element :open_all, 'button.govuk-accordion__open-all'
+    element :show_all, 'button .govuk-accordion__show-all-text'
 
     section :banner, 'ul#navigation' do
       element :login_banner, 'li:nth-child(1)'
