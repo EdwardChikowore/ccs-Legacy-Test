@@ -19,16 +19,16 @@ When('I am on {string} page') do |text|
   expect(common.header_one.text).to end_with(text)
 end
 
-Then('I click on open all') do
-  value = common.open_all.text
+Then('I click on show all sections') do
+  value = common.show_all.text
 
-  common.open_all.click if value == "Open all\nsections"
+  common.show_all.click if value == 'Show all sections'
 end
 
-Then('I click on close all') do
-  value = common.open_all.text
+Then('I click on hide all sections') do
+  value = common.show_all.text
 
-  common.open_all.click if value == 'Close all sections'
+  common.show_all.click if value == 'Hide all sections'
 end
 
 Then('I should see the following error messages:') do |table|

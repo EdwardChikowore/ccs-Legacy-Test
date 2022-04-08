@@ -6,10 +6,10 @@ Feature: Direct Award prod test
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     When I select all da services
     And I click on "Continue"
-    And I click on open all
+    And I click on show all sections
     And I check "Tees Valley and Durham"
     And I click on "Continue"
     And I add contract name

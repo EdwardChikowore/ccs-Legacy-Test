@@ -5,7 +5,7 @@ Feature:  Facilities Management - Services - Helpdesk - Page Content
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on close all
+    And I click on hide all sections
     When I click on "Helpdesk services"
     Then the following "Helpdesk services" are displayed:
       | Helpdesk services |

@@ -86,6 +86,17 @@ The following command will create the buildings you need in the specified enviro
  bundle exec cucumber -p set_up
  ```
 
+ You will also need to have the details setup for the test user.
+ These are:
+ | Detail                 | Value                             |
+ | ---------------------- | --------------------------------- |
+ | Name                   | Automation Test                   |
+ | Job title              | Test Analyst                      |
+ | Telephone number       | 07749228347                       |
+ | Organisation name      | CCS                               |
+ | Organisation address   | 2 Marylebone Road, London NW1 4DF |
+ | Sector                 | Central government                |
+
  ## Clean up after tests
 After running all the tests there can be a lot of data left over that is not required.
 This feature was created to remove as much of this data as possible from the environment where it is run.

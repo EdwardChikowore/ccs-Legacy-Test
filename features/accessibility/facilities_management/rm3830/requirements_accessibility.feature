@@ -75,10 +75,10 @@ Feature:  FM - Requirements - Accessibility
   Scenario: FM - Requirements - Services
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     And I check "Mechanical and electrical engineering maintenance"
     And I click on "Continue"
-    And I click on open all
+    And I click on show all sections
     And I check "Tees Valley and Durham"
     And I click on "Continue"
     And I am on "Quick view results" page
@@ -93,10 +93,10 @@ Feature:  FM - Requirements - Accessibility
   Scenario: FM - Requirements - Services
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     And I check "Mechanical and electrical engineering maintenance"
     And I click on "Continue"
-    And I click on open all
+    And I click on show all sections
     And I check "Tees Valley and Durham"
     And I click on "Continue"
     And I am on "Quick view results" page
@@ -111,10 +111,10 @@ Feature:  FM - Requirements - Accessibility
   Scenario: FM - Requirements - Buildings
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     And I check "Mechanical and electrical engineering maintenance"
     And I click on "Continue"
-    And I click on open all
+    And I click on show all sections
     And I check "Tees Valley and Durham"
     And I click on "Continue"
     And I am on "Quick view results" page
@@ -130,7 +130,7 @@ Feature:  FM - Requirements - Accessibility
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     And I check "Mechanical and electrical engineering maintenance"
     And I am on requirements page
     Then I answer contract details question
@@ -144,7 +144,7 @@ Feature:  FM - Requirements - Accessibility
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     And I check "Mechanical and electrical engineering maintenance"
     And I am on requirements page
     Then I answer contract details question
@@ -162,7 +162,7 @@ Feature:  FM - Requirements - Accessibility
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     And I check "Mechanical and electrical engineering maintenance"
     And I am on requirements page
     Then I answer contract details question
@@ -181,7 +181,7 @@ Feature:  FM - Requirements - Accessibility
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     And I check "Mobile cleaning"
     And I am on requirements page
     Then I answer contract details question
@@ -200,7 +200,7 @@ Feature:  FM - Requirements - Accessibility
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     And I check "Lifts, hoists & conveyance systems maintenance "
     And I am on requirements page
     Then I answer contract details question
@@ -219,7 +219,7 @@ Feature:  FM - Requirements - Accessibility
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     And I check "Taxi booking service"
     And I am on requirements page
     Then I answer contract details question

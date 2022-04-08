@@ -5,7 +5,7 @@ Feature: Contract cost calculation with a range of services
     Given I create a new procurement
     And I click on "Services"
     And I am on "Services" page
-    And I click on open all
+    And I click on show all sections
     And I check "Mechanical and electrical engineering maintenance"
     And I check "Lifts, hoists & conveyance systems maintenance "
     And I check "Cleaning of external areas"

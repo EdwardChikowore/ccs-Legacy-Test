@@ -175,7 +175,7 @@ Feature: Requirements validations
 	Scenario: Validation errors after services and continuing to results
 		And I click on "Services"
 		And I am on "Services" page
-    And I click on open all
+    And I click on show all sections
 		And I check "High voltage (HV) and switchgear maintenance"
 		And I check "Internal & external building fabric maintenance"
     When I click on "Save and continue"
@@ -198,7 +198,7 @@ Feature: Requirements validations
 	Scenario: Validation errors after services and buildings and then continuing to results
 		And I click on "Services"
 		And I am on "Services" page
-    And I click on open all
+    And I click on show all sections
 		And I check "High voltage (HV) and switchgear maintenance"
 		And I check "Internal & external building fabric maintenance"
     When I click on "Save and continue"
@@ -228,7 +228,7 @@ Feature: Requirements validations
 	Scenario: Validation errors after services, buildings and assigning services to buildings then continuing to results
 		And I click on "Services"
 		And I am on "Services" page
-    And I click on open all
+    And I click on show all sections
 		And I check "High voltage (HV) and switchgear maintenance"
 		And I check "Internal & external building fabric maintenance"
     When I click on "Save and continue"
@@ -266,7 +266,7 @@ Feature: Requirements validations
 	Scenario: Service requirements standards error
 		And I click on "Services"
 		And I am on "Services" page
-    And I click on open all
+    And I click on show all sections
 		And I check "High voltage (HV) and switchgear maintenance"
 		And I check "Internal & external building fabric maintenance"
     And I click on "Save and continue"
@@ -303,7 +303,7 @@ Feature: Requirements validations
 	Scenario: Service requirements standards errors
 		And I click on "Services"
 		And I am on "Services" page
-    And I click on open all
+    And I click on show all sections
 		And I check "High voltage (HV) and switchgear maintenance"
 		And I check "Internal & external building fabric maintenance"
 		When I click on "Save and continue"
@@ -373,7 +373,7 @@ Feature: Requirements validations
     And I click on "Return to requirements"
 		And I click on "Services"
 		And I am on "Services" page
-    And I click on open all
+    And I click on show all sections
 		And I check "High voltage (HV) and switchgear maintenance"
 		And I check "Internal & external building fabric maintenance"
 		And I click on "Save and continue"

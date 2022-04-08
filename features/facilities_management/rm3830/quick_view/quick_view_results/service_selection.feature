@@ -7,12 +7,12 @@ Feature: Quick view results - Service selection
     And I am on "Services" page
 
   Scenario: View all services on results
-    Given I click on open all
+    Given I click on show all sections
     And I select all services
     And I should see text "116 services selected" in the selection basket
     And I click on "Continue"
     And I am on "Regions" page
-    And I click on open all
+    And I click on show all sections
     And I click on select all for "North East England"
     And I should see text "2 regions selected" in the selection basket
     Then I click on "Continue"
@@ -137,12 +137,12 @@ Feature: Quick view results - Service selection
       | Management of billable works                                  |
 
   Scenario: Change service selection
-    Given I click on open all
+    Given I click on show all sections
     And I select all "Horticultural services"
     And I should see text "6 services selected" in the selection basket
     And I click on "Continue"
     And I am on "Regions" page
-    And I click on open all
+    And I click on show all sections
     And I click on select all for "North East England"
     And I should see text "2 regions selected" in the selection basket
     Then I click on "Continue"
@@ -182,12 +182,12 @@ Feature: Quick view results - Service selection
       | Specialist maintenance services                               |
 
   Scenario: Change service selection - validation
-    Given I click on open all
+    Given I click on show all sections
     And I select all services
     And I should see text "116 services selected" in the selection basket
     And I click on "Continue"
     And I am on "Regions" page
-    And I click on open all
+    And I click on show all sections
     And I click on select all for "North East England"
     And I should see text "2 regions selected" in the selection basket
     Then I click on "Continue"

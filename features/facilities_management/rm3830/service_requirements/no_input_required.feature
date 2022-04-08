@@ -5,7 +5,7 @@ Feature:Services with no service questions
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     And I select services with no service questions
     And I am on requirements page
     Then I answer contract details question

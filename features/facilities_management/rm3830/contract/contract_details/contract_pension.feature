@@ -5,9 +5,9 @@ Feature:  Facilities Management - Contract - Local Government Pension Scheme
     Then I should see the navigation panel has sign out link
     When I click on "Quick view suppliers"
     And I am on the "Select the facilities management services that you need" page
-    And I click on open all
+    And I click on show all sections
     And I check "Mechanical and electrical engineering maintenance"
-    And I click on "Close all"
+    And I click on hide all sections
     And I am on requirements page
     Then I answer contract details question
     And I answer contract period question
