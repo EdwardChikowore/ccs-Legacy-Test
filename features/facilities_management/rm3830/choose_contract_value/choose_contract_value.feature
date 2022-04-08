@@ -35,7 +35,7 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on "Return to requirements"
     And I click on "Continue to results"
     And I am on "Estimated contract cost" page
-    And I should see the partial price value "£290,266"
+    And I should see the partial price value "£290,398"
     And unpriced service "Professional snow & ice clearance" should be displayed
     And I can select the following lots:
       | 1a  |
@@ -63,7 +63,7 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on "Return to requirements"
     And I click on "Continue to results"
     And I am on "Estimated contract cost" page
-    And I should see the partial price value "£393,521"
+    And I should see the partial price value "£393,671"
     And unpriced service "Professional snow & ice clearance" should be displayed
     And I can select the following lots:
       | 1a  |
@@ -93,7 +93,7 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on "Return to requirements"
     And I click on "Continue to results"
     And I am on "Estimated contract cost" page
-    And I should see the partial price value "£17,010,785"
+    And I should see the partial price value "£17,010,917"
     And unpriced service "Professional snow & ice clearance" should be displayed
     And I can select the following lots:
       | 1b  |
@@ -125,7 +125,7 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on "Return to requirements"
     And I click on "Continue to results"
     And I am on "Estimated contract cost" page
-    And I should see the partial price value "£23,044,302"
+    And I should see the partial price value "£23,044,452"
     And unpriced service "Professional snow & ice clearance" should be displayed
     And I can select the following lots:
       | 1b  |
@@ -154,7 +154,7 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on "Return to requirements"
     And I click on "Continue to results"
     And I am on "Estimated contract cost" page
-    And I should see the partial price value "£115,919,309"
+    And I should see the partial price value "£115,918,780"
     And unpriced service "Professional snow & ice clearance" should be displayed
     And I cannot select the lot
 
@@ -184,6 +184,6 @@ Feature: Assessed value Scenario Three - No Customer Price and at least 1 Servic
     And I click on "Return to requirements"
     And I click on "Continue to results"
     And I am on "Estimated contract cost" page
-    And I should see the partial price value "£157,393,752"
+    And I should see the partial price value "£157,393,003"
     And unpriced service "Professional snow & ice clearance" should be displayed
     And I cannot select the lot
