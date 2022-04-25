@@ -15,12 +15,7 @@ require 'nokogiri'
 require 'axe/cucumber/step_definitions'
 
 require_relative '../../features/support/pages_helper'
-require_relative '../support/login_helper'
-require_relative '../support/capybara_driver.helper'
 
-World(Pages)
-
-Webdrivers::Chromedriver.update
 
 configure = YAML.load_file('config/environment.yml')
 ENV['TEST_ENV'] ||= 'cmpdev'
@@ -34,3 +29,9 @@ ENV['HOST'] ||= configure[test_env]['host']
 MAX_OPACITY_WAIT_TIME ||= 120
 require "#{File.dirname(__FILE__)}/../../features/support/capybara_driver.helper"
 require "#{File.dirname(__FILE__)}/../../features/support/login_helper"
+require "#{File.dirname(__FILE__)}/../../features/support/download_helpers"
+
+World(Pages)
+World(DownloadHelpers)
+
+Webdrivers::Chromedriver.update
