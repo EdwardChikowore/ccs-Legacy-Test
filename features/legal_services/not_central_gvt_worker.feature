@@ -27,7 +27,7 @@ Feature: Do you work for Central Government Lots1-4
         And I check "Social housing"
         And I click on "Continue"
         Then I am on "Select the regions where you need legal services" page
-        When I click on "North East" region
+        When I check "North East"
         And I click on "Continue"
         And I am on "Supplier results" page
         And I click on "Download the supplier list"
@@ -46,7 +46,7 @@ Feature: Do you work for Central Government Lots1-4
         And I am on "Select the lot you need" page 
         And I click on "Lot 2 - Full-service firms" option
         And I click on "Continue"        
-        Then I am on "Lot 2 - Full-service firms" page
+        Then I am on "Select the jurisdiction you need" page
         When I click on "Continue"
         Then I should see the following error messages
          | Select the jurisdiction you need |
@@ -97,7 +97,7 @@ Feature: Do you work for Central Government Lots1-4
         And I am on "Select the lot you need" page 
         And I click on "Lot 2 - Full-service firms" option
         And I click on "Continue"        
-        Then I am on "Lot 2 - Full-service firms" page
+        Then I am on "Select the jurisdiction you need" page
         When I click on "Continue"
         Then I should see the following error messages
          | Select the jurisdiction you need |
@@ -134,7 +134,7 @@ Feature: Do you work for Central Government Lots1-4
         And I am on "Select the lot you need" page 
         And I click on "Lot 2 - Full-service firms" option
         And I click on "Continue"        
-        Then I am on "Lot 2 - Full-service firms" page
+        Then I am on "Select the jurisdiction you need" page
         When I click on "Continue"
         Then I should see the following error messages
          | Select the jurisdiction you need |
@@ -185,6 +185,7 @@ Feature: Do you work for Central Government Lots1-4
         And I am on "Supplier results" page
         And I click on "Download the supplier list"
         And I am on "Download the supplier shortlist" page
+        And I click on "Download supplier shortlist"
         And The excel file "Shortlist of WPS Legal Services Suppliers" should download successfully 
         And I click on "Back to start"
         And I am on "Find legal services for the wider public sector" page

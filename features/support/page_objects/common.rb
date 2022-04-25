@@ -19,9 +19,6 @@ class Common < SitePrism::Page
   elements :results_list, 'ul.ccs-results-list>li>h2>a'
   elements :results_list_mc, 'ul.ccs-results-list>li>div>div>h2>a'
 
-  #element :radio_button_yes, 'central_government_yes'
-  #element :radio_button_no,  '[value="no"]'
-
   element :back_button, '#govuk-back-link ccs-no-print'
   #<a class="govuk-back-link ccs-no-print" aria-label="Back to the previous page" href="/legal-services">Back</a>
 
@@ -34,4 +31,9 @@ class Common < SitePrism::Page
 
   element :supplier_details_page_title, 'div>span.govuk-caption-xl'
 
+  element :agency_details_title, 'div.govuk-grid-row > div:nth-child(1) > p'
+
+  element :agency_details_name, 'div.govuk-grid-row > div > div:nth-child(4) > div > h2 > a'
+
+  element :multiple_agencies, 'div.govuk-grid-row > div > p > strong'
 end

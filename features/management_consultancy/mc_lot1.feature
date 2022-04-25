@@ -4,9 +4,7 @@ Feature: Management Consultancy Lots 1-9
         Given I am logged in to management consultancy
 
     Scenario: Lot1 View a single supplier's details
-        Given I am on "Confirm you need management consultancy" page
-        And I click on "Confirm and continue"
-        Then I am on "Select the lot you need" page
+        Given I am on "Select the lot you need" page
         When I click on "Lot 1 - Business" option
         And I click on "Continue"
         Then I am on "Select the services you need" page
@@ -25,9 +23,7 @@ Feature: Management Consultancy Lots 1-9
         Then I am on the Management Consultancy start page
 
     Scenario: Lot1 Services selection/deselcting/checking error message
-        Given I am on "Confirm you need management consultancy" page
-        And I click on "Confirm and continue"
-        Then I am on "Select the lot you need" page
+        Given I am on "Select the lot you need" page
         When I click on "Lot 1 - Business" option
         And I click on "Continue"
         Then I am on "Select the services you need" page
@@ -51,9 +47,7 @@ Feature: Management Consultancy Lots 1-9
             | Select the service or services you need |  
 
     Scenario: Lot1 No suppliers found page
-        Given I am on "Confirm you need management consultancy" page
-        And I click on "Confirm and continue"
-        Then I am on "Select the lot you need" page
+        Given I am on "Select the lot you need" page
         When I click on "Lot 1 - Business" option
         And I click on "Continue"
         Then I am on "Select the services you need" page
@@ -77,17 +71,13 @@ Feature: Management Consultancy Lots 1-9
          Then I am on "No suppliers were found" page
 
     Scenario: Select the Lot you need error messsage display
-        Given I am on "Confirm you need management consultancy" page
-        And I click on "Confirm and continue"
-        Then I am on "Select the lot you need" page
+        Given I am on "Select the lot you need" page
         And I click on "Continue"
         Then I should see the following error messages
             | Select the lot you need  |
 
     Scenario: Lot2 - Strategy and Policy - downloading supplier shortlist
-        Given I am on "Confirm you need management consultancy" page
-        And I click on "Confirm and continue"
-        Then I am on "Select the lot you need" page
+        Given I am on "Select the lot you need" page
         When I click on "Lot 2 - Strategy and Policy" option
         And I click on "Continue"
         Then I am on "Select the services you need" page
@@ -120,9 +110,7 @@ Feature: Management Consultancy Lots 1-9
         Then I am on "Find management consultants" page
         
 Scenario: Lot 3 - Complex and Transformation - downloading supplier shortlist
-        Given I am on "Confirm you need management consultancy" page
-        And I click on "Confirm and continue"
-        Then I am on "Select the lot you need" page
+        Given I am on "Select the lot you need" page
         When I click on "Lot 3 - Complex and Transformation" option
         And I click on "Continue"
         Then I am on "Select the services you need" page
@@ -159,9 +147,7 @@ Scenario: Lot 3 - Complex and Transformation - downloading supplier shortlist
         Then I am on "Find management consultants" page
 
 Scenario: Lot 4 - Finance - downloading supplier shortlist
-        Given I am on "Confirm you need management consultancy" page
-        And I click on "Confirm and continue"
-        Then I am on "Select the lot you need" page
+        Given I am on "Select the lot you need" page
         When I click on "Lot 4 - Finance" option
         And I click on "Continue"
         Then I am on "Select the services you need" page
@@ -209,9 +195,7 @@ Scenario: Lot 4 - Finance - downloading supplier shortlist
         Then I am on "Find management consultants" page       
 
 Scenario: Lot 5 - HR - downloading supplier shortlist
-        Given I am on "Confirm you need management consultancy" page
-        And I click on "Confirm and continue"
-        Then I am on "Select the lot you need" page
+        Given I am on "Select the lot you need" page
         When I click on "Lot 5 - HR" option
         And I click on "Continue"
         Then I am on "Select the services you need" page
@@ -245,9 +229,7 @@ Scenario: Lot 5 - HR - downloading supplier shortlist
         Then I am on "Find management consultants" page   
 
 Scenario: Lot 6 - Procurement and Supply Chain - downloading supplier shortlist
-        Given I am on "Confirm you need management consultancy" page
-        And I click on "Confirm and continue"
-        Then I am on "Select the lot you need" page
+        Given I am on "Select the lot you need" page
         When I click on "Lot 6 - Procurement and Supply Chain" option
         And I click on "Continue"
         Then I am on "Select the services you need" page        
@@ -284,9 +266,7 @@ Scenario: Lot 6 - Procurement and Supply Chain - downloading supplier shortlist
         Then I am on "Find management consultants" page      
 
 Scenario: Lot 7 - Health, Social Care and Community - downloading supplier shortlist
-        Given I am on "Confirm you need management consultancy" page
-        And I click on "Confirm and continue"
-        Then I am on "Select the lot you need" page
+        Given I am on "Select the lot you need" page
         When I click on "Lot 7 - Health, Social Care and Community" option
         And I click on "Continue"
         Then I am on "Select the services you need" page        
@@ -331,9 +311,7 @@ Scenario: Lot 7 - Health, Social Care and Community - downloading supplier short
         Then I am on "Find management consultants" page   
 
 Scenario: Lot 8 - Infrastructure including Transport - downloading supplier shortlist
-        Given I am on "Confirm you need management consultancy" page
-        And I click on "Confirm and continue"
-        Then I am on "Select the lot you need" page
+        Given I am on "Select the lot you need" page
         When I click on "Lot 8 - Infrastructure including Transport" option
         And I click on "Continue"
         Then I am on "Select the services you need" page        
@@ -364,9 +342,7 @@ Scenario: Lot 8 - Infrastructure including Transport - downloading supplier shor
         Then I am on "Find management consultants" page      
 
 Scenario: Lot 9 - Environmental Sustainability and Socio-economic Development - downloading supplier shortlist
-        Given I am on "Confirm you need management consultancy" page
-        And I click on "Confirm and continue"
-        Then I am on "Select the lot you need" page
+        Given I am on "Select the lot you need" page
         When I click on "Lot 9 - Environmental Sustainability and Socio-economic Development" option
         And I click on "Continue"
         Then I am on "Select the services you need" page        
