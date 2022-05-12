@@ -10,3 +10,11 @@ preview:
   host: https://marketplace.preview.crowncommercial.gov.uk
   account_username: edward.chikowore@crowncommercial.gov.uk
   account_password: Test12345!
+sandbox:
+  host: https://cmp.cmp-sandbox.crowncommercial.gov.uk
+  account_username: edward.chikowore@crowncommercial.gov.uk
+  account_password: Test12345!
+production:
+  host: https://marketplace.service.crowncommercial.gov.uk/
+  account_username: edward.chikowore@crowncommercial.gov.uk
+  account_password: Test12345!

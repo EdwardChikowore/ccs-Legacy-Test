@@ -37,3 +37,39 @@ class Common < SitePrism::Page
 
   element :multiple_agencies, 'div.govuk-grid-row > div > p > strong'
 end
+
+#section :start_date_input, 'contract-start'
+#element :start_day, '#contract_start_date_day'
+#element :start_month, '#contract_start_date_month'
+#element :start_year, #contract_start_date_year
+
+#element :#days_per_week
+#element :#day_rate
+#element :#markup_rate
+
+#section: hire_date_input, #hire-date
+#element: hire_day, #hire_date_day
+#element: hire_month,#hire_date_month
+#element: hire_year, #hire_date_year
+
+#section: first_holiday_start, #holiday-1-start-date
+#element: holiday_1_start_day, #holiday_1_start_date_day
+#element: holiday_1_start_month, #holiday_1_start_date_month
+#element: holiday_1_start_year, #holiday_1_start_date_year
+
+#section: first_holiday_end, #holiday-1-end-date
+#element: holiday_1_end_day, #holiday_1_end_date_day
+#element: holiday_1_end_month, #holiday_1_end_date_month
+#element: holiday_1_end_year, #holiday_1_end_date_year
+
+#section: second_holiday_start, #holiday-2-start-date
+
+
+#element: holiday_2_start_day, #holiday_2_start_date_day
+#element: holiday_2_start_month, #holiday_2_start_date_month
+#element: holiday_2_start_year, #holiday_2_start_date_year
+
+#section: first_holiday_end, #holiday-1-end-date
+#element: holiday_1_end_day, #holiday_1_end_date_day
+#element: holiday_1_end_month, #holiday_1_end_date_month
+#element: holiday_1_end_year, #holiday_1_end_date_year

@@ -10,7 +10,7 @@ Feature: ST Agency Option 1 Indiv Worker
 
         When I select "An agency who can provide my school with an individual worker"
         And I click on "Continue"
-        Then the browser navigates to the "Do you want an agency to supply the worker?" page
+        Then I am on "Do you want an agency to supply the worker?" page
         
         When I dont select a option and click on "Continue"
         Then an error message is displayed in the box titled "There is a problem"
@@ -23,16 +23,16 @@ Feature: ST Agency Option 1 Indiv Worker
         Then the "What is your school’s postcode?" page is displayed
         
         When I enter the postcode "sw1 1aa"
-        And I select 'Qualified teacher: non-SEN roles'
-        And I select 'Up to 1 week'
+        And I select "Qualified teacher: non-SEN roles"
+        And I select "Up to 1 week"
         And click on "Continue"
-        Then 'Agency results' page appears
+        Then I am on "Agency results" page
         
-        When I enter an amount in the 'Enter daily rate' field
+        When I enter an amount in the "Enter daily rate" field
         And click enter on keyboard/mouse click
-        Then the 'Cost of the worker' & 'Agency fee' amounts are displayed
+        Then the "Cost of the worker" & "Agency fee" amounts are displayed
 
-        And I click on link 'Download shortlist of agencies'
+        And I click on link "Download shortlist of agencies"
         And the Shortlist is downloaded
         And I click on link 'Download shortlist (with markup calculator)'
         And the Shortlist is downloaded
