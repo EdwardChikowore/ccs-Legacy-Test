@@ -14,6 +14,10 @@ module Pages
     @services ||= Services.new
   end
 
+  def calc_fees 
+    @calc_fees ||=Calc_fees.new
+  end
+
 module WaitUntil
   def self.wait_until(timeout = 10, message = nil, &block)
     wait = Selenium::WebDriver::Wait.new(timeout: timeout, message: message)

@@ -5,7 +5,7 @@ Feature: ST Agency Option 1 Indiv Worker
 
     Scenario: User selects option Yes for agency supplying worker/managing pay
         Given I am on "What is your school looking for?" page
-        When I dont select a option and click on "Continue"
+        When click on "Continue"
         Then an error message is displayed in the box titled "There is a problem" 
 
         When I select "An agency who can provide my school with an individual worker"

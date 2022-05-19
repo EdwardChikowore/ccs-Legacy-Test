@@ -28,3 +28,5 @@ Given("I am logged in to supply teachers") do
   Given("I am on Agency details page") do
     expect(common.agency_details_title.text).to eq('Agency details')
  end
+
+ 
