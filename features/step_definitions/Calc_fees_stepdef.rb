@@ -52,5 +52,19 @@ Then("I should see fee as {string}") do |fee|
 expect(calc_fees.perm_fee.text).to eq(fee)
 end
 
+When("I enter end day as {string}") do |day|
+  calc_fees.contract_end_date.day.set(day) 
+end
 
+When("I enter end month as {string}") do |month|
+  calc_fees.contract_end_date.month.set(month)
+end
+
+When("I enter end year as {string}") do |year|
+  calc_fees.contract_end_date.year.set(year)
+end
+
+When("I enter {string} amount salary per year") do |amount|
+  calc_fees.salary.set(amount)
+end
 

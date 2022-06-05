@@ -36,4 +36,12 @@ class Common < SitePrism::Page
   element :agency_details_name, 'div.govuk-grid-row > div > div:nth-child(4) > div > h2 > a'
 
   element :multiple_agencies, 'div.govuk-grid-row > div > p > strong'
+
+  element :postcode, '#postcode'
+
+  element :daily_rate, '#daily_rate_932ce25e-6110-45d9-908a-43b76a7eff54'
+
+  element :agency_name, '#main-content > div.govuk-grid-row > div > form > div > div.govuk-grid-column-two-thirds > div > div:nth-child(1) > div > div > h2 > a'
+ 
+
 end

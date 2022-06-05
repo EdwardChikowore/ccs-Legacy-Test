@@ -104,8 +104,7 @@ Feature: Management Consultancy Lots 1-9
         Then I am on "Supplier results" page
         When I click on "Download the supplier list"
         And I am on "Download the supplier shortlist" page
-        #And I click on "Download supplier shortlist" 
-        #And The excel file "shortlist_of_management_consultancy_suppliers" should download successfully
+  
         And I click on "Back to start"
         Then I am on "Find management consultants" page
         

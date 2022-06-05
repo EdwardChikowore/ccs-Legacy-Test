@@ -29,4 +29,25 @@ Given("I am logged in to supply teachers") do
     expect(common.agency_details_title.text).to eq('Agency details')
  end
 
- 
+ When(/^I enter postcode as "([^"]*)"$/) do |postcode|
+ common.postcode.set(postcode)
+end
+
+When("I enter agency_rate as {string}") do |agency_rate|
+  common.daily_rate.set(agency_rate).click
+end
+
+Then("I should see agency {string}") do |agency|
+  expect(common.agency_name.text).to eq('Danluker Limited t/a Supply Care Solutions')
+end
+
+When("I enter salary as {string}") do |salary|
+  calc_fees.salary.set(salary)
+end
+
+#Then("I should see Cost of worker {string}") do |Cost of worker|
+# expect(calc_fees.cost_of_worker.text).to eq("£175.44")
+#end
+
+
+

@@ -108,8 +108,6 @@ Feature: Do you work for Central Government Yes Options
         And I click on "Sign out"
         Then I am on the legal services start page
 
-
-
     Scenario: Buyer selects Yes for Central gvt No for fees over £20,000
         Given I am on "Do you work for central government?" page
         And I click on "Yes" option
