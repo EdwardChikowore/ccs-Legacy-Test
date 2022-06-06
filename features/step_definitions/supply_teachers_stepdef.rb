@@ -45,9 +45,19 @@ When("I enter salary as {string}") do |salary|
   calc_fees.salary.set(salary)
 end
 
-#Then("I should see Cost of worker {string}") do |Cost of worker|
-# expect(calc_fees.cost_of_worker.text).to eq("£175.44")
-#end
+Then("I enter full employment start day as {string}") do |day|
+  calc_fees.full_employ_start_date.emp_start_day.set(day)
+end
 
+Then("I enter full employmeny start month as {string}") do |month|
+  calc_fees.full_employ_start_date.emp_start_month.set(month)
+end
 
+Then("I enter full employment start year as {string}") do |year|
+  calc_fees.full_employ_start_date.emp_start_year.set(year)
+end
+
+When("I enter fixed term fee as {string}") do |fee|
+  calc_fees.fee.set(fee)
+end
 

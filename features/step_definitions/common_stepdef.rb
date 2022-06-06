@@ -40,11 +40,11 @@ And(/^I click on the "([^"]*)"$/) do |text|
   check text
 end
 
-Given("I am on {string} page") do |header_text|
+Given("I am on the {string} page") do |header_text|
   expect(common.header.text).to eq(header_text)
 end
 
-And(/^I am on the "(.+)" page$/) do |header|
+And(/^I am on "(.+)" page$/) do |header|
   expect(common.header.text).to eq(header)
 end
 

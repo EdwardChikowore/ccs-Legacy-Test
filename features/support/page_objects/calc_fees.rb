@@ -18,12 +18,20 @@ element :days_per_week, '#days_per_week'
 element :charge_per_day, '#day_rate'
 element :percentage_mark_up, '#markup_rate'
 element :salary, '#salary'
+element :fee, '#fixed_term_fee'
 
 section :hire_date, 'div.govuk-date-input[id="hire-date"]' do
 element :hire_day, '#hire_date_day'
 element :hire_month, '#hire_date_month'
 element :hire_year, '#hire_date_year'
 end
+
+section :full_employ_start_date, 'div.govuk-date-input[id="contract-start"]' do
+element :emp_start_day, '#hire_date_day'
+element :emp_start_month, '#hire_date_month'
+element :emp_start_year, '#hire_date_year'
+end
+
 
 section :notify_agency_date, 'div.govuk-date-input[id="notice-date"]' do
     element :notice_day, '#notice_date_day'
